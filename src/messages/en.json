@@ -1,0 +1,490 @@
+{
+  "Header": {
+    "Logo": "Hotlino",
+    "Home": "Home",
+    "Flight": "Flights",
+    "Hotel": "Hotel Reservations",
+    "FeaturedDeals": "Featured Deals",
+    "App": "App",
+    "Login": "Login",
+    "Signup": "Create Account"
+  },
+  "Hero": {
+    "Heading": "Best Travel Deals at Amazing Prices",
+    "SubHeading": "Search, compare, and book your next trip effortlessly. Save up to 50% with our exclusive offers",
+    "JoinPartner": "Flights",
+    "BrowseOffers": "Hotel Offers"
+  },
+  "Services": {
+    "title": "Elevate Your Journey",
+    "subtitle": "Redefined Luxury Travel Experiences",
+    "flights": "Flights",
+    "flightsDescription": "Discover the world with premium flight options featuring exclusive comforts and priority services.",
+    "hotels": "Hotels",
+    "hotelsDescription": "Relax in carefully selected luxury accommodations for the discerning traveler.",
+    "feature1": "Instant pricing with dynamic savings",
+    "feature2": "Priority boarding and premium lounges",
+    "feature3": "Flexible cancellation policies",
+    "feature4": "Exclusive member pricing and upgrades",
+    "feature5": "24/7 concierge service",
+    "feature6": "Personalized recommendations based on preferences",
+    "searchPlaceholder": "Where are you traveling from?",
+    "destinationPlaceholder": "Destination",
+    "datesPlaceholder": "Dates",
+    "travelersPlaceholder": "Travelers",
+    "filters": "Advanced Filters",
+    "searchButton": "Search Flights",
+    "learnMore": "Discover Experiences",
+    "statsTitle": "Travel with Confidence",
+    "bookings": "Annual Bookings",
+    "satisfaction": "Customer Satisfaction",
+    "support": "Global Support",
+    "destinations": "Countries Covered",
+    "travelers": "Travelers Booked This Month",
+    "partners": "Global Partners"
+  },
+  "WhyUs": {
+    "title": "Why Choose Us?",
+    "subtitle": "We simplify your travel planning with affordable costs through our advanced tools and exclusive offers",
+    "card1": {
+      "title": "Best Price Guarantee",
+      "text": "We guarantee you the best prices for flights and hotel stays. Found a lower price? We'll match it."
+    },
+    "card2": {
+      "title": "Secure Bookings",
+      "text": "Your personal data and payments are protected by the highest banking security standards."
+    },
+    "card3": {
+      "title": "24/7 Instant Support",
+      "text": "Our travel experts are available 24/7 to assist with all your inquiries and bookings."
+    }
+  },
+  "Deals": {
+    "title": "Featured Travel Deals",
+    "subtitle": "Discover exceptional discounts on flights and hotel stays for popular destinations",
+    "dir": "ltr",
+    "tabs": {
+      "flights": "Flight Deals",
+      "hotels": "Accommodation Deals"
+    },
+    "dealsList": [
+      {
+        "id": 1,
+        "type": "Flight",
+        "title": "New York to Paris",
+        "price": "$459",
+        "priceSuffix": "Round Trip",
+        "description": "Direct flight with luxury amenities. Limited seats available.",
+        "meta": [
+          {"icon": "calendar", "text": "May - October 2024"},
+          {"icon": "clock", "text": "7 hours 30 minutes"}
+        ]
+      },
+      {
+        "id": 2,
+        "type": "Hotel",
+        "title": "Luxury Resort in Bali",
+        "price": "$129",
+        "priceSuffix": "Per Night",
+        "description": "5-star resort with private beach and spa. Breakfast included.",
+        "meta": [
+          {"icon": "star", "text": "4.8 (120 reviews)"},
+          {"icon": "umbrella", "text": "Swimming Pool"}
+        ]
+      },
+      {
+        "id": 3,
+        "type": "Package",
+        "title": "Rome Holiday",
+        "price": "$799",
+        "priceSuffix": "Per Person",
+        "description": "Flight + 4 nights in central hotel with guided tours.",
+        "meta": [
+          {"icon": "calendar", "text": "September - December 2024"},
+          {"icon": "utensils", "text": "Breakfast"}
+        ]
+      }
+    ],
+    "viewDeal": "View Deal",
+    "viewAll": "View All Travel Offers"
+  },
+  "Insights": {
+    "title": "Travel Tips",
+    "subtitle": "Data-backed insights to help you plan better and save more",
+    "card1": {
+      "title": "Traveler Satisfaction"
+    },
+    "card2": {
+      "title": "Hotels Worldwide"
+    },
+    "card3": {
+      "title": "Traveler Savings"
+    },
+    "card4": {
+      "title": "Travelers Who Benefited from Offers"
+    }
+  },
+  "ArticlesCarousel": {
+    "title": "Latest Articles",
+    "seeMore": "More Articles",
+    "readArticle": "Read Article"
+  },
+  "PopularAirlines": {
+    "title": "Popular Airlines in the United States",
+    "subtitle": "Book cheap flights with your favorite airlines"
+  },
+  "TripIdeas": {
+    "title": "Trip Ideas from USA",
+    "subtitle": "Discover your perfect destination with carefully curated travel recommendations",
+    "tabs": {
+      "romantic": "Romantic Getaways",
+      "cultural": "Cultural Experiences",
+      "beach": "Beach Destinations",
+      "family": "Family-Friendly",
+      "nature": "Nature & Adventures",
+      "forTrips": "For Trips"
+    },
+    "card": {
+      "roundTrip": "Round Trip"
+    }
+  },
+  "MobileApp": {
+    "Badge": "New Experience",
+    "Heading": "Download Hotlino App and Book Your Trip in Minutes",
+    "SubHeading": "Enjoy an exceptional booking experience through our app. Browse thousands of offers, manage your bookings, and travel without limits from anywhere, anytime.",
+    "Features": {
+      "One": {
+        "Title": "Instant Booking",
+        "Text": "Complete your booking in under two minutes with simple steps"
+      },
+      "Two": {
+        "Title": "Exclusive Offers",
+        "Text": "Up to 50% discounts available only for app users"
+      },
+      "Three": {
+        "Title": "Deal Alerts",
+        "Text": "Be the first to know about the latest offers for your favorite destinations"
+      },
+      "Four": {
+        "Title": "Secure Payments",
+        "Text": "Multiple payment systems with highest transaction protection standards"
+      }
+    },
+    "AvailableNow": "Available now on all devices",
+    "DownloadButton": "Download App From",
+    "mobile": {
+      "Heading": "Hotlino",
+      "Text": "Search. Book. Travel",
+      "Card": {
+        "Title": "Riyadh ⇨ Dubai",
+        "Date": "Thursday 15 July",
+        "Price": "899 SAR"
+      },
+      "Card2": {
+        "Title": "Jeddah ⇨ Istanbul",
+        "Date": "Saturday 20 August",
+        "Price": "1,250 SAR"
+      },
+      "ReadQrCode": "Scan QR Code to Install App"
+    }
+  },
+  "SearchFlightsComponent": {
+    "Location": {
+      "Origin": "Where from?",
+      "OriginPlaceholder": "Departure airport",
+      "Destination": "Where to?",
+      "DestinationPlaceholder": "Arrival airport"
+    },
+    "TripType": {
+      "One": "One Way",
+      "Return": "Round Trip"
+    },
+    "DepartureDate": {
+      "Placeholder": "Departure Date"
+    },
+    "ReturnDate": {
+      "Placeholder": "Return Date"
+    },
+    "SearchButton": "Search",
+    "AdvancedOptions": "Advanced Options",
+    "Currency": "Currency",
+    "Passengers": {
+      "One": "Passenger",
+      "More": "Passengers",
+      "Adults": {
+        "Text": "Adults",
+        "EX": "12+ years"
+      },
+      "Children": {
+        "Text": "Children",
+        "EX": "2-11 years"
+      },
+      "Infants": {
+        "Text": "Infants",
+        "EX": "Under 2 years"
+      }
+    },
+    "Date": {
+      "Departure": "Departure",
+      "Return": "Return"
+    },
+    "SortBy": {
+      "Title": "Sort By",
+      "Price": "Price (Lowest First)",
+      "Duration": "Duration (Shortest First)",
+      "Departure": "Departure Time"
+    },
+    "Direct": "Direct Flights Only",
+    "NoResults": {
+      "Title": "No Results Found",
+      "Message": "We couldn't find flights matching your search criteria. Please modify your search criteria and try again."
+    },
+    "NotFoundFlight": {
+      "Title": "No Flights Found",
+      "Message": "We couldn't find flights matching your search criteria. Please modify your search criteria and try again."
+    },
+    "Error": {
+      "origin": "Enter departure and destination",
+      "departureDate": "Enter departure date",
+      "returnDate": "Enter return date"
+    }
+  },
+  "SearchHotelsComponent": {
+    "SearchTitle": "Find Your Perfect Stay",
+    "Destination": {
+      "Placeholder": "Where are you going?"
+    },
+    "Date": {
+      "CheckIn": "Check-in",
+      "CheckOut": "Check-out",
+      "CheckInPlaceholder": "Select date",
+      "CheckOutPlaceholder": "Select date"
+    },
+    "GuestsRooms": {
+      "Title": "Guests & Rooms",
+      "Adults": "Adults",
+      "AdultsEx": "Ages 18+",
+      "Children": "Children",
+      "ChildrenEx": "Ages 0-17",
+      "Rooms": "Rooms",
+      "RoomsEx": "Number of rooms",
+      "Guest": "guest",
+      "Guests": "guests",
+      "Room": "room"
+    },
+    "CancellationPolicy": "Free Cancellation",
+    "SearchButton": "Search Hotels",
+    "Error": {
+      "destination": "Please select a destination",
+      "checkIn": "Please select check-in date",
+      "checkOut": "Please select check-out date"
+    }
+  },
+  "AppDownloadBanner": {
+    "title": "Unlock exclusive features only available on Wego app. Download now!",
+    "features": {
+      "1": "Enjoy over ten practical features designed exclusively for app users.",
+      "2": "Discover our Explore page for popular destinations, weekend getaways, travel news, and more.",
+      "3": "Fast payment on Wego app with offline booking access, various discounts, and passwordless login."
+    },
+    "scanText": "Scan to Download",
+    "appPreviewAlt": "Wego App Preview",
+    "qrAlt": "Download QR Code"
+  },
+  "FlightCard": {
+    "FlightListTitle": "Flight Results",
+    "direct": "Direct",
+    "nonStop": "Nonstop",
+    "stops": "{count, plural, zero {Direct} one {1 stop} two {2 stops} few {# stops} many {# stops} other {# stops}}",
+    "select": "Select"
+  },
+  "HotelList": {
+    "Stars": "stars",
+    "Includes": "Includes taxes & fees",
+    "ViewDeal": "View Deal",
+    "Guests": "guests",
+    "Room": "room",
+    "Rooms": "rooms",
+    "Rating": {
+      "Excellent": "Excellent",
+      "VeryGood": "Very Good",
+      "Good": "Good",
+      "Fair": "Fair",
+      "Poor": "Poor"
+    },
+    "PerNight": "night",
+    "PerNights": "nights"
+  },
+  "HotelsError": {
+    "Title": "No Hotels Found",
+    "Message": "We couldn't find any hotels matching your criteria. Try adjusting your search filters."
+  },
+  "Common": {
+    "From": "From",
+    "To": "To",
+    "Departure": "Departure",
+    "Return": "Return",
+    "CheckIn": "Check-in Date",
+    "CheckOut": "Check-out Date",
+    "Adults": "Adults",
+    "Children": "Children",
+    "Infants": "Infants",
+    "Rooms": "Rooms",
+    "Price": "Price",
+    "Duration": "Duration",
+    "Rating": "Rating",
+    "Distance": "Distance",
+    "BookNow": "Book Now",
+    "ViewDeal": "View Deal",
+    "FreeCancellation": "Free Cancellation",
+    "PerNight": "Per Night",
+    "TotalForNights": "Total for {nights} nights",
+    "ShowMore": "Show More",
+    "ShowLess": "Show Less",
+    "ResetFilters": "Reset Filters",
+    "SortBy": "Sort By",
+    "Apply": "Apply",
+    "Loading": "Loading...",
+    "SearchResults": "Search Results",
+    "PopularDestinations": "Popular Destinations",
+    "BestDeals": "Best Deals",
+    "HotelAmenities": "Hotel Amenities",
+    "PriceAscending": "Price: Low to High",
+    "PriceDescending": "Price: High to Low",
+    "RatingHigh": "Highest Rating",
+    "DistanceCenter": "Distance from Center"
+  },
+  "Footer": {
+    "Logo": "Hotlino",
+    "AboutUs": {
+      "Title": "About Hotlino",
+      "Text": "We provide the best travel, flight, and hotel deals at competitive prices. Book your next trip with us and save money."
+    },
+    "QuickLinks": {
+      "Title": "Quick Links",
+      "Home": "Home",
+      "Flight": "Flights",
+      "Hotel": "Hotels",
+      "FeaturedDeals": "Special Offers",
+      "Contact": "App"
+    },
+    "PopularDestinations": {
+      "Title": "Popular Destinations",
+      "c1": "Dubai",
+      "c2": "Istanbul",
+      "c3": "Malaysia",
+      "c4": "Sharm El Sheikh",
+      "c5": "Paris"
+    },
+    "ContactUs": {
+      "Title": "Contact Us",
+      "Location": "Riyadh, Saudi Arabia"
+    },
+    "BootomFooter": "Hotlino, All Rights Reserved | Abdullah Hassoun 2025"
+  },
+  "AppDownloadPage": {
+    "hero": {
+      "title": "Your Perfect Travel Companion",
+      "subtitle": "Download our app to book flights, hotels, and discover amazing destinations with mobile-exclusive offers.",
+      "benefits": {
+        "secure": "Secure Payments",
+        "payment": "Multiple Payment Options",
+        "availability": "24/7 Availability"
+      }
+    },
+    "features": {
+      "title": "Why Our App Stands Out",
+      "subtitle": "Experience travel booking like never before with our powerful features",
+      "flight": {
+        "title": "Instant Flight Booking",
+        "description": "Search and book flights in seconds using our intuitive interface and real-time availability."
+      },
+      "hotel": {
+        "title": "Smart Hotel Search",
+        "description": "Find perfect accommodations with smart filters, photos, and verified reviews."
+      },
+      "discovery": {
+        "title": "Destination Discovery",
+        "description": "Explore new destinations with curated travel guides and personalized recommendations."
+      },
+      "alerts": {
+        "title": "Price Alerts",
+        "description": "Set alerts for your favorite routes and get notified when prices drop."
+      }
+    },
+    "testimonials": {
+      "title": "What Travelers Say",
+      "subtitle": "Join millions of satisfied users traveling smarter with our app",
+      "1": {
+        "name": "Sarah Johnson",
+        "role": "Frequent Traveler",
+        "content": "This app completely changed how I travel. Saved over $500 on my last trip thanks to price comparison!"
+      },
+      "2": {
+        "name": "Mohammed Ali",
+        "role": "Business Traveler",
+        "content": "Mobile check-in and boarding pass features save so much time at airports. A must-have for any traveler."
+      },
+      "3": {
+        "name": "Emma Rodriguez",
+        "role": "Travel Blogger",
+        "content": "I've tried all travel apps, this one is the most user-friendly and feature-rich. Hotel booking experience is exceptional."
+      }
+    },
+    "faq": {
+      "title": "FAQs",
+      "subtitle": "Everything you need to know about our mobile app",
+      "1": {
+        "question": "Is the app available for both iOS and Android?",
+        "answer": "Yes! Our app is available for both iOS and Android devices. Download from App Store or Google Play."
+      },
+      "2": {
+        "question": "Do I need to create a new account for the app?",
+        "answer": "No, you can use your existing website account to log into the app. All saved preferences and booking history will sync automatically."
+      },
+      "3": {
+        "question": "Are mobile bookings more expensive?",
+        "answer": "Actually, we offer mobile-exclusive deals that are often cheaper than our website prices. Plus, you'll get app-only promotional offers."
+      },
+      "4": {
+        "question": "Can I manage existing bookings through the app?",
+        "answer": "Absolutely! You can view, modify, or cancel any booking made through our platform directly in the app."
+      }
+    },
+    "cta": {
+      "title": "Ready to Travel Smarter?",
+      "subtitle": "Download the app today and get $20 off your first booking!",
+      "note": "App available in English and Arabic"
+    }
+  },
+  "FlightSearch": {
+    "oneWay": "One Way",
+    "roundTrip": "Round Trip",
+    "fromPlaceholder": "City or Airport",
+    "toPlaceholder": "City or Airport",
+    "selectAirport": "Select an airport...",
+    "departure": "Departure",
+    "return": "Return",
+    "currency": "Currency",
+    "searchButton": "Search Flights",
+    "searching": "Searching...",
+    "swap": "Swap Airports",
+    "clear": "Clear Selection"
+  },
+  "FlightResults": {
+    "foundFlights": "Found {count} flights",
+    "perPerson": "Per Person",
+    "duration": "{hours}h {minutes}m",
+    "directFlight": "Direct",
+    "transfers": "{count} stop",
+    "transfers_plural": "{count} stops",
+    "bookNow": "Book Now",
+    "noFlightsTitle": "No Flights Found",
+    "noFlightsDescription": "Try modifying your search criteria",
+    "enterSearch": "Enter search criteria to find flights",
+    "error": "Failed to load flights. Please try again.",
+    "showCalendar": "Show Price Calendar",
+    "hideCalendar": "Hide Calendar",
+    "flightsFound": "Available Flights"
+  }
+}

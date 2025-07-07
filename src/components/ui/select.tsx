@@ -60,7 +60,7 @@ const Select: React.FC<SelectProps> = ({
           flex items-center justify-between w-full px-4 py-2
           bg-white  rounded-xl border
           ${isOpen ? 'border-indigo-500' : 'border-gray-200'}
-          shadow-sm hover:shadow-md transition-all duration-200
+          hover:shadow-md transition-all duration-200
           focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50
         `}
         onClick={() => setIsOpen(!isOpen)}

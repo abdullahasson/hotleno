@@ -1,22 +1,26 @@
 import React from 'react';
+import { useTranslations } from "next-intl";
 import Image from 'next/image';
 
 const FeaturesSection = () => {
+
+  const t = useTranslations("FeaturesSection");
+
   const features = [
     {
-      title: "أفضل عروض السفر في الولايات المتحدة الأمريكية",
+      title: t('one'),
       icon: "/placeholder.svg",
     },
     {
-      title: "آلاف عروض الرحلات والفنادق",
+      title: t('two'),
       icon: "/placeholder.svg",
     },
     {
-      title: "طرق دفع متعددة",
+      title: t('three'),
       icon: "/placeholder.svg",
     },
     {
-      title: "خدمة عملاء متوفرة 24/7",
+      title: t('four'),
       icon: "/placeholder.svg",
     },
   ];

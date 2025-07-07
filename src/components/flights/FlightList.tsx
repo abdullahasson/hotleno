@@ -49,10 +49,11 @@ export default function FlightList({
     <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
       <div className="p-6 border-b border-gray-600">
         <h2 className="text-xl font-semibold text-gray-800">
-           {locale === "ar" ? 
-            `تم العثور على ${flights.length} رحلات جوية` : 
-            `Found ${flights.length} flights`
-          } • {getAirportInfo(originNow).city[locale]} {locale === "ar" ? 'الى' : 'to'} {getAirportInfo(destination).city[locale]}
+            {t('results', {
+              count: flights.length , 
+              origin: getAirportInfo(originNow).city[locale], 
+              destination: getAirportInfo(destination).city[locale]
+            })}
         </h2>
         <div className="flex items-center mt-2 text-sm text-gray-600">
           <CalendarDays size={16} className="mr-1" />

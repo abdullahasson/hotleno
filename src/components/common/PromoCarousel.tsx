@@ -1,34 +1,37 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useLocale , useTranslations } from "next-intl"
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
 const PromoCarousel = () => {
+  const lang = useLocale();
+  const t = useTranslations("PromoCarousel")
   const [currentSlide, setCurrentSlide] = useState(0);
   const [autoSlide, setAutoSlide] = useState(true);
   const slideInterval = useRef<NodeJS.Timeout | null>(null);
   
   const slides = [
     {
-      title: "تأجير سيارات",
-      description: "احصل على أفضل العروض لتأجير السيارات في وجهتك",
+      title: t("Cards.one.title"),
+      description: t("Cards.one.des"),
       image: "/placeholder.svg",
       link: "https://www.wego.com/car-rental?source=mc&ulang=ar",
     },
     {
-      title: "باقات eSIM",
-      description: "اتصال بالإنترنت فور وصولك بدون بطاقة SIM",
+      title:  t("Cards.two.title"),
+      description:  t("Cards.two.des"),
       image: "/placeholder.svg",
       link: "https://airalo.pxf.io/c/5609792/2139174/15608?p.code=WEGO",
     },
     {
-      title: "متطلبات التأشيرة",
-      description: "اعرف متطلبات السفر لوجهتك قبل الحجز",
+      title:  t("Cards.three.title"),
+      description: t("Cards.three.des") ,
       image: "/placeholder.svg",
       link: "https://apply.joinsherpa.com/travel-restrictions?affiliateId=wego&language=ar-SA&currency=SAR",
     },
     {
-      title: "خدمات المطار",
-      description: "مواصلات من وإلى المطار بأسعار مميزة",
+      title: t("Cards.four.title") ,
+      description: t("Cards.four.des"),
       image: "/placeholder.svg",
       link: "https://wego.transferz.com/airport-transfers/?wg_source=Onsite&wg_medium=carousel&wg_campaign=visa-desktop",
     }
@@ -80,7 +83,7 @@ const PromoCarousel = () => {
           <div className="overflow-hidden rounded-2xl bg-white shadow-xl">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(${currentSlide * 100}%)` }}
+              style={{ transform: `translateX(${lang !== "ar" && "-"}${currentSlide * 100}%)` }}
             >
               {slides.map((slide, index) => (
                 <div 
@@ -97,7 +100,7 @@ const PromoCarousel = () => {
                         rel="noreferrer"
                         className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-colors duration-300 group"
                       >
-                        اكتشف المزيد
+                        {t("Cards.btn")}
                         <ChevronLeft className="ml-1 w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                       </a>
                     </div>

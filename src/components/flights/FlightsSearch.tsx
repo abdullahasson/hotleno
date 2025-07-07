@@ -296,9 +296,9 @@ export default function FlightsSearch() {
     <div>
       {/* Search Form */}
       <div className="bg-white w-full shadow-xl p-6 border-b border-gray-100 sticky top-0 z-30">
-        <div className="flex items-center justify-between w-full mb-4">
+        <div className="flex items-center justify-between w-full mb-6">
           {/* Trip Type Selector */}
-          <div className="flex p-1 pb-0 gap-2">
+          <div className="flex flex-1 items-end p-1 pb-0 gap-2">
             {(['one-way', 'round-trip'] as const).map((type) => {
               const tripTypeLabels = getTripTypeLabels();
               return (
@@ -306,7 +306,7 @@ export default function FlightsSearch() {
                   key={type}
                   type="button"
                   className={`py-2 px-4 text-center rounded-full text-sm transition-all duration-300 cursor-pointer ${searchParamsState.tripType === type
-                ? 'bg-blue-700/50 shadow-md text-white font-medium'
+                ? 'bg-gradient-to-r from-blue-500 to-blue-600 shadow-md text-white font-medium'
                 : 'text-gray-500 bg-gray-200/50 hover:text-gray-700'
                     }`}
                   onClick={() => handleParamChange('tripType', type)}
@@ -317,13 +317,12 @@ export default function FlightsSearch() {
             })}
           </div>
 
-
-          <div className="flex items-center gap-2">
+          <div className="flex flex-1 items-end gap-2">
 
             {/* Passengers */}
-            <div className="relative flex-1">
+            <div className="relative w-full">
               <div
-                className="border border-gray-200 rounded-xl py-2 pr-4 pl-10 cursor-pointer hover:border-blue-400 transition-colors duration-300 bg-white shadow-sm"
+                className="border border-gray-200 rounded-xl py-2 pr-4 pl-10 cursor-pointer hover:border-blue-400 transition-colors duration-300 bg-white"
                 onClick={() => handleParamChange('showPassengerSelect', true)}
               >
                 <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
@@ -363,7 +362,7 @@ export default function FlightsSearch() {
 
         <div className="flex gap-5 justify-between items-center">
           {/* Location Inputs */}
-          <div className="flex-[2] flex items-center relative">
+          <div className="flex-[2] flex items-center relative gap-2">
             <div className="flex-1 relative">
               <AirportSelect
                 value={''}
@@ -420,7 +419,7 @@ export default function FlightsSearch() {
             <button
               onClick={searchFlights}
               disabled={loading}
-              className="w-full cursor-pointer bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white p-4 rounded-xl flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-75"
+              className="w-full cursor-pointer border border-blue-600 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-4 py-3 rounded-xl flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-75"
             >
               {loading ? (
                 <Loader2 className="animate-spin h-6 w-6" />

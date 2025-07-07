@@ -42,7 +42,7 @@ const Header = ({ initialScrolled = false }: HeaderProps) => {
                 <div className="navbar flex justify-between items-center py-4 transition-all duration-400">
                     <Link href={`/${lang}/`} className="logo flex items-center gap-2 text-2xl font-extrabold text-darker transition-all duration-400">
                         <Plane className="text-[var(--color-primary)] transition-all duration-400" />
-                        <span>{t("Logo")}</span>
+                        <span>Hotleno</span>
                     </Link>
                     
                     <div className="nav-links hidden lg:flex gap-8">
@@ -53,7 +53,7 @@ const Header = ({ initialScrolled = false }: HeaderProps) => {
                         <SwitchLanguages scrolled={scrolled} />
                     
                         <Link className="text-sm border border-white rounded-full py-2 px-3 transition-all hover:scale-105" href="/sign-in">
-                            تسجيل الدخول
+                            {t('Login')}
                         </Link>
 
                         {/* قائمة الهامبرجر للجوال */}

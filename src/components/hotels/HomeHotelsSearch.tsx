@@ -1,11 +1,16 @@
 // src/components/HomeHotelsSearch.tsx
 'use client';
 
-import { useState, FormEvent } from 'react';
+// Next
 import { useRouter } from 'next/navigation';
+// React
+import { useState, FormEvent } from 'react';
+// Next Intl
 import { useTranslations, useLocale } from 'next-intl';
+// UI
 import UiDatePicker from '../ui/datepicker';
-import LocationAutocomplete from '../ui/LocationAutocomplete';
+import LocationAutocomplete from '../ui/location-autocomplete';
+// Icons
 import {
   User,
   X,
@@ -15,105 +20,6 @@ import {
   XCircle,
   Calendar
 } from 'lucide-react';
-
-const GuestRoomSelector = ({
-  guests,
-  rooms,
-  onChange,
-  onClose
-}: {
-  guests: { adults: number; children: number };
-  rooms: number;
-  onChange: (type: 'adults' | 'children' | 'rooms', delta: number) => void;
-  onClose: () => void;
-}) => {
-  const t = useTranslations("SearchHotelsComponent");
-
-  return (
-    <div className="absolute z-20 bg-white border border-gray-200 rounded-xl shadow-lg p-5 w-full mt-2 animate-fadeIn">
-      <div className="flex justify-between items-center mb-4 pb-2 border-b border-gray-100">
-        <h3 className="font-semibold text-gray-800">{t("GuestsRooms.Title")}</h3>
-        <button onClick={onClose} className="p-1 cursor-pointer rounded-full hover:bg-gray-100 transition-colors">
-          <X size={18} className="text-gray-500" />
-        </button>
-      </div>
-
-      <div className="space-y-6">
-        {/* Adults */}
-        <div className="flex justify-between items-center">
-          <div>
-            <div className="font-medium text-gray-800">{t("GuestsRooms.Adults")}</div>
-            <div className="text-sm text-gray-500">{t("GuestsRooms.AdultsEx")}</div>
-          </div>
-          <div className="flex items-center space-x-3">
-            <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
-              disabled={guests.adults <= 1}
-              onClick={() => onChange('adults', -1)}
-            >
-              <Minus size={16} className="text-blue-500" />
-            </button>
-            <span className="font-medium w-6 text-center">{guests.adults}</span>
-            <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-50 transition-colors"
-              onClick={() => onChange('adults', 1)}
-            >
-              <Plus size={16} className="text-blue-500" />
-            </button>
-          </div>
-        </div>
-
-        {/* Children */}
-        <div className="flex justify-between items-center">
-          <div>
-            <div className="font-medium text-gray-800">{t("GuestsRooms.Children")}</div>
-            <div className="text-sm text-gray-500">{t("GuestsRooms.ChildrenEx")}</div>
-          </div>
-          <div className="flex items-center space-x-3">
-            <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
-              disabled={guests.children <= 0}
-              onClick={() => onChange('children', -1)}
-            >
-              <Minus size={16} className="text-blue-500" />
-            </button>
-            <span className="font-medium w-6 text-center">{guests.children}</span>
-            <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-50 transition-colors"
-              onClick={() => onChange('children', 1)}
-            >
-              <Plus size={16} className="text-blue-500" />
-            </button>
-          </div>
-        </div>
-
-        {/* Rooms */}
-        <div className="flex justify-between items-center">
-          <div>
-            <div className="font-medium text-gray-800">{t("GuestsRooms.Rooms")}</div>
-            <div className="text-sm text-gray-500">{t("GuestsRooms.RoomsEx")}</div>
-          </div>
-          <div className="flex items-center space-x-3">
-            <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
-              disabled={rooms <= 1}
-              onClick={() => onChange('rooms', -1)}
-            >
-              <Minus size={16} className="text-blue-500" />
-            </button>
-            <span className="font-medium w-6 text-center">{rooms}</span>
-            <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-50 transition-colors"
-              onClick={() => onChange('rooms', 1)}
-            >
-              <Plus size={16} className="text-blue-500" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export default function HomeHotelsSearch() {
   const router = useRouter();
@@ -322,3 +228,103 @@ export default function HomeHotelsSearch() {
     </div>
   );
 }
+
+// Components
+const GuestRoomSelector = ({
+  guests,
+  rooms,
+  onChange,
+  onClose
+}: {
+  guests: { adults: number; children: number };
+  rooms: number;
+  onChange: (type: 'adults' | 'children' | 'rooms', delta: number) => void;
+  onClose: () => void;
+}) => {
+  const t = useTranslations("SearchHotelsComponent");
+
+  return (
+    <div className="absolute z-20 bg-white border border-gray-200 rounded-xl shadow-lg p-5 w-full mt-2 animate-fadeIn">
+      <div className="flex justify-between items-center mb-4 pb-2 border-b border-gray-100">
+        <h3 className="font-semibold text-gray-800">{t("GuestsRooms.Title")}</h3>
+        <button onClick={onClose} className="p-1 cursor-pointer rounded-full hover:bg-gray-100 transition-colors">
+          <X size={18} className="text-gray-500" />
+        </button>
+      </div>
+
+      <div className="space-y-6">
+        {/* Adults */}
+        <div className="flex justify-between items-center">
+          <div>
+            <div className="font-medium text-gray-800">{t("GuestsRooms.Adults")}</div>
+            <div className="text-sm text-gray-500">{t("GuestsRooms.AdultsEx")}</div>
+          </div>
+          <div className="flex items-center space-x-3">
+            <button
+              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
+              disabled={guests.adults <= 1}
+              onClick={() => onChange('adults', -1)}
+            >
+              <Minus size={16} className="text-blue-500" />
+            </button>
+            <span className="font-medium w-6 text-center">{guests.adults}</span>
+            <button
+              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-50 transition-colors"
+              onClick={() => onChange('adults', 1)}
+            >
+              <Plus size={16} className="text-blue-500" />
+            </button>
+          </div>
+        </div>
+
+        {/* Children */}
+        <div className="flex justify-between items-center">
+          <div>
+            <div className="font-medium text-gray-800">{t("GuestsRooms.Children")}</div>
+            <div className="text-sm text-gray-500">{t("GuestsRooms.ChildrenEx")}</div>
+          </div>
+          <div className="flex items-center space-x-3">
+            <button
+              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
+              disabled={guests.children <= 0}
+              onClick={() => onChange('children', -1)}
+            >
+              <Minus size={16} className="text-blue-500" />
+            </button>
+            <span className="font-medium w-6 text-center">{guests.children}</span>
+            <button
+              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-50 transition-colors"
+              onClick={() => onChange('children', 1)}
+            >
+              <Plus size={16} className="text-blue-500" />
+            </button>
+          </div>
+        </div>
+
+        {/* Rooms */}
+        <div className="flex justify-between items-center">
+          <div>
+            <div className="font-medium text-gray-800">{t("GuestsRooms.Rooms")}</div>
+            <div className="text-sm text-gray-500">{t("GuestsRooms.RoomsEx")}</div>
+          </div>
+          <div className="flex items-center space-x-3">
+            <button
+              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
+              disabled={rooms <= 1}
+              onClick={() => onChange('rooms', -1)}
+            >
+              <Minus size={16} className="text-blue-500" />
+            </button>
+            <span className="font-medium w-6 text-center">{rooms}</span>
+            <button
+              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-50 transition-colors"
+              onClick={() => onChange('rooms', 1)}
+            >
+              <Plus size={16} className="text-blue-500" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

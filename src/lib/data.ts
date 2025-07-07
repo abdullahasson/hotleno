@@ -1,77 +1,187 @@
-// Images
-import placeholder from "../../public/placeholder.svg"
+// tripsData.ts
+import placeholder from "../../public/placeholder.svg";
+
+// Country keys
+export const COUNTRIES = {
+  FRANCE: "country_france",
+  ITALY: "country_italy",
+  GREECE: "country_greece",
+  SPAIN: "country_spain",
+  MOROCCO: "country_morocco",
+  CZECH: "country_czech",
+  HUNGARY: "country_hungary",
+  CROATIA: "country_croatia",
+  AUSTRIA: "country_austria",
+  JAPAN: "country_japan",
+  EGYPT: "country_egypt",
+  PERU: "country_peru",
+  TURKEY: "country_turkey",
+  CHINA: "country_china",
+  INDIA: "country_india",
+  CAMBODIA: "country_cambodia",
+  THAILAND: "country_thailand",
+  JORDAN: "country_jordan",
+  MALDIVES: "country_maldives",
+  MEXICO: "country_mexico",
+  INDONESIA: "country_indonesia",
+  AUSTRALIA: "country_australia",
+  BRAZIL: "country_brazil",
+  HAWAII: "country_hawaii",
+  USA: "country_usa",
+  SINGAPORE: "country_singapore",
+  DENMARK: "country_denmark",
+  CANADA: "country_canada",
+  NETHERLANDS: "country_netherlands",
+  UAE: "country_uae",
+  UK: "country_uk",
+  COSTA_RICA: "country_costa_rica",
+  NEW_ZEALAND: "country_new_zealand",
+  TANZANIA: "country_tanzania",
+  NORWAY: "country_norway",
+  KENYA: "country_kenya",
+  ICELAND: "country_iceland",
+  VENEZUELA: "country_venezuela",
+  NAMIBIA: "country_namibia",
+  GERMANY: "country_germany",
+  ARGENTINA: "country_argentina",
+  COLOMBIA: "country_colombia",
+  FINLAND: "country_finland",
+  HONG_KONG: "country_hong_kong",
+  SOUTH_KOREA: "country_south_korea",
+  PORTUGAL: "country_portugal"
+};
+
+// City keys
+export const CITIES = {
+  PARIS: "city_paris",
+  VENICE: "city_venice",
+  SANTORINI: "city_santorini",
+  SEVILLE: "city_seville",
+  MARRAKECH: "city_marrakech",
+  PRAGUE: "city_prague",
+  BUDAPEST: "city_budapest",
+  DUBROVNIK: "city_dubrovnik",
+  VIENNA: "city_vienna",
+  KYOTO: "city_kyoto",
+  CAIRO: "city_cairo",
+  CUSCO: "city_cusco",
+  ISTANBUL: "city_istanbul",
+  BEIJING: "city_beijing",
+  AGRA: "city_agra",
+  SIEM_REAP: "city_siem_reap",
+  BANGKOK: "city_bangkok",
+  PETRA: "city_petra",
+  MALE: "city_male",
+  CANCUN: "city_cancun",
+  PHUKET: "city_phuket",
+  BALI: "city_bali",
+  MYKONOS: "city_mykonos",
+  GOLD_COAST: "city_gold_coast",
+  MAJORCA: "city_majorca",
+  FLORIANOPOLIS: "city_florianopolis",
+  MAUI: "city_maui",
+  ORLANDO: "city_orlando",
+  BARCELONA: "city_barcelona",
+  SINGAPORE: "city_singapore",
+  TOKYO: "city_tokyo",
+  COPENHAGEN: "city_copenhagen",
+  VANCOUVER: "city_vancouver",
+  AMSTERDAM: "city_amsterdam",
+  DUBAI: "city_dubai",
+  LONDON: "city_london",
+  MONTEVERDE: "city_monteverde",
+  QUEENSTOWN: "city_queenstown",
+  BANFF: "city_banff",
+  ZANZIBAR: "city_zanzibar",
+  TROMSO: "city_tromso",
+  MASAI_MARA: "city_masai_mara",
+  REYKJAVIK: "city_reykjavik",
+  CANAIMA: "city_canaima",
+  SOSSUVLEI: "city_sossusvlei",
+  BERLIN: "city_berlin",
+  SYDNEY: "city_sydney",
+  RIO: "city_rio",
+  BUENOS_AIRES: "city_buenos_aires",
+  CARTAGENA: "city_cartagena",
+  HELSINKI: "city_helsinki",
+  HONG_KONG: "city_hong_kong",
+  SEOUL: "city_seoul",
+  PORTO: "city_porto"
+};
 
 export interface Trip {
-    id: number;
-    country: string;
-    city: string;
-    price: number;
-    image: string;
-    category: string;
-  }
+  id: number;
+  country: string;
+  city: string;
+  price: number;
+  image: string;
+  category: string;
+}
+
+export const trips: Trip[] = [
+  // Romantic
+  { id: 1, country: COUNTRIES.FRANCE, city: CITIES.PARIS, price: 899, image: placeholder, category: "romantic" },
+  { id: 2, country: COUNTRIES.ITALY, city: CITIES.VENICE, price: 749, image: placeholder, category: "romantic" },
+  { id: 3, country: COUNTRIES.GREECE, city: CITIES.SANTORINI, price: 1099, image: placeholder, category: "romantic" },
+  { id: 19, country: COUNTRIES.SPAIN, city: CITIES.SEVILLE, price: 799, image: placeholder, category: "romantic" },
+  { id: 20, country: COUNTRIES.MOROCCO, city: CITIES.MARRAKECH, price: 699, image: placeholder, category: "romantic" },
+  { id: 21, country: COUNTRIES.CZECH, city: CITIES.PRAGUE, price: 849, image: placeholder, category: "romantic" },
+  { id: 22, country: COUNTRIES.HUNGARY, city: CITIES.BUDAPEST, price: 779, image: placeholder, category: "romantic" },
+  { id: 23, country: COUNTRIES.CROATIA, city: CITIES.DUBROVNIK, price: 929, image: placeholder, category: "romantic" },
+  { id: 24, country: COUNTRIES.AUSTRIA, city: CITIES.VIENNA, price: 1029, image: placeholder, category: "romantic" },
   
-  export const trips: Trip[] = [
-  // Romantic (12 entries)
-  { id: 1, country: "فرنسا", city: "باريس", price: 899, image: placeholder, category: "romantic" },
-  { id: 2, country: "إيطاليا", city: "البندقية", price: 749, image: placeholder, category: "romantic" },
-  { id: 3, country: "اليونان", city: "سانتوريني", price: 1099, image: placeholder, category: "romantic" },
-  { id: 19, country: "إسبانيا", city: "إشبيلية", price: 799, image: placeholder, category: "romantic" },
-  { id: 20, country: "المغرب", city: "مراكش", price: 699, image: placeholder, category: "romantic" },
-  { id: 21, country: "التشيك", city: "براغ", price: 849, image: placeholder, category: "romantic" },
-  { id: 22, country: "المجر", city: "بودابست", price: 779, image: placeholder, category: "romantic" },
-  { id: 23, country: "كرواتيا", city: "دوبروفنيك", price: 929, image: placeholder, category: "romantic" },
-  { id: 24, country: "النمسا", city: "فيينا", price: 1029, image: placeholder, category: "romantic" },
-  // Cultural (12 entries)
-  { id: 4, country: "اليابان", city: "كيوتو", price: 1299, image: placeholder, category: "cultural" },
-  { id: 5, country: "مصر", city: "القاهرة", price: 799, image: placeholder, category: "cultural" },
-  { id: 6, country: "بيرو", city: "كوسكو", price: 899, image: placeholder, category: "cultural" },
-  { id: 28, country: "تركيا", city: "إسطنبول", price: 849, image: placeholder, category: "cultural" },
-  { id: 29, country: "الصين", city: "بكين", price: 1199, image: placeholder, category: "cultural" },
-  { id: 30, country: "الهند", city: "أغرا", price: 729, image: placeholder, category: "cultural" },
-  { id: 31, country: "كمبوديا", city: "سييم ريب", price: 999, image: placeholder, category: "cultural" },
-  { id: 32, country: "تايلاند", city: "بانكوك", price: 879, image: placeholder, category: "cultural" },
-  { id: 33, country: "الأردن", city: "البتراء", price: 949, image: placeholder, category: "cultural" },
-  // Beach (12 entries)
-  { id: 7, country: "المالديف", city: "ماليه", price: 1499, image: placeholder, category: "beach" },
-  { id: 8, country: "المكسيك", city: "كانكون", price: 699, image: placeholder, category: "beach" },
-  { id: 9, country: "تايلاند", city: "فوكيت", price: 899, image: placeholder, category: "beach" },
-  { id: 37, country: "إندونيسيا", city: "بالي", price: 849, image: placeholder, category: "beach" },
-  { id: 38, country: "اليونان", city: "ميكونوس", price: 1129, image: placeholder, category: "beach" },
-  { id: 39, country: "أستراليا", city: "السهل الذهبي", price: 1299, image: placeholder, category: "beach" },
-  { id: 40, country: "إسبانيا", city: "مايوركا", price: 979, image: placeholder, category: "beach" },
-  { id: 41, country: "البرازيل", city: "فلوريانوبوليس", price: 899, image: placeholder, category: "beach" },
-  { id: 42, country: "هاواي", city: "ماوي", price: 1599, image: placeholder, category: "beach" },
+  // Cultural
+  { id: 4, country: COUNTRIES.JAPAN, city: CITIES.KYOTO, price: 1299, image: placeholder, category: "cultural" },
+  { id: 5, country: COUNTRIES.EGYPT, city: CITIES.CAIRO, price: 799, image: placeholder, category: "cultural" },
+  { id: 6, country: COUNTRIES.PERU, city: CITIES.CUSCO, price: 899, image: placeholder, category: "cultural" },
+  { id: 28, country: COUNTRIES.TURKEY, city: CITIES.ISTANBUL, price: 849, image: placeholder, category: "cultural" },
+  { id: 29, country: COUNTRIES.CHINA, city: CITIES.BEIJING, price: 1199, image: placeholder, category: "cultural" },
+  { id: 30, country: COUNTRIES.INDIA, city: CITIES.AGRA, price: 729, image: placeholder, category: "cultural" },
+  { id: 31, country: COUNTRIES.CAMBODIA, city: CITIES.SIEM_REAP, price: 999, image: placeholder, category: "cultural" },
+  { id: 32, country: COUNTRIES.THAILAND, city: CITIES.BANGKOK, price: 879, image: placeholder, category: "cultural" },
+  { id: 33, country: COUNTRIES.JORDAN, city: CITIES.PETRA, price: 949, image: placeholder, category: "cultural" },
+  
+  // Beach
+  { id: 7, country: COUNTRIES.MALDIVES, city: CITIES.MALE, price: 1499, image: placeholder, category: "beach" },
+  { id: 8, country: COUNTRIES.MEXICO, city: CITIES.CANCUN, price: 699, image: placeholder, category: "beach" },
+  { id: 9, country: COUNTRIES.THAILAND, city: CITIES.PHUKET, price: 899, image: placeholder, category: "beach" },
+  { id: 37, country: COUNTRIES.INDONESIA, city: CITIES.BALI, price: 849, image: placeholder, category: "beach" },
+  { id: 38, country: COUNTRIES.GREECE, city: CITIES.MYKONOS, price: 1129, image: placeholder, category: "beach" },
+  { id: 39, country: COUNTRIES.AUSTRALIA, city: CITIES.GOLD_COAST, price: 1299, image: placeholder, category: "beach" },
+  { id: 40, country: COUNTRIES.SPAIN, city: CITIES.MAJORCA, price: 979, image: placeholder, category: "beach" },
+  { id: 41, country: COUNTRIES.BRAZIL, city: CITIES.FLORIANOPOLIS, price: 899, image: placeholder, category: "beach" },
+  { id: 42, country: COUNTRIES.HAWAII, city: CITIES.MAUI, price: 1599, image: placeholder, category: "beach" },
 
-  // Family (12 entries)
-  { id: 10, country: "الولايات المتحدة", city: "أورلاندو", price: 599, image: placeholder, category: "family" },
-  { id: 11, country: "إسبانيا", city: "برشلونة", price: 799, image: placeholder, category: "family" },
-  { id: 12, country: "سنغافورة", city: "سنغافورة", price: 1199, image: placeholder, category: "family" },
-  { id: 46, country: "اليابان", city: "طوكيو", price: 1399, image: placeholder, category: "family" },
-  { id: 47, country: "الدنمارك", city: "كوبنهاغن", price: 1099, image: placeholder, category: "family" },
-  { id: 48, country: "كندا", city: "فانكوفر", price: 899, image: placeholder, category: "family" },
-  { id: 49, country: "هولندا", city: "أمستردام", price: 949, image: placeholder, category: "family" },
-  { id: 50, country: "الإمارات", city: "دبي", price: 1299, image: placeholder, category: "family" },
-  { id: 51, country: "المملكة المتحدة", city: "لندن", price: 1249, image: placeholder, category: "family" },
+  // Family
+  { id: 10, country: COUNTRIES.USA, city: CITIES.ORLANDO, price: 599, image: placeholder, category: "family" },
+  { id: 11, country: COUNTRIES.SPAIN, city: CITIES.BARCELONA, price: 799, image: placeholder, category: "family" },
+  { id: 12, country: COUNTRIES.SINGAPORE, city: CITIES.SINGAPORE, price: 1199, image: placeholder, category: "family" },
+  { id: 46, country: COUNTRIES.JAPAN, city: CITIES.TOKYO, price: 1399, image: placeholder, category: "family" },
+  { id: 47, country: COUNTRIES.DENMARK, city: CITIES.COPENHAGEN, price: 1099, image: placeholder, category: "family" },
+  { id: 48, country: COUNTRIES.CANADA, city: CITIES.VANCOUVER, price: 899, image: placeholder, category: "family" },
+  { id: 49, country: COUNTRIES.NETHERLANDS, city: CITIES.AMSTERDAM, price: 949, image: placeholder, category: "family" },
+  { id: 50, country: COUNTRIES.UAE, city: CITIES.DUBAI, price: 1299, image: placeholder, category: "family" },
+  { id: 51, country: COUNTRIES.UK, city: CITIES.LONDON, price: 1249, image: placeholder, category: "family" },
 
-  // Nature (12 entries)
-  { id: 13, country: "كوستاريكا", city: "مونتيفيردي", price: 899, image: placeholder, category: "nature" },
-  { id: 14, country: "نيوزيلندا", city: "كوينزتاون", price: 1299, image: placeholder, category: "nature" },
-  { id: 15, country: "كندا", city: "بانف", price: 799, image: placeholder, category: "nature" },
-  { id: 55, country: "تنزانيا", city: "زنجبار", price: 1199, image: placeholder, category: "nature" },
-  { id: 56, country: "النرويج", city: "ترومسو", price: 1399, image: placeholder, category: "nature" },
-  { id: 57, country: "كينيا", city: "ماساي مارا", price: 1499, image: placeholder, category: "nature" },
-  { id: 58, country: "آيسلندا", city: "ريكيافيك", price: 1299, image: placeholder, category: "nature" },
-  { id: 59, country: "فنزويلا", city: "كانيما", price: 1699, image: placeholder, category: "nature" },
-  { id: 60, country: "ناميبيا", city: "صوسوسفلي", price: 1399, image: placeholder, category: "nature" },
+  // Nature
+  { id: 13, country: COUNTRIES.COSTA_RICA, city: CITIES.MONTEVERDE, price: 899, image: placeholder, category: "nature" },
+  { id: 14, country: COUNTRIES.NEW_ZEALAND, city: CITIES.QUEENSTOWN, price: 1299, image: placeholder, category: "nature" },
+  { id: 15, country: COUNTRIES.CANADA, city: CITIES.BANFF, price: 799, image: placeholder, category: "nature" },
+  { id: 55, country: COUNTRIES.TANZANIA, city: CITIES.ZANZIBAR, price: 1199, image: placeholder, category: "nature" },
+  { id: 56, country: COUNTRIES.NORWAY, city: CITIES.TROMSO, price: 1399, image: placeholder, category: "nature" },
+  { id: 57, country: COUNTRIES.KENYA, city: CITIES.MASAI_MARA, price: 1499, image: placeholder, category: "nature" },
+  { id: 58, country: COUNTRIES.ICELAND, city: CITIES.REYKJAVIK, price: 1299, image: placeholder, category: "nature" },
+  { id: 59, country: COUNTRIES.VENEZUELA, city: CITIES.CANAIMA, price: 1699, image: placeholder, category: "nature" },
+  { id: 60, country: COUNTRIES.NAMIBIA, city: CITIES.SOSSUVLEI, price: 1399, image: placeholder, category: "nature" },
 
-  // For Trips (12 entries)
-  { id: 16, country: "ألمانيا", city: "برلين", price: 849, image: placeholder, category: "forTrips" },
-  { id: 17, country: "أستراليا", city: "سيدني", price: 1399, image: placeholder, category: "forTrips" },
-  { id: 18, country: "البرازيل", city: "ريو دي جانيرو", price: 999, image: placeholder, category: "forTrips" },
-  { id: 64, country: "الأرجنتين", city: "بوينس آيرس", price: 899, image: placeholder, category: "forTrips" },
-  { id: 65, country: "كولومبيا", city: "قرطاجنة", price: 799, image: placeholder, category: "forTrips" },
-  { id: 66, country: "فنلندا", city: "هلسنكي", price: 1099, image: placeholder, category: "forTrips" },
-  { id: 67, country: "هونغ كونغ", city: "هونغ كونغ", price: 1249, image: placeholder, category: "forTrips" },
-  { id: 68, country: "كوريا الجنوبية", city: "سيول", price: 1349, image: placeholder, category: "forTrips" },
-  { id: 69, country: "البرتغال", city: "بورتو", price: 949, image: placeholder, category: "forTrips" }
-  ];
+  // For Trips
+  { id: 16, country: COUNTRIES.GERMANY, city: CITIES.BERLIN, price: 849, image: placeholder, category: "forTrips" },
+  { id: 17, country: COUNTRIES.AUSTRALIA, city: CITIES.SYDNEY, price: 1399, image: placeholder, category: "forTrips" },
+  { id: 18, country: COUNTRIES.BRAZIL, city: CITIES.RIO, price: 999, image: placeholder, category: "forTrips" },
+  { id: 64, country: COUNTRIES.ARGENTINA, city: CITIES.BUENOS_AIRES, price: 899, image: placeholder, category: "forTrips" },
+  { id: 65, country: COUNTRIES.COLOMBIA, city: CITIES.CARTAGENA, price: 799, image: placeholder, category: "forTrips" },
+  { id: 66, country: COUNTRIES.FINLAND, city: CITIES.HELSINKI, price: 1099, image: placeholder, category: "forTrips" },
+  { id: 67, country: COUNTRIES.HONG_KONG, city: CITIES.HONG_KONG, price: 1249, image: placeholder, category: "forTrips" },
+  { id: 68, country: COUNTRIES.SOUTH_KOREA, city: CITIES.SEOUL, price: 1349, image: placeholder, category: "forTrips" },
+  { id: 69, country: COUNTRIES.PORTUGAL, city: CITIES.PORTO, price: 949, image: placeholder, category: "forTrips" }
+];

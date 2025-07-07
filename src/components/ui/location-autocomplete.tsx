@@ -100,7 +100,7 @@ export default function LocationAutocomplete({
 
   return (
     <div className="relative w-full" ref={containerRef}>
-      <div className="flex items-center">
+      <div className="flex items-center py-3 px-2 rounded-xl border border-gray-200">
         <MapPin size={20} className="text-blue-500 mr-2" />
         <input
           type="text"
@@ -108,7 +108,7 @@ export default function LocationAutocomplete({
           onChange={handleInputChange}
           onFocus={handleInputFocus}
           placeholder={placeholder}
-          className="w-full bg-transparent border-none focus:outline-none text-gray-800 placeholder-gray-500"
+          className="w-full bg-transparent focus:outline-none text-gray-800 placeholder-gray-500"
         />
         {loading && <Loader2 className="animate-spin h-5 w-5 text-blue-500 ml-2" />}
       </div>

@@ -15,6 +15,40 @@
     "JoinPartner": "Flights",
     "BrowseOffers": "Hotel Offers"
   },
+  "PromoCarousel": {
+    "title": "With us, travel has meaning.",
+    "Cards": {
+      "one": {
+        "title": "Car Rental",
+        "des": "Get the best car rental offers at your destination"
+      },
+      "two": {
+        "title": "eSIM Packages",
+        "des": "Internet connection immediately upon arrival without a physical SIM"
+      },
+      "three": {
+        "title": "Visa Requirements",
+        "des": "Learn about travel requirements for your destination before booking"
+      },
+      "four": {
+        "title": "Airport Services",
+        "des": "Premium airport transfers at competitive prices"
+      },
+      "btn": "Discover More"
+    }
+  },
+  "FeaturesSection": {
+    "one": "Best travel deals in the United States",
+    "two": "Thousands of flight and hotel offers",
+    "three": "Multiple payment methods",
+    "four": "24/7 customer service"
+  },
+  "SearchHome": {
+    "Tabs": {
+      "flights": "Flights",
+      "hotels": "Hotels"
+    }
+  },
   "Services": {
     "title": "Elevate Your Journey",
     "subtitle": "Redefined Luxury Travel Experiences",
@@ -145,8 +179,113 @@
       "forTrips": "For Trips"
     },
     "card": {
-      "roundTrip": "Round Trip"
-    }
+      "roundTrip": "Round Trip",
+      "details" : "Details"
+    },
+    "countries": {
+      "country_france": "France",
+      "country_italy": "Italy",
+      "country_greece": "Greece",
+      "country_spain": "Spain",
+      "country_morocco": "Morocco",
+      "country_czech": "Czech Republic",
+      "country_hungary": "Hungary",
+      "country_croatia": "Croatia",
+      "country_austria": "Austria",
+      "country_japan": "Japan",
+      "country_egypt": "Egypt",
+      "country_peru": "Peru",
+      "country_turkey": "Turkey",
+      "country_china": "China",
+      "country_india": "India",
+      "country_cambodia": "Cambodia",
+      "country_thailand": "Thailand",
+      "country_jordan": "Jordan",
+      "country_maldives": "Maldives",
+      "country_mexico": "Mexico",
+      "country_indonesia": "Indonesia",
+      "country_australia": "Australia",
+      "country_brazil": "Brazil",
+      "country_hawaii": "Hawaii",
+      "country_usa": "United States",
+      "country_singapore": "Singapore",
+      "country_denmark": "Denmark",
+      "country_canada": "Canada",
+      "country_netherlands": "Netherlands",
+      "country_uae": "UAE",
+      "country_uk": "United Kingdom",
+      "country_costa_rica": "Costa Rica",
+      "country_new_zealand": "New Zealand",
+      "country_tanzania": "Tanzania",
+      "country_norway": "Norway",
+      "country_kenya": "Kenya",
+      "country_iceland": "Iceland",
+      "country_venezuela": "Venezuela",
+      "country_namibia": "Namibia",
+      "country_germany": "Germany",
+      "country_argentina": "Argentina",
+      "country_colombia": "Colombia",
+      "country_finland": "Finland",
+      "country_hong_kong": "Hong Kong",
+      "country_south_korea": "South Korea",
+      "country_portugal": "Portugal"
+    },
+    "cities": {
+      "city_paris": "Paris",
+      "city_venice": "Venice",
+      "city_santorini": "Santorini",
+      "city_seville": "Seville",
+      "city_marrakech": "Marrakech",
+      "city_prague": "Prague",
+      "city_budapest": "Budapest",
+      "city_dubrovnik": "Dubrovnik",
+      "city_vienna": "Vienna",
+      "city_kyoto": "Kyoto",
+      "city_cairo": "Cairo",
+      "city_cusco": "Cusco",
+      "city_istanbul": "Istanbul",
+      "city_beijing": "Beijing",
+      "city_agra": "Agra",
+      "city_siem_reap": "Siem Reap",
+      "city_bangkok": "Bangkok",
+      "city_petra": "Petra",
+      "city_male": "Male",
+      "city_cancun": "Cancun",
+      "city_phuket": "Phuket",
+      "city_bali": "Bali",
+      "city_mykonos": "Mykonos",
+      "city_gold_coast": "Gold Coast",
+      "city_majorca": "Majorca",
+      "city_florianopolis": "Florianopolis",
+      "city_maui": "Maui",
+      "city_orlando": "Orlando",
+      "city_barcelona": "Barcelona",
+      "city_singapore": "Singapore",
+      "city_tokyo": "Tokyo",
+      "city_copenhagen": "Copenhagen",
+      "city_vancouver": "Vancouver",
+      "city_amsterdam": "Amsterdam",
+      "city_dubai": "Dubai",
+      "city_london": "London",
+      "city_monteverde": "Monteverde",
+      "city_queenstown": "Queenstown",
+      "city_banff": "Banff",
+      "city_zanzibar": "Zanzibar",
+      "city_tromso": "Tromso",
+      "city_masai_mara": "Masai Mara",
+      "city_reykjavik": "Reykjavik",
+      "city_canaima": "Canaima",
+      "city_sossusvlei": "Sossusvlei",
+      "city_berlin": "Berlin",
+      "city_sydney": "Sydney",
+      "city_rio": "Rio de Janeiro",
+      "city_buenos_aires": "Buenos Aires",
+      "city_cartagena": "Cartagena",
+      "city_helsinki": "Helsinki",
+      "city_hong_kong": "Hong Kong",
+      "city_seoul": "Seoul",
+      "city_porto": "Porto"
+    }  
   },
   "MobileApp": {
     "Badge": "New Experience",
@@ -197,7 +336,8 @@
     },
     "TripType": {
       "One": "One Way",
-      "Return": "Round Trip"
+      "Return": "Return",
+      "RoundTrip": "Round Trip"
     },
     "DepartureDate": {
       "Placeholder": "Departure Date"
@@ -249,36 +389,83 @@
       "returnDate": "Enter return date"
     }
   },
+  "AirportSelect": {
+    "Search": "Search Airports",
+    "NoResults": "No results found",
+    "Loading": "Loading...",
+    "Not": "No results found"
+  },
   "SearchHotelsComponent": {
-    "SearchTitle": "Find Your Perfect Stay",
-    "Destination": {
-      "Placeholder": "Where are you going?"
+    "SearchTitle": "Search for your perfect stay",
+    "Location": {
+      "Label": "Location",
+      "Placeholder": "Where are you traveling to?"
     },
     "Date": {
-      "CheckIn": "Check-in",
-      "CheckOut": "Check-out",
+      "CheckIn": "Check-in date",
+      "CheckOut": "Check-out date",
       "CheckInPlaceholder": "Select date",
       "CheckOutPlaceholder": "Select date"
     },
     "GuestsRooms": {
       "Title": "Guests & Rooms",
       "Adults": "Adults",
-      "AdultsEx": "Ages 18+",
       "Children": "Children",
-      "ChildrenEx": "Ages 0-17",
       "Rooms": "Rooms",
-      "RoomsEx": "Number of rooms",
-      "Guest": "guest",
-      "Guests": "guests",
-      "Room": "room"
+      "AdultsEx": "Age 13+",
+      "ChildrenEx": "Ages 2-12",
+      "RoomsEx": "Max 8 rooms",
+      "Guest": "Guest",
+      "Guests": "Guests",
+      "Room": "Room"
     },
-    "CancellationPolicy": "Free Cancellation",
-    "SearchButton": "Search Hotels",
-    "Error": {
-      "destination": "Please select a destination",
+    "Guests": {
+      "Title": "Guests & Rooms",
+      "Adults": "Adults",
+      "Children": "Children",
+      "Rooms": "Rooms",
+      "RoomsHint": "Maximum 8 rooms",
+      "Label": "Guest",
+      "One": "Guest",
+      "More": "Guests"
+    },
+    "SortBy": {
+      "Title": "Sort by",
+      "Price": "Price",
+      "Rating": "Rating",
+      "Popularity": "Popularity"
+    },
+    "CancellationPolicy": "Free cancellation",
+    "SearchButton": "Search",
+    "Errors": {
+      "destination": "Please enter destination",
       "checkIn": "Please select check-in date",
-      "checkOut": "Please select check-out date"
+      "checkOut": "Please select check-out date",
+      "LocationRequired": "Please enter location",
+      "DatesRequired": "Please select check-in and check-out dates",
+      "General": "Failed to fetch hotels. Please try again."
     }
+  },
+  "HotelList": {
+    "Stars": "Stars",
+    "Includes": "Includes taxes and fees",
+    "ViewDeal": "View Deal",
+    "Guests": "Guests",
+    "Room": "Room",
+    "Rooms": "Rooms",
+    "Rating": {
+      "Excellent": "Excellent",
+      "VeryGood": "Very Good",
+      "Good": "Good",
+      "Fair": "Fair",
+      "Poor": "Poor"
+    },
+    "PerNight": "Night",
+    "PerNights": "Nights"
+  },
+  "HotelsError": {
+    "Title": "No hotels found",
+    "Message": "We couldn't find any hotels matching your criteria. Try adjusting the filters."
   },
   "AppDownloadBanner": {
     "title": "Unlock exclusive features only available on Wego app. Download now!",
@@ -296,28 +483,8 @@
     "direct": "Direct",
     "nonStop": "Nonstop",
     "stops": "{count, plural, zero {Direct} one {1 stop} two {2 stops} few {# stops} many {# stops} other {# stops}}",
-    "select": "Select"
-  },
-  "HotelList": {
-    "Stars": "stars",
-    "Includes": "Includes taxes & fees",
-    "ViewDeal": "View Deal",
-    "Guests": "guests",
-    "Room": "room",
-    "Rooms": "rooms",
-    "Rating": {
-      "Excellent": "Excellent",
-      "VeryGood": "Very Good",
-      "Good": "Good",
-      "Fair": "Fair",
-      "Poor": "Poor"
-    },
-    "PerNight": "night",
-    "PerNights": "nights"
-  },
-  "HotelsError": {
-    "Title": "No Hotels Found",
-    "Message": "We couldn't find any hotels matching your criteria. Try adjusting your search filters."
+    "select": "Select",
+    "results": "Found {count} flights • {origin} to {destination}"
   },
   "Common": {
     "From": "From",

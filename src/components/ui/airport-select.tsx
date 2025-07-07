@@ -134,10 +134,9 @@ const AirportSelect: React.FC<AirportSelectProps> = ({
           placeholder={placeholder}
           className={`
             w-full rounded-xl 
-            border border-gray-300 
-            px-4 py-4 pl-10 
+            border border-gray-200 
+            px-4 py-3 pl-10 
             text-lg 
-            shadow-sm 
             transition-all duration-300 
             hover:shadow-md 
             focus:border-transparent focus:ring-2 focus:ring-blue-500

@@ -137,7 +137,7 @@ export default function HomeFlightsSearch() {
               key={type}
               type="button"
               className={`py-2 px-4 text-center rounded-full text-sm transition-all duration-300 cursor-pointer ${formState.tripType === type
-                ? 'bg-blue-700/50 shadow-md text-white font-medium'
+                ? 'bg-gradient-to-r from-blue-500 to-blue-600 shadow-md text-white font-medium'
                 : 'text-gray-500 bg-gray-200/50 hover:text-gray-700'
                 }`}
               onClick={() => handleInputChange('tripType', type)}
@@ -256,7 +256,7 @@ export default function HomeFlightsSearch() {
             {/* Passengers */}
             <div className="relative">
               <div
-                className="border border-gray-200 rounded-xl px-4 py-2 pl-12 cursor-pointer hover:border-blue-400 transition-colors duration-300 bg-white shadow-sm"
+                className="border border-gray-200 rounded-xl px-4 py-2 pl-12 cursor-pointer transition-colors duration-300 bg-white hover:shadow-md"
                 onClick={() => setUiState(prev => ({ ...prev, showPassengerSelect: !prev.showPassengerSelect }))}
               >
                 <div className="absolute left-4 top-1/2 transform -translate-y-1/2">

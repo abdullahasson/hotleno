@@ -15,113 +15,39 @@
     "JoinPartner": "رحلات طيران",
     "BrowseOffers": "عروض الفنادق"
   },
-  "Services":  {
-    "title": "ارفع مستوى رحلتك",
-    "subtitle": "تجارب سفر فاخرة مُعاد تعريفها",
-    "flights": "رحلات الطيران",
-    "flightsDescription": "اكتشف العالم مع خيارات الطيران الفاخرة التي تتميز بوسائل الراحة الحصرية وخدمات الأولوية.",
-    "hotels": "الفنادق",
-    "hotelsDescription": "استرخِ في أماكن الإقامة الفاخرة المختارة بعناية للمسافر المتميز.",
-    "feature1": "تسعير فوري مع توفير ديناميكي",
-    "feature2": "صعود مميز وصالات فاخرة",
-    "feature3": "سياسات إلغاء مرنة",
-    "feature4": "أسعار حصرية للأعضاء وترقيات",
-    "feature5": "خدمة كونسيرج على مدار الساعة",
-    "feature6": "توصيات مخصصة بناءً على التفضيلات",
-    "searchPlaceholder": "من أين ستسافر؟",
-    "destinationPlaceholder": "الوجهة",
-    "datesPlaceholder": "التواريخ",
-    "travelersPlaceholder": "المسافرون",
-    "filters": "مرشحات متقدمة",
-    "searchButton": "ابحث عن رحلات",
-    "learnMore": "اكتشف التجارب",
-    "statsTitle": "سافر بثقة",
-    "bookings": "حجوزات سنوية",
-    "satisfaction": "رضا العملاء",
-    "support": "دعم عالمي",
-    "destinations": "دول مغطاة",
-    "travelers": "مسافرون حجزوا هذا الشهر",
-    "partners": "شركاء عالميون"
-  },
-  "WhyUs": {
-    "title": "لماذا نكون اختيارك؟",
-    "subtitle": "نُبسّط تخطيط سفرك بتكاليف مناسبة عبر أدواتنا المتطوّرة وعروضنا الحصرية",
-    "card1": {
-      "title": "ضمان أفضل الأسعار",
-      "text": "نضمن لك أفضل الأسعار للرحلات الجوية والإقامة الفندقية. وجدت سعراً أقل؟ سنُطابقه لك."
-    },
-    "card2": {
-      "title": "حجوزات آمنة",
-      "text": "بياناتك الشخصية ومدفوعاتك محمية بأعلى معايير الأمان المصرفي."
-    },
-    "card3": {
-      "title": "دعم فوري على مدار الساعة",
-      "text": "خبراء السفر لدينا متاحون 24/7 لمساعدتك في كافة استفساراتك وحجوزاتك."
+  "PromoCarousel": {
+    "title": "معنا، للسّفر مَعْنى.",
+    "Cards" : {
+      "one" : {
+        "title": "تأجير سيارات",
+        "des": "احصل على أفضل العروض لتأجير السيارات في وجهتك"
+      },
+      "two" : {
+        "title": "باقات eSIM",
+        "des": "اتصال بالإنترنت فور وصولك بدون بطاقة SIM"
+      },
+      "three" : {
+        "title" : "متطلبات التأشيرة",
+        "des": "اعرف متطلبات السفر لوجهتك قبل الحجز"
+      },
+      "four" : {
+        "title" : "خدمات المطار",
+        "des" :  "مواصلات من وإلى المطار بأسعار مميزة" 
+      },
+
+      "btn": "اكتشف المزيد"
     }
   },
-  "Deals": {
-    "title": "عروض السفر المميّزة",
-    "subtitle": "اكتشف خصومات استثنائية على رحلات الطيران والإقامات الفندقية لأشهر الوجهات",
-    "dir": "rtl",
-    "tabs": {
-      "flights": "عروض الطيران",
-      "hotels": "عروض الإقامة"
-    },
-    "dealsList": [
-      {
-        "id": 1,
-        "type": "طيران",
-        "title": "نيويورك إلى باريس",
-        "price": "$459",
-        "priceSuffix": "ذهاب وعودة",
-        "description": "رحلة مباشرة مع وسائل رفاهية فاخرة. مقاعد محدودة متاحة.",
-        "meta": [
-          {"icon": "calendar", "text": "مايو - أكتوبر 2024"},
-          {"icon": "clock", "text": "7 ساعات 30 دقيقة"}
-        ]
-      },
-      {
-        "id": 2,
-        "type": "فندق",
-        "title": "منتجع فاخر في بالي",
-        "price": "$129",
-        "priceSuffix": "للليلة",
-        "description": "منتجع 5 نجوم مع شاطئ خاص ومنتجع صحي. يتضمن الإفطار.",
-        "meta": [
-          {"icon": "star", "text": "4.8 (120 تقييم)"},
-          {"icon": "umbrella", "text": "مسبح"}
-        ]
-      },
-      {
-        "id": 3,
-        "type": "باقة",
-        "title": "عطلة في روما",
-        "price": "$799",
-        "priceSuffix": "للشخص",
-        "description": "رحلة طيران + 4 ليالي في فندق مركزي مع جولات سياحية مرافقة.",
-        "meta": [
-          {"icon": "calendar", "text": "سبتمبر - ديسمبر 2024"},
-          {"icon": "utensils", "text": "إفطار"}
-        ]
-      }
-    ],
-    "viewDeal": "عرض العرض",
-    "viewAll": "عرض جميع عروض السفر"
+  "FeaturesSection": {
+    "one" : "أفضل عروض السفر في الولايات المتحدة الأمريكية",
+    "two" : "آلاف عروض الرحلات والفنادق",
+    "three" : "طرق دفع متعددة",
+    "four" : "خدمة عملاء متوفرة 24/7"
   },
-  "Insights": {
-    "title": "نصائح السفر",
-    "subtitle": "رؤى مدعومة ببيانات دقيقة لمساعدتك على التخطيط الأمثل وتوفير المزيد",
-    "card1": {
-      "title": "رضا المسافرين"
-    },
-    "card2": {
-      "title": "فنادق حول العالم"
-    },
-    "card3": {
-      "title": "مدخرات المسافرين"
-    },
-    "card4": {
-      "title": "مسافرون استفادوا من العروض"
+  "SearchHome": {
+    "Tabs" : {
+      "flights": "رحلات الطيران",
+      "hotels": "الفنادق"
     }
   },
   "ArticlesCarousel": {
@@ -145,7 +71,112 @@
       "forTrips": "للرحلات"
     },
     "card": {
-      "roundTrip": "رحلة ذهاب وعودة"
+      "roundTrip": "رحلة ذهاب وعودة",
+      "details" : "عرض التفاصيل"
+    },
+    "countries": {
+      "country_france": "فرنسا",
+      "country_italy": "إيطاليا",
+      "country_greece": "اليونان",
+      "country_spain": "إسبانيا",
+      "country_morocco": "المغرب",
+      "country_czech": "التشيك",
+      "country_hungary": "المجر",
+      "country_croatia": "كرواتيا",
+      "country_austria": "النمسا",
+      "country_japan": "اليابان",
+      "country_egypt": "مصر",
+      "country_peru": "بيرو",
+      "country_turkey": "تركيا",
+      "country_china": "الصين",
+      "country_india": "الهند",
+      "country_cambodia": "كمبوديا",
+      "country_thailand": "تايلاند",
+      "country_jordan": "الأردن",
+      "country_maldives": "المالديف",
+      "country_mexico": "المكسيك",
+      "country_indonesia": "إندونيسيا",
+      "country_australia": "أستراليا",
+      "country_brazil": "البرازيل",
+      "country_hawaii": "هاواي",
+      "country_usa": "الولايات المتحدة",
+      "country_singapore": "سنغافورة",
+      "country_denmark": "الدنمارك",
+      "country_canada": "كندا",
+      "country_netherlands": "هولندا",
+      "country_uae": "الإمارات",
+      "country_uk": "المملكة المتحدة",
+      "country_costa_rica": "كوستاريكا",
+      "country_new_zealand": "نيوزيلندا",
+      "country_tanzania": "تنزانيا",
+      "country_norway": "النرويج",
+      "country_kenya": "كينيا",
+      "country_iceland": "آيسلندا",
+      "country_venezuela": "فنزويلا",
+      "country_namibia": "ناميبيا",
+      "country_germany": "ألمانيا",
+      "country_argentina": "الأرجنتين",
+      "country_colombia": "كولومبيا",
+      "country_finland": "فنلندا",
+      "country_hong_kong": "هونغ كونغ",
+      "country_south_korea": "كوريا الجنوبية",
+      "country_portugal": "البرتغال"
+    },
+    "cities": {
+      "city_paris": "باريس",
+      "city_venice": "البندقية",
+      "city_santorini": "سانتوريني",
+      "city_seville": "إشبيلية",
+      "city_marrakech": "مراكش",
+      "city_prague": "براغ",
+      "city_budapest": "بودابست",
+      "city_dubrovnik": "دوبروفنيك",
+      "city_vienna": "فيينا",
+      "city_kyoto": "كيوتو",
+      "city_cairo": "القاهرة",
+      "city_cusco": "كوسكو",
+      "city_istanbul": "إسطنبول",
+      "city_beijing": "بكين",
+      "city_agra": "أغرا",
+      "city_siem_reap": "سييم ريب",
+      "city_bangkok": "بانكوك",
+      "city_petra": "البتراء",
+      "city_male": "ماليه",
+      "city_cancun": "كانكون",
+      "city_phuket": "فوكيت",
+      "city_bali": "بالي",
+      "city_mykonos": "ميكونوس",
+      "city_gold_coast": "السهل الذهبي",
+      "city_majorca": "مايوركا",
+      "city_florianopolis": "فلوريانوبوليس",
+      "city_maui": "ماوي",
+      "city_orlando": "أورلاندو",
+      "city_barcelona": "برشلونة",
+      "city_singapore": "سنغافورة",
+      "city_tokyo": "طوكيو",
+      "city_copenhagen": "كوبنهاغن",
+      "city_vancouver": "فانكوفر",
+      "city_amsterdam": "أمستردام",
+      "city_dubai": "دبي",
+      "city_london": "لندن",
+      "city_monteverde": "مونتيفيردي",
+      "city_queenstown": "كوينزتاون",
+      "city_banff": "بانف",
+      "city_zanzibar": "زنجبار",
+      "city_tromso": "ترومسو",
+      "city_masai_mara": "ماساي مارا",
+      "city_reykjavik": "ريكيافيك",
+      "city_canaima": "كانيما",
+      "city_sossusvlei": "صوسوسفلي",
+      "city_berlin": "برلين",
+      "city_sydney": "سيدني",
+      "city_rio": "ريو دي جانيرو",
+      "city_buenos_aires": "بوينس آيرس",
+      "city_cartagena": "قرطاجنة",
+      "city_helsinki": "هلسنكي",
+      "city_hong_kong": "هونغ كونغ",
+      "city_seoul": "سيول",
+      "city_porto": "بورتو"
     }
   },
   "MobileApp": {
@@ -344,7 +375,8 @@
     "direct": "مباشر",
     "nonStop": "بدون توقف",
     "stops": "{count, plural, zero {مباشر} one {توقف واحد} two {توقفان} few {# توقفات} many {# توقفاً} other {# توقف}}",
-    "select": "اختيار"
+    "select": "اختيار",
+    "results": "تم العثور على {count} رحلة • {origin} إلى {destination}"
   },
   "Common": {
     "From": "من",

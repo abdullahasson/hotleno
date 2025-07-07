@@ -7,7 +7,7 @@ import HotelList from "./HotelList";
 import HotelsError from './HotelsError';
 import Select from '../ui/select';
 import UiDatePicker from '../ui/datepicker';
-import LocationAutocomplete from '../ui/LocationAutocomplete';
+import LocationAutocomplete from '../ui/location-autocomplete';
 import {
   User,
   X,

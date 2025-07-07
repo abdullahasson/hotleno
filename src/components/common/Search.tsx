@@ -2,11 +2,14 @@
 
 // React
 import { useState } from "react"
+// Next Intl
+import { useTranslations } from "next-intl";
 // Components
 import HomeFlightsSearch from "../flights/HomeFlightsSearch"
 import HomeHotelssSearch from "../hotels/HomeHotelsSearch";
 
 const Search = () => {
+    const t = useTranslations("SearchHome");
 
     const [tab , setTab] = useState("flights")
 
@@ -19,7 +22,7 @@ const Search = () => {
                         ${tab === 'flights' ? "border-blue-500" : "border-b-transparent"}
                     `}
                 >
-                    رحلات الطيران
+                    {t("Tabs.flights")}
                 </button>
 
                 <button 
@@ -28,7 +31,7 @@ const Search = () => {
                         ${tab === 'hotels' ? "border-blue-500" : "border-b-transparent"}
                     `}
                 >
-                    الفنادق
+                    {t("Tabs.hotels")}
                 </button>
             </div>
             {tab === 'flights' ? <HomeFlightsSearch /> : <HomeHotelssSearch />}

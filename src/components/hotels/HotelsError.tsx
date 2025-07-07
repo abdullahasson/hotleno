@@ -1,20 +1,20 @@
-// src/components/hotels/HotelsError.tsx
-import { Hotel, XCircle } from 'lucide-react';
+// Next Intl
 import { useTranslations } from 'next-intl';
+// Icons
+import { Hotel } from 'lucide-react';
 
 export default function HotelsError() {
   const t = useTranslations("HotelsError");
-  
+
   return (
-    <div className="flex flex-col items-center justify-center py-12 text-center">
-      <XCircle className="h-16 w-16 text-red-500 mb-4" />
-      <h3 className="text-xl font-semibold text-gray-800 mb-2">{t('Title')}</h3>
-      <p className="text-gray-600 max-w-md mb-6">
-        {t('Message')}
+    <div className="bg-white rounded-2xl shadow-xl p-12 text-center">
+      <Hotel size={48} className="mx-auto text-gray-400 mb-4" />
+      <h3 className="text-2xl font-bold text-gray-800 mb-2">
+        {t("Title")}
+      </h3>
+      <p className="text-gray-600 max-w-md mx-auto">
+        {t("Message")}
       </p>
-      <div className="bg-gray-100 p-6 rounded-xl inline-block">
-        <Hotel className="h-12 w-12 text-blue-500 mx-auto" />
-      </div>
     </div>
   );
 }

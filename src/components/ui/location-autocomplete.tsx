@@ -100,8 +100,8 @@ export default function LocationAutocomplete({
 
   return (
     <div className="relative w-full" ref={containerRef}>
-      <div className="flex items-center py-3 px-2 rounded-xl border border-gray-200">
-        <MapPin size={20} className="text-blue-500 mr-2" />
+      <div className="flex items-center gap-2 py-3 px-2 rounded-xl border border-gray-200">
+        <MapPin size={20} className="text-blue-500" />
         <input
           type="text"
           value={inputValue}
@@ -110,20 +110,20 @@ export default function LocationAutocomplete({
           placeholder={placeholder}
           className="w-full bg-transparent focus:outline-none text-gray-800 placeholder-gray-500"
         />
-        {loading && <Loader2 className="animate-spin h-5 w-5 text-blue-500 ml-2" />}
+        {loading && <Loader2 className="animate-spin h-5 w-5 text-blue-500" />}
       </div>
 
       {showSuggestions && suggestions.length > 0 && (
-        <div className="absolute z-10 mt-2 w-full bg-white border border-gray-200 rounded-xl shadow-lg max-h-60 overflow-y-auto">
+        <div className="absolute z-10 mt-2 w-full bg-white divide-y divide-gray-200  border border-gray-200 rounded-xl shadow-lg max-h-60 overflow-y-auto">
           {suggestions.map((suggestion) => (
             <div
               key={suggestion.id}
-              className="px-4 py-3 hover:bg-blue-50 cursor-pointer transition-colors flex items-center"
+              className="px-4 py-3 hover:bg-blue-50 cursor-pointer transition-colors flex gap-3 items-center "
               onClick={() => handleSelect(suggestion)}
               onMouseDown={(e) => e.preventDefault()}
             >
               <MapPin size={16} className="text-blue-500 mr-2 flex-shrink-0" />
-              <div className="truncate">
+              <div className="truncate text-start">
                 <div className="font-medium text-gray-800">
                   {suggestion.city_name || suggestion.name}
                 </div>

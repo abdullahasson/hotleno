@@ -15,8 +15,7 @@ import {
   Loader2,
   Minus,
   Plus,
-  XCircle,
-  MapPin
+  XCircle
 } from 'lucide-react';
 
 interface HotelData {
@@ -112,7 +111,7 @@ export default function HotelsSearch() {
 
       const apiUrl = `/api/travelpayouts/hotels?${params.toString()}`;
       const res = await fetch(apiUrl);
-      
+
       // Handle non-JSON responses
       const contentType = res.headers.get('content-type');
       if (!contentType || !contentType.includes('application/json')) {
@@ -131,14 +130,14 @@ export default function HotelsSearch() {
     } catch (err: unknown) {  // Fixed: Add type annotation to catch clause
       const errorMessage = err instanceof Error ? err.message : 'Failed to fetch hotels';
       console.error('Hotel search failed:', errorMessage);
-      
+
       // Handle specific HTML response error
       if (errorMessage.includes('Unexpected token') && errorMessage.includes('<!DOCTYPE')) {
         setError('The server returned an HTML page instead of data. Check API configuration.');
       } else {
         setError(t('Errors.General'));
       }
-      
+
       setHotels([]);
     } finally {
       setLoading(false);
@@ -162,16 +161,16 @@ export default function HotelsSearch() {
     const handleChange = (type: keyof GuestConfig, delta: number) => {
       const newValue = Math.max(0, searchParamsState.guests[type] + delta);
       const newGuests = { ...searchParamsState.guests, [type]: newValue };
-      
+
       if (type === 'rooms' && newValue > newGuests.adults) {
         newGuests.adults = newValue;
       }
-      
+
       handleParamChange('guests', newGuests);
     };
 
     return (
-      <div className="absolute z-20 bg-white border border-gray-200 rounded-xl shadow-lg p-5 w-[200%] mt-2 animate-fadeIn">
+      <div className="absolute z-20 bg-white border border-gray-200 rounded-xl shadow-lg p-5 w-full mt-2 animate-fadeIn">
         <div className="flex justify-between items-center mb-4 pb-2 border-b border-gray-100">
           <h3 className="font-semibold text-gray-800">{t("Guests.Title")}</h3>
           <button
@@ -235,39 +234,34 @@ export default function HotelsSearch() {
       <div className="bg-white w-full shadow-xl p-6 border-b border-gray-100 sticky top-0 z-30">
         <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
           <div className="w-full md:w-1/3">
-            <div className="flex items-center border border-gray-200 rounded-xl px-4 py-3 hover:border-blue-400 transition-colors">
-              <MapPin size={20} className="text-blue-500 mr-2" />
-              <LocationAutocomplete
-                value={searchParamsState.location}
-                onChange={value => handleParamChange('location', value)}
-                placeholder={t('Location.Placeholder')}
-              />
-            </div>
+            <LocationAutocomplete
+              value={searchParamsState.location}
+              onChange={value => handleParamChange('location', value)}
+              placeholder={t('Location.Placeholder')}
+            />
           </div>
 
           <div className="w-full md:w-1/3 flex gap-2">
             <div className="w-1/2">
-              <div className="flex items-center border border-gray-200 rounded-xl px-4 py-3 hover:border-blue-400 transition-colors">
-                <UiDatePicker
-                  selected={searchParamsState.checkIn}
-                  onChange={date => handleParamChange('checkIn', date || new Date())}
-                  minDate={new Date()}
-                  placeholderText={t("Date.CheckIn")}
-                  className="w-full bg-transparent border-none focus:outline-none"
-                />
-              </div>
+              <UiDatePicker
+                selected={searchParamsState.checkIn}
+                onChange={date => handleParamChange('checkIn', date || new Date())}
+                minDate={new Date()}
+                placeholderText={t("Date.CheckIn")}
+                className="w-full bg-transparent border-none focus:outline-none"
+              />
+
             </div>
 
             <div className="w-1/2">
-              <div className="flex items-center border border-gray-200 rounded-xl px-4 py-3 hover:border-blue-400 transition-colors">
-                <UiDatePicker
-                  selected={searchParamsState.checkOut}
-                  onChange={date => handleParamChange('checkOut', date || new Date(Date.now() + 86400000 * 3))}
-                  minDate={searchParamsState.checkIn || new Date()}
-                  placeholderText={t("Date.CheckOut")}
-                  className="w-full bg-transparent border-none focus:outline-none"
-                />
-              </div>
+              <UiDatePicker
+                selected={searchParamsState.checkOut}
+                onChange={date => handleParamChange('checkOut', date || new Date(Date.now() + 86400000 * 3))}
+                minDate={searchParamsState.checkIn || new Date()}
+                placeholderText={t("Date.CheckOut")}
+                className="w-full bg-transparent border-none focus:outline-none"
+              />
+
             </div>
           </div>
 
@@ -295,10 +289,10 @@ export default function HotelsSearch() {
                 ]}
                 value={searchParamsState.currency}
                 onChange={value => handleParamChange('currency', value)}
-                placeholder="Currency"
+                placeholder={t('SortBy.Price')}
                 className="min-w-[120px]"
               />
-              
+
               <button
                 onClick={searchHotels}
                 disabled={loading}
@@ -308,8 +302,7 @@ export default function HotelsSearch() {
                   <Loader2 className="animate-spin h-6 w-6" />
                 ) : (
                   <div className="flex items-center">
-                    <Search size={20} className="mr-2" />
-                    <span className="font-medium">{t("SearchButton")}</span>
+                    <Search size={20} />
                   </div>
                 )}
               </button>
@@ -318,8 +311,8 @@ export default function HotelsSearch() {
         </div>
 
         {error && (
-          <div className="mt-4 p-3 bg-red-50 text-red-700 rounded-xl flex items-center animate-fadeIn border border-red-100">
-            <XCircle className="text-red-500 mr-3" size={20} />
+          <div className="mt-4 p-3 bg-red-50 text-red-700 rounded-xl flex gap-3 items-center animate-fadeIn border border-red-100">
+            <XCircle className="text-red-500" size={20} />
             <span>{error}</span>
           </div>
         )}
@@ -338,7 +331,7 @@ export default function HotelsSearch() {
             />
           </div>
         </div>
-        
+
         <div className="w-full md:w-3/4">
           {loading ? (
             <div className="flex justify-center py-12">

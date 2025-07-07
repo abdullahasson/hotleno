@@ -161,7 +161,7 @@ export default function HomeFlightsSearch() {
             <button
               type="button"
               onClick={swapLocations}
-              className="absolute border-x-2 border-gray-300 left-1/2 top-1/2 -translate-1/2 bg-white z-20 max-[767px]:left-0 max-[767px]:m-0 max-[767px]:top-1/2 max-[767px]:-translate-y-1/2 max-[767px]:z-20 p-2 cursor-pointer hover:border-blue-400 hover:bg-blue-50 rounded-full transition-all duration-300"
+              className="absolute border-x-2 border-gray-200 left-1/2 top-1/2 -translate-1/2 bg-white z-20 max-[767px]:left-0 max-[767px]:m-0 max-[767px]:top-1/2 max-[767px]:-translate-y-1/2 max-[767px]:z-20 p-2 cursor-pointer hover:border-blue-400 hover:bg-blue-50 rounded-[100vmax] transition-all duration-300"
               aria-label="SwapLocations"
             >
               <ArrowRightLeft size={18} className="text-blue-500" />

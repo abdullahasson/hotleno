@@ -30,7 +30,7 @@ const cairo = Cairo({
 })
 
 // Define the valid locales as a type
-type ValidLocale = "en" | "ar";
+type ValidLocale = "en" | "ar" | "fr" | "es" | "tr";
 
 export default async function RootLayout({
   children,

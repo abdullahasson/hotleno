@@ -1,0 +1,548 @@
+{
+    "Header": {
+      "Logo": "Hotlino",
+      "Home": "Ana Sayfa",
+      "Flight": "Uçuşlar",
+      "Hotel": "Otel",
+      "FeaturedDeals": "Öne Çıkan Fırsatlar",
+      "App": "Uygulama",
+      "Login": "Giriş Yap",
+      "Signup": "Üye Ol"
+    },
+    "Hero": {
+      "Heading": "İnanılmaz fiyatlarla en iyi seyahat teklifleri",
+      "SubHeading": "Bir sonraki yolculuğunuzu kolayca araştırın, karşılaştırın ve rezerve edin, özel tekliflerimizle %50'ye varan tasarruf edin",
+      "JoinPartner": "Uçuşlar",
+      "BrowseOffers": "Otel Fırsatları"
+    },
+    "PromoCarousel": {
+      "title": "Bizimle seyahatin bir anlamı var.",
+      "Cards": {
+        "one": {
+          "title": "Araç Kiralama",
+          "des": "Varış noktanızda en iyi araç kiralama fırsatlarını elde edin"
+        },
+        "two": {
+          "title": "eSIM Paketleri",
+          "des": "SIM kart olmadan varır varmaz internet bağlantısı"
+        },
+        "three": {
+          "title": "Vize Gereksinimleri",
+          "des": "Rezervasyon yapmadan önce seyahat gereksinimlerini öğrenin"
+        },
+        "four": {
+          "title": "Havaalanı Servisleri",
+          "des": "Uygun fiyatlarla havaalanı transferleri"
+        },
+        "btn": "Daha Fazla Keşfet"
+      }
+    },
+    "FeaturesSection": {
+      "one": "ABD'deki en iyi seyahat fırsatları",
+      "two": "Binlerce uçuş ve otel teklifi",
+      "three": "Çoklu ödeme seçenekleri",
+      "four": "7/24 müşteri hizmeti"
+    },
+    "SearchHome": {
+      "Tabs": {
+        "flights": "Uçuşlar",
+        "hotels": "Otel"
+      }
+    },
+    "ArticlesCarousel": {
+      "title": "Son Makaleler",
+      "seeMore": "Daha Fazla Makale",
+      "readArticle": "Makaleyi Oku"
+    },
+    "PopularAirlines": {
+      "title": "ABD'de Popüler Havayolları",
+      "subtitle": "Favori havayollarınızla ucuz uçak biletleri rezerve edin"
+    },
+    "TripIdeas": {
+      "title": "ABD'den Seyahat Fikirleri",
+      "subtitle": "Özenle seçilmiş seyahat önerileriyle ideal destinasyonunuzu keşfedin",
+      "tabs": {
+        "romantic": "Romantik Tatiller",
+        "cultural": "Kültürel Deneyimler",
+        "beach": "Sahil Destinasyonları",
+        "family": "Aile Dostu",
+        "nature": "Doğa ve Macera",
+        "forTrips": "Seyahatler İçin"
+      },
+      "card": {
+        "roundTrip": "Gidiş-Dönüş",
+        "details": "Detayları Göster"
+      },
+      "countries": {
+        "country_france": "Fransa",
+        "country_italy": "İtalya",
+        "country_greece": "Yunanistan",
+        "country_spain": "İspanya",
+        "country_morocco": "Fas",
+        "country_czech": "Çek Cumhuriyeti",
+        "country_hungary": "Macaristan",
+        "country_croatia": "Hırvatistan",
+        "country_austria": "Avusturya",
+        "country_japan": "Japonya",
+        "country_egypt": "Mısır",
+        "country_peru": "Peru",
+        "country_turkey": "Türkiye",
+        "country_china": "Çin",
+        "country_india": "Hindistan",
+        "country_cambodia": "Kamboçya",
+        "country_thailand": "Tayland",
+        "country_jordan": "Ürdün",
+        "country_maldives": "Maldivler",
+        "country_mexico": "Meksika",
+        "country_indonesia": "Endonezya",
+        "country_australia": "Avustralya",
+        "country_brazil": "Brezilya",
+        "country_hawaii": "Hawaii",
+        "country_usa": "ABD",
+        "country_singapore": "Singapur",
+        "country_denmark": "Danimarka",
+        "country_canada": "Kanada",
+        "country_netherlands": "Hollanda",
+        "country_uae": "BAE",
+        "country_uk": "Birleşik Krallık",
+        "country_costa_rica": "Kosta Rika",
+        "country_new_zealand": "Yeni Zelanda",
+        "country_tanzania": "Tanzanya",
+        "country_norway": "Norveç",
+        "country_kenya": "Kenya",
+        "country_iceland": "İzlanda",
+        "country_venezuela": "Venezuela",
+        "country_namibia": "Namibya",
+        "country_germany": "Almanya",
+        "country_argentina": "Arjantin",
+        "country_colombia": "Kolombiya",
+        "country_finland": "Finlandiya",
+        "country_hong_kong": "Hong Kong",
+        "country_south_korea": "Güney Kore",
+        "country_portugal": "Portekiz"
+      },
+      "cities": {
+        "city_paris": "Paris",
+        "city_venice": "Venedik",
+        "city_santorini": "Santorini",
+        "city_seville": "Sevilla",
+        "city_marrakech": "Marakeş",
+        "city_prague": "Prag",
+        "city_budapest": "Budapeşte",
+        "city_dubrovnik": "Dubrovnik",
+        "city_vienna": "Viyana",
+        "city_kyoto": "Kyoto",
+        "city_cairo": "Kahire",
+        "city_cusco": "Cusco",
+        "city_istanbul": "İstanbul",
+        "city_beijing": "Pekin",
+        "city_agra": "Agra",
+        "city_siem_reap": "Siem Reap",
+        "city_bangkok": "Bangkok",
+        "city_petra": "Petra",
+        "city_male": "Malé",
+        "city_cancun": "Cancún",
+        "city_phuket": "Phuket",
+        "city_bali": "Bali",
+        "city_mykonos": "Mikonos",
+        "city_gold_coast": "Gold Coast",
+        "city_majorca": "Mayorka",
+        "city_florianopolis": "Florianópolis",
+        "city_maui": "Maui",
+        "city_orlando": "Orlando",
+        "city_barcelona": "Barselona",
+        "city_singapore": "Singapur",
+        "city_tokyo": "Tokyo",
+        "city_copenhagen": "Kopenhag",
+        "city_vancouver": "Vancouver",
+        "city_amsterdam": "Amsterdam",
+        "city_dubai": "Dubai",
+        "city_london": "Londra",
+        "city_monteverde": "Monteverde",
+        "city_queenstown": "Queenstown",
+        "city_banff": "Banff",
+        "city_zanzibar": "Zanzibar",
+        "city_tromso": "Tromsø",
+        "city_masai_mara": "Masai Mara",
+        "city_reykjavik": "Reykjavik",
+        "city_canaima": "Canaima",
+        "city_sossusvlei": "Sossusvlei",
+        "city_berlin": "Berlin",
+        "city_sydney": "Sidney",
+        "city_rio": "Rio de Janeiro",
+        "city_buenos_aires": "Buenos Aires",
+        "city_cartagena": "Cartagena",
+        "city_helsinki": "Helsinki",
+        "city_hong_kong": "Hong Kong",
+        "city_seoul": "Seul",
+        "city_porto": "Porto"
+      }
+    },
+    "MobileApp": {
+      "Badge": "Yeni Deneyim",
+      "Heading": "Hotlino uygulamasını indirin ve yolculuğunuzu dakikalar içinde rezerve edin",
+      "SubHeading": "Uygulamamız aracılığıyla olağanüstü bir rezervasyon deneyimi yaşayın. Binlerce teklifi inceleyin, rezervasyonlarınızı yönetin ve her yerden, her zaman sınırsız seyahat edin.",
+      "Features": {
+        "One": {
+          "Title": "Anında Rezervasyon",
+          "Text": "Rezervasyonunuzu 2 dakikadan kısa sürede tamamlayın"
+        },
+        "Two": {
+          "Title": "Özel Teklifler",
+          "Text": "Yalnızca uygulama kullanıcıları için %50'ye varan indirimler"
+        },
+        "Three": {
+          "Title": "Fırsat Uyarıları",
+          "Text": "Favori destinasyonlarınızdaki son fırsatları ilk siz öğrenin"
+        },
+        "Four": {
+          "Title": "Güvenli Ödemeler",
+          "Text": "En yüksek işlem koruma standartlarıyla çoklu ödeme sistemleri"
+        }
+      },
+      "AvailableNow": "Tüm cihazlarda mevcut",
+      "DownloadButton": "İndir",
+      "mobile": {
+        "Heading": "Hotlino",
+        "Text": "Ara. Rezerve Et. Seyahat Et",
+        "Card": {
+          "Title": "Riyad ⇨ Dubai",
+          "Date": "Perşembe 15 Temmuz",
+          "Price": "899 SAR"
+        },
+        "Card2": {
+          "Title": "Cidde ⇨ İstanbul",
+          "Date": "Cumartesi 20 Ağustos",
+          "Price": "1.250 SAR"
+        },
+        "ReadQrCode": "Uygulamayı yüklemek için tarayın"
+      }
+    },
+    "SearchFlightsComponent": {
+      "Location": {
+        "Origin": "Nereden?",
+        "OriginPlaceholder": "Kalkış havalimanı",
+        "Destination": "Nereye?",
+        "DestinationPlaceholder": "Varış havalimanı"
+      },
+      "TripType": {
+        "One": "Tek Yön",
+        "Return": "Gidiş-Dönüş",
+        "RoundTrip": "Çoklu Destinasyon"
+      },
+      "DepartureDate": {
+        "Placeholder": "Kalkış tarihi"
+      },
+      "ReturnDate": {
+        "Placeholder": "Dönüş tarihi"
+      },
+      "SearchButton": "Ara",
+      "AdvancedOptions": "Gelişmiş Seçenekler",
+      "Currency": "Para Birimi",
+      "Passengers": {
+        "One": "Yolcu",
+        "More": "Yolcular",
+        "Adults": {
+          "Text": "Yetişkin",
+          "EX": "12+ yaş"
+        },
+        "Children": {
+          "Text": "Çocuk",
+          "EX": "2-11 yaş"
+        },
+        "Infants": {
+          "Text": "Bebek",
+          "EX": "2 yaş altı"
+        }
+      },
+      "Date": {
+        "Departure": "Kalkış",
+        "Return": "Dönüş"
+      },
+      "SortBy": {
+        "Title": "Sırala",
+        "Price": "Fiyat (düşükten yükseğe)",
+        "Duration": "Süre (kısadan uzuna)",
+        "Departure": "Kalkış saati"
+      },
+      "Direct": "Yalnızca direkt uçuşlar",
+      "NoResults": {
+        "Title": "Sonuç bulunamadı",
+        "Message": "Arama kriterlerinize uygun uçuş bulunamadı. Lütfen kriterlerinizi değiştirip tekrar deneyin."
+      },
+      "NotFoundFlight": {
+        "Title": "Uçuş bulunamadı",
+        "Message": "Arama kriterlerinize uygun uçuş bulunamadı. Lütfen kriterlerinizi değiştirip tekrar deneyin."
+      },
+      "Error": {
+        "origin": "Kalkış ve varış noktası seçin",
+        "departureDate": "Kalkış tarihi seçin",
+        "returnDate": "Dönüş tarihi seçin"
+      }
+    },
+    "AirportSelect": {
+      "Search": "Havalimanı ara",
+      "NoResults": "Eşleşen havalimanı bulunamadı",
+      "Loading": "Aranıyor...",
+      "Not": "Aranacak havalimanı yok"
+    },
+    "SearchHotelsComponent": {
+      "SearchTitle": "Mükemmel konaklamanızı bulun",
+      "Location": {
+        "Label": "Konum",
+        "Placeholder": "Nereye seyahat ediyorsunuz?"
+      },
+      "Date": {
+        "CheckIn": "Giriş Tarihi",
+        "CheckOut": "Çıkış Tarihi",
+        "CheckInPlaceholder": "Tarih seçin",
+        "CheckOutPlaceholder": "Tarih seçin"
+      },
+      "GuestsRooms": {
+        "Title": "Misafir ve Oda",
+        "Adults": "Yetişkin",
+        "Children": "Çocuk",
+        "Rooms": "Oda",
+        "AdultsEx": "13+ yaş",
+        "ChildrenEx": "2-12 yaş",
+        "RoomsEx": "Maks. 8 oda",
+        "Guest": "Misafir",
+        "Guests": "Misafirler",
+        "Room": "Oda"
+      },
+      "Guests": {
+        "Title": "Misafir ve Oda",
+        "Adults": "Yetişkin",
+        "Children": "Çocuk",
+        "Rooms": "Oda",
+        "RoomsHint": "Maks. 8 oda",
+        "Label": "Misafir",
+        "One": "Misafir",
+        "More": "Misafirler"
+      },
+      "SortBy": {
+        "Title": "Sırala",
+        "Price": "Fiyat",
+        "Rating": "Puan",
+        "Popularity": "Popülerlik"
+      },
+      "CancellationPolicy": "Ücretsiz iptal",
+      "SearchButton": "Ara",
+      "Errors": {
+        "destination": "Bir konum girin",
+        "checkIn": "Giriş tarihi seçin",
+        "checkOut": "Çıkış tarihi seçin",
+        "LocationRequired": "Konum gerekli",
+        "DatesRequired": "Giriş/çıkış tarihleri gerekli",
+        "General": "Otel yüklenirken hata oluştu. Lütfen tekrar deneyin."
+      }
+    },
+    "HotelList": {
+      "Stars": "yıldız",
+      "Includes": "Vergi ve ücretler dahil",
+      "ViewDeal": "Teklifi Gör",
+      "Guests": "Misafir",
+      "Room": "Oda",
+      "Rooms": "Oda",
+      "Rating": {
+        "Excellent": "Mükemmel",
+        "VeryGood": "Çok İyi",
+        "Good": "İyi",
+        "Fair": "Orta",
+        "Poor": "Zayıf"
+      },
+      "PerNight": "gece",
+      "PerNights": "gece"
+    },
+    "HotelsError": {
+      "Title": "Otel bulunamadı",
+      "Message": "Kriterlerinize uygun otel bulunamadı. Filtreleri değiştirmeyi deneyin."
+    },
+    "AppDownloadBanner": {
+      "title": "Yalnızca Hotleno uygulamasında bulunan özel özellikleri keşfedin. Hemen indirin!",
+      "features": {
+        "1": "Uygulama kullanıcıları için özel olarak tasarlanmış 10'dan fazla pratik özelliğin keyfini çıkarın",
+        "2": "Popüler destinasyonları, hafta sonu kaçamaklarını ve seyahat haberlerini keşfedin",
+        "3": "Hızlı ödeme, çevrimdışı erişim, çeşitli indirimler ve şifresiz giriş ile Hotleno uygulaması"
+      },
+      "scanText": "İndirmek için tarayın",
+      "appPreviewAlt": "Hotleno Uygulama Önizlemesi",
+      "qrAlt": "İndirme QR Kodu"
+    },
+    "FlightCard": {
+      "FlightListTitle": "Uçuş Sonuçları",
+      "direct": "Direkt",
+      "nonStop": "Aktarmasız",
+      "stops": "{count, plural, =0 {Direkt} one {1 aktarma} other {{count} aktarma}}",
+      "select": "Seç",
+      "results": "{count} uçuş bulundu • {origin} - {destination}"
+    },
+    "Common": {
+      "From": "Nereden",
+      "To": "Nereye",
+      "Departure": "Kalkış",
+      "Return": "Dönüş",
+      "CheckIn": "Giriş",
+      "CheckOut": "Çıkış",
+      "Adults": "Yetişkin",
+      "Children": "Çocuk",
+      "Infants": "Bebek",
+      "Rooms": "Oda",
+      "Price": "Fiyat",
+      "Duration": "Süre",
+      "Rating": "Puan",
+      "Distance": "Mesafe",
+      "BookNow": "Hemen Rezerve Et",
+      "ViewDeal": "Teklifi Gör",
+      "FreeCancellation": "Ücretsiz iptal",
+      "PerNight": "gecelik",
+      "TotalForNights": "{nights} gece toplam",
+      "ShowMore": "Daha Fazla Göster",
+      "ShowLess": "Daha Az Göster",
+      "ResetFilters": "Filtreleri Sıfırla",
+      "SortBy": "Sırala",
+      "Apply": "Uygula",
+      "Loading": "Yükleniyor...",
+      "SearchResults": "Arama Sonuçları",
+      "PopularDestinations": "Popüler Destinasyonlar",
+      "BestDeals": "En İyi Fırsatlar",
+      "HotelAmenities": "Otel Olanakları",
+      "PriceAscending": "Fiyat: Düşükten Yükseğe",
+      "PriceDescending": "Fiyat: Yüksekten Düşüğe",
+      "RatingHigh": "En Yüksek Puan",
+      "DistanceCenter": "Merkeze Mesafe"
+    },
+    "Footer": {
+      "Logo": "Hotlino",
+      "AboutUs": {
+        "Title": "Hotlino Hakkında",
+        "Text": "En iyi seyahat, uçuş ve otel tekliflerini rekabetçi fiyatlarla sunuyoruz. Bir sonraki yolculuğunuzu bizimle rezerve edin ve tasarruf edin."
+      },
+      "QuickLinks": {
+        "Title": "Hızlı Bağlantılar",
+        "Home": "Ana Sayfa",
+        "Flight": "Uçuşlar",
+        "Hotel": "Otel",
+        "FeaturedDeals": "Öne Çıkan Fırsatlar",
+        "Contact": "Uygulama"
+      },
+      "PopularDestinations": {
+        "Title": "Popüler Destinasyonlar",
+        "c1": "Dubai",
+        "c2": "İstanbul",
+        "c3": "Malezya",
+        "c4": "Şarm El-Şeyh",
+        "c5": "Paris"
+      },
+      "ContactUs": {
+        "Title": "İletişim",
+        "Location": "Riyad, Suudi Arabistan"
+      },
+      "BootomFooter": "Hotlino, Tüm hakları saklıdır | Abdullah Hassoun 2025"
+    },
+    "AppDownloadPage": {
+      "hero": {
+        "title": "Mükemmel Seyahat Arkadaşınız",
+        "subtitle": "Uygulamamızı indirerek uçuş/otel rezervasyonu yapın ve yalnızca mobilde geçerli özel tekliflerle muhteşem destinasyonları keşfedin.",
+        "benefits": {
+          "secure": "Güvenli ödemeler",
+          "payment": "Çoklu ödeme seçenekleri",
+          "availability": "7/24 kullanılabilirlik"
+        }
+      },
+      "features": {
+        "title": "Uygulamamız Neden Öne Çıkıyor?",
+        "subtitle": "Güçlü özelliklerimizle daha önce hiç olmadığı gibi bir seyahat rezervasyon deneyimi yaşayın",
+        "flight": {
+          "title": "Anında Uçuş Rezervasyonu",
+          "description": "Sezgisel arayüzümüz ve gerçek zamanlı uygunlukla saniyeler içinde uçuşları arayın ve rezerve edin"
+        },
+        "hotel": {
+          "title": "Akıllı Otel Arama",
+          "description": "Akıllı filtreler, fotoğraflar ve doğrulanmış yorumlarla mükemmel konaklamayı keşfedin"
+        },
+        "discovery": {
+          "title": "Destinasyon Keşfi",
+          "description": "Özenle seçilmiş seyahat rehberleri ve kişiselleştirilmiş önerilerle yeni destinasyonları keşfedin"
+        },
+        "alerts": {
+          "title": "Fiyat Alarmları",
+          "description": "Favori rotalarınız için alarm kurun ve fiyatlar düştüğünde bildirim alın"
+        }
+      },
+      "testimonials": {
+        "title": "Seyahat Edenler Ne Diyor?",
+        "subtitle": "Uygulamamızla akıllıca seyahat eden milyonlarca memnun kullanıcıya katılın",
+        "1": {
+          "name": "Sarah Johnson",
+          "role": "Sık Seyahat Eden",
+          "content": "Bu uygulama seyahat etme şeklimi tamamen değiştirdi. Fiyat karşılaştırma özelliği sayesinde son yolculuğumda 500$'dan fazla tasarruf ettim!"
+        },
+        "2": {
+          "name": "Mehmet Ali",
+          "role": "İş Seyahati Yapan",
+          "content": "Mobil check-in ve biniş kartı özellikleri havaalanlarında çok zaman kazandırıyor. Her yolcunun sahip olması gereken bir uygulama."
+        },
+        "3": {
+          "name": "Emine Rodriguez",
+          "role": "Seyahat Bloğu Yazarı",
+          "content": "Tüm seyahat uygulamalarını denedim ve bu en kullanıcı dostu ve zengin özelliklere sahip olanı. Otel rezervasyon deneyimi istisnai."
+        }
+      },
+      "faq": {
+        "title": "Sıkça Sorulan Sorular",
+        "subtitle": "Mobil uygulamamız hakkında bilmeniz gereken her şey",
+        "1": {
+          "question": "Uygulama hem iOS hem Android için mevcut mu?",
+          "answer": "Evet! Uygulamamız hem iOS hem Android cihazlarda kullanılabilir. App Store veya Google Play'den indirebilirsiniz."
+        },
+        "2": {
+          "question": "Uygulama için yeni hesap açmam gerekiyor mu?",
+          "answer": "Hayır, web sitesindeki mevcut hesabınızla giriş yapabilirsiniz. Tüm kayıtlı tercihleriniz ve rezervasyon geçmişiniz otomatik olarak senkronize edilecektir."
+        },
+        "3": {
+          "question": "Mobil rezervasyonlar daha mı pahalı?",
+          "answer": "Aslında, genellikle web sitemizdeki fiyatlardan daha ucuz olan yalnızca mobilde geçerli özel teklifler sunuyoruz. Ayrıca yalnızca uygulamaya özel promosyonlar alırsınız."
+        },
+        "4": {
+          "question": "Mevcut rezervasyonlarımı uygulamadan yönetebilir miyim?",
+          "answer": "Kesinlikle! Platformumuz üzerinden yapılan herhangi bir rezervasyonu doğrudan uygulamada görüntüleyebilir, değiştirebilir veya iptal edebilirsiniz."
+        }
+      },
+      "cta": {
+        "title": "Akıllı seyahat etmeye hazır mısınız?",
+        "subtitle": "Uygulamayı bugün indirin ve ilk rezervasyonunuzda 20$ indirim kazanın!",
+        "note": "Uygulama İngilizce ve Türkçe dillerinde mevcuttur"
+      }
+    },
+    "FlightSearch": {
+      "oneWay": "Tek Yön",
+      "roundTrip": "Gidiş-Dönüş",
+      "fromPlaceholder": "Şehir veya havalimanı",
+      "toPlaceholder": "Şehir veya havalimanı",
+      "selectAirport": "Havalimanı seçin...",
+      "departure": "Kalkış",
+      "return": "Dönüş",
+      "currency": "Para Birimi",
+      "searchButton": "Uçuş Ara",
+      "searching": "Aranıyor...",
+      "swap": "Yer Değiştir",
+      "clear": "Temizle"
+    },
+    "FlightResults": {
+      "foundFlights": "{count} uçuş bulundu",
+      "perPerson": "kişi başı",
+      "duration": "{hours}sa {minutes}d",
+      "directFlight": "Direkt",
+      "transfers": "{count} aktarma",
+      "transfers_plural": "{count} aktarma",
+      "bookNow": "Hemen Rezerve Et",
+      "noFlightsTitle": "Uçuş bulunamadı",
+      "noFlightsDescription": "Arama kriterlerinizi değiştirmeyi deneyin",
+      "enterSearch": "Uçuş bulmak için arama kriterleri girin",
+      "error": "Uçuşlar yüklenirken hata oluştu. Lütfen tekrar deneyin.",
+      "showCalendar": "Fiyat takvimini göster",
+      "hideCalendar": "Takvimi gizle",
+      "flightsFound": "Mevcut Uçuşlar"
+    }
+  }

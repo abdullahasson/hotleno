@@ -1,0 +1,548 @@
+{
+    "Header": {
+      "Logo": "Hotlino",
+      "Home": "Accueil",
+      "Flight": "Vols",
+      "Hotel": "Hôtels",
+      "FeaturedDeals": "Offres spéciales",
+      "App": "Application",
+      "Login": "Connexion",
+      "Signup": "Inscription"
+    },
+    "Hero": {
+      "Heading": "Meilleures offres de voyage à des prix incroyables",
+      "SubHeading": "Recherchez, comparez et réservez votre prochain voyage en toute simplicité, économisez jusqu'à 50% avec nos offres exclusives",
+      "JoinPartner": "Vols",
+      "BrowseOffers": "Offres d'hôtels"
+    },
+    "PromoCarousel": {
+      "title": "Avec nous, le voyage a un sens.",
+      "Cards": {
+        "one": {
+          "title": "Location de voitures",
+          "des": "Obtenez les meilleures offres de location de voitures à destination"
+        },
+        "two": {
+          "title": "Forfaits eSIM",
+          "des": "Connexion Internet à l'arrivée sans carte SIM"
+        },
+        "three": {
+          "title": "Exigences de visa",
+          "des": "Connaître les exigences de voyage avant de réserver"
+        },
+        "four": {
+          "title": "Services aéroportuaires",
+          "des": "Transferts aéroport à prix avantageux"
+        },
+        "btn": "Découvrir plus"
+      }
+    },
+    "FeaturesSection": {
+      "one": "Meilleures offres de voyage aux États-Unis",
+      "two": "Des milliers d'offres de vols et d'hôtels",
+      "three": "Paiements multiples",
+      "four": "Service client 24h/24 et 7j/7"
+    },
+    "SearchHome": {
+      "Tabs": {
+        "flights": "Vols",
+        "hotels": "Hôtels"
+      }
+    },
+    "ArticlesCarousel": {
+      "title": "Derniers articles",
+      "seeMore": "Plus d'articles",
+      "readArticle": "Lire l'article"
+    },
+    "PopularAirlines": {
+      "title": "Compagnies aériennes populaires aux États-Unis",
+      "subtitle": "Réservez des vols pas chers avec vos compagnies préférées"
+    },
+    "TripIdeas": {
+      "title": "Idées de voyage depuis les États-Unis",
+      "subtitle": "Découvrez votre destination idéale avec nos recommandations de voyage",
+      "tabs": {
+        "romantic": "Vacances romantiques",
+        "cultural": "Expériences culturelles",
+        "beach": "Destinations balnéaires",
+        "family": "Adapté aux familles",
+        "nature": "Nature et aventures",
+        "forTrips": "Pour les voyages"
+      },
+      "card": {
+        "roundTrip": "Aller-retour",
+        "details": "Voir les détails"
+      },
+      "countries": {
+        "country_france": "France",
+        "country_italy": "Italie",
+        "country_greece": "Grèce",
+        "country_spain": "Espagne",
+        "country_morocco": "Maroc",
+        "country_czech": "République tchèque",
+        "country_hungary": "Hongrie",
+        "country_croatia": "Croatie",
+        "country_austria": "Autriche",
+        "country_japan": "Japon",
+        "country_egypt": "Égypte",
+        "country_peru": "Pérou",
+        "country_turkey": "Turquie",
+        "country_china": "Chine",
+        "country_india": "Inde",
+        "country_cambodia": "Cambodge",
+        "country_thailand": "Thaïlande",
+        "country_jordan": "Jordanie",
+        "country_maldives": "Maldives",
+        "country_mexico": "Mexique",
+        "country_indonesia": "Indonésie",
+        "country_australia": "Australie",
+        "country_brazil": "Brésil",
+        "country_hawaii": "Hawaï",
+        "country_usa": "États-Unis",
+        "country_singapore": "Singapour",
+        "country_denmark": "Danemark",
+        "country_canada": "Canada",
+        "country_netherlands": "Pays-Bas",
+        "country_uae": "Émirats Arabes Unis",
+        "country_uk": "Royaume-Uni",
+        "country_costa_rica": "Costa Rica",
+        "country_new_zealand": "Nouvelle-Zélande",
+        "country_tanzania": "Tanzanie",
+        "country_norway": "Norvège",
+        "country_kenya": "Kenya",
+        "country_iceland": "Islande",
+        "country_venezuela": "Venezuela",
+        "country_namibia": "Namibie",
+        "country_germany": "Allemagne",
+        "country_argentina": "Argentine",
+        "country_colombia": "Colombie",
+        "country_finland": "Finlande",
+        "country_hong_kong": "Hong Kong",
+        "country_south_korea": "Corée du Sud",
+        "country_portugal": "Portugal"
+      },
+      "cities": {
+        "city_paris": "Paris",
+        "city_venice": "Venise",
+        "city_santorini": "Santorin",
+        "city_seville": "Séville",
+        "city_marrakech": "Marrakech",
+        "city_prague": "Prague",
+        "city_budapest": "Budapest",
+        "city_dubrovnik": "Dubrovnik",
+        "city_vienna": "Vienne",
+        "city_kyoto": "Kyoto",
+        "city_cairo": "Le Caire",
+        "city_cusco": "Cusco",
+        "city_istanbul": "Istanbul",
+        "city_beijing": "Pékin",
+        "city_agra": "Agra",
+        "city_siem_reap": "Siem Reap",
+        "city_bangkok": "Bangkok",
+        "city_petra": "Pétra",
+        "city_male": "Malé",
+        "city_cancun": "Cancún",
+        "city_phuket": "Phuket",
+        "city_bali": "Bali",
+        "city_mykonos": "Mykonos",
+        "city_gold_coast": "Gold Coast",
+        "city_majorca": "Majorque",
+        "city_florianopolis": "Florianópolis",
+        "city_maui": "Maui",
+        "city_orlando": "Orlando",
+        "city_barcelona": "Barcelone",
+        "city_singapore": "Singapour",
+        "city_tokyo": "Tokyo",
+        "city_copenhagen": "Copenhague",
+        "city_vancouver": "Vancouver",
+        "city_amsterdam": "Amsterdam",
+        "city_dubai": "Dubaï",
+        "city_london": "Londres",
+        "city_monteverde": "Monteverde",
+        "city_queenstown": "Queenstown",
+        "city_banff": "Banff",
+        "city_zanzibar": "Zanzibar",
+        "city_tromso": "Tromsø",
+        "city_masai_mara": "Masai Mara",
+        "city_reykjavik": "Reykjavik",
+        "city_canaima": "Canaima",
+        "city_sossusvlei": "Sossusvlei",
+        "city_berlin": "Berlin",
+        "city_sydney": "Sydney",
+        "city_rio": "Rio de Janeiro",
+        "city_buenos_aires": "Buenos Aires",
+        "city_cartagena": "Cartagène",
+        "city_helsinki": "Helsinki",
+        "city_hong_kong": "Hong Kong",
+        "city_seoul": "Séoul",
+        "city_porto": "Porto"
+      }
+    },
+    "MobileApp": {
+      "Badge": "Nouvelle expérience",
+      "Heading": "Téléchargez l'application Hotlino et réservez votre voyage en quelques minutes",
+      "SubHeading": "Profitez d'une expérience de réservation exceptionnelle via notre application. Parcourez des milliers d'offres, gérez vos réservations et voyagez sans limites.",
+      "Features": {
+        "One": {
+          "Title": "Réservation instantanée",
+          "Text": "Terminez votre réservation en moins de 2 minutes"
+        },
+        "Two": {
+          "Title": "Offres exclusives",
+          "Text": "Jusqu'à 50% de réduction réservées aux utilisateurs de l'application"
+        },
+        "Three": {
+          "Title": "Alertes promotions",
+          "Text": "Soyez le premier informé des dernières offres pour vos destinations préférées"
+        },
+        "Four": {
+          "Title": "Paiements sécurisés",
+          "Text": "Systèmes de paiement multiples avec haute protection"
+        }
+      },
+      "AvailableNow": "Disponible sur tous les appareils",
+      "DownloadButton": "Télécharger sur",
+      "mobile": {
+        "Heading": "Hotlino",
+        "Text": "Rechercher. Réserver. Voyager",
+        "Card": {
+          "Title": "Riyad ⇨ Dubaï",
+          "Date": "Jeudi 15 juillet",
+          "Price": "899 SAR"
+        },
+        "Card2": {
+          "Title": "Jeddah ⇨ Istanbul",
+          "Date": "Samedi 20 août",
+          "Price": "1 250 SAR"
+        },
+        "ReadQrCode": "Scannez pour installer l'application"
+      }
+    },
+    "SearchFlightsComponent": {
+      "Location": {
+        "Origin": "De ?",
+        "OriginPlaceholder": "Aéroport de départ",
+        "Destination": "Vers ?",
+        "DestinationPlaceholder": "Aéroport d'arrivée"
+      },
+      "TripType": {
+        "One": "Aller simple",
+        "Return": "Aller-retour",
+        "RoundTrip": "Multi-destinations"
+      },
+      "DepartureDate": {
+        "Placeholder": "Date de départ"
+      },
+      "ReturnDate": {
+        "Placeholder": "Date de retour"
+      },
+      "SearchButton": "Rechercher",
+      "AdvancedOptions": "Options avancées",
+      "Currency": "Devise",
+      "Passengers": {
+        "One": "Passager",
+        "More": "Passagers",
+        "Adults": {
+          "Text": "Adultes",
+          "EX": "+12 ans"
+        },
+        "Children": {
+          "Text": "Enfants",
+          "EX": "2-11 ans"
+        },
+        "Infants": {
+          "Text": "Bébés",
+          "EX": "-2 ans"
+        }
+      },
+      "Date": {
+        "Departure": "Départ",
+        "Return": "Retour"
+      },
+      "SortBy": {
+        "Title": "Trier par",
+        "Price": "Prix (croissant)",
+        "Duration": "Durée (croissante)",
+        "Departure": "Heure de départ"
+      },
+      "Direct": "Vols directs uniquement",
+      "NoResults": {
+        "Title": "Aucun résultat",
+        "Message": "Aucun vol ne correspond à vos critères. Veuillez modifier vos critères de recherche."
+      },
+      "NotFoundFlight": {
+        "Title": "Aucun vol trouvé",
+        "Message": "Aucun vol ne correspond à vos critères. Veuillez modifier vos critères de recherche."
+      },
+      "Error": {
+        "origin": "Sélectionnez l'origine et la destination",
+        "departureDate": "Sélectionnez la date de départ",
+        "returnDate": "Sélectionnez la date de retour"
+      }
+    },
+    "AirportSelect": {
+      "Search": "Rechercher un aéroport",
+      "NoResults": "Aucun aéroport trouvé",
+      "Loading": "Recherche en cours...",
+      "Not": "Aucun aéroport disponible"
+    },
+    "SearchHotelsComponent": {
+      "SearchTitle": "Trouvez votre hébergement idéal",
+      "Location": {
+        "Label": "Destination",
+        "Placeholder": "Où allez-vous ?"
+      },
+      "Date": {
+        "CheckIn": "Arrivée",
+        "CheckOut": "Départ",
+        "CheckInPlaceholder": "Sélectionner une date",
+        "CheckOutPlaceholder": "Sélectionner une date"
+      },
+      "GuestsRooms": {
+        "Title": "Voyageurs et chambres",
+        "Adults": "Adultes",
+        "Children": "Enfants",
+        "Rooms": "Chambres",
+        "AdultsEx": "13+ ans",
+        "ChildrenEx": "2-12 ans",
+        "RoomsEx": "8 chambres max",
+        "Guest": "Voyageur",
+        "Guests": "Voyageurs",
+        "Room": "Chambre"
+      },
+      "Guests": {
+        "Title": "Voyageurs et chambres",
+        "Adults": "Adultes",
+        "Children": "Enfants",
+        "Rooms": "Chambres",
+        "RoomsHint": "8 chambres maximum",
+        "Label": "Voyageur",
+        "One": "Voyageur",
+        "More": "Voyageurs"
+      },
+      "SortBy": {
+        "Title": "Trier par",
+        "Price": "Prix",
+        "Rating": "Note",
+        "Popularity": "Popularité"
+      },
+      "CancellationPolicy": "Annulation gratuite",
+      "SearchButton": "Rechercher",
+      "Errors": {
+        "destination": "Sélectionnez une destination",
+        "checkIn": "Sélectionnez la date d'arrivée",
+        "checkOut": "Sélectionnez la date de départ",
+        "LocationRequired": "Destination requise",
+        "DatesRequired": "Dates d'arrivée/départ requises",
+        "General": "Erreur de chargement. Veuillez réessayer."
+      }
+    },
+    "HotelList": {
+      "Stars": "étoiles",
+      "Includes": "Taxes et frais inclus",
+      "ViewDeal": "Voir l'offre",
+      "Guests": "Voyageurs",
+      "Room": "Chambre",
+      "Rooms": "Chambres",
+      "Rating": {
+        "Excellent": "Excellent",
+        "VeryGood": "Très bien",
+        "Good": "Bien",
+        "Fair": "Acceptable",
+        "Poor": "Médiocre"
+      },
+      "PerNight": "nuit",
+      "PerNights": "nuits"
+    },
+    "HotelsError": {
+      "Title": "Aucun hôtel trouvé",
+      "Message": "Aucun hôtel ne correspond à vos critères. Modifiez vos filtres."
+    },
+    "AppDownloadBanner": {
+      "title": "Découvrez les fonctionnalités exclusives de l'application Hotleno. Téléchargez maintenant !",
+      "features": {
+        "1": "Plus de 10 fonctionnalités pratiques exclusives à l'application",
+        "2": "Explorez les destinations tendances, week-ends et actualités voyage",
+        "3": "Paiement rapide, mode hors connexion, réductions et connexion sans mot de passe"
+      },
+      "scanText": "Scannez pour télécharger",
+      "appPreviewAlt": "Aperçu de l'application Hotleno",
+      "qrAlt": "QR code de téléchargement"
+    },
+    "FlightCard": {
+      "FlightListTitle": "Résultats des vols",
+      "direct": "Direct",
+      "nonStop": "Sans escale",
+      "stops": "{count, plural, =0 {Direct} one {1 escale} other {{count} escales}}",
+      "select": "Sélectionner",
+      "results": "{count} vols trouvés • {origin} vers {destination}"
+    },
+    "Common": {
+      "From": "De",
+      "To": "Vers",
+      "Departure": "Départ",
+      "Return": "Retour",
+      "CheckIn": "Arrivée",
+      "CheckOut": "Départ",
+      "Adults": "Adultes",
+      "Children": "Enfants",
+      "Infants": "Bébés",
+      "Rooms": "Chambres",
+      "Price": "Prix",
+      "Duration": "Durée",
+      "Rating": "Note",
+      "Distance": "Distance",
+      "BookNow": "Réserver",
+      "ViewDeal": "Voir l'offre",
+      "FreeCancellation": "Annulation gratuite",
+      "PerNight": "par nuit",
+      "TotalForNights": "Total pour {nights} nuits",
+      "ShowMore": "Voir plus",
+      "ShowLess": "Voir moins",
+      "ResetFilters": "Réinitialiser",
+      "SortBy": "Trier par",
+      "Apply": "Appliquer",
+      "Loading": "Chargement...",
+      "SearchResults": "Résultats",
+      "PopularDestinations": "Destinations populaires",
+      "BestDeals": "Meilleures offres",
+      "HotelAmenities": "Équipements hôtel",
+      "PriceAscending": "Prix : croissant",
+      "PriceDescending": "Prix : décroissant",
+      "RatingHigh": "Meilleures notes",
+      "DistanceCenter": "Distance du centre"
+    },
+    "Footer": {
+      "Logo": "Hotlino",
+      "AboutUs": {
+        "Title": "À propos de Hotlino",
+        "Text": "Offres de voyage, vols et hôtels aux meilleurs prix. Économisez sur votre prochain voyage."
+      },
+      "QuickLinks": {
+        "Title": "Liens rapides",
+        "Home": "Accueil",
+        "Flight": "Vols",
+        "Hotel": "Hôtels",
+        "FeaturedDeals": "Offres spéciales",
+        "Contact": "Application"
+      },
+      "PopularDestinations": {
+        "Title": "Destinations populaires",
+        "c1": "Dubaï",
+        "c2": "Istanbul",
+        "c3": "Malaisie",
+        "c4": "Charm el-Cheikh",
+        "c5": "Paris"
+      },
+      "ContactUs": {
+        "Title": "Contact",
+        "Location": "Riyad, Arabie Saoudite"
+      },
+      "BootomFooter": "Hotlino © Tous droits réservés | Abdullah Hassoun 2025"
+    },
+    "AppDownloadPage": {
+      "hero": {
+        "title": "Votre compagnon de voyage",
+        "subtitle": "Téléchargez notre application pour réserver vols/hôtels et découvrir des destinations avec des offres exclusives.",
+        "benefits": {
+          "secure": "Paiements sécurisés",
+          "payment": "Options multiples",
+          "availability": "Disponible 24h/24"
+        }
+      },
+      "features": {
+        "title": "Pourquoi choisir notre app",
+        "subtitle": "Une expérience de réservation révolutionnaire",
+        "flight": {
+          "title": "Réservation instantanée",
+          "description": "Recherchez et réservez des vols en quelques secondes"
+        },
+        "hotel": {
+          "title": "Recherche intelligente",
+          "description": "Trouvez l'hébergement idéal avec filtres, photos et avis"
+        },
+        "discovery": {
+          "title": "Découvertes",
+          "description": "Explorez de nouvelles destinations avec guides et recommandations"
+        },
+        "alerts": {
+          "title": "Alertes prix",
+          "description": "Notifications pour les baisses de prix sur vos trajets"
+        }
+      },
+      "testimonials": {
+        "title": "Témoignages",
+        "subtitle": "Rejoignez des millions d'utilisateurs satisfaits",
+        "1": {
+          "name": "Sarah Johnson",
+          "role": "Voyageuse fréquente",
+          "content": "Cette application a révolutionné mes voyages. J'ai économisé plus de 500$ grâce au comparateur de prix !"
+        },
+        "2": {
+          "name": "Mohamed Ali",
+          "role": "Voyageur d'affaires",
+          "content": "L'enregistrement mobile et la carte d'embarquement font gagner un temps précieux. Indispensable !"
+        },
+        "3": {
+          "name": "Emma Rodriguez",
+          "role": "Bloggeuse voyage",
+          "content": "L'application la plus intuitive et riche en fonctionnalités. L'expérience hôtel est exceptionnelle."
+        }
+      },
+      "faq": {
+        "title": "FAQ",
+        "subtitle": "Tout savoir sur notre application",
+        "1": {
+          "question": "Disponible sur iOS et Android ?",
+          "answer": "Oui ! Téléchargeable sur App Store et Google Play."
+        },
+        "2": {
+          "question": "Compte requis ?",
+          "answer": "Non, utilisez votre compte existant. Vos préférences seront synchronisées."
+        },
+        "3": {
+          "question": "Tarifs mobiles plus chers ?",
+          "answer": "Non, offres exclusives souvent moins chères que le site web."
+        },
+        "4": {
+          "question": "Gestion des réservations ?",
+          "answer": "Oui, consultez/modifiez/annulez vos réservations dans l'app."
+        }
+      },
+      "cta": {
+        "title": "Prêt à voyager malin ?",
+        "subtitle": "Téléchargez l'app et obtenez 20$ de réduction !",
+        "note": "Disponible en anglais et français"
+      }
+    },
+    "FlightSearch": {
+      "oneWay": "Aller simple",
+      "roundTrip": "Aller-retour",
+      "fromPlaceholder": "Ville ou aéroport",
+      "toPlaceholder": "Ville ou aéroport",
+      "selectAirport": "Sélectionner un aéroport...",
+      "departure": "Départ",
+      "return": "Retour",
+      "currency": "Devise",
+      "searchButton": "Rechercher des vols",
+      "searching": "Recherche en cours...",
+      "swap": "Inverser",
+      "clear": "Effacer"
+    },
+    "FlightResults": {
+      "foundFlights": "{count} vols trouvés",
+      "perPerson": "par personne",
+      "duration": "{hours}h {minutes}min",
+      "directFlight": "Direct",
+      "transfers": "{count} escale",
+      "transfers_plural": "{count} escales",
+      "bookNow": "Réserver",
+      "noFlightsTitle": "Aucun vol trouvé",
+      "noFlightsDescription": "Modifiez vos critères de recherche",
+      "enterSearch": "Saisissez des critères pour trouver des vols",
+      "error": "Erreur de chargement. Veuillez réessayer.",
+      "showCalendar": "Afficher le calendrier des prix",
+      "hideCalendar": "Masquer le calendrier",
+      "flightsFound": "Vols disponibles"
+    }
+  }

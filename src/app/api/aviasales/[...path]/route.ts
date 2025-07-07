@@ -14,7 +14,15 @@ export async function GET(req: NextRequest) {
       ? pathname.slice(basePath.length)
       : '';
     
-    const baseUrl = process.env.NEXT_PUBLIC_AVIASALES_BASE_URL || 'https://api.travelpayouts.com';
+    // 1. Identify hotel requests by path pattern
+    const isHotelRequest = /^(api\/v[12]\/|hotels\/)/i.test(apiPath);
+    
+    // 2. Switch base URL only for hotel requests
+    let baseUrl = process.env.NEXT_PUBLIC_AVIASALES_BASE_URL || 'https://api.travelpayouts.com';
+    if (isHotelRequest) {
+      baseUrl = 'https://engine.hotellook.com';
+    }
+    
     const apiToken = process.env.TRAVELPAYOUTS_API_TOKEN || '65b7444863a8c0f818ad4d2369312298';
     
     if (!baseUrl || !apiToken) {
@@ -24,7 +32,7 @@ export async function GET(req: NextRequest) {
       );
     }
 
-    // Build target URL
+    // 3. Build target URL
     const targetUrl = new URL(`${baseUrl}/${apiPath}`);
     
     // Transfer query parameters
@@ -48,6 +56,7 @@ export async function GET(req: NextRequest) {
   }
 }
 
+// REST OF THE CODE REMAINS EXACTLY THE SAME
 async function processApiResponse(response: Response) {
   if (!response.ok) {
     const errorText = await response.text();

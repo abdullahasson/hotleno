@@ -1,7 +1,11 @@
 // src/components/ui/location-autocomplete.tsx
 'use client';
 
+// React
 import { useState, useEffect, useRef } from 'react';
+// Next Intl
+import { useLocale } from "next-intl";
+// Icons
 import { Loader2, MapPin } from 'lucide-react';
 
 interface LocationSuggestion {
@@ -24,6 +28,8 @@ export default function LocationAutocomplete({
   onChange,
   placeholder = 'Search locations...'
 }: LocationAutocompleteProps) {
+
+  const lang = useLocale()
   const [inputValue, setInputValue] = useState(value);
   const [suggestions, setSuggestions] = useState<LocationSuggestion[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -44,7 +50,7 @@ export default function LocationAutocomplete({
     setLoading(true);
     try {
       const res = await fetch(
-        `https://autocomplete.travelpayouts.com/places2?term=${encodeURIComponent(query)}&locale=en&types[]=city`
+        `https://autocomplete.travelpayouts.com/places2?term=${encodeURIComponent(query)}&locale=${lang}&types[]=city`
       );
       const data = await res.json();
       setSuggestions(data.slice(0, 5));

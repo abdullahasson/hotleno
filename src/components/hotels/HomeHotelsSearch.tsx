@@ -21,6 +21,8 @@ import {
   Calendar
 } from 'lucide-react';
 
+// /api/search?location=paris&checkIn=2025-07-08&checkOut=2025-07-09&adults=2
+
 export default function HomeHotelsSearch() {
   const router = useRouter();
   const locale = useLocale();
@@ -120,7 +122,7 @@ export default function HomeHotelsSearch() {
           </div>
 
           {/* Date Pickers */}
-          <div className="flex-1 flex gap-3 max-[767px]:w-full">
+          <div className="flex-1 flex gap-3 max-[767px]:w-full max-[767px]:flex-col">
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-1 text-sm font-medium text-gray-700">
                 <Calendar size={16} className="text-blue-500" />
@@ -208,7 +210,7 @@ export default function HomeHotelsSearch() {
           <div className="max-[767px]:w-full">
             <button
               type="submit"
-              className="w-full cursor-pointer rounded-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white py-2 px-4 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="w-full cursor-pointer rounded-full max-[767px]:rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white py-2 px-4 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               <div className="flex items-center gap-2">
                 <Search size={20} className="" />

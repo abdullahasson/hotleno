@@ -2,7 +2,7 @@
 'use client';
 
 // React
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react'; // Added useCallback
 // Next Intl
 import { useLocale } from "next-intl";
 // Icons
@@ -41,7 +41,8 @@ export default function LocationAutocomplete({
     setInputValue(value);
   }, [value]);
 
-  const fetchSuggestions = async (query: string) => {
+  // Wrap fetchSuggestions in useCallback
+  const fetchSuggestions = useCallback(async (query: string) => {
     if (!query.trim()) {
       setSuggestions([]);
       return;
@@ -59,7 +60,7 @@ export default function LocationAutocomplete({
     } finally {
       setLoading(false);
     }
-  };
+  }, [lang]); // lang is a dependency
 
   // Debounce search
   useEffect(() => {
@@ -70,7 +71,7 @@ export default function LocationAutocomplete({
     return () => {
       clearTimeout(handler);
     };
-  }, [inputValue]);
+  }, [inputValue, fetchSuggestions]); // Added fetchSuggestions to dependencies
 
   // Close suggestions when clicking outside
   useEffect(() => {

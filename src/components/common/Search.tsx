@@ -14,7 +14,7 @@ const Search = () => {
     const [tab , setTab] = useState("flights")
 
     return (
-        <div className="flex flex-col gap-0 p-0 w-[80%] mx-auto">
+        <div className="flex flex-col gap-0 p-0 w-[80%] max-[767px]:w-[100%] mx-auto">
             <div className="flex-1 flex items-center justify-start bg-white border-b border-gray-200 py-0 px-8 rounded-t-3xl">
                 <button 
                     onClick={() => setTab('flights')} 

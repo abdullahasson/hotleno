@@ -131,12 +131,12 @@ export default function HomeFlightsSearch() {
     <div className="flex-1">
       <form onSubmit={handleSubmit} className="bg-white w-full rounded-b-3xl shadow-2xl px-8 pb-8 pt-4 max-[767px]:p-6 border border-gray-100">
         {/* Trip Type Selector */}
-        <div className="flex p-1 pb-0 gap-2">
+        <div className="flex p-1 pb-0 gap-2 max-[767px]:gap-1 max-[767px]:justify-center">
           {(['one-way', 'return', 'round-trip'] as const).map((type) => (
             <button
               key={type}
               type="button"
-              className={`py-2 px-4 text-center rounded-full text-sm transition-all duration-300 cursor-pointer ${formState.tripType === type
+              className={`py-2 px-4 text-center rounded-full text-sm transition-all duration-300 cursor-pointer max-[767px]:px-2 ${formState.tripType === type
                 ? 'bg-gradient-to-r from-blue-500 to-blue-600 shadow-md text-white font-medium'
                 : 'text-gray-500 bg-gray-200/50 hover:text-gray-700'
                 }`}
@@ -147,9 +147,9 @@ export default function HomeFlightsSearch() {
           ))}
         </div>
 
-        <div className="flex items-center gap-5 max-[767px]:gap-2 my-4">
+        <div className="flex items-center gap-5 max-[767px]:gap-2 max-[767px]:flex-col max-[767px]:w-full mt-4 mb-4 max-[767px]:mb-2">
           {/* Location Inputs */}
-          <div className="flex-1 max-[767px]:flex-col relative flex items-center gap-2">
+          <div className="flex-1 max-[767px]:flex-col max-[767px]:w-full relative flex items-center gap-2">
             <div className="flex-1 relative max-[767px]:w-full max-[767px]:mx-auto !text-gray-900">
               <AirportSelect
                 value={formState.origin}
@@ -178,7 +178,7 @@ export default function HomeFlightsSearch() {
           </div>
 
           {/* Date Pickers */}
-          <div className="flex-1 flex gap-3">
+          <div className="flex-1 flex gap-2 max-[767px]:flex-col max-[767px]:w-full">
             <div className="flex-1 relative">
               <UiDatePicker
                 selected={formState.departureDate}
@@ -203,7 +203,7 @@ export default function HomeFlightsSearch() {
           </div>
         </div>
 
-        <div className="flex items-center justify-between w-full">
+        <div className="flex items-center justify-between max-[767px]:flex-col max-[767px]:w-full max-[767px]:gap-2 max-[767px]:items-start w-full">
           {/* Direct flights */}
           <div className="flex items-center pl-3">
             <div className="flex items-center">
@@ -221,9 +221,9 @@ export default function HomeFlightsSearch() {
           </div>
 
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 max-[767px]:flex-col max-[767px]:w-full max-[767px]:items-start">
             {/* Currency */}
-            <div className="relative">
+            <div className="relative max-[767px]:w-full">
               <Select
                 options={[
                   { value: 'USD', label: 'USD ($)' },
@@ -239,7 +239,7 @@ export default function HomeFlightsSearch() {
             </div>
 
             {/* Sort by */}
-            <div className="relative">
+            <div className="relative max-[767px]:w-full">
               <Select
                 options={[
                   { value: 'price', label: t("SortBy.Price") },
@@ -254,7 +254,7 @@ export default function HomeFlightsSearch() {
 
 
             {/* Passengers */}
-            <div className="relative">
+            <div className="relative max-[767px]:w-full">
               <div
                 className="border border-gray-200 rounded-xl px-4 py-2 pl-12 cursor-pointer transition-colors duration-300 bg-white hover:shadow-md"
                 onClick={() => setUiState(prev => ({ ...prev, showPassengerSelect: !prev.showPassengerSelect }))}
@@ -277,10 +277,10 @@ export default function HomeFlightsSearch() {
             </div>
 
             {/* Search Button */}
-            <div>
+            <div className="max-[767px]:w-full">
               <button
                 type="submit"
-                className="w-full cursor-pointer rounded-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white py-2 px-4 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="w-full cursor-pointer rounded-full max-[767px]:rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white py-2 px-4 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 <div className="flex items-center gap-2">
                   <Search size={20} className="" />

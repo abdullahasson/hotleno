@@ -256,6 +256,20 @@
         "ReadQrCode": "Uygulamayı yüklemek için tarayın"
       }
     },
+    "FlightDestinations": {
+      "1": {
+        "title": "Amerika Birleşik Devletleri'nden En İyi Şehirlere Uçuşlar"
+      },
+      "2": {
+        "title": "Amerika Birleşik Devletleri'nden En İyi Ülkelere Uçuşlar"
+      },
+      "3": {
+        "title": "En İyi Şehirlerde Oteller"
+      },
+      "4": {
+        "title": "En İyi Ülkelerde Oteller"
+      }
+    },
     "SearchFlightsComponent": {
       "Location": {
         "Origin": "Nereden?",

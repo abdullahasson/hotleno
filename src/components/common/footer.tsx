@@ -9,6 +9,7 @@ import {
     Instagram ,
     Youtube ,
     ChevronLeft ,
+    ChevronRight,
     Map ,
     Phone ,
     MessageCircleReply
@@ -46,38 +47,47 @@ const Footer = () => {
                     <div className="footer-col">
                         <h3 className="text-xl mb-6 pb-3 relative">{t("QuickLinks.Title")}</h3>
                         <ul className="footer-links">
-                            <li className="mb-4">
+                            <li className={`mb-4 ${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
                                 <Link href={`/${lang}/`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
-                                    
-                                    <ChevronLeft className="text-[var(--color-accent))]" />
+                                    {lang === 'ar' ? 
+                                        <ChevronLeft className="text-[var(--color-accent))]" /> : 
+                                        <ChevronRight className="text-[var(--color-accent))]" />}
                                     {t("QuickLinks.Home")}
                                 </Link>
                             </li>
-                            <li className="mb-4">
+                            <li className={`mb-4 ${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
                                 <Link href={`/${lang}/flights`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
                                     
-                                    <ChevronLeft className="text-[var(--color-accent))]" />
+                                    {lang === 'ar' ? 
+                                        <ChevronLeft className="text-[var(--color-accent))]" /> : 
+                                        <ChevronRight className="text-[var(--color-accent))]" />}
                                     {t("QuickLinks.Flight")}
                                 </Link>
                             </li>
-                            <li className="mb-4">
+                            <li className={`mb-4 ${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
                                 <Link href={`/${lang}/hotels`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
                                     
-                                    <ChevronLeft className="text-[var(--color-accent))]" />
+                                    {lang === 'ar' ? 
+                                        <ChevronLeft className="text-[var(--color-accent))]" /> : 
+                                        <ChevronRight className="text-[var(--color-accent))]" />}
                                     {t("QuickLinks.Hotel")}
                                 </Link>
                             </li>
-                            <li className="mb-4">
+                            <li className={`mb-4 ${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
                                 <Link href={`/${lang}/`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
                                     
-                                    <ChevronLeft className="text-[var(--color-accent))]" />
+                                    {lang === 'ar' ? 
+                                        <ChevronLeft className="text-[var(--color-accent))]" /> : 
+                                        <ChevronRight className="text-[var(--color-accent))]" />}
                                     {t("QuickLinks.FeaturedDeals")}
                                 </Link>
                             </li>
-                            <li>
+                            <li className={`${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
                                 <Link href={`/${lang}/mobile-app`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
                                     
-                                    <ChevronLeft className="text-[var(--color-accent))]" />
+                                    {lang === 'ar' ? 
+                                        <ChevronLeft className="text-[var(--color-accent))]" /> : 
+                                        <ChevronRight className="text-[var(--color-accent))]" />}
                                     {t("QuickLinks.Contact")}
                                 </Link>
                             </li>
@@ -86,31 +96,31 @@ const Footer = () => {
                     <div className="footer-col">
                         <h3 className="text-xl mb-6 pb-3 relative">{t("PopularDestinations.Title")}</h3>
                         <ul className="footer-links">
-                            <li className="mb-4">
+                            <li className={`mb-4 ${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
                                 <Link href={`/${lang}/`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
                                     <Map className="text-[var(--color-accent)]" />
                                     {t("PopularDestinations.c1")}
                                 </Link>
                             </li>
-                            <li className="mb-4">
+                            <li className={`mb-4 ${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
                                 <Link href={`/${lang}/`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
                                     <Map className="text-[var(--color-accent)]" />
                                     {t("PopularDestinations.c2")}
                                 </Link>
                             </li>
-                            <li className="mb-4">
+                            <li className={`mb-4 ${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
                                 <Link href={`/${lang}/`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
                                     <Map className="text-[var(--color-accent)]" />
                                     {t("PopularDestinations.c3")}
                                 </Link>
                             </li>
-                            <li className="mb-4">
+                            <li className={`mb-4 ${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
                                 <Link href={`/${lang}/`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
                                     <Map className="text-[var(--color-accent)]" />
                                     {t("PopularDestinations.c4")}
                                 </Link>
                             </li>
-                            <li>
+                            <li className={`${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
                                 <Link href={`/${lang}/`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
                                     <Map className="text-[var(--color-accent)]" />
                                     {t("PopularDestinations.c5")}
@@ -121,19 +131,19 @@ const Footer = () => {
                     <div className="footer-col">
                         <h3 className="text-xl mb-6 pb-3 relative">{t("ContactUs.Title")}</h3>
                         <ul className="footer-links">
-                            <li className="mb-4">
+                            <li className={`mb-4 ${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
                                 <Link href={`/${lang}/`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
                                     <MessageCircleReply className="text-[var(--color-accent)]" />
-                                    info@rahhalati.com
+                                    hotlenosite@gmail.com
                                 </Link>
                             </li>
-                            <li className="mb-4">
+                            <li className={`mb-4 ${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
                                 <Link href={`/${lang}/`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
                                     <Phone className="text-[var(--color-accent)]" />
                                     +966 123 456 789
                                 </Link>
                             </li>
-                            <li>
+                            <li className={`${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
                                 <Link href={`/${lang}/`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
                                     <Map className="text-[var(--color-accent)]" />
                                     {t("ContactUs.Location")}

@@ -238,6 +238,7 @@
         "Text": "Multiple payment systems with highest transaction protection standards"
       }
     },
+
     "AvailableNow": "Available now on all devices",
     "DownloadButton": "Download App From",
     "mobile": {
@@ -254,6 +255,20 @@
         "Price": "1,250 SAR"
       },
       "ReadQrCode": "Scan QR Code to Install App"
+    }
+  },
+  "FlightDestinations": {
+    "1": {
+      "title": "Flights to the Best Cities from the United States"
+    },
+    "2": {
+      "title": "Flights to the Best Countries from the United States"
+    },
+    "3": {
+      "title": "Hotels in the Best Cities"
+    },
+    "4": {
+      "title": "Hotels in the Best Countries"
     }
   },
   "SearchFlightsComponent": {

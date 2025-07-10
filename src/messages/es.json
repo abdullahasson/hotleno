@@ -256,6 +256,20 @@
         "ReadQrCode": "Escanear para instalar la app"
       }
     },
+    "FlightDestinations": {
+      "1": {
+        "title": "Vuelos a las Mejores Ciudades desde Estados Unidos"
+      },
+      "2": {
+        "title": "Vuelos a los Mejores Países desde Estados Unidos"
+      },
+      "3": {
+        "title": "Hoteles en las Mejores Ciudades"
+      },
+      "4": {
+        "title": "Hoteles en los Mejores Países"
+      }
+    },
     "SearchFlightsComponent": {
       "Location": {
         "Origin": "¿Desde dónde?",

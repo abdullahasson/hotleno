@@ -50,14 +50,220 @@ export const articles: Article[] = [
 
 // Homepage Destinations Mock Data
 export const destinations = [
-    { name: "نيويورك", url: "/flights-to/nyc/cheap-flights-to-new-york" },
-    { name: "ميامي", url: "/flights-to/mia/cheap-flights-to-miami" },
-    { name: "لوس أنجليس", url: "/flights-to/lax/cheap-flights-to-los-angeles" },
-    { name: "واشنطن", url: "/flights-to/was/cheap-flights-to-washington-dc" },
-    { name: "أورلاندو", url: "/flights-to/orl/cheap-flights-to-orlando" },
-    { name: "شيكاغو", url: "/flights-to/chi/cheap-flights-to-chicago" },
-    { name: "لاس فيغاس", url: "/flights-to/las/cheap-flights-to-las-vegas-nv" },
-    { name: "دالاس", url: "/flights-to/dfw/cheap-flights-to-dallas-tx" },
-    { name: "ديترويت", url: "/flights-to/dtt/cheap-flights-to-detroit" },
-    { name: "سان فرانسسكو", url: "/flights-to/sfo/cheap-flights-to-san-francisco" }
+    { 
+        name: 'city_paris',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_venice',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_santorini',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_seville',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_marrakech',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_prague',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_budapest',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_dubrovnik',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_vienna',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_kyoto',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_cairo',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_cusco',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_istanbul',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_beijing',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_agra',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_siem_reap',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_bangkok',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_petra',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_male',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_cancun',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_phuket',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_bali',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_mykonos',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_gold_coast',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_majorca',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_florianopolis',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_maui',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_orlando',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_barcelona',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_singapore',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_tokyo',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_copenhagen',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_vancouver',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_amsterdam',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_dubai',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_london',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_monteverde',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_queenstown',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_banff',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_zanzibar',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_tromso',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_masai_mara',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_reykjavik',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_canaima',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_sossusvlei',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_berlin',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_sydney',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_rio',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_buenos_aires',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_cartagena',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_helsinki',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_hong_kong',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_seoul',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    },
+    { 
+        name: 'city_porto',
+        url: '/flights-to/sfo/cheap-flights-to-san-francisco'
+    }
 ];

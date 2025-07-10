@@ -1,5 +1,7 @@
 // components/TextFlightDestinations.tsx
 import React from 'react';
+// Next Intl
+import { useTranslations } from "next-intl"
 import { motion } from 'framer-motion';
 import { Plane } from 'lucide-react';
 
@@ -32,6 +34,8 @@ const TextFlightDestinations: React.FC<FlightDestinationsProps> = ({
     show: { x: 0, opacity: 1 }
   };
 
+  const t = useTranslations("TripIdeas.cities")
+
   return (
     <div className="mx-auto px-8 py-6">
       <div className="flex gap-2 mb-4 items-center">
@@ -57,7 +61,7 @@ const TextFlightDestinations: React.FC<FlightDestinationsProps> = ({
             variants={item}
             whileHover={{ scale: 1.05 }}
           >
-            {destination.name}
+            {t(`${destination.name}`)}
           </motion.a>
         ))}
       </motion.nav>

@@ -3,7 +3,7 @@
     "Logo": "Hotlino",
     "Home": "Home",
     "Flight": "Flights",
-    "Hotel": "Hotel Reservations",
+    "Hotel": "Hotel",
     "FeaturedDeals": "Featured Deals",
     "App": "App",
     "Login": "Login",
@@ -47,115 +47,6 @@
     "Tabs": {
       "flights": "Flights",
       "hotels": "Hotels"
-    }
-  },
-  "Services": {
-    "title": "Elevate Your Journey",
-    "subtitle": "Redefined Luxury Travel Experiences",
-    "flights": "Flights",
-    "flightsDescription": "Discover the world with premium flight options featuring exclusive comforts and priority services.",
-    "hotels": "Hotels",
-    "hotelsDescription": "Relax in carefully selected luxury accommodations for the discerning traveler.",
-    "feature1": "Instant pricing with dynamic savings",
-    "feature2": "Priority boarding and premium lounges",
-    "feature3": "Flexible cancellation policies",
-    "feature4": "Exclusive member pricing and upgrades",
-    "feature5": "24/7 concierge service",
-    "feature6": "Personalized recommendations based on preferences",
-    "searchPlaceholder": "Where are you traveling from?",
-    "destinationPlaceholder": "Destination",
-    "datesPlaceholder": "Dates",
-    "travelersPlaceholder": "Travelers",
-    "filters": "Advanced Filters",
-    "searchButton": "Search Flights",
-    "learnMore": "Discover Experiences",
-    "statsTitle": "Travel with Confidence",
-    "bookings": "Annual Bookings",
-    "satisfaction": "Customer Satisfaction",
-    "support": "Global Support",
-    "destinations": "Countries Covered",
-    "travelers": "Travelers Booked This Month",
-    "partners": "Global Partners"
-  },
-  "WhyUs": {
-    "title": "Why Choose Us?",
-    "subtitle": "We simplify your travel planning with affordable costs through our advanced tools and exclusive offers",
-    "card1": {
-      "title": "Best Price Guarantee",
-      "text": "We guarantee you the best prices for flights and hotel stays. Found a lower price? We'll match it."
-    },
-    "card2": {
-      "title": "Secure Bookings",
-      "text": "Your personal data and payments are protected by the highest banking security standards."
-    },
-    "card3": {
-      "title": "24/7 Instant Support",
-      "text": "Our travel experts are available 24/7 to assist with all your inquiries and bookings."
-    }
-  },
-  "Deals": {
-    "title": "Featured Travel Deals",
-    "subtitle": "Discover exceptional discounts on flights and hotel stays for popular destinations",
-    "dir": "ltr",
-    "tabs": {
-      "flights": "Flight Deals",
-      "hotels": "Accommodation Deals"
-    },
-    "dealsList": [
-      {
-        "id": 1,
-        "type": "Flight",
-        "title": "New York to Paris",
-        "price": "$459",
-        "priceSuffix": "Round Trip",
-        "description": "Direct flight with luxury amenities. Limited seats available.",
-        "meta": [
-          {"icon": "calendar", "text": "May - October 2024"},
-          {"icon": "clock", "text": "7 hours 30 minutes"}
-        ]
-      },
-      {
-        "id": 2,
-        "type": "Hotel",
-        "title": "Luxury Resort in Bali",
-        "price": "$129",
-        "priceSuffix": "Per Night",
-        "description": "5-star resort with private beach and spa. Breakfast included.",
-        "meta": [
-          {"icon": "star", "text": "4.8 (120 reviews)"},
-          {"icon": "umbrella", "text": "Swimming Pool"}
-        ]
-      },
-      {
-        "id": 3,
-        "type": "Package",
-        "title": "Rome Holiday",
-        "price": "$799",
-        "priceSuffix": "Per Person",
-        "description": "Flight + 4 nights in central hotel with guided tours.",
-        "meta": [
-          {"icon": "calendar", "text": "September - December 2024"},
-          {"icon": "utensils", "text": "Breakfast"}
-        ]
-      }
-    ],
-    "viewDeal": "View Deal",
-    "viewAll": "View All Travel Offers"
-  },
-  "Insights": {
-    "title": "Travel Tips",
-    "subtitle": "Data-backed insights to help you plan better and save more",
-    "card1": {
-      "title": "Traveler Satisfaction"
-    },
-    "card2": {
-      "title": "Hotels Worldwide"
-    },
-    "card3": {
-      "title": "Traveler Savings"
-    },
-    "card4": {
-      "title": "Travelers Who Benefited from Offers"
     }
   },
   "ArticlesCarousel": {
@@ -447,21 +338,12 @@
     }
   },
   "HotelList": {
-    "Stars": "Stars",
-    "Includes": "Includes taxes and fees",
-    "ViewDeal": "View Deal",
-    "Guests": "Guests",
-    "Room": "Room",
-    "Rooms": "Rooms",
-    "Rating": {
-      "Excellent": "Excellent",
-      "VeryGood": "Very Good",
-      "Good": "Good",
-      "Fair": "Fair",
-      "Poor": "Poor"
-    },
-    "PerNight": "Night",
-    "PerNights": "Nights"
+    "found": "Found {count} hotels in {location}.",
+    "rated": "Highly rated",
+    "details": "View details",
+    "adults": "Adults",
+    "adult": "Adult",
+    "noresults": "No hotels found. Try other search criteria."
   },
   "HotelsError": {
     "Title": "No hotels found",

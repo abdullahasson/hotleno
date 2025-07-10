@@ -16,7 +16,9 @@ import {
   Loader2,
   Minus,
   Plus,
-  XCircle
+  XCircle,
+  ArrowDown,
+  ArrowUp
 } from 'lucide-react';
 
 // Types
@@ -169,6 +171,8 @@ export default function FlightsSearch() {
     } as PassengerCounts,
     showPassengerSelect: false
   });
+  const [mobileOpen , setMobileOpen] = useState(false)
+
 
   // Search function
   const searchFlights = useCallback(async () => {
@@ -294,20 +298,35 @@ export default function FlightsSearch() {
 
   return (
     <div>
+      <div className="selcon-btn" onClick={() => setMobileOpen(!mobileOpen)}>
+        {mobileOpen ? <ArrowUp /> : <ArrowDown />}
+      </div>
+
       {/* Search Form */}
-      <div className="bg-white w-full shadow-xl p-6 border-b border-gray-100 sticky top-0 z-30">
-        <div className="flex items-center justify-between w-full mb-6">
+      <div className={`
+        bg-white 
+        w-full 
+        shadow-xl 
+        p-4 sm:p-6 
+        border-b border-gray-100 
+        sticky 
+        top-0 
+        z-30 
+        selcon
+        ${mobileOpen ? 'selcon-open' : ''}
+      `}>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full mb-4 sm:mb-6 gap-4">
           {/* Trip Type Selector */}
-          <div className="flex flex-1 items-end p-1 pb-0 gap-2">
+          <div className="flex flex-1 w-full items-end p-1 pb-0 gap-2">
             {(['one-way', 'round-trip'] as const).map((type) => {
               const tripTypeLabels = getTripTypeLabels();
               return (
                 <button
                   key={type}
                   type="button"
-                  className={`py-2 px-4 text-center rounded-full text-sm transition-all duration-300 cursor-pointer ${searchParamsState.tripType === type
-                ? 'bg-gradient-to-r from-blue-500 to-blue-600 shadow-md text-white font-medium'
-                : 'text-gray-500 bg-gray-200/50 hover:text-gray-700'
+                  className={`py-2 px-4 text-center rounded-full text-sm transition-all duration-300 cursor-pointer flex-1 ${searchParamsState.tripType === type
+                    ? 'bg-gradient-to-r from-blue-500 to-blue-600 shadow-md text-white font-medium'
+                    : 'text-gray-500 bg-gray-200/50 hover:text-gray-700'
                     }`}
                   onClick={() => handleParamChange('tripType', type)}
                 >
@@ -317,8 +336,7 @@ export default function FlightsSearch() {
             })}
           </div>
 
-          <div className="flex flex-1 items-end gap-2">
-
+          <div className="flex flex-1 w-full items-end gap-2">
             {/* Passengers */}
             <div className="relative w-full">
               <div
@@ -331,7 +349,6 @@ export default function FlightsSearch() {
                 <div className="font-medium text-gray-800">
                   {totalPassengers} {totalPassengers === 1 ? t("Passengers.One") : t("Passengers.More")}
                 </div>
-
               </div>
 
               {searchParamsState.showPassengerSelect && (
@@ -359,11 +376,10 @@ export default function FlightsSearch() {
           </div>
         </div>
 
-
-        <div className="flex gap-5 justify-between items-center">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-between items-stretch">
           {/* Location Inputs */}
-          <div className="flex-[2] flex items-center relative gap-2">
-            <div className="flex-1 relative">
+          <div className="flex-[2] flex flex-col sm:flex-row items-center relative gap-2 sm:gap-2">
+            <div className="flex-1 w-full">
               <AirportSelect
                 value={''}
                 onChange={value => handleParamChange('origin', value)}
@@ -374,13 +390,13 @@ export default function FlightsSearch() {
             <button
               type="button"
               onClick={swapLocations}
-              className="absolute border-x-2 border-gray-200 left-1/2 top-1/2 -translate-1/2 bg-white z-20 max-[767px]:left-0 max-[767px]:m-0 max-[767px]:top-1/2 max-[767px]:-translate-y-1/2 max-[767px]:z-20 p-2 cursor-pointer hover:border-blue-400 hover:bg-blue-50 rounded-[100vmax] transition-all duration-300"
+              className="absolute sm:static border-x-2 sm:border-x-0 border-gray-200 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 sm:translate-x-0 sm:translate-y-0 bg-white z-20 p-2 cursor-pointer hover:border-blue-400 hover:bg-blue-50 rounded-[100vmax] transition-all duration-300 self-center my-2 sm:my-0"
               aria-label="SwapLocations"
             >
-              <ArrowRightLeft size={18} className="text-blue-500" />
+              <ArrowRightLeft size={18} className="text-blue-500 rotate-90 sm:rotate-0" />
             </button>
 
-            <div className="flex-1 relative">
+            <div className="flex-1 w-full">
               <AirportSelect
                 value={''}
                 onChange={value => handleParamChange('destination', value)}
@@ -390,8 +406,8 @@ export default function FlightsSearch() {
           </div>
 
           {/* Date Pickers */}
-          <div className="flex-[2] flex gap-3">
-            <div className="flex-1 relative">
+          <div className="flex-[2] flex flex-col sm:flex-row gap-3">
+            <div className="flex-1">
               <UiDatePicker
                 selected={searchParamsState.departureDate}
                 onChange={date => handleParamChange('departureDate', date || new Date())}
@@ -402,7 +418,7 @@ export default function FlightsSearch() {
             </div>
 
             {searchParamsState.tripType === 'round-trip' && (
-              <div className="flex-1 relative">
+              <div className="flex-1">
                 <UiDatePicker
                   selected={searchParamsState.returnDate}
                   onChange={date => handleParamChange('returnDate', date)}
@@ -415,7 +431,7 @@ export default function FlightsSearch() {
           </div>
 
           {/* Search Button */}
-          <div className="flex-1">
+          <div className="flex-1 mt-2 sm:mt-0">
             <button
               onClick={searchFlights}
               disabled={loading}
@@ -435,7 +451,7 @@ export default function FlightsSearch() {
 
         {/* Error message */}
         {error && (
-          <div className="mt-5 p-4 bg-red-50 text-red-700 rounded-xl flex items-center animate-fadeIn border border-red-100">
+          <div className="mt-4 sm:mt-5 p-4 bg-red-50 text-red-700 rounded-xl flex items-center animate-fadeIn border border-red-100">
             <XCircle className="text-red-500 mr-3" size={20} />
             <span>{error}</span>
           </div>
@@ -443,8 +459,8 @@ export default function FlightsSearch() {
       </div>
 
       {/* Results Section */}
-      <div className="flex p-6 gap-6">
-        <div className="flex-[2]">
+      <div className="flex p-6 gap-6 max-[767px]:flex-col">
+        <div className="flex-1">
           <div className="md:col-span-3">
             <div className="border border-gray-200 rounded-xl p-4 bg-white shadow-sm">
               <label className="block text-sm font-medium text-gray-700 mb-2">{t("SortBy.Title")}</label>

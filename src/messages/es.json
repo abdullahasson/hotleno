@@ -338,21 +338,12 @@
       }
     },
     "HotelList": {
-      "Stars": "estrellas",
-      "Includes": "Impuestos y tasas incluidos",
-      "ViewDeal": "Ver oferta",
-      "Guests": "Huéspedes",
-      "Room": "Habitación",
-      "Rooms": "Habitaciones",
-      "Rating": {
-        "Excellent": "Excelente",
-        "VeryGood": "Muy bueno",
-        "Good": "Bueno",
-        "Fair": "Aceptable",
-        "Poor": "Deficiente"
-      },
-      "PerNight": "noche",
-      "PerNights": "noches"
+      "found": "Se encontraron {count} hoteles en {location}.",
+      "rated": "Altamente valorado",
+      "details": "Ver detalles",
+      "adults": "Adultos",
+      "adult": "Adulto",
+      "noresults": "No se encontraron hoteles. Pruebe otros criterios de búsqueda."
     },
     "HotelsError": {
       "Title": "Hoteles no encontrados",

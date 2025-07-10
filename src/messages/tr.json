@@ -338,21 +338,12 @@
       }
     },
     "HotelList": {
-      "Stars": "yıldız",
-      "Includes": "Vergi ve ücretler dahil",
-      "ViewDeal": "Teklifi Gör",
-      "Guests": "Misafir",
-      "Room": "Oda",
-      "Rooms": "Oda",
-      "Rating": {
-        "Excellent": "Mükemmel",
-        "VeryGood": "Çok İyi",
-        "Good": "İyi",
-        "Fair": "Orta",
-        "Poor": "Zayıf"
-      },
-      "PerNight": "gece",
-      "PerNights": "gece"
+      "found": "{location} konumunda {count} otel bulundu.",
+      "rated": "Yüksek Puanlı",
+      "details": "Detayları Göster",
+      "adults": "Yetişkin",
+      "adult": "Yetişkin",
+      "noresults": "Otel bulunamadı. Lütfen başka arama kriterleri deneyin."
     },
     "HotelsError": {
       "Title": "Otel bulunamadı",

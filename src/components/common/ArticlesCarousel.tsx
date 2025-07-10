@@ -114,8 +114,8 @@ const ArticlesCarousel = ({ articles }: { articles: Article[] }) => {
                                 transition={{ duration: 0.4, ease: "easeInOut" }}
                                 className="absolute inset-0 grid grid-cols-1 md:grid-cols-3 gap-8"
                             >
-                                {getVisibleArticles().map((article) => (
-                                    <ArticleCard key={article.id} article={article} t={t} />
+                                {getVisibleArticles().map((article , index) => (
+                                    <ArticleCard key={article.id} article={article} t={t} i={index} />
                                 ))}
                             </motion.div>
                         </AnimatePresence>
@@ -129,9 +129,10 @@ const ArticlesCarousel = ({ articles }: { articles: Article[] }) => {
 interface ArticleCardProps {
     article: Article;
     t: (key: string) => string;
+    i: number
 }
 
-const ArticleCard = ({ article, t }: ArticleCardProps) => (
+const ArticleCard = ({ article, t , i }: ArticleCardProps) => (
     <motion.div
         whileHover={{ y: 0 }}
         className="h-full bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-gray-200 hover:shadow-xl transition-all"
@@ -151,15 +152,17 @@ const ArticleCard = ({ article, t }: ArticleCardProps) => (
         <div className="p-6 flex flex-col flex-grow">
             <div className="mb-3">
                 <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-1 rounded">
-                    {article.department}
+                    {t(`articles.${i + 1}.department`)}
                 </span>
             </div>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                {article.title}
+                {t(`articles.${i + 1}.title`)}
             </h3>
             <p className="text-gray-600 mb-4 flex-grow line-clamp-3">
-                {article.description}
+                
+                {t(`articles.${i + 1}.description`)}
+                
             </p>
 
             {/* Blog Info */}
@@ -167,7 +170,8 @@ const ArticleCard = ({ article, t }: ArticleCardProps) => (
                 <div className="flex items-center">
                     <div className="bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full w-8 h-8 flex items-center justify-center">
                         <span className="text-white font-medium text-xs">
-                            {article.blogName.charAt(0)}
+                        
+                            {t(`articles.${i + 1}.blogName`)}
                         </span>
                     </div>
                     <span className="ml-3 font-medium text-gray-900">{article.blogName}</span>

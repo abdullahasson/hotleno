@@ -1,8 +1,10 @@
-// components/HotelList.tsx
+// Next
 import Image from 'next/image';
+// Next Int
+import { useTranslations } from 'next-intl';
+// Icons
 import { Home, Star, CalendarDays } from 'lucide-react';
 
-// Corrected Hotel type (removed checkIn/checkOut/adults)
 export type Hotel = {
   hotelId: number;
   hotelName: string;
@@ -32,6 +34,8 @@ export default function HotelList({
   checkOut,
   adults
 }: HotelListProps) {
+
+  const t = useTranslations('HotelList')
   // Format date for display
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -44,7 +48,7 @@ export default function HotelList({
   if (hotels.length === 0) {
     return (
       <div className="text-center py-12">
-        <p className="text-gray-500 text-lg">No hotels found. Try different search criteria.</p>
+        <p className="text-gray-500 text-lg">{t('noresults')}</p>
       </div>
     );
   }
@@ -53,13 +57,16 @@ export default function HotelList({
     <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
       <div className="p-6 border-b border-gray-200">
         <h2 className="text-xl font-semibold text-gray-800">
-          {hotels.length} {hotels.length === 1 ? 'hotel' : 'hotels'} found in {location}
+        {t('found' , {
+            count: hotels.length || 0, 
+            location: location || ''
+          })}
         </h2>
         <div className="flex items-center mt-2 text-sm text-gray-600">
           <CalendarDays size={16} className="mr-1" />
           {formatDate(checkIn)} - {formatDate(checkOut)}
           <span className="mx-3">•</span>
-          {adults} {adults === 1 ? 'adult' : 'adults'}
+          {adults} {adults === 1 ? t('adult') : t('adults')}
         </div>
       </div>
 
@@ -71,6 +78,7 @@ export default function HotelList({
           >
             <div className="block p-6">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div className="flex flex-col sm:flex-row w-full sm:w-1/2 justify-between">
                 <div className="flex items-center mb-4 md:mb-0">
                   <div className="bg-gray-100 p-3 rounded-xl mr-4">
                     {hotel.imageUrl ? (
@@ -93,7 +101,7 @@ export default function HotelList({
                       </div>
                       {hotel.stars >= 4 && (
                         <span className="ml-3 bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded">
-                          Highly Rated
+                          {t('rated')}
                         </span>
                       )}
                     </div>
@@ -103,7 +111,7 @@ export default function HotelList({
                   </div>
                 </div>
 
-                <div className="flex-1 max-w-md">
+                <div>
                   <div className="flex flex-col">
                     <div className="font-medium">
                       {hotel.location.name}, {hotel.location.country}
@@ -126,12 +134,13 @@ export default function HotelList({
                     </div>
                   </div>
                 </div>
+                </div>
 
                 <div className="mt-4 md:mt-0 w-full md:w-auto">
                   <button
                     className="w-full md:w-auto bg-blue-50 hover:bg-blue-100 text-blue-700 font-medium py-2 px-6 rounded-lg transition"
                   >
-                    View Details
+                    {t('details')}
                   </button>
                 </div>
               </div>

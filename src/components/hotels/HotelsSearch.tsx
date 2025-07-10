@@ -1,8 +1,11 @@
 // components/HotelsSearch.tsx
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+// Next
 import { useSearchParams } from 'next/navigation';
+// React
+import { useState, useEffect, useCallback } from 'react';
+// Components
 import HotelList from "./HotelList";
 import HotelError from './HotelError';
 import UiDatePicker from '../ui/datepicker';
@@ -13,7 +16,9 @@ import {
   Minus,
   Plus,
   XCircle,
-  MapPin
+  MapPin,
+  ArrowDown,
+  ArrowUp
 } from 'lucide-react';
 
 // Types
@@ -122,6 +127,7 @@ export default function HotelsSearch() {
     } as PassengerCounts,
     showPassengerSelect: false
   });
+  const [mobileOpen , setMobileOpen] = useState(false)
 
   // Search function
   const searchHotels = useCallback(async () => {
@@ -195,8 +201,23 @@ export default function HotelsSearch() {
 
   return (
     <div>
+      <div className="selcon-btn" onClick={() => setMobileOpen(!mobileOpen)}>
+        {mobileOpen ? <ArrowUp /> : <ArrowDown />}
+      </div>
+
       {/* Search Form */}
-      <div className="bg-white w-full shadow-xl p-4 sm:p-6 border-b border-gray-100 sticky top-0 z-30">
+      <div className={`
+        bg-white 
+        w-full 
+        shadow-xl 
+        p-4 sm:p-6 
+        border-b border-gray-100 
+        sticky 
+        top-0 
+        z-30
+        selcon
+        ${mobileOpen ? 'selcon-open' : ''}
+      `}>
         <div className="flex flex-col sm:flex-row gap-5 sm:justify-between sm:items-center">
           {/* Location Input */}
           <div className="w-full sm:flex-[2] flex items-center relative">
@@ -303,14 +324,9 @@ export default function HotelsSearch() {
               adults={searchParamsState.passengers.adults}
             />
           ) : !loading && (
-            <HotelError 
-              message={error || 'No hotels found'} 
-              onRetry={searchHotels} 
-            />
+            <HotelError />
           )}
         </div>
-        
-        <div className="flex-1"></div>
       </div>
     </div>
   );

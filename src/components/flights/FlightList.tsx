@@ -90,7 +90,7 @@ export default function FlightList({
                 rel="noopener noreferrer"
                 className="block p-6"
               >
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div className="flex flex-col md:flex-row justify-between md:items-center">
                   <div className="flex items-center mb-4 md:mb-0">
                     <div className="bg-gray-100 p-3 rounded-xl mr-4">
                       <Plane size={24} className="text-blue-600" />
@@ -152,7 +152,7 @@ export default function FlightList({
 
                   <div className="mt-4 md:mt-0 w-full md:w-auto">
                     <button
-                      className={`w-full md:w-auto bg-blue-50 hover:bg-blue-100 text-blue-700 font-medium py-2 px-6 rounded-lg transition ${locale === 'ar' ? 'text-right' : 'text-left'
+                      className={`md:w-auto bg-blue-50 hover:bg-blue-100 text-blue-700 font-medium py-2 px-6 rounded-lg transition ${locale === 'ar' ? 'text-right' : 'text-left'
                         }`}
                     >
                       {t('select')}

@@ -1,11 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image"
 import { usePathname } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import SwitchLanguages from "../common/switch-languages";
-import { Plane, Menu, X } from "lucide-react"; // Changed Hamburger to Menu
-import { useState, useEffect } from "react"; // Added for state management
+import { Menu, X } from "lucide-react"; 
+import { useState, useEffect } from "react"; 
+// Logo
+import LogoEn from '../../../public/logo-en.png'
+import LogoAr from '../../../public/logo-ar.png'
 
 const Header = () => {
   const t = useTranslations("Header");
@@ -48,8 +52,7 @@ const Header = () => {
       <div className="container mx-auto px-4 xl:px-0 max-w-7xl">
         <div className="navbar flex justify-between items-center py-4 transition-all duration-400">
           <Link href={`/${lang}/`} className="logo flex items-center gap-2 text-2xl font-extrabold text-darker">
-            <Plane className="text-[var(--color-primary)]" />
-            <span>Hotleno</span>
+            <Image src={lang == 'ar' ? LogoAr : LogoEn} alt="EnLogo" className="w-32"/>
           </Link>
           
           {/* Desktop Navigation */}

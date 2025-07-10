@@ -52,7 +52,45 @@
     "ArticlesCarousel": {
       "title": "Artículos más recientes",
       "seeMore": "Más artículos",
-      "readArticle": "Leer artículo"
+      "readArticle": "Leer artículo",
+      "articles": {
+        "1": {
+          "title": "El futuro de los viajes en un mundo postpandémico",
+          "description": "Explorando cómo la industria de viajes se adapta a nuevos desafíos y cambiantes comportamientos de los viajeros en el panorama global actual.",
+          "department": "Tendencias de Viajes",
+          "blogName": "Perspectivas Wanderlust"
+        },
+        "2": {
+          "title": "10 joyas ocultas del sudeste asiático que debes visitar",
+          "description": "Descubre destinos fuera de los circuitos turísticos en el sudeste asiático que ofrecen experiencias únicas lejos de las multitudes.",
+          "department": "Guía de Destinos",
+          "blogName": "Diario del Explorador"
+        },
+        "3": {
+          "title": "Viajes sostenibles: Cómo reducir tu huella de carbono",
+          "description": "Consejos prácticos y estrategias para viajeros ecológicamente conscientes que buscan minimizar su impacto mientras exploran el mundo.",
+          "department": "Ecoturismo",
+          "blogName": "El Viajero Verde"
+        },
+        "4": {
+          "title": "Guía completa de destinos para nómadas digitales",
+          "description": "Las mejores ciudades del mundo para nómadas digitales que ofrecen internet confiable, espacios de coworking y comunidades vibrantes.",
+          "department": "Trabajo y Viajes",
+          "blogName": "Vida Nómada"
+        },
+        "5": {
+          "title": "Aventuras culinarias: Tours de comida callejera alrededor del mundo",
+          "description": "Un viaje gastronómico por mercados callejeros globales y platos imperdibles en cada destino.",
+          "department": "Gastronomía y Cultura",
+          "blogName": "Saborea el Mundo"
+        },
+        "6": {
+          "title": "Trucos para viajes familiares: Vacaciones sin estrés con niños",
+          "description": "Consejos expertos para planificar y disfrutar vacaciones familiares que satisfacen todas las edades e intereses.",
+          "department": "Viajes Familiares",
+          "blogName": "Viajes Felices"
+        }
+      }
     },
     "PopularAirlines": {
       "title": "Aerolíneas populares en Estados Unidos",

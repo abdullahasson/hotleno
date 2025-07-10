@@ -52,7 +52,45 @@
     "ArticlesCarousel": {
       "title": "Derniers articles",
       "seeMore": "Plus d'articles",
-      "readArticle": "Lire l'article"
+      "readArticle": "Lire l'article",
+      "articles": {
+        "1": {
+          "title": "L'avenir du voyage dans un monde post-pandémique",
+          "description": "Exploration des adaptations de l'industrie du voyage face aux nouveaux défis et à l'évolution des comportements des voyageurs dans le paysage mondial actuel.",
+          "department": "Tendances du Voyage",
+          "blogName": "Perspectives Wanderlust"
+        },
+        "2": {
+          "title": "10 joyaux cachés d'Asie du Sud-Est à visiter absolument",
+          "description": "Découvrez des destinations hors des sentiers battus en Asie du Sud-Est offrant des expériences uniques loin des foules touristiques.",
+          "department": "Guide des Destinations",
+          "blogName": "Carnet de l'Explorateur"
+        },
+        "3": {
+          "title": "Voyage durable : Comment réduire votre empreinte carbone",
+          "description": "Conseils pratiques et stratégies pour les voyageurs écoresponsables souhaitant minimiser leur impact tout en explorant le monde.",
+          "department": "Écotourisme",
+          "blogName": "Le Voyageur Vert"
+        },
+        "4": {
+          "title": "Le guide complet des destinations pour nomades digitaux",
+          "description": "Les meilleures villes du monde pour les nomades digitaux offrant internet fiable, espaces de coworking et communautés dynamiques.",
+          "department": "Travail et Voyage",
+          "blogName": "Vie de Nomade"
+        },
+        "5": {
+          "title": "Aventures culinaires : Tour des street foods à travers le monde",
+          "description": "Périple gastronomique à travers les marchés de rue mondiaux et plats incontournables de chaque destination.",
+          "department": "Cuisine et Culture",
+          "blogName": "Saveurs du Monde"
+        },
+        "6": {
+          "title": "Astuces voyage en famille : Vacances sans stress avec enfants",
+          "description": "Conseils d'experts pour organiser et profiter de vacances familiales adaptées à tous les âges et centres d'intérêt.",
+          "department": "Voyage Familial",
+          "blogName": "Voyages Heureux"
+        }
+      }
     },
     "PopularAirlines": {
       "title": "Compagnies aériennes populaires aux États-Unis",

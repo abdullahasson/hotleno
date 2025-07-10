@@ -52,7 +52,45 @@
   "ArticlesCarousel": {
     "title": "Latest Articles",
     "seeMore": "More Articles",
-    "readArticle": "Read Article"
+    "readArticle": "Read Article",
+    "articles": {
+      "1": {
+        "title": "The Future of Travel in a Post-Pandemic World",
+        "description": "Exploring how the travel industry is adapting to new challenges and changing traveler behaviors in the current global landscape.",
+        "department": "Travel Trends",
+        "blogName": "Wanderlust Insights"
+      },
+      "2": {
+        "title": "10 Hidden Gems in Southeast Asia You Must Visit",
+        "description": "Discover off-the-beaten-path destinations in Southeast Asia that offer unique experiences away from tourist crowds.",
+        "department": "Destination Guide",
+        "blogName": "Explorer's Diary"
+      },
+      "3": {
+        "title": "Sustainable Travel: How to Reduce Your Carbon Footprint",
+        "description": "Practical tips and strategies for environmentally conscious travelers to minimize their impact while exploring the world.",
+        "department": "Ecotourism",
+        "blogName": "The Green Traveler"
+      },
+      "4": {
+        "title": "The Comprehensive Guide to Digital Nomad Destinations",
+        "description": "The world's best cities for digital nomads offering reliable internet, coworking spaces, and vibrant communities.",
+        "department": "Work and Travel",
+        "blogName": "Nomad Life"
+      },
+      "5": {
+        "title": "Culinary Adventures: Street Food Tours Around the World",
+        "description": "A foodie journey through global street food markets and must-try dishes in each destination.",
+        "department": "Food and Culture",
+        "blogName": "Taste the World"
+      },
+      "6": {
+        "title": "Family Travel Hacks: Stress-Free Vacations with Kids",
+        "description": "Expert tips for planning and enjoying family holidays that cater to all ages and interests.",
+        "department": "Family Travel",
+        "blogName": "Happy Journeys"
+      }
+    }
   },
   "PopularAirlines": {
     "title": "Popular Airlines in the United States",

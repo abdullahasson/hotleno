@@ -74,7 +74,7 @@ const PromoCarousel = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-4">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 tracking-tight">
-            معنا، للسّفر مَعْنى.
+            {t('title')}
           </h2>
         </div>
 

@@ -56,40 +56,40 @@
     "readArticle": "قراءة المقال",
     "articles": {
       "1": {
-        "title": "The Future of Travel in a Post-Pandemic World",
-        "description": "Exploring how the travel industry is adapting to new challenges and changing traveler behaviors in the current global landscape.",
-        "department": "Travel Trends",
-        "blogName": "Wanderlust Insights"
+        "title": "مستقبل السفر في عالم ما بعد الجائحة",
+        "description": "استكشاف كيفية تكيُّف صناعة السفر مع التحديات الجديدة وتحوُّل سلوكيات المسافرين في المشهد العالمي الحالي.",
+        "department": "اتجاهات السفر",
+        "blogName": "رؤى الشوق للسفر"
       },
       "2": {
-        "title": "10 Hidden Gems in Southeast Asia You Must Visit",
-        "description": "Discover off-the-beaten-path destinations in Southeast Asia that offer unique experiences away from tourist crowds.",
-        "department": "Destination Guide",
-        "blogName": "Explorer's Diary"
+        "title": "10 جوهرات خفية في جنوب شرق آسيا يجب أن تزورها",
+        "description": "اكتشف الوجهات غير التقليدية في جنوب شرق آسيا التي تقدّم تجارب فريدة بعيداً عن الزحام السياحي.",
+        "department": "دليل الوجهات",
+        "blogName": "مذكّرات المستكشف"
       },
       "3": {
-        "title": "Sustainable Travel: How to Reduce Your Carbon Footprint",
-        "description": "Practical tips and strategies for environmentally conscious travelers to minimize their impact while exploring the world.",
-        "department": "Ecotourism",
-        "blogName": "The Green Traveler"
+        "title": "السفر المستدام: كيفية تقليل بصمتك الكربونية",
+        "description": "نصائح عملية واستراتيجيات للمسافرين الواعين بيئياً لتقليل تأثيرهم أثناء استكشاف العالم.",
+        "department": "السياحة البيئية",
+        "blogName": "المسافر الأخضر"
       },
       "4": {
-        "title": "The Comprehensive Guide to Digital Nomad Destinations",
-        "description": "The world's best cities for digital nomads offering reliable internet, coworking spaces, and vibrant communities.",
-        "department": "Work and Travel",
-        "blogName": "Nomad Life"
+        "title": "الدليل الشامل لوجهات الرحّالة الرقميين",
+        "description": "أفضل مدن العالم للرحّالة الرقميين التي توفر إنترنت موثوقاً ومساحات عمل مشتركة ومجتمعات حيوية.",
+        "department": "العمل والسفر",
+        "blogName": "حياة البداوة الرقمية"
       },
       "5": {
-        "title": "Culinary Adventures: Street Food Tours Around the World",
-        "description": "A foodie journey through global street food markets and must-try dishes in each destination.",
-        "department": "Food and Culture",
-        "blogName": "Taste the World"
+        "title": "مغامرات الطهي: جولات طعام الشارع حول العالم",
+        "description": "رحلة لعشاق الطعام عبر أسواق الأطعمة الشارعية العالمية وأطباق لا بد من تجربتها في كل وجهة.",
+        "department": "الطعام والثقافة",
+        "blogName": "أذواق العالم"
       },
       "6": {
-        "title": "Family Travel Hacks: Stress-Free Vacations with Kids",
-        "description": "Expert tips for planning and enjoying family holidays that cater to all ages and interests.",
-        "department": "Family Travel",
-        "blogName": "Happy Journeys"
+        "title": "حيل السفر العائلي: عطلات خالية من التوتر مع الأطفال",
+        "description": "نصائح خبراء للتخطيط والاستمتاع بعطلات عائلية تلبي جميع الأعمار والاهتمامات.",
+        "department": "السفر العائلي",
+        "blogName": "رحلات سعيدة"
       }
     }
   },

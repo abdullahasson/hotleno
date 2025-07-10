@@ -9,7 +9,7 @@ import { useTranslations , useLocale } from "next-intl";
 // Components
 import SwitchLanguages from "./switch-languages"
 // Icons
-import { Plane , Hamburger } from "lucide-react"
+import { Plane } from "lucide-react"
 
 interface HeaderProps {
     initialScrolled?: boolean;
@@ -55,11 +55,6 @@ const Header = ({ initialScrolled = false }: HeaderProps) => {
                         <Link className="text-sm border border-white rounded-full py-2 px-3 transition-all hover:scale-105" href="/sign-in">
                             {t('Login')}
                         </Link>
-
-                        {/* قائمة الهامبرجر للجوال */}
-                        <button className="md:hidden text-2xl text-gray-700">
-                            <Hamburger />
-                        </button>
                     </div>
                 </div>
             </div>

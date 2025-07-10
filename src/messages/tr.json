@@ -52,7 +52,45 @@
     "ArticlesCarousel": {
       "title": "Son Makaleler",
       "seeMore": "Daha Fazla Makale",
-      "readArticle": "Makaleyi Oku"
+      "readArticle": "Makaleyi Oku",
+      "articles": {
+        "1": {
+          "title": "Pandemi Sonrası Dünyada Seyahatin Geleceği",
+          "description": "Seyahat endüstrisinin mevcut küresel ortamda yeni zorluklara ve değişen gezgin davranışlarına nasıl uyum sağladığının incelenmesi.",
+          "department": "Seyahat Trendleri",
+          "blogName": "Seyahat Tutkusu Analizleri"
+        },
+        "2": {
+          "title": "Güneydoğu Asya'da Görmeniz Gereken 10 Gizli Cennet",
+          "description": "Turist kalabalıklarından uzakta, eşsiz deneyimler sunan Güneydoğu Asya'nın keşfedilmemiş rotalarını keşfedin.",
+          "department": "Rota Rehberi",
+          "blogName": "Kaşifin Günlüğü"
+        },
+        "3": {
+          "title": "Sürdürülebilir Seyahat: Karbon Ayak İzinizi Nasıl Azaltırsınız",
+          "description": "Dünyayı keşfederken çevresel etkisini en aza indirmek isteyen gezginler için pratik ipuçları ve stratejiler.",
+          "department": "Eko-Turizm",
+          "blogName": "Yeşil Gezgin"
+        },
+        "4": {
+          "title": "Dijital Göçebeler İçin Kapsamlı Rota Kılavuzu",
+          "description": "Güvenilir internet, ortak çalışma alanları ve canlı topluluklar sunan dünyanın en iyi dijital göçbe şehirleri.",
+          "department": "Çalışma ve Seyahat",
+          "blogName": "Göçebe Yaşamı"
+        },
+        "5": {
+          "title": "Gastronomi Maceraları: Dünya Sokak Lezzetleri Turları",
+          "description": "Her destinasyonda mutlaka denemeniz gereken yemeklerle birlikte küresel sokak yemekleri pazarlarında lezzet yolculuğu.",
+          "department": "Yemek ve Kültür",
+          "blogName": "Dünyanın Tadı"
+        },
+        "6": {
+          "title": "Aile Seyahati Püf Noktaları: Çocuklarla Stressiz Tatiller",
+          "description": "Tüm yaşlara ve ilgi alanlarına hitap eden aile tatillerini planlamak ve keyfini çıkarmak için uzman tavsiyeleri.",
+          "department": "Aile Seyahati",
+          "blogName": "Mutlu Yolculuklar"
+        }
+      }
     },
     "PopularAirlines": {
       "title": "ABD'de Popüler Havayolları",

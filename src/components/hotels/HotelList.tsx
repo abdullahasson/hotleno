@@ -1,9 +1,7 @@
-// Next
+// components/HotelList.tsx
 import Image from 'next/image';
-// Next Int
 import { useTranslations } from 'next-intl';
-// Icons
-import { Home, Star, CalendarDays } from 'lucide-react';
+import { Home, Star, CalendarDays, ArrowUpRight } from 'lucide-react';
 
 export type Hotel = {
   hotelId: number;
@@ -17,6 +15,7 @@ export type Hotel = {
   stars: number;
   locationId: number;
   imageUrl: string;
+  bookingUrl: string; // Add bookingUrl to the type
 };
 
 type HotelListProps = {
@@ -137,11 +136,18 @@ export default function HotelList({
                 </div>
 
                 <div className="mt-4 md:mt-0 w-full md:w-auto">
-                  <button
-                    className="w-full md:w-auto bg-blue-50 hover:bg-blue-100 text-blue-700 font-medium py-2 px-6 rounded-lg transition"
+                  <a
+                    href={hotel.bookingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group w-full md:w-auto flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition"
                   >
                     {t('details')}
-                  </button>
+                    <ArrowUpRight 
+                      size={18} 
+                      className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" 
+                    />
+                  </a>
                 </div>
               </div>
             </div>

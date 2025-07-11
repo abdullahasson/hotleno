@@ -34,6 +34,7 @@ export type Hotel = {
   stars: number;
   locationId: number;
   imageUrl: string;
+  bookingUrl: string; // Add this line
 };
 
 interface PassengerCounts {
@@ -57,7 +58,7 @@ const PassengerSelector = ({
   };
 
   return (
-    <div className="absolute z-20 bg-white border border-gray-200 rounded-xl shadow-lg p-5 w-[200%] mt-2 animate-fadeIn">
+    <div className="absolute z-20 bg-white border border-gray-200 rounded-xl shadow-lg p-5 w-full mt-2 animate-fadeIn">
       <div className="flex justify-between items-center mb-4 pb-2 border-b border-gray-100">
         <h3 className="font-semibold text-gray-800">Guests</h3>
         <button

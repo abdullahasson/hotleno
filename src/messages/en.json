@@ -393,7 +393,7 @@
   "HotelList": {
     "found": "Found {count} hotels in {location}.",
     "rated": "Highly rated",
-    "details": "View details",
+    "details": "Book",
     "adults": "Adults",
     "adult": "Adult",
     "noresults": "No hotels found. Try other search criteria."

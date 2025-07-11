@@ -1,3 +1,4 @@
+// src/app/api/search/route.ts
 import { NextRequest } from 'next/server';
 import { SearchParams } from '@/types/hotel';
 
@@ -14,6 +15,11 @@ interface ApiHotel {
   stars: number;
   locationId: number;
   imageUrl: string;
+}
+
+// Define extended interface with bookingUrl
+interface HotelResult extends ApiHotel {
+  bookingUrl: string;
 }
 
 export async function GET(request: NextRequest) {
@@ -37,28 +43,29 @@ export async function GET(request: NextRequest) {
 
   try {
     const response = await fetch(`${process.env.HOTEL_API_URL}?${apiParams}`);
-    const data: ApiHotel[] = await response.json(); // Replaced any[] with ApiHotel[]
+    const data: ApiHotel[] = await response.json();
 
-    const results = data.map(hotel => ({
-      hotelId: hotel.hotelId,
-      hotelName: hotel.hotelName,
-      location: {
-        name: hotel.location.name,
-        country: hotel.location.country
-      },
-      priceAvg: hotel.priceAvg,
-      pricePercentile: hotel.pricePercentile,
-      stars: hotel.stars,
-      locationId: hotel.locationId,
-      imageUrl: hotel.imageUrl
-    }));
+    const results: HotelResult[] = data.map(hotel => {
+      // Generate booking URL with affiliate parameters
+      const bookingUrl = new URL('https://search.hotellook.com/');
+      bookingUrl.searchParams.set('marker', process.env.TRAVELPAYOUTS_PARTNER_ID!);
+      bookingUrl.searchParams.set('hotelId', hotel.hotelId.toString());
+      bookingUrl.searchParams.set('checkIn', params.checkIn);
+      bookingUrl.searchParams.set('checkOut', params.checkOut);
+      bookingUrl.searchParams.set('adults', params.adults.toString());
+      
+      return {
+        ...hotel,
+        bookingUrl: bookingUrl.toString()
+      };
+    });
 
     return new Response(JSON.stringify(results), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }
     });
   } catch (error) {
-    console.error('API fetch error:', error); // Now using the error variable
+    console.error('API fetch error:', error);
     return new Response(JSON.stringify({ error: 'Failed to fetch data' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }

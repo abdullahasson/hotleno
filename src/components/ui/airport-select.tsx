@@ -14,6 +14,7 @@ interface AirportSelectProps {
   value: string;
   onChange: (value: string) => void;
   placeholder: string;
+  defaultValue?: string; // New defaultValue prop
 }
 
 // Define API response interface
@@ -29,6 +30,7 @@ const AirportSelect: React.FC<AirportSelectProps> = ({
   value,
   onChange,
   placeholder,
+  defaultValue, // Destructure new prop
 }) => {
   const lang = useLocale();
   const t = useTranslations('AirportSelect');
@@ -74,6 +76,32 @@ const AirportSelect: React.FC<AirportSelectProps> = ({
     }
   }, [inputValue, lang]);
 
+  // Fetch single airport by code
+  const fetchAirportByCode = useCallback(async (code: string) => {
+    setLoading(true);
+    try {
+      const response = await fetch(
+        `https://autocomplete.travelpayouts.com/places2?locale=${lang}&types[]=airport&term=${code}`
+      );
+      const data: ApiAirportItem[] = await response.json();
+      
+      if (data.length > 0) {
+        const airport = data[0];
+        setInputValue(
+          `${airport.country_name} - ${airport.city_name} - ${airport.name}`
+        );
+      } else {
+        // If airport not found, just show the code
+        setInputValue(code);
+      }
+    } catch (error) {
+      console.error('Error fetching airport:', error);
+      setInputValue(code);
+    } finally {
+      setLoading(false);
+    }
+  }, [lang]);
+
   useEffect(() => {
     // Debounce the API call
     const timer = setTimeout(() => {
@@ -100,12 +128,21 @@ const AirportSelect: React.FC<AirportSelectProps> = ({
     };
   }, []);
 
+  // Handle initial defaultValue
+  useEffect(() => {
+    if (defaultValue && !value) {
+      fetchAirportByCode(defaultValue);
+    }
+  }, [defaultValue, value, fetchAirportByCode]);
+
   // Set input value when a selection is made
   useEffect(() => {
     if (value && airports.length > 0) {
       const selectedAirport = airports.find((a) => a.code === value);
       if (selectedAirport) {
-        setInputValue(`${selectedAirport.country}`);
+        setInputValue(
+          `${selectedAirport.country} - ${selectedAirport.city} - ${selectedAirport.name}`
+        );
       }
     }
   }, [value, airports]);

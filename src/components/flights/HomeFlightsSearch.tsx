@@ -3,6 +3,7 @@
 import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
+import { getDestinationByCode } from "@/constants/mock-data"
 import Select from '../ui/select';
 import UiDatePicker from '../ui/datepicker';
 import AirportSelect from '../ui/airport-select'; // Changed from SelectCountry to AirportSelect
@@ -13,7 +14,8 @@ import {
   Search,
   Minus,
   Plus,
-  XCircle
+  XCircle,
+  Plane
 } from 'lucide-react';
 
 
@@ -21,7 +23,17 @@ import {
 type TripType = 'one-way' | 'round-trip' | 'return';
 type SortBy = 'price' | 'duration' | 'departure';
 
-export default function HomeFlightsSearch() {
+interface HomeFlightsSearchProps {
+  position: string;
+  destinationCode?: string;
+  originCode?: string;
+}
+
+export default function HomeFlightsSearch({
+  position = 'tab',
+  destinationCode = '',
+  originCode = '',
+}: HomeFlightsSearchProps) {
   const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("SearchFlightsComponent");
@@ -129,7 +141,29 @@ export default function HomeFlightsSearch() {
 
   return (
     <div className="flex-1">
-      <form onSubmit={handleSubmit} className="bg-white w-full rounded-b-3xl shadow-2xl px-8 pb-8 pt-4 max-[767px]:p-6 border border-gray-100">
+      <form
+        onSubmit={handleSubmit}
+        className={`
+          bg-white 
+          w-full 
+          ${position === 'flights-to' ? 'rounded-3xl relative' : 'rounded-b-3xl '}
+          shadow-2xl 
+          px-8 pb-8 pt-4 max-[767px]:p-6 
+          border border-gray-100
+        `}
+      >
+        {
+          position === 'flights-to' ? (
+            <div className="text-gray-900 flex items-center absolute z-20 top-0 left-1/2 -translate-x-1/2 -translate-y-3/4 shadow-md bg-white rounded-[100vmax] p-3 text-center">
+              <div className="bg-gray-100 p-2 rounded-full">
+                <Plane size={24} className="text-blue-600" />
+              </div>
+              <span className="px-2">
+                {t('flightsTo', { destination: getDestinationByCode(destinationCode)?.formattedName })}
+              </span>
+            </div>
+          ) : null
+        }
         {/* Trip Type Selector */}
         <div className="flex p-1 pb-0 gap-2 max-[767px]:gap-1 max-[767px]:justify-center">
           {(['one-way', 'return', 'round-trip'] as const).map((type) => (
@@ -155,6 +189,7 @@ export default function HomeFlightsSearch() {
                 value={formState.origin}
                 onChange={(value) => handleInputChange('origin', value)}
                 placeholder={t('Location.Origin')}
+                defaultValue={originCode}
               />
             </div>
 
@@ -173,6 +208,7 @@ export default function HomeFlightsSearch() {
                 value={formState.destination}
                 onChange={(value) => handleInputChange('destination', value)}
                 placeholder={t('Location.Destination')}
+                defaultValue={destinationCode}
               />
             </div>
           </div>

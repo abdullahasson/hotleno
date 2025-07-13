@@ -1,7 +1,7 @@
 // components/TextFlightDestinations.tsx
 import React from 'react';
 // Next Intl
-import { useTranslations } from "next-intl"
+import { useTranslations , useLocale } from "next-intl"
 import { motion } from 'framer-motion';
 import { Plane } from 'lucide-react';
 
@@ -19,6 +19,9 @@ const TextFlightDestinations: React.FC<FlightDestinationsProps> = ({
   title, 
   destinations 
 }) => {
+
+  const lang = useLocale();
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -54,7 +57,7 @@ const TextFlightDestinations: React.FC<FlightDestinationsProps> = ({
         {destinations.map((destination, index) => (
           <motion.a
             key={index}
-            href={destination.url}
+            href={`/${lang}${destination.url}`}
             target="_blank"
             rel="noreferrer"
             className="text-gray-600 hover:text-gray-800 transition-colors duration-300 px-1 border-b border-transparent"

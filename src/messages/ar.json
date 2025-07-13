@@ -331,7 +331,8 @@
       "origin" : "أدخل المنطقة و الوجهة",
       "departureDate": "أدخل تاريخ المغادرة",
       "returnDate": "أدخل تاريخ العودة"
-    }
+    },
+    "flightsTo": "رحلات الى {destination}"
   },
   "AirportSelect": {
     "Search": "ابحث عن مطار",
@@ -391,6 +392,18 @@
     }
   },
   "HotelList": {
+    "filters": "Filters",
+    "priceRange": "Price Range",
+    "starRating": "Star Rating",
+    "stars": "stars",
+    "location": "Location",
+    "allLocations": "All Locations",
+    "cityCenter": "City Center",
+    "highlyRated": "Show highly rated only",
+    "resetFilters": "Reset Filters",
+    "hideFilters": "Hide Filters",
+    "showFilters": "Show Filters",
+    "fromPrice": "From",
     "found": "تم العثور على {count} فندق في {location}.",
     "rated": "تقييم عالي",
     "details": "حجز",

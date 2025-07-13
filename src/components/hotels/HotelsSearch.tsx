@@ -28,13 +28,19 @@ export type Hotel = {
   location: {
     name: string;
     country: string;
+    state: string | null;
+    geo: {
+      lat: number;
+      lon: number;
+    };
   };
+  priceFrom: number;
   priceAvg: number;
   pricePercentile: Record<string, number>;
   stars: number;
   locationId: number;
   imageUrl: string;
-  bookingUrl: string; // Add this line
+  bookingUrl: string;
 };
 
 interface PassengerCounts {

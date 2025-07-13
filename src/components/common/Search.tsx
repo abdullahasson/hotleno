@@ -34,7 +34,7 @@ const Search = () => {
                     {t("Tabs.hotels")}
                 </button>
             </div>
-            {tab === 'flights' ? <HomeFlightsSearch /> : <HomeHotelssSearch />}
+            {tab === 'flights' ? <HomeFlightsSearch position="tab" /> : <HomeHotelssSearch />}
         </div>
     )
 }

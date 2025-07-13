@@ -39,6 +39,9 @@ export async function GET(request: NextRequest) {
     adults: params.adults.toString(),
     token: process.env.TRAVELPAYOUTS_API_TOKEN!,
     partner: process.env.TRAVELPAYOUTS_PARTNER_ID!,
+    limit: '50', // Request more hotels
+    currency: 'usd',
+    language: 'en',
   });
 
   try {

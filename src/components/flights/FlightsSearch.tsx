@@ -382,6 +382,7 @@ export default function FlightsSearch() {
             <div className="flex-1 w-full">
               <AirportSelect
                 value={''}
+                defaultValue={searchParamsState.origin}
                 onChange={value => handleParamChange('origin', value)}
                 placeholder={t('Location.Origin')}
               />
@@ -399,6 +400,7 @@ export default function FlightsSearch() {
             <div className="flex-1 w-full">
               <AirportSelect
                 value={''}
+                defaultValue={searchParamsState.destination}
                 onChange={value => handleParamChange('destination', value)}
                 placeholder={t('Location.Destination')}
               />

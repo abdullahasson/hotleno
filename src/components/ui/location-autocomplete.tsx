@@ -1,8 +1,7 @@
-// src/components/ui/location-autocomplete.tsx
 'use client';
 
 // React
-import { useState, useEffect, useRef, useCallback } from 'react'; // Added useCallback
+import { useState, useEffect, useRef, useCallback } from 'react';
 // Next Intl
 import { useLocale } from "next-intl";
 // Icons
@@ -18,30 +17,34 @@ interface LocationSuggestion {
 }
 
 interface LocationAutocompleteProps {
-  value: string;
+  value?: string;
+  defaultValue?: string;
   onChange: (value: string) => void;
   placeholder?: string;
 }
 
 export default function LocationAutocomplete({
   value,
+  defaultValue = '',
   onChange,
   placeholder = 'Search locations...'
 }: LocationAutocompleteProps) {
 
-  const lang = useLocale()
-  const [inputValue, setInputValue] = useState(value);
+  const lang = useLocale();
+  const isControlled = value !== undefined;
+  const [inputValue, setInputValue] = useState(defaultValue);
   const [suggestions, setSuggestions] = useState<LocationSuggestion[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [loading, setLoading] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Sync with parent value
+  // Sync with parent value (controlled mode)
   useEffect(() => {
-    setInputValue(value);
-  }, [value]);
+    if (isControlled) {
+      setInputValue(value);
+    }
+  }, [value, isControlled]);
 
-  // Wrap fetchSuggestions in useCallback
   const fetchSuggestions = useCallback(async (query: string) => {
     if (!query.trim()) {
       setSuggestions([]);
@@ -60,7 +63,7 @@ export default function LocationAutocomplete({
     } finally {
       setLoading(false);
     }
-  }, [lang]); // lang is a dependency
+  }, [lang]);
 
   // Debounce search
   useEffect(() => {
@@ -71,7 +74,7 @@ export default function LocationAutocomplete({
     return () => {
       clearTimeout(handler);
     };
-  }, [inputValue, fetchSuggestions]); // Added fetchSuggestions to dependencies
+  }, [inputValue, fetchSuggestions]);
 
   // Close suggestions when clicking outside
   useEffect(() => {
@@ -88,14 +91,16 @@ export default function LocationAutocomplete({
   }, []);
 
   const handleSelect = (suggestion: LocationSuggestion) => {
-    setInputValue(suggestion.name);
-    onChange(suggestion.name);
+    const newValue = suggestion.name;
+    setInputValue(newValue);
+    onChange(newValue);
     setShowSuggestions(false);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
-    onChange(e.target.value);
+    const newValue = e.target.value;
+    setInputValue(newValue);
+    onChange(newValue);
     setShowSuggestions(true);
   };
 
@@ -121,11 +126,11 @@ export default function LocationAutocomplete({
       </div>
 
       {showSuggestions && suggestions.length > 0 && (
-        <div className="absolute z-10 mt-2 w-full bg-white divide-y divide-gray-200  border border-gray-200 rounded-xl shadow-lg max-h-60 overflow-y-auto">
+        <div className="absolute z-10 mt-2 w-full bg-white divide-y divide-gray-200 border border-gray-200 rounded-xl shadow-lg max-h-60 overflow-y-auto">
           {suggestions.map((suggestion) => (
             <div
               key={suggestion.id}
-              className="px-4 py-3 hover:bg-blue-50 cursor-pointer transition-colors flex gap-3 items-center "
+              className="px-4 py-3 hover:bg-blue-50 cursor-pointer transition-colors flex gap-3 items-center"
               onClick={() => handleSelect(suggestion)}
               onMouseDown={(e) => e.preventDefault()}
             >

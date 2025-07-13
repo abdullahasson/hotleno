@@ -391,6 +391,18 @@
     }
   },
   "HotelList": {
+    "filters": "Filters",
+    "priceRange": "Price Range",
+    "starRating": "Star Rating",
+    "stars": "stars",
+    "location": "Location",
+    "allLocations": "All Locations",
+    "cityCenter": "City Center",
+    "highlyRated": "Show highly rated only",
+    "resetFilters": "Reset Filters",
+    "hideFilters": "Hide Filters",
+    "showFilters": "Show Filters",
+    "fromPrice": "From",
     "found": "Found {count} hotels in {location}.",
     "rated": "Highly rated",
     "details": "Book",

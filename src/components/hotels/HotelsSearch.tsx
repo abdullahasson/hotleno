@@ -219,9 +219,6 @@ export default function HotelsSearch() {
         shadow-xl 
         p-4 sm:p-6 
         border-b border-gray-100 
-        sticky 
-        top-0 
-        z-30
         selcon
         ${mobileOpen ? 'selcon-open' : ''}
       `}>

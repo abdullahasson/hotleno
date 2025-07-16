@@ -3,8 +3,10 @@
 
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Home, Star, CalendarDays, ArrowUpRight, MapPin, Filter, X, Map, Award } from 'lucide-react';
+import { Star, CalendarDays, ArrowUpRight, MapPin, Filter, X, Map, Award } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
+// Images
+import placeholderHotelImage from "../../../public/hotel-image-placeholder.jpg"
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
@@ -46,8 +48,8 @@ type FilterState = {
   highRatedOnly: boolean;
 };
 
-export default function HotelList({ 
-  hotels, 
+export default function HotelList({
+  hotels,
   location,
   checkIn,
   checkOut,
@@ -70,7 +72,7 @@ export default function HotelList({
       const prices = hotels.map(hotel => hotel.priceAvg);
       const minPrice = Math.min(...prices);
       const maxPrice = Math.max(...prices);
-      
+
       setFilters(prev => ({
         ...prev,
         minPrice,
@@ -95,17 +97,17 @@ export default function HotelList({
       if (hotel.priceAvg < filters.minPrice || hotel.priceAvg > filters.maxPrice) {
         return false;
       }
-      
+
       // Star rating filter
       if (hotel.stars < filters.minStars || hotel.stars > filters.maxStars) {
         return false;
       }
-      
+
       // High-rated filter (4+ stars)
       if (filters.highRatedOnly && hotel.stars < 4) {
         return false;
       }
-      
+
       return true;
     });
   }, [hotels, filters]);
@@ -115,7 +117,7 @@ export default function HotelList({
     const prices = hotels.map(hotel => hotel.priceAvg);
     const minPrice = Math.min(...prices);
     const maxPrice = Math.max(...prices);
-    
+
     setFilters({
       minPrice,
       maxPrice,
@@ -133,28 +135,28 @@ export default function HotelList({
       </div>
     );
   }
-  
+
   return (
     <div className="flex flex-col md:flex-row gap-6">
       {/* Filters Sidebar */}
-      <div className={`bg-white rounded-2xl shadow-xl p-6 h-fit transition-all duration-300 ${showFilters ? 'block' : 'hidden'} md:block md:w-1/4`}>
+      <div className={`bg-white sticky top-6 rounded-2xl shadow-xl p-6 h-fit transition-all duration-300 ${showFilters ? 'block' : 'hidden'} md:block md:w-1/4`}>
         <div className="flex justify-between items-center mb-6">
           <h3 className="text-lg font-bold flex items-center">
             <Filter size={18} className="mr-2" />
             {t('filters')}
           </h3>
-          <button 
+          <button
             onClick={() => setShowFilters(false)}
             className="md:hidden text-gray-500 hover:text-gray-700"
           >
             <X size={20} />
           </button>
         </div>
-        
+
         {/* Price Filter */}
         <div className="mb-6">
           <h4 className="font-medium mb-3">{t('priceRange')} (${filters.minPrice.toFixed(2)} - ${filters.maxPrice.toFixed(2)})</h4>
-          <Slider 
+          <Slider
             range
             min={0}
             max={Math.ceil(filters.maxPrice * 1.2)}
@@ -169,7 +171,7 @@ export default function HotelList({
               }
             }}
             trackStyle={{ backgroundColor: '#3b82f6', height: 4 }}
-            handleStyle={{ 
+            handleStyle={{
               borderColor: '#3b82f6',
               height: 18,
               width: 18,
@@ -182,7 +184,7 @@ export default function HotelList({
             <span>${filters.maxPrice.toFixed(2)}</span>
           </div>
         </div>
-        
+
         {/* Star Rating Filter */}
         <div className="mb-6">
           <h4 className="font-medium mb-3">{t('starRating')}</h4>
@@ -190,7 +192,7 @@ export default function HotelList({
             <span className="text-sm text-gray-600">{filters.minStars} {t('stars')}</span>
             <span className="text-sm text-gray-600">{filters.maxStars} {t('stars')}</span>
           </div>
-          <Slider 
+          <Slider
             range
             min={1}
             max={5}
@@ -205,7 +207,7 @@ export default function HotelList({
               }
             }}
             trackStyle={{ backgroundColor: '#f59e0b', height: 4 }}
-            handleStyle={{ 
+            handleStyle={{
               borderColor: '#f59e0b',
               height: 18,
               width: 18,
@@ -214,35 +216,33 @@ export default function HotelList({
             railStyle={{ backgroundColor: '#e5e7eb', height: 4 }}
           />
         </div>
-        
+
         {/* Additional Filters */}
         <div className="space-y-4">
           <div>
             <h4 className="font-medium mb-2">{t('location')}</h4>
             <div className="flex space-x-4">
               <button
-                className={`px-4 py-2 rounded-lg text-sm ${
-                  filters.locationType === 'all' 
-                    ? 'bg-blue-600 text-white' 
+                className={`px-4 py-2 rounded-lg text-sm ${filters.locationType === 'all'
+                    ? 'bg-blue-600 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
+                  }`}
                 onClick={() => setFilters(prev => ({ ...prev, locationType: 'all' }))}
               >
                 {t('allLocations')}
               </button>
               <button
-                className={`px-4 py-2 rounded-lg text-sm ${
-                  filters.locationType === 'center' 
-                    ? 'bg-blue-600 text-white' 
+                className={`px-4 py-2 rounded-lg text-sm ${filters.locationType === 'center'
+                    ? 'bg-blue-600 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
+                  }`}
                 onClick={() => setFilters(prev => ({ ...prev, locationType: 'center' }))}
               >
                 {t('cityCenter')}
               </button>
             </div>
           </div>
-          
+
           <div className="flex items-center">
             <input
               type="checkbox"
@@ -256,7 +256,7 @@ export default function HotelList({
             </label>
           </div>
         </div>
-        
+
         {/* Reset Button */}
         <button
           onClick={resetFilters}
@@ -265,7 +265,7 @@ export default function HotelList({
           {t('resetFilters')}
         </button>
       </div>
-      
+
       {/* Hotel List */}
       <div className="flex-1">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -273,7 +273,7 @@ export default function HotelList({
             <div>
               <h2 className="text-xl font-semibold text-gray-800">
                 {t('found', {
-                  count: filteredHotels.length || 0, 
+                  count: filteredHotels.length || 0,
                   location: location || ''
                 })}
               </h2>
@@ -284,8 +284,8 @@ export default function HotelList({
                 {adults} {adults === 1 ? t('adult') : t('adults')}
               </div>
             </div>
-            
-            <button 
+
+            <button
               onClick={() => setShowFilters(!showFilters)}
               className="mt-4 md:mt-0 flex items-center px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition"
             >
@@ -318,17 +318,24 @@ export default function HotelList({
                             />
                           </div>
                         ) : (
-                          <Home size={32} className="text-blue-600" />
+                          <div className="relative w-full h-full">
+                            <Image
+                              src={placeholderHotelImage}
+                              alt={hotel.hotelName}
+                              fill
+                              className="object-cover"
+                            />
+                          </div>
                         )}
                       </div>
                     </div>
-                    
+
                     {/* Hotel Info */}
                     <div className="flex-1">
                       <div className="flex justify-between">
                         <div>
                           <h3 className="text-xl font-bold text-gray-900 mb-1">{hotel.hotelName}</h3>
-                          
+
                           <div className="flex items-center text-gray-600 mb-3">
                             <MapPin size={16} className="mr-1" />
                             <span>
@@ -340,25 +347,24 @@ export default function HotelList({
                               {hotel.location.geo.lat.toFixed(4)}, {hotel.location.geo.lon.toFixed(4)}
                             </span>
                           </div>
-                          
+
                           <div className="flex items-center mb-4">
                             <div className="flex mr-4">
                               {Array.from({ length: 5 }).map((_, i) => (
                                 <Star
                                   key={i}
                                   size={18}
-                                  className={`mr-1 ${
-                                    i < Math.floor(hotel.stars)
+                                  className={`mr-1 ${i < Math.floor(hotel.stars)
                                       ? 'text-yellow-500 fill-yellow-500'
                                       : 'text-gray-300'
-                                  }`}
+                                    }`}
                                 />
                               ))}
                             </div>
                             <span className="text-gray-700 font-medium">
                               {hotel.stars.toFixed(1)} {t('stars')}
                             </span>
-                            
+
                             {hotel.stars >= 4 && (
                               <span className="ml-4 bg-green-100 text-green-800 text-sm font-medium px-2.5 py-1 rounded-full flex items-center">
                                 <Award size={16} className="mr-1" />
@@ -367,7 +373,7 @@ export default function HotelList({
                             )}
                           </div>
                         </div>
-                        
+
                         {/* Price Info */}
                         <div className="text-right">
                           <div className="text-2xl font-bold text-blue-600">
@@ -378,7 +384,7 @@ export default function HotelList({
                           </div>
                         </div>
                       </div>
-                      
+
                       {/* Additional Info */}
                       <div className="mt-4 flex justify-between">
                         <div className="bg-blue-50 rounded-lg px-4 py-2">
@@ -394,7 +400,7 @@ export default function HotelList({
                             ))}
                           </div>
                         </div>
-                        
+
                         <a
                           href={hotel.bookingUrl}
                           target="_blank"
@@ -402,9 +408,9 @@ export default function HotelList({
                           className="group flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition self-center h-fit"
                         >
                           {t('details')}
-                          <ArrowUpRight 
-                            size={18} 
-                            className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" 
+                          <ArrowUpRight
+                            size={18}
+                            className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
                           />
                         </a>
                       </div>
@@ -414,7 +420,7 @@ export default function HotelList({
               </li>
             ))}
           </ul>
-          
+
           {/* Empty State */}
           {filteredHotels.length === 0 && (
             <div className="py-12 text-center">

@@ -21,7 +21,7 @@ const TripCard: React.FC<TripCardProps> = ({ trip, roundTripText }) => {
             alt={`${trip.city}, ${trip.country}`} 
             layout="fill"
             objectFit="cover"
-            className="rounded-t-xl sm:rounded-l-xl sm:rounded-tr-none"
+            className=" sm:rounded-tr-none"
           />
         </div>
         

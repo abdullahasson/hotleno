@@ -408,7 +408,8 @@
     "details": "Book",
     "adults": "Adults",
     "adult": "Adult",
-    "noresults": "No hotels found. Try other search criteria."
+    "noresults": "No hotels found. Try other search criteria.",
+    "noFilterResults": "No filter hotels found"
   },
   "HotelsError": {
     "Title": "No hotels found",

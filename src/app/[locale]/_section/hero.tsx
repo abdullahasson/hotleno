@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Search from "@/components/common/Search";
+// Images
+import hero1 from "../../../../public/hero1.jpg"
+import hero2 from "../../../../public/hero2.jpg"
+import hero3 from "../../../../public/hero3.jpg"
 
 const Hero = () => {
     const images = [
-        '/hero1.jpg',
-        '/hero2.jpg',
-        '/hero3.jpg'
+        hero1,
+        hero2,
+        hero3
     ];
     
     const [currentIndex, setCurrentIndex] = useState(0);

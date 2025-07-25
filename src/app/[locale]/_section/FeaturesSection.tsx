@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTranslations } from "next-intl";
 import Image from 'next/image';
+// Image
+import placeholder from "../../../../public/placeholder.svg"
 
 const FeaturesSection = () => {
 
@@ -9,19 +11,19 @@ const FeaturesSection = () => {
   const features = [
     {
       title: t('one'),
-      icon: "/placeholder.svg",
+      icon: placeholder,
     },
     {
       title: t('two'),
-      icon: "/placeholder.svg",
+      icon: placeholder,
     },
     {
       title: t('three'),
-      icon: "/placeholder.svg",
+      icon: placeholder,
     },
     {
       title: t('four'),
-      icon: "/placeholder.svg",
+      icon: placeholder,
     },
   ];
 

@@ -9,11 +9,11 @@ import { useLocale } from "next-intl";
 // React
 import { useState } from "react";
 // Images
-import sa from "../../../public/sa.png"
-import es from "../../../public/es.png"
-import tr from "../../../public/tr.png"
-import gb from "../../../public/gb.png"
-import fr from "../../../public/fr.png"
+import sa from "../../../public/sa.svg"
+import es from "../../../public/es.svg"
+import tr from "../../../public/tr.svg"
+import gb from "../../../public/gb.svg"
+import fr from "../../../public/fr.svg"
 // Icons 
 import { ChevronDown } from "lucide-react"
 
@@ -38,11 +38,11 @@ const SwitchLanguages = ({scrolled} : SwitchLanguagesProps) => {
     const pathSuffix = basePath ? `/${basePath}` : "";
 
     const handleActiveLanguageButttonText = {
-        "ar": "العربية",
-        "en": "English",
-        "fr": "Français",
-        "es": "Español",
-        "tr": "Türkçe"
+        "ar": "AR",
+        "en": "EN",
+        "fr": "FR",
+        "es": "ES",
+        "tr": "TR"
     }
 
     const handleActiveLanguageImage = {
@@ -57,7 +57,9 @@ const SwitchLanguages = ({scrolled} : SwitchLanguagesProps) => {
         <div className="desktop-language-switcher language-switcher">
             <div className="flex items-center gap-2" onClick={() => setOpen(!open)}>
                 <Image src={handleActiveLanguageImage[lang]} className="language-flag" alt={handleActiveLanguageButttonText[lang]} />
-                <span className={`${scrolled ? 'text-gray-700' : 'text-white'} font-medium`}>{handleActiveLanguageButttonText[lang]}</span>
+                <span className={`${scrolled ? 'text-gray-700' : 'text-white'} font-medium`}>
+                    {handleActiveLanguageButttonText[lang]}
+                </span>
                 <ChevronDown className="text-xs text-gray-500" />
             </div>
   

@@ -134,13 +134,13 @@ const Footer = () => {
                             <li className={`mb-4 ${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
                                 <Link href={`/${lang}/`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
                                     <MessageCircleReply className="text-[var(--color-accent)]" />
-                                    hotlenosite@gmail.com
+                                    info@hotleno.com
                                 </Link>
                             </li>
                             <li className={`mb-4 ${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
                                 <Link href={`/${lang}/`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
                                     <Phone className="text-[var(--color-accent)]" />
-                                    +966 123 456 789
+                                    +44 123 456 789
                                 </Link>
                             </li>
                             <li className={`${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>

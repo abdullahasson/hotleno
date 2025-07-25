@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useLocale , useTranslations } from "next-intl"
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+// Images
+import placeholder from "../../../public/placeholder.svg"
 
 const PromoCarousel = () => {
   const lang = useLocale();
@@ -14,25 +16,25 @@ const PromoCarousel = () => {
     {
       title: t("Cards.one.title"),
       description: t("Cards.one.des"),
-      image: "/placeholder.svg",
+      image: placeholder,
       link: "https://www.wego.com/car-rental?source=mc&ulang=ar",
     },
     {
       title:  t("Cards.two.title"),
       description:  t("Cards.two.des"),
-      image: "/placeholder.svg",
+      image: placeholder,
       link: "https://airalo.pxf.io/c/5609792/2139174/15608?p.code=WEGO",
     },
     {
       title:  t("Cards.three.title"),
       description: t("Cards.three.des") ,
-      image: "/placeholder.svg",
+      image: placeholder,
       link: "https://apply.joinsherpa.com/travel-restrictions?affiliateId=wego&language=ar-SA&currency=SAR",
     },
     {
       title: t("Cards.four.title") ,
       description: t("Cards.four.des"),
-      image: "/placeholder.svg",
+      image: placeholder,
       link: "https://wego.transferz.com/airport-transfers/?wg_source=Onsite&wg_medium=carousel&wg_campaign=visa-desktop",
     }
   ];

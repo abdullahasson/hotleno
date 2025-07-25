@@ -828,3 +828,272 @@ export const getUrlByCountryCode = (code: string): string | undefined => {
   const destination = cityDestinations.find(dest => dest.code === code);
   return destination?.url;
 };
+
+
+// Mock Data for every Hotel
+export const hotelsbeds = {
+    "auditData": {
+        "processTime": "892",
+        "timestamp": "2025-07-25 01:56:19.259",
+        "requestHost": "35.222.118.161, 15.158.47.17, 10.214.142.204, 10.214.129.149",
+        "serverId": "ip-10-214-128-53.eu-central-1.compute.internal",
+        "environment": "[awseucentral1, awseucentral1c, ip_10_214_128_53, eucentral1, secret]",
+        "release": "",
+        "token": "79803196BEA74B53A160F70C165F2CAB",
+        "internal": "0|57A21252B91C496175340857836905|UK|00|274|6596||||||||||||15802||1~1~2~0|0|80||4|37eb72d6a4495ae8dd9bf052af324182||||"
+    },
+    "hotels": {
+        "hotels": [
+            {
+                "code": 4492,
+                "name": "Sercotel Madrid Aeropuerto",
+                "categoryCode": "4EST",
+                "categoryName": "4 STARS",
+                "destinationCode": "MAD",
+                "destinationName": "Madrid",
+                "zoneCode": 35,
+                "zoneName": "Barajas-Ifema",
+                "latitude": "40.45794120000000000000",
+                "longitude": "-3.58336520000000000000",
+                "rooms": [
+                    {
+                        "code": "TWN.AS",
+                        "name": "CLASSIC TWIN",
+                        "rates": [
+                            {
+                                "rateKey": "20250725|20250730|W|102|4492|TWN.AS|EB I OP RO|RO||1~2~0||P@07~~232196~1961178984~N~~~NOR~~57A21252B91C496175340857836905AAUK02740080000400232196",
+                                "rateClass": "NOR",
+                                "rateType": "BOOKABLE",
+                                "net": "406.50",
+                                "allotment": 7,
+                                "rateCommentsId": "102|233021|0",
+                                "paymentType": "AT_WEB",
+                                "packaging": true,
+                                "boardCode": "RO",
+                                "boardName": "ROOM ONLY",
+                                "cancellationPolicies": [
+                                    {
+                                        "amount": "406.50",
+                                        "from": "2025-07-24T23:59:00+02:00"
+                                    }
+                                ],
+                                "rooms": 1,
+                                "adults": 2,
+                                "children": 0,
+                                "promotions": [
+                                    {
+                                        "code": "322",
+                                        "name": "Online check-in"
+                                    }
+                                ]
+                            },
+                            {
+                                "rateKey": "20250725|20250730|W|102|4492|TWN.AS|EB I RO|RO||1~2~0||N@07~~232217~298302984~N~~~NOR~~57A21252B91C496175340857836905AAUK027400800004002451c3",
+                                "rateClass": "NOR",
+                                "rateType": "BOOKABLE",
+                                "net": "451.69",
+                                "allotment": 7,
+                                "rateCommentsId": "102|233002|0",
+                                "paymentType": "AT_WEB",
+                                "packaging": false,
+                                "boardCode": "RO",
+                                "boardName": "ROOM ONLY",
+                                "cancellationPolicies": [
+                                    {
+                                        "amount": "451.69",
+                                        "from": "2025-07-24T23:59:00+02:00"
+                                    }
+                                ],
+                                "rooms": 1,
+                                "adults": 2,
+                                "children": 0,
+                                "promotions": [
+                                    {
+                                        "code": "322",
+                                        "name": "Online check-in"
+                                    }
+                                ]
+                            },
+                            {
+                                "rateKey": "20250725|20250730|W|102|4492|TWN.AS|EB I OP BB|BB||1~2~0||P@07~~24e1f2~-1124196312~N~~~NOR~~57A21252B91C496175340857836905AAUK0274008000040024e1f2",
+                                "rateClass": "NOR",
+                                "rateType": "BOOKABLE",
+                                "net": "498.78",
+                                "allotment": 7,
+                                "rateCommentsId": "102|233022|0",
+                                "paymentType": "AT_WEB",
+                                "packaging": true,
+                                "boardCode": "BB",
+                                "boardName": "BED AND BREAKFAST",
+                                "cancellationPolicies": [
+                                    {
+                                        "amount": "498.78",
+                                        "from": "2025-07-24T23:59:00+02:00"
+                                    }
+                                ],
+                                "rooms": 1,
+                                "adults": 2,
+                                "children": 0,
+                                "promotions": [
+                                    {
+                                        "code": "322",
+                                        "name": "Online check-in"
+                                    }
+                                ]
+                            },
+                            {
+                                "rateKey": "20250725|20250730|W|102|4492|TWN.AS|EB I BB|BB||1~2~0||N@07~~200291~-388628906~N~~~NOR~~57A21252B91C496175340857836905AAUK0274008000040021322a",
+                                "rateClass": "NOR",
+                                "rateType": "BOOKABLE",
+                                "net": "554.19",
+                                "allotment": 7,
+                                "rateCommentsId": "102|233003|0",
+                                "paymentType": "AT_WEB",
+                                "packaging": false,
+                                "boardCode": "BB",
+                                "boardName": "BED AND BREAKFAST",
+                                "cancellationPolicies": [
+                                    {
+                                        "amount": "554.19",
+                                        "from": "2025-07-24T23:59:00+02:00"
+                                    }
+                                ],
+                                "rooms": 1,
+                                "adults": 2,
+                                "children": 0,
+                                "promotions": [
+                                    {
+                                        "code": "322",
+                                        "name": "Online check-in"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "code": "DBL.SU",
+                        "name": "SUPERIOR DOBLE",
+                        "rates": [
+                            {
+                                "rateKey": "20250725|20250730|W|102|4492|DBL.SU|EB I OP RO|RO||1~2~0||P@07~~25d1eb~1663934677~N~~~NOR~~57A21252B91C496175340857836905AAUK0274008000040025d1eb",
+                                "rateClass": "NOR",
+                                "rateType": "BOOKABLE",
+                                "net": "491.93",
+                                "allotment": 7,
+                                "rateCommentsId": "102|233021|0",
+                                "paymentType": "AT_WEB",
+                                "packaging": true,
+                                "boardCode": "RO",
+                                "boardName": "ROOM ONLY",
+                                "cancellationPolicies": [
+                                    {
+                                        "amount": "491.93",
+                                        "from": "2025-07-24T23:59:00+02:00"
+                                    }
+                                ],
+                                "rooms": 1,
+                                "adults": 2,
+                                "children": 0,
+                                "promotions": [
+                                    {
+                                        "code": "322",
+                                        "name": "Online check-in"
+                                    }
+                                ]
+                            },
+                            {
+                                "rateKey": "20250725|20250730|W|102|4492|DBL.SU|EB I RO|RO||1~2~0||N@07~~200288~1345364655~N~~~NOR~~57A21252B91C496175340857836905AAUK02740080000400238222",
+                                "rateClass": "NOR",
+                                "rateType": "BOOKABLE",
+                                "net": "546.56",
+                                "allotment": 7,
+                                "rateCommentsId": "102|233002|0",
+                                "paymentType": "AT_WEB",
+                                "packaging": false,
+                                "boardCode": "RO",
+                                "boardName": "ROOM ONLY",
+                                "cancellationPolicies": [
+                                    {
+                                        "amount": "546.56",
+                                        "from": "2025-07-24T23:59:00+02:00"
+                                    }
+                                ],
+                                "rooms": 1,
+                                "adults": 2,
+                                "children": 0,
+                                "promotions": [
+                                    {
+                                        "code": "322",
+                                        "name": "Online check-in"
+                                    }
+                                ]
+                            },
+                            {
+                                "rateKey": "20250725|20250730|W|102|4492|DBL.SU|EB I OP BB|BB||1~2~0||P@07~~20e248~1543456309~N~~~NOR~~57A21252B91C496175340857836905AAUK0274008000040020e248",
+                                "rateClass": "NOR",
+                                "rateType": "BOOKABLE",
+                                "net": "584.14",
+                                "allotment": 7,
+                                "rateCommentsId": "102|233022|0",
+                                "paymentType": "AT_WEB",
+                                "packaging": true,
+                                "boardCode": "BB",
+                                "boardName": "BED AND BREAKFAST",
+                                "cancellationPolicies": [
+                                    {
+                                        "amount": "584.14",
+                                        "from": "2025-07-24T23:59:00+02:00"
+                                    }
+                                ],
+                                "rooms": 1,
+                                "adults": 2,
+                                "children": 0,
+                                "promotions": [
+                                    {
+                                        "code": "322",
+                                        "name": "Online check-in"
+                                    }
+                                ]
+                            },
+                            {
+                                "rateKey": "20250725|20250730|W|102|4492|DBL.SU|EB I BB|BB||1~2~0||N@07~~232301~-1209131092~N~~~NOR~~57A21252B91C496175340857836905AAUK02740080000400206289",
+                                "rateClass": "NOR",
+                                "rateType": "BOOKABLE",
+                                "net": "649.06",
+                                "allotment": 7,
+                                "rateCommentsId": "102|233003|0",
+                                "paymentType": "AT_WEB",
+                                "packaging": false,
+                                "boardCode": "BB",
+                                "boardName": "BED AND BREAKFAST",
+                                "cancellationPolicies": [
+                                    {
+                                        "amount": "649.06",
+                                        "from": "2025-07-24T23:59:00+02:00"
+                                    }
+                                ],
+                                "rooms": 1,
+                                "adults": 2,
+                                "children": 0,
+                                "promotions": [
+                                    {
+                                        "code": "322",
+                                        "name": "Online check-in"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "minRate": "406.50",
+                "maxRate": "649.06",
+                "currency": "EUR"
+            }
+
+            // More hotels
+        ],
+        "checkIn": "2025-07-25",
+        "total": 274,
+        "checkOut": "2025-07-30"
+    }
+}

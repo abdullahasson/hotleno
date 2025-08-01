@@ -112,7 +112,7 @@ export default function LocationAutocomplete({
 
   return (
     <div className="relative w-full" ref={containerRef}>
-      <div className="flex items-center gap-2 py-3 px-2 rounded-xl border border-gray-200">
+      <div className="flex items-center gap-2 py-3 px-2 rounded-xl border border-gray-400">
         <MapPin size={20} className="text-blue-500" />
         <input
           type="text"
@@ -126,7 +126,7 @@ export default function LocationAutocomplete({
       </div>
 
       {showSuggestions && suggestions.length > 0 && (
-        <div className="absolute z-10 mt-2 w-full bg-white divide-y divide-gray-200 border border-gray-200 rounded-xl shadow-lg max-h-60 overflow-y-auto">
+        <div className="absolute z-10 mt-2 w-full bg-white divide-y divide-gray-200 border border-gray-400 rounded-xl shadow-lg max-h-60 overflow-y-auto">
           {suggestions.map((suggestion) => (
             <div
               key={suggestion.id}
@@ -149,7 +149,7 @@ export default function LocationAutocomplete({
       )}
 
       {showSuggestions && !loading && suggestions.length === 0 && inputValue && (
-        <div className="absolute z-10 mt-2 w-full bg-white border border-gray-200 rounded-xl shadow-lg p-4 text-center text-gray-500">
+        <div className="absolute z-10 mt-2 w-full bg-white border border-gray-400 rounded-xl shadow-lg p-4 text-center text-gray-500">
           No locations found
         </div>
       )}

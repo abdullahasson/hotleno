@@ -171,7 +171,7 @@ export default function FlightsSearch() {
     } as PassengerCounts,
     showPassengerSelect: false
   });
-  const [mobileOpen , setMobileOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
 
 
   // Search function
@@ -450,14 +450,6 @@ export default function FlightsSearch() {
             </button>
           </div>
         </div>
-
-        {/* Error message */}
-        {error && (
-          <div className="mt-4 sm:mt-5 p-4 bg-red-50 text-red-700 rounded-xl flex items-center animate-fadeIn border border-red-100">
-            <XCircle className="text-red-500 mr-3" size={20} />
-            <span>{error}</span>
-          </div>
-        )}
       </div>
 
       {/* Results Section */}
@@ -497,6 +489,24 @@ export default function FlightsSearch() {
         </div>
         <div className="flex-1"></div>
       </div>
+
+      {/* Error message */}
+      {error && (
+        <div className={`
+            flex items-center gap-3
+            fixed bottom-10 right-1/2 translate-x-1/2 z-50
+            mt-5 
+            p-4 
+            bg-red-50 text-red-700 
+            rounded-xl 
+            animate-bounce
+            border border-red-100
+            shadow-2xl
+          `}>
+          <XCircle className="text-red-500" size={20} />
+          <span>{error}</span>
+        </div>
+      )}
     </div>
   );
 }

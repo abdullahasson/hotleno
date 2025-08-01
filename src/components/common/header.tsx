@@ -53,7 +53,7 @@ const Header = ({ initialScrolled = false }: HeaderProps) => {
                         {/* تبديل اللغة - نسخة سطح المكتب */}
                         <SwitchLanguages scrolled={scrolled} />
                     
-                        <Link className="text-sm border border-white rounded-full py-2 px-3 transition-all hover:scale-105" href="/sign-in">
+                        <Link className="text-sm border border-white rounded-full py-2 px-3 transition-all hover:scale-105" href={`/${lang}/login`}>
                             {t('Login')}
                         </Link>
                     </div>

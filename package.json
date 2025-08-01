@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@hookform/devtools": "^4.4.0",
+    "@hookform/resolvers": "^5.2.1",
     "axios": "^1.10.0",
     "date-fns": "^4.1.0",
     "framer-motion": "^12.18.1",
+    "leaflet": "^1.9.4",
     "lucide-react": "^0.516.0",
     "next": "15.3.3",
     "next-intl": "^4.1.0",
@@ -21,11 +23,14 @@
     "react-datepicker": "^8.4.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.60.0",
-    "swr": "^2.3.4"
+    "react-leaflet": "^5.0.0",
+    "swr": "^2.3.4",
+    "zod": "^4.0.13"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/leaflet": "^1.9.20",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

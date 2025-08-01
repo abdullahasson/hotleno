@@ -481,3 +481,26 @@ body {
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+
+
+.login-form {
+  background-image: url('/public/bg-1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Titles */
+.title-login-one {
+  position: relative;
+  text-align: center;
+}
+.title-login-one::before {
+  content: url(/public/line-shape-1.svg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+}

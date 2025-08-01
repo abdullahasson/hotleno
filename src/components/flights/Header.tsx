@@ -79,7 +79,7 @@ const Header = () => {
           <div className="flex items-center gap-6">
             <SwitchLanguages scrolled={true} />
           
-            <Link className="hidden sm:inline text-sm border border-white rounded-full py-2 px-3 transition-all hover:scale-105" href="/sign-in">
+            <Link className="hidden sm:inline text-sm border border-white rounded-full py-2 px-3 transition-all hover:scale-105" href={`/${lang}/login`}>
               تسجيل الدخول
             </Link>
 
@@ -129,7 +129,7 @@ const Header = () => {
           <div className="mt-auto pb-10 pt-8 border-t border-gray-200">
             <Link 
               className="block text-center w-full py-3 px-4 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-colors"
-              href="/sign-in"
+              href={`/${lang}/login`}
             >
               تسجيل الدخول
             </Link>

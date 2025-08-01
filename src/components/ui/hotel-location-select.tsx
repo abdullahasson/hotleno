@@ -212,7 +212,7 @@ const HotelLocationSelect: React.FC<HotelLocationSelectProps> = ({ value, onChan
             animate="visible"
             exit="exit"
             variants={dropdownVariants}
-            className="absolute z-10 mt-1 w-full bg-white rounded-lg shadow-lg border border-gray-200 max-h-96 overflow-y-auto"
+            className="absolute z-10 mt-1 w-full bg-white rounded-lg shadow-lg border border-gray-400 max-h-96 overflow-y-auto"
           >
             {loading ? (
               <motion.div 

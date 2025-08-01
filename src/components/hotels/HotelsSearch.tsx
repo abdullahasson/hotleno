@@ -7,7 +7,7 @@ import { useSearchParams } from 'next/navigation';
 import { useState, useEffect, useCallback } from 'react';
 // Components
 import HotelList from "./HotelList";
-import HotelError from './HotelError';
+// import HotelError from './HotelError';
 import UiDatePicker from '../ui/datepicker';
 import {
   User,
@@ -20,6 +20,9 @@ import {
   ArrowDown,
   ArrowUp
 } from 'lucide-react';
+// Mock Data
+import { mockHotels } from "@/data/mockHotels";
+
 
 // Types
 export type Hotel = {
@@ -134,7 +137,7 @@ export default function HotelsSearch() {
     } as PassengerCounts,
     showPassengerSelect: false
   });
-  const [mobileOpen , setMobileOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   // Search function
   const searchHotels = useCallback(async () => {
@@ -173,11 +176,11 @@ export default function HotelsSearch() {
 
       const apiUrl = `/api/search?${params.toString()}`;
       const res = await fetch(apiUrl);
-      
+
       if (!res.ok) {
         throw new Error(`HTTP error! Status: ${res.status}`);
       }
-      
+
       const data: Hotel[] = await res.json();
       setHotels(data);
     } catch (err) {
@@ -209,7 +212,10 @@ export default function HotelsSearch() {
   return (
     <div>
       <div className="selcon-btn" onClick={() => setMobileOpen(!mobileOpen)}>
-        {mobileOpen ? <ArrowUp /> : <ArrowDown />}
+        {mobileOpen ?
+          <ArrowUp /> :
+          <ArrowDown />
+        }
       </div>
 
       {/* Search Form */}
@@ -218,7 +224,7 @@ export default function HotelsSearch() {
         w-full 
         shadow-xl 
         p-4 sm:p-6 
-        border-b border-gray-100 
+        border-y border-gray-400
         selcon
         ${mobileOpen ? 'selcon-open' : ''}
       `}>
@@ -302,36 +308,62 @@ export default function HotelsSearch() {
             </button>
           </div>
         </div>
-
-        {/* Error message */}
-        {error && (
-          <div className="mt-5 p-4 bg-red-50 text-red-700 rounded-xl flex items-center animate-fadeIn border border-red-100">
-            <XCircle className="text-red-500 mr-3" size={20} />
-            <span>{error}</span>
-          </div>
-        )}
       </div>
 
       {/* Results Section */}
-      <div className="p-6">        
+      <div className="p-6">
         <div>
           {loading ? (
-            <div className="flex justify-center py-12">
-              <Loader2 className="animate-spin h-12 w-12 text-blue-600" />
+            <div className="container mx-auto px-4 py-8 bg-gray-400">
+              <div className="animate-pulse space-y-4">
+                <div className="h-8 bg-gray-200 rounded w-1/3"></div>
+                <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+                <div className="flex gap-6 mt-6">
+                  <div className="w-1/4 space-y-4">
+                    <div className="h-8 bg-gray-200 rounded"></div>
+                    <div className="h-32 bg-gray-200 rounded"></div>
+                    <div className="h-32 bg-gray-200 rounded"></div>
+                  </div>
+                  <div className="w-3/4 space-y-4">
+                    {[...Array(3)].map((_, i) => (
+                      <div key={i} className="h-48 bg-gray-200 rounded"></div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           ) : hotels.length > 0 ? (
-            <HotelList 
-              hotels={hotels}
-              location={searchParamsState.location}
-              checkIn={searchParamsState.checkIn.toISOString()}
-              checkOut={searchParamsState.checkOut.toISOString()}
-              adults={searchParamsState.passengers.adults}
+            <HotelList
+              hotels={mockHotels}
+
             />
           ) : !loading && (
-            <HotelError />
+            <HotelList
+              hotels={mockHotels}
+
+            />
           )}
         </div>
       </div>
+
+      {/* Error message */}
+      {error && (
+        <div className={`
+            flex items-center gap-3
+            fixed bottom-10 right-1/2 translate-x-1/2 z-50
+            mt-5 
+            p-4 
+            bg-red-50 text-red-700 
+            rounded-xl 
+            animate-bounce
+            border border-red-100
+            shadow-2xl
+          `}
+        >
+          <XCircle className="text-red-500" size={20} />
+          <span>{error}</span>
+        </div>
+      )}
     </div>
   );
 }

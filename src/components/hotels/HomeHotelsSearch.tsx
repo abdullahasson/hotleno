@@ -12,13 +12,11 @@ import UiDatePicker from '../ui/datepicker';
 import LocationAutocomplete from '../ui/location-autocomplete';
 // Icons
 import {
-  User,
   X,
   Search,
   Minus,
   Plus,
   XCircle,
-  Calendar
 } from 'lucide-react';
 
 // /api/search?location=paris&checkIn=2025-07-08&checkOut=2025-07-09&adults=2
@@ -108,10 +106,7 @@ export default function HomeHotelsSearch() {
         <div className="flex items-center gap-5 max-[767px]:gap-2 max-[767px]:flex-col">
           {/* Location */}
           <div className="flex-1 max-[767px]:w-full">
-            <div className="flex items-center gap-2 mb-1 text-sm font-medium text-gray-700">
-              <Calendar size={16} className="text-blue-500" />
-              {t("Location.Label")}
-            </div>
+
             <div className="relative !text-gray-900">
               <LocationAutocomplete
                 value={formState.location}
@@ -124,10 +119,6 @@ export default function HomeHotelsSearch() {
           {/* Date Pickers */}
           <div className="flex-1 flex gap-3 max-[767px]:w-full max-[767px]:flex-col">
             <div className="flex-1">
-              <div className="flex items-center gap-2 mb-1 text-sm font-medium text-gray-700">
-                <Calendar size={16} className="text-blue-500" />
-                {t("Date.CheckIn")}
-              </div>
               <UiDatePicker
                 selected={formState.checkIn}
                 onChange={(date) => handleInputChange('checkIn', date)}
@@ -138,10 +129,6 @@ export default function HomeHotelsSearch() {
             </div>
 
             <div className="flex-1">
-              <div className="flex items-center gap-2 mb-1 text-sm font-medium text-gray-700">
-                <Calendar size={16} className="text-blue-500" />
-                {t("Date.CheckOut")}
-              </div>
               <UiDatePicker
                 selected={formState.checkOut}
                 onChange={(date) => handleInputChange('checkOut', date)}
@@ -154,13 +141,9 @@ export default function HomeHotelsSearch() {
 
           {/* Guests & Rooms */}
           <div className="flex-1 max-[767px]:w-full">
-            <div className="flex items-center gap-2 mb-1 text-sm font-medium text-gray-700">
-              <User size={16} className="text-blue-500" />
-              {t("GuestsRooms.Title")}
-            </div>
             <div className="relative">
               <div
-                className="border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-blue-400 transition-colors"
+                className="border border-gray-400 rounded-xl px-4 py-3 cursor-pointer hover:border-blue-400 transition-colors"
                 onClick={() => setUiState(prev => ({ 
                   ...prev, 
                   showGuestRoomSelect: !prev.showGuestRoomSelect 
@@ -246,7 +229,7 @@ const GuestRoomSelector = ({
   const t = useTranslations("SearchHotelsComponent");
 
   return (
-    <div className="absolute z-20 bg-white border border-gray-200 rounded-xl shadow-lg p-5 w-full mt-2 animate-fadeIn">
+    <div className="absolute z-20 bg-white border border-gray-400 rounded-xl shadow-lg p-5 w-full mt-2 animate-fadeIn">
       <div className="flex justify-between items-center mb-4 pb-2 border-b border-gray-100">
         <h3 className="font-semibold text-gray-800">{t("GuestsRooms.Title")}</h3>
         <button onClick={onClose} className="p-1 cursor-pointer rounded-full hover:bg-gray-100 transition-colors">
@@ -263,7 +246,7 @@ const GuestRoomSelector = ({
           </div>
           <div className="flex items-center space-x-3">
             <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
+              className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
               disabled={guests.adults <= 1}
               onClick={() => onChange('adults', -1)}
             >
@@ -271,7 +254,7 @@ const GuestRoomSelector = ({
             </button>
             <span className="font-medium w-6 text-center">{guests.adults}</span>
             <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-50 transition-colors"
+              className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center hover:bg-blue-50 transition-colors"
               onClick={() => onChange('adults', 1)}
             >
               <Plus size={16} className="text-blue-500" />
@@ -287,7 +270,7 @@ const GuestRoomSelector = ({
           </div>
           <div className="flex items-center space-x-3">
             <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
+              className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
               disabled={guests.children <= 0}
               onClick={() => onChange('children', -1)}
             >
@@ -295,7 +278,7 @@ const GuestRoomSelector = ({
             </button>
             <span className="font-medium w-6 text-center">{guests.children}</span>
             <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-50 transition-colors"
+              className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center hover:bg-blue-50 transition-colors"
               onClick={() => onChange('children', 1)}
             >
               <Plus size={16} className="text-blue-500" />
@@ -311,7 +294,7 @@ const GuestRoomSelector = ({
           </div>
           <div className="flex items-center space-x-3">
             <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
+              className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
               disabled={rooms <= 1}
               onClick={() => onChange('rooms', -1)}
             >
@@ -319,7 +302,7 @@ const GuestRoomSelector = ({
             </button>
             <span className="font-medium w-6 text-center">{rooms}</span>
             <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-50 transition-colors"
+              className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center hover:bg-blue-50 transition-colors"
               onClick={() => onChange('rooms', 1)}
             >
               <Plus size={16} className="text-blue-500" />

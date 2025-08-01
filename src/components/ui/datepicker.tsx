@@ -26,7 +26,7 @@ const CustomDateInput = forwardRef<HTMLButtonElement, CustomDateInputProps>(
     ({ value, onClick, placeholderText }, ref) => (
         <motion.button
             whileTap={{ scale: 0.98 }}
-            className="flex items-center w-full py-3 pr-4 pl-12 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-transparent text-lg hover:shadow-md transition-all duration-200 bg-white "
+            className="flex items-center w-full py-3 pr-4 pl-12 border border-gray-400 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-transparent text-lg hover:shadow-md transition-all duration-200 bg-white "
             onClick={onClick}
             ref={ref}
             type="button"

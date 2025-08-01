@@ -4,6 +4,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 // Images
 import placeholder from "../../../public/placeholder.svg"
+import car from "../../../public/Group 695.svg"
+import emia from "../../../public/Group 698.svg"
 
 const PromoCarousel = () => {
   const lang = useLocale();
@@ -16,13 +18,13 @@ const PromoCarousel = () => {
     {
       title: t("Cards.one.title"),
       description: t("Cards.one.des"),
-      image: placeholder,
+      image: car,
       link: "https://www.wego.com/car-rental?source=mc&ulang=ar",
     },
     {
       title:  t("Cards.two.title"),
       description:  t("Cards.two.des"),
-      image: placeholder,
+      image: emia,
       link: "https://airalo.pxf.io/c/5609792/2139174/15608?p.code=WEGO",
     },
     {

@@ -292,7 +292,7 @@ export default function HomeFlightsSearch({
             {/* Passengers */}
             <div className="relative max-[767px]:w-full">
               <div
-                className="border border-gray-200 rounded-xl px-4 py-2 pl-12 cursor-pointer transition-colors duration-300 bg-white hover:shadow-md"
+                className="border border-gray-400 rounded-xl px-4 py-2 pl-12 cursor-pointer transition-colors duration-300 bg-white hover:shadow-md"
                 onClick={() => setUiState(prev => ({ ...prev, showPassengerSelect: !prev.showPassengerSelect }))}
               >
                 <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
@@ -355,7 +355,7 @@ const PassengerSelector = ({
   const t = useTranslations("SearchFlightsComponent");
 
   return (
-    <div className="absolute z-20 bg-white border border-gray-200 rounded-xl shadow-lg p-5 w-full mt-2 animate-fadeIn">
+    <div className="absolute z-20 bg-white border border-gray-400 rounded-xl shadow-lg p-5 w-full mt-2 animate-fadeIn">
       <div className="flex justify-between items-center mb-4 pb-2 border-b border-gray-100">
         <h3 className="font-semibold text-gray-800">{t("Passengers.More")}</h3>
         <button
@@ -379,7 +379,7 @@ const PassengerSelector = ({
             </div>
             <div className="flex items-center space-x-3">
               <button
-                className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
+                className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
                 disabled={
                   (type === 'adults' && passengers[type] <= 1) ||
                   (type !== 'adults' && passengers[type] <= 0)
@@ -390,7 +390,7 @@ const PassengerSelector = ({
               </button>
               <span className="font-medium w-6 text-center">{passengers[type]}</span>
               <button
-                className="w-9 h-9 cursor-pointer rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-50 transition-colors"
+                className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center hover:bg-blue-50 transition-colors"
                 disabled={type === 'infants' && passengers[type] >= passengers.adults}
                 onClick={() => onChange(type, 1)}
               >

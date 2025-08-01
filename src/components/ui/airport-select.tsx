@@ -171,7 +171,7 @@ const AirportSelect: React.FC<AirportSelectProps> = ({
           placeholder={placeholder}
           className={`
             w-full rounded-xl 
-            border border-gray-200 
+            border border-gray-400 
             px-4 py-3 pl-10 
             text-lg 
             transition-all duration-300 
@@ -210,7 +210,7 @@ const AirportSelect: React.FC<AirportSelectProps> = ({
 
       {isOpen && (
         <div
-          className={`absolute z-10 mt-1 max-h-60 w-96 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg`}
+          className={`absolute z-10 mt-1 max-h-60 w-96 overflow-y-auto rounded-lg border border-gray-400 bg-white shadow-lg`}
         >
           {loading ? (
             <div className={`px-4 py-4 text-center text-gray-500`}>

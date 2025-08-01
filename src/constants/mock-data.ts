@@ -830,7 +830,7 @@ export const getUrlByCountryCode = (code: string): string | undefined => {
 };
 
 
-// Mock Data for every Hotel
+// http://localhost:3000/api/hotels?destination=MAD&checkIn=2025-07-25&checkOut=2025-07-30
 export const hotelsbeds = {
     "auditData": {
         "processTime": "892",
@@ -1090,7 +1090,7 @@ export const hotelsbeds = {
                 "currency": "EUR"
             }
 
-            // More hotels
+            // More hotels 
         ],
         "checkIn": "2025-07-25",
         "total": 274,

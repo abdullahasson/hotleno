@@ -109,7 +109,7 @@
     },
     "card": {
       "roundTrip": "Round Trip",
-      "details" : "Details"
+      "details": "Details"
     },
     "countries": {
       "country_france": "France",
@@ -214,7 +214,7 @@
       "city_hong_kong": "Hong Kong",
       "city_seoul": "Seoul",
       "city_porto": "Porto"
-    }  
+    }
   },
   "MobileApp": {
     "Badge": "New Experience",
@@ -238,7 +238,6 @@
         "Text": "Multiple payment systems with highest transaction protection standards"
       }
     },
-
     "AvailableNow": "Available now on all devices",
     "DownloadButton": "Download App From",
     "mobile": {
@@ -391,6 +390,7 @@
     }
   },
   "HotelList": {
+    "noresults": "No results found",
     "filters": "Filters",
     "priceRange": "Price Range",
     "starRating": "Star Rating",
@@ -398,18 +398,20 @@
     "location": "Location",
     "allLocations": "All Locations",
     "cityCenter": "City Center",
-    "highlyRated": "Show highly rated only",
+    "highlyRated": "Highly Rated Only",
     "resetFilters": "Reset Filters",
+    "found": "{count} hotels found in {location}",
     "hideFilters": "Hide Filters",
     "showFilters": "Show Filters",
+    "noFilterResults": "No hotels match your filters",
+    "adult": "adult",
+    "adults": "adults",
     "fromPrice": "From",
-    "found": "Found {count} hotels in {location}.",
-    "rated": "Highly rated",
-    "details": "Book",
-    "adults": "Adults",
-    "adult": "Adult",
-    "noresults": "No hotels found. Try other search criteria.",
-    "noFilterResults": "No filter hotels found"
+    "rated": "Highly Rated",
+    "bookNow": "Book Now",
+    "refundable": "Refundable",
+    "nonRefundable": "Non-Refundable",
+    "children": "children"
   },
   "HotelsError": {
     "Title": "No hotels found",
@@ -601,5 +603,60 @@
     "showCalendar": "Show Price Calendar",
     "hideCalendar": "Hide Calendar",
     "flightsFound": "Available Flights"
+  },
+  "Login": {
+    "welcome": "Welcome Back",
+    "login_with_email": "Login with your email",
+    "email_address": "Email Address",
+    "password": "Password",
+    "login_button": "Login",
+    "logging_in": "Logging in...",
+    "or": "or",
+    "no_account": "Don't have an account?",
+    "sign_up": "Sign up",
+    "journey_title": "Start your amazing journey <break></break> with one click, <break></break> explore the world!",
+    "validation": {
+      "email_required": "Email is required",
+      "email_invalid": "Please enter a valid email",
+      "password_required": "Password is required",
+      "password_min_length": "Password must be at least 8 characters"
+    }
+  },
+  "SignUp": {
+    "errors": {
+      "username": {
+        "min": "Username must be at least 3 characters",
+        "max": "Username must be at most 20 characters"
+      },
+      "email": {
+        "invalid": "Please enter a valid email address"
+      },
+      "password": {
+        "min": "Password must be at least 8 characters",
+        "uppercase": "Password must contain at least one uppercase letter",
+        "lowercase": "Password must contain at least one lowercase letter",
+        "number": "Password must contain at least one number",
+        "special": "Password must contain at least one special character"
+      },
+      "confirmPassword": {
+        "match": "Passwords do not match"
+      }
+    },
+    "signing_up": "Signing up...",
+    "welcome": "Welcome",
+    "login_with_email": "Sign Up with Your Email",
+    "email_address": "Email Address",
+    "username": "Username",
+    "signUp_button": "Sign Up",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "or": "OR",
+    "no_account": "Already have an account?",
+    "login": "Login",
+    "journey_title": "Start your amazing journey <break></break> with one click, <break></break> explore the world!",
+    "email_required": "Email is required",
+    "invalid_email": "Invalid email address",
+    "password_required": "Password is required",
+    "password_min_length": "Password must be at least 6 characters"
   }
 }

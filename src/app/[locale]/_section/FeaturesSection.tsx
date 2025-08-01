@@ -2,7 +2,10 @@ import React from 'react';
 import { useTranslations } from "next-intl";
 import Image from 'next/image';
 // Image
-import placeholder from "../../../../public/placeholder.svg"
+import Deals from "../../../../public/deals.svg"
+import Thothund from "../../../../public/thuothand.svg"
+import Support from "../../../../public/support.svg"
+import Payment from "../../../../public/payment.svg"
 
 const FeaturesSection = () => {
 
@@ -11,19 +14,19 @@ const FeaturesSection = () => {
   const features = [
     {
       title: t('one'),
-      icon: placeholder,
+      icon: Deals,
     },
     {
       title: t('two'),
-      icon: placeholder,
+      icon: Thothund,
     },
     {
       title: t('three'),
-      icon: placeholder,
+      icon: Payment,
     },
     {
       title: t('four'),
-      icon: placeholder,
+      icon: Support,
     },
   ];
 
@@ -48,7 +51,7 @@ const FeatureCard = ({ title, icon }: { title: string; icon: string }) => {
   return (
     <div className="group flex flex-col items-center text-center p-6">
       <div className="mb-5 flex items-center justify-center w-24 h-24 rounded-full bg-blue-50 duration-300">
-        <div className="relative w-16 h-16">
+        <div className="relative w-52 h-52">
           <Image 
             src={icon}
             alt={title}

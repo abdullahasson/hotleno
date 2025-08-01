@@ -87,7 +87,7 @@ const Select: React.FC<SelectProps> = ({
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
             className="absolute z-10 w-full mt-2 py-2 bg-white  !text-gray-900
-                      rounded-xl shadow-lg border border-gray-200 
+                      rounded-xl shadow-lg border border-gray-400 
                       max-h-60 overflow-auto focus:outline-none"
             role="listbox"
           >

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Search from "@/components/common/Search";
 // Images
-import BgHero from "../../../../public/hero3.jpg"
+import BgHero from "../../../../public/hero3.jpeg"
 
 
 const Hero = () => {

@@ -1,13 +1,13 @@
-// components/HotelsSearch.tsx
 'use client';
 
 // Next
 import { useSearchParams } from 'next/navigation';
 // React
 import { useState, useEffect, useCallback } from 'react';
+// Types
+import { Hotel } from "./HotelList"
 // Components
 import HotelList from "./HotelList";
-// import HotelError from './HotelError';
 import UiDatePicker from '../ui/datepicker';
 import {
   User,
@@ -20,31 +20,8 @@ import {
   ArrowDown,
   ArrowUp
 } from 'lucide-react';
-// Mock Data
-import { mockHotels } from "@/data/mockHotels";
 
 
-// Types
-export type Hotel = {
-  hotelId: number;
-  hotelName: string;
-  location: {
-    name: string;
-    country: string;
-    state: string | null;
-    geo: {
-      lat: number;
-      lon: number;
-    };
-  };
-  priceFrom: number;
-  priceAvg: number;
-  pricePercentile: Record<string, number>;
-  stars: number;
-  locationId: number;
-  imageUrl: string;
-  bookingUrl: string;
-};
 
 interface PassengerCounts {
   adults: number;
@@ -174,11 +151,14 @@ export default function HotelsSearch() {
         adults: passengers.adults.toString(),
       });
 
-      const apiUrl = `/api/search?${params.toString()}`;
+      // Use Nest.js API endpoint
+      const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000';
+      const apiUrl = `${baseUrl}/search/hotels?${params.toString()}`;
+
       const res = await fetch(apiUrl);
 
       if (!res.ok) {
-        throw new Error(`HTTP error! Status: ${res.status}`);
+        throw new Error(`API request failed with status ${res.status}`);
       }
 
       const data: Hotel[] = await res.json();
@@ -312,38 +292,32 @@ export default function HotelsSearch() {
 
       {/* Results Section */}
       <div className="p-6">
-        <div>
-          {loading ? (
-            <div className="container mx-auto px-4 py-8 bg-gray-400">
-              <div className="animate-pulse space-y-4">
-                <div className="h-8 bg-gray-200 rounded w-1/3"></div>
-                <div className="h-4 bg-gray-200 rounded w-1/2"></div>
-                <div className="flex gap-6 mt-6">
-                  <div className="w-1/4 space-y-4">
-                    <div className="h-8 bg-gray-200 rounded"></div>
-                    <div className="h-32 bg-gray-200 rounded"></div>
-                    <div className="h-32 bg-gray-200 rounded"></div>
-                  </div>
-                  <div className="w-3/4 space-y-4">
-                    {[...Array(3)].map((_, i) => (
-                      <div key={i} className="h-48 bg-gray-200 rounded"></div>
-                    ))}
-                  </div>
+        {loading ? (
+          <div className="container mx-auto px-4 py-8 bg-gray-400">
+            <div className="animate-pulse space-y-4">
+              <div className="h-8 bg-gray-200 rounded w-1/3"></div>
+              <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+              <div className="flex gap-6 mt-6">
+                <div className="w-1/4 space-y-4">
+                  <div className="h-8 bg-gray-200 rounded"></div>
+                  <div className="h-32 bg-gray-200 rounded"></div>
+                  <div className="h-32 bg-gray-200 rounded"></div>
+                </div>
+                <div className="w-3/4 space-y-4">
+                  {[...Array(3)].map((_, i) => (
+                    <div key={i} className="h-48 bg-gray-200 rounded"></div>
+                  ))}
                 </div>
               </div>
             </div>
-          ) : hotels.length > 0 ? (
-            <HotelList
-              hotels={mockHotels}
-
-            />
-          ) : !loading && (
-            <HotelList
-              hotels={mockHotels}
-
-            />
-          )}
-        </div>
+          </div>
+        ) : hotels.length > 0 ? (
+          <HotelList hotels={hotels} />
+        ) : (
+          <div className="text-center py-10">
+            <p className="text-gray-600">No hotels found. Try different dates or location.</p>
+          </div>
+        )}
       </div>
 
       {/* Error message */}

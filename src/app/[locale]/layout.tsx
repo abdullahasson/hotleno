@@ -53,7 +53,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      data-theme='dark'
+      data-theme='light'
       className={`${roboto.className} ${cairo.className}`}
     >
       <head>

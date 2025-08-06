@@ -11,6 +11,7 @@ import PromoCarousel from '@/components/common/PromoCarousel';
 import ArticlesCarousel from '@/components/common/ArticlesCarousel';
 import PopularAirlines from '@/components/common/popular-airlines';
 import TripIdeasSection from '@/components/common/TripIdeasSection';
+import TagsMarquee from "@/components/common/TagsMarquee";
 // Mock Data
 import { articles } from '@/constants/mock-data';
 // Images
@@ -49,6 +50,8 @@ export default function Home() {
 
       {/* Mobile App */}
       <MobileApp />
+
+      <TagsMarquee />
     </div>
   );
 }

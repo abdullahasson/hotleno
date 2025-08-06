@@ -1,19 +1,27 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useLocale , useTranslations } from "next-intl"
+import React, { useState, useEffect } from 'react';
+import { useLocale, useTranslations } from "next-intl";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
 // Images
-import placeholder from "../../../public/placeholder.svg"
-import car from "../../../public/Group 695.svg"
-import emia from "../../../public/Group 698.svg"
+import car from "../../../public/Group 695.svg";
+import emia from "../../../public/Group 698.svg";
+import visa from "../../../public/Group 700.svg";
+import thuothand from "../../../public/thuothand.svg";
 
 const PromoCarousel = () => {
   const lang = useLocale();
-  const t = useTranslations("PromoCarousel")
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [autoSlide, setAutoSlide] = useState(true);
-  const slideInterval = useRef<NodeJS.Timeout | null>(null);
-  
+  const t = useTranslations("PromoCarousel");
+  const [api, setApi] = useState<any>(null);
+  const [current, setCurrent] = useState(0);
+
   const slides = [
     {
       title: t("Cards.one.title"),
@@ -22,56 +30,50 @@ const PromoCarousel = () => {
       link: "https://www.wego.com/car-rental?source=mc&ulang=ar",
     },
     {
-      title:  t("Cards.two.title"),
-      description:  t("Cards.two.des"),
+      title: t("Cards.two.title"),
+      description: t("Cards.two.des"),
       image: emia,
       link: "https://airalo.pxf.io/c/5609792/2139174/15608?p.code=WEGO",
     },
     {
-      title:  t("Cards.three.title"),
-      description: t("Cards.three.des") ,
-      image: placeholder,
+      title: t("Cards.three.title"),
+      description: t("Cards.three.des"),
+      image: visa,
       link: "https://apply.joinsherpa.com/travel-restrictions?affiliateId=wego&language=ar-SA&currency=SAR",
     },
     {
-      title: t("Cards.four.title") ,
+      title: t("Cards.four.title"),
       description: t("Cards.four.des"),
-      image: placeholder,
+      image: thuothand,
       link: "https://wego.transferz.com/airport-transfers/?wg_source=Onsite&wg_medium=carousel&wg_campaign=visa-desktop",
-    }
+    },
   ];
 
-  // Handle auto slide
+  // Group slides into sets of 2
+  const groupedSlides = [];
+  for (let i = 0; i < slides.length; i += 2) {
+    groupedSlides.push(slides.slice(i, i + 2));
+  }
+
+  const totalSlides = groupedSlides.length;
+
   useEffect(() => {
-    if (autoSlide) {
-      slideInterval.current = setInterval(() => {
-        setCurrentSlide(prev => (prev + 1) % slides.length);
-      }, 5000);
-    }
-    
-    return () => {
-      if (slideInterval.current) {
-        clearInterval(slideInterval.current);
-      }
+    if (!api) return;
+
+    const handleSelect = () => {
+      setCurrent(api.selectedScrollSnap());
     };
-  }, [autoSlide, slides.length]);
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    if (slideInterval.current) {
-      clearInterval(slideInterval.current);
-    }
-    setAutoSlide(false);
-    setTimeout(() => setAutoSlide(true), 10000);
-  };
+    api.on("select", handleSelect);
+    return () => {
+      api.off("select", handleSelect);
+    };
+  }, [api]);
 
-  const goPrev = () => {
-    goToSlide((currentSlide - 1 + slides.length) % slides.length);
-  };
-
-  const goNext = () => {
-    goToSlide((currentSlide + 1) % slides.length);
-  };
+  // Don't render if no slides
+  if (slides.length === 0) {
+    return null;
+  }
 
   return (
     <section className="w-full py-10">
@@ -82,84 +84,92 @@ const PromoCarousel = () => {
           </h2>
         </div>
 
-        <div className="relative group">
-          {/* Carousel container */}
-          <div className="overflow-hidden rounded-2xl bg-white shadow-xl">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(${lang !== "ar" && "-"}${currentSlide * 100}%)` }}
-            >
-              {slides.map((slide, index) => (
-                <div 
-                  key={index} 
-                  className="w-full flex-shrink-0 flex flex-col md:flex-row"
-                >
-                  <div className="md:w-1/2 p-8 flex flex-col justify-center bg-gradient-to-r from-blue-50 to-white">
-                    <div className="max-w-md mx-auto">
-                      <h3 className="text-3xl font-bold text-gray-900 mb-4">{slide.title}</h3>
-                      <p className="text-lg text-gray-600 mb-6">{slide.description}</p>
-                      <a 
-                        href={slide.link} 
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-colors duration-300 group"
-                      >
-                        {t("Cards.btn")}
-                        <ChevronLeft className="ml-1 w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-                      </a>
-                    </div>
+        <div className="relative group" dir={lang === "ar" ? "rtl" : "ltr"}>
+          <Carousel 
+            setApi={setApi}
+            opts={{ 
+              align: "start",
+              direction: lang === "ar" ? "rtl" : "ltr"
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {groupedSlides.map((slideGroup, groupIndex) => (
+                <CarouselItem key={groupIndex} className="basis-full">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-2">
+                    {slideGroup.map((slide, index) => (
+                      <div key={index} className="flex rounded-2xl bg-white border border-gray-400 overflow-hidden h-full">
+                        <div className="flex flex-col md:flex-row flex-1">
+                          {/* Content side */}
+                          <div className="md:w-1/2 p-6 flex flex-col justify-center bg-gradient-to-r from-blue-50 to-white">
+                            <div className="max-w-xs mx-auto">
+                              <h3 className="text-xl font-bold text-gray-900 mb-3">{slide.title}</h3>
+                              <p className="text-gray-600 mb-4 text-sm">{slide.description}</p>
+                              <a
+                                href={slide.link}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-colors duration-300 group text-sm"
+                              >
+                                {t("Cards.btn")}
+                                <ChevronRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                              </a>
+                            </div>
+                          </div>
+                          {/* Image side */}
+                          <div className="md:w-1/2 h-48 md:h-auto overflow-hidden relative">
+                            <div className='w-full h-full flex justify-center items-center p-5'>
+                              <Image
+                                src={slide.image}
+                                alt={slide.title}
+                                fill
+                                className="object-contain"
+                                sizes="(max-width: 768px) 100vw, 16vw"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  <div className="md:w-1/2 h-80 md:h-auto overflow-hidden">
-                    <div className="relative w-full h-full">
-                      <Image 
-                        src={slide.image} 
-                        alt={slide.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                    </div>
-                  </div>
-                </div>
+                </CarouselItem>
               ))}
-            </div>
-          </div>
-          
-          {/* Navigation buttons */}
-          <button 
-            onClick={goPrev}
-            disabled={currentSlide === 0}
-            className="absolute top-1/2 left-4 -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="w-6 h-6 text-blue-600" />
-          </button>
-          
-          <button 
-            onClick={goNext}
-            disabled={currentSlide === slides.length - 1}
-            className="absolute top-1/2 right-4 -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-            aria-label="Next slide"
-          >
-            <ChevronRight className="w-6 h-6 text-blue-600" />
-          </button>
-          
-          {/* Indicators */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide 
-                    ? 'bg-blue-600 w-8' 
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
+            </CarouselContent>
+
+            {/* Navigation buttons - only show if multiple slides */}
+            {totalSlides > 1 && (
+              <>
+                <CarouselPrevious 
+                  className="absolute top-1/2 left-4 -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  aria-label="Previous slide"
+                >
+                  <ChevronLeft className="w-6 h-6 text-blue-600" />
+                </CarouselPrevious>
+
+                <CarouselNext 
+                  className="absolute top-1/2 right-4 -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  aria-label="Next slide"
+                >
+                  <ChevronRight className="w-6 h-6 text-blue-600" />
+                </CarouselNext>
+
+                {/* Indicators */}
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-2">
+                  {groupedSlides.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => api?.scrollTo(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${index === current
+                          ? 'bg-blue-600 w-8'
+                          : 'bg-gray-300 hover:bg-gray-400'
+                        }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </Carousel>
         </div>
       </div>
     </section>

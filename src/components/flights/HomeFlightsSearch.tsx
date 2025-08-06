@@ -4,9 +4,7 @@ import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import { getDestinationByCode } from "@/constants/mock-data"
-import Select from '../ui/select';
-import UiDatePicker from '../ui/datepicker';
-import AirportSelect from '../ui/airport-select'; // Changed from SelectCountry to AirportSelect
+import { addDays, format } from 'date-fns';
 import {
   ArrowRightLeft,
   User,
@@ -15,9 +13,27 @@ import {
   Minus,
   Plus,
   XCircle,
-  Plane
+  Plane,
+  Calendar as CalendarIcon
 } from 'lucide-react';
 
+// Shadcn UI Components
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+  SelectLabel
+} from "@/components/ui/select";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
+
+// Custom Components
+import AirportSelect from '../ui/airport-select';
 
 // Define form state types
 type TripType = 'one-way' | 'round-trip' | 'return';
@@ -53,12 +69,11 @@ export default function HomeFlightsSearch({
 
   // UI state
   const [uiState, setUiState] = useState({
-    showAdvanced: false,
     showPassengerSelect: false,
     error: ''
   });
 
-  // Handle input changes with proper typing
+  // Handle input changes
   const handleInputChange = <K extends keyof typeof formState>(
     field: K,
     value: typeof formState[K]
@@ -67,6 +82,14 @@ export default function HomeFlightsSearch({
       ...prev,
       [field]: value,
       ...(field === 'tripType' && value === 'one-way' ? { returnDate: null } : {})
+    }));
+  };
+
+  // Handle date changes
+  const handleDateChange = (field: 'departureDate' | 'returnDate', date: Date | undefined) => {
+    setFormState(prev => ({
+      ...prev,
+      [field]: date || null
     }));
   };
 
@@ -107,7 +130,7 @@ export default function HomeFlightsSearch({
       return;
     }
 
-    if (tripType === 'round-trip' && !returnDate) {
+    if (tripType === 'return' && !returnDate) {
       setUiState(prev => ({ ...prev, error: t("Error.returnDate") }));
       return;
     }
@@ -129,7 +152,7 @@ export default function HomeFlightsSearch({
       infants: formState.passengers.infants.toString()
     });
 
-    if (tripType === 'round-trip' && returnDate) {
+    if (tripType === 'return' && returnDate) {
       params.append('return_date', formatDate(returnDate));
     }
 
@@ -146,45 +169,45 @@ export default function HomeFlightsSearch({
         className={`
           bg-white 
           w-full 
-          ${position === 'flights-to' ? 'rounded-3xl relative' : 'rounded-b-3xl '}
+          ${position === 'flights-to' ? 'rounded-3xl relative' : 'rounded-b-3xl'}
           shadow-2xl 
           px-8 pb-8 pt-4 max-[767px]:p-6 
           border border-gray-100
         `}
       >
-        {
-          position === 'flights-to' ? (
-            <div className="text-gray-900 flex items-center absolute z-20 top-0 left-1/2 -translate-x-1/2 -translate-y-3/4 shadow-md bg-white rounded-[100vmax] p-3 text-center">
-              <div className="bg-gray-100 p-2 rounded-full">
-                <Plane size={24} className="text-blue-600" />
-              </div>
-              <span className="px-2">
-                {t('flightsTo', { destination: getDestinationByCode(destinationCode)?.formattedName })}
-              </span>
+        {position === 'flights-to' && (
+          <div className="text-gray-900 flex items-center absolute z-20 top-0 left-1/2 -translate-x-1/2 -translate-y-3/4 shadow-md bg-white rounded-[100vmax] p-3 text-center">
+            <div className="bg-blue-100 p-2 rounded-full">
+              <Plane size={24} className="text-blue-600" />
             </div>
-          ) : null
-        }
+            <span className="px-2 font-medium">
+              {t('flightsTo', { destination: getDestinationByCode(destinationCode)?.formattedName })}
+            </span>
+          </div>
+        )}
+
         {/* Trip Type Selector */}
         <div className="flex p-1 pb-0 gap-2 max-[767px]:gap-1 max-[767px]:justify-center">
-          {(['one-way', 'return', 'round-trip'] as const).map((type) => (
-            <button
+          {(['one-way', 'return'] as const).map((type) => (
+            <Button
               key={type}
               type="button"
-              className={`py-2 px-4 text-center rounded-full text-sm transition-all duration-300 cursor-pointer max-[767px]:px-2 ${formState.tripType === type
-                ? 'bg-gradient-to-r from-blue-500 to-blue-600 shadow-md text-white font-medium'
-                : 'text-gray-500 bg-gray-200/50 hover:text-gray-700'
+              variant={formState.tripType === type ? "default" : "outline"}
+              className={`rounded-full text-sm transition-all duration-300 max-[767px]:px-2 ${formState.tripType === type
+                  ? 'bg-gradient-to-r from-blue-600 to-blue-700 shadow-md text-white font-medium'
+                  : 'text-gray-700 bg-gray-100 hover:bg-gray-200'
                 }`}
               onClick={() => handleInputChange('tripType', type)}
             >
-              {t(`TripType.${type === 'one-way' ? 'One' : type === 'return' ? 'Return' : 'RoundTrip'}`)}
-            </button>
+              {t(`TripType.${type === 'one-way' ? 'One' : 'Return'}`)}
+            </Button>
           ))}
         </div>
 
         <div className="flex items-center gap-5 max-[767px]:gap-2 max-[767px]:flex-col max-[767px]:w-full mt-4 mb-4 max-[767px]:mb-2">
           {/* Location Inputs */}
           <div className="flex-1 max-[767px]:flex-col max-[767px]:w-full relative flex items-center gap-2">
-            <div className="flex-1 relative max-[767px]:w-full max-[767px]:mx-auto !text-gray-900">
+            <div className="flex-1 relative max-[767px]:w-full max-[767px]:mx-auto">
               <AirportSelect
                 value={formState.origin}
                 onChange={(value) => handleInputChange('origin', value)}
@@ -193,17 +216,18 @@ export default function HomeFlightsSearch({
               />
             </div>
 
-            <button
+            <Button
               type="button"
               onClick={swapLocations}
-              className="absolute border-x-2 border-gray-200 left-1/2 top-1/2 -translate-1/2 bg-white z-20 max-[767px]:left-0 max-[767px]:m-0 max-[767px]:top-1/2 max-[767px]:-translate-y-1/2 max-[767px]:z-20 p-2 cursor-pointer hover:border-blue-400 hover:bg-blue-50 rounded-[100vmax] transition-all duration-300"
+              variant="outline"
+              size="icon"
+              className="absolute left-1/2 top-1/2 -translate-1/2 bg-white z-20 max-[767px]:left-0 max-[767px]:m-0 max-[767px]:top-1/2 max-[767px]:-translate-y-1/2 max-[767px]:z-20 p-2 hover:bg-blue-50 rounded-full transition-all duration-300 border border-gray-400"
               aria-label="SwapLocations"
             >
-              <ArrowRightLeft size={18} className="text-blue-500" />
-            </button>
+              <ArrowRightLeft size={18} className="text-blue-600" />
+            </Button>
 
-            <div className="flex-1 relative max-[767px]:w-full max-[767px]:mx-auto !text-gray-900 max-[767px]:rounded-none">
-              {/* Replaced SelectCountry with AirportSelect */}
+            <div className="flex-1 relative max-[767px]:w-full max-[767px]:mx-auto">
               <AirportSelect
                 value={formState.destination}
                 onChange={(value) => handleInputChange('destination', value)}
@@ -216,24 +240,76 @@ export default function HomeFlightsSearch({
           {/* Date Pickers */}
           <div className="flex-1 flex gap-2 max-[767px]:flex-col max-[767px]:w-full">
             <div className="flex-1 relative">
-              <UiDatePicker
-                selected={formState.departureDate}
-                onChange={(date) => handleInputChange('departureDate', date)}
-                minDate={new Date()}
-                placeholderText={t("Date.Departure")}
-                className="w-full"
-              />
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className={`w-full pl-3 !py-6 !text-gray-900 !rounded-xl text-left font-normal border ${formState.departureDate
+                        ? 'border-gray-400 bg-blue-50'
+                        : 'border-gray-400 hover:border-blue-300'
+                      }`}
+                  >
+                    {formState.departureDate ? (
+                      format(formState.departureDate, "MMM dd, yyyy")
+                    ) : (
+                      <span className="text-gray-500">{t("Date.Departure")}</span>
+                    )}
+                    <CalendarIcon className="ml-auto h-4 w-4 text-blue-600" />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0 bg-white shadow-lg rounded-lg border border-gray-200">
+                  <Calendar
+                    mode="single"
+                    selected={formState.departureDate || undefined}
+                    onSelect={(date) => handleDateChange('departureDate', date)}
+                    initialFocus
+                    disabled={{ before: new Date() }}
+                    className="rounded-md"
+                    classNames={{
+                      day_selected: "bg-blue-600 text-white hover:bg-blue-700",
+                      day_today: "border border-gray-400",
+                    }}
+                  />
+                </PopoverContent>
+              </Popover>
             </div>
 
             {formState.tripType === 'return' && (
               <div className="flex-1 relative">
-                <UiDatePicker
-                  selected={formState.returnDate}
-                  onChange={(date) => handleInputChange('returnDate', date)}
-                  minDate={formState.departureDate || new Date()}
-                  placeholderText={t("Date.Return")}
-                  className="w-full"
-                />
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      className={`w-full pl-3 text-left font-normal border ${formState.returnDate
+                          ? 'border-blue-400 bg-blue-50'
+                          : 'border-gray-400 hover:border-blue-300'
+                        }`}
+                    >
+                      {formState.returnDate ? (
+                        format(formState.returnDate, "MMM dd, yyyy")
+                      ) : (
+                        <span className="text-gray-500">{t("Date.Return")}</span>
+                      )}
+                      <CalendarIcon className="ml-auto h-4 w-4 text-blue-600" />
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0 bg-white shadow-lg rounded-lg border border-gray-200">
+                    <Calendar
+                      mode="single"
+                      selected={formState.returnDate || undefined}
+                      onSelect={(date) => handleDateChange('returnDate', date)}
+                      initialFocus
+                      disabled={{
+                        before: formState.departureDate || addDays(new Date(), 1)
+                      }}
+                      className="rounded-md"
+                      classNames={{
+                        day_selected: "bg-blue-600 text-white hover:bg-blue-700",
+                        day_today: "border border-gray-400",
+                      }}
+                    />
+                  </PopoverContent>
+                </Popover>
               </div>
             )}
           </div>
@@ -241,98 +317,105 @@ export default function HomeFlightsSearch({
 
         <div className="flex items-center justify-between max-[767px]:flex-col max-[767px]:w-full max-[767px]:gap-2 max-[767px]:items-start w-full">
           {/* Direct flights */}
-          <div className="flex items-center pl-3">
-            <div className="flex items-center">
-              <input
-                type="checkbox"
+          <div className="flex items-center">
+            <div className="flex items-center space-x-2">
+              <Checkbox
                 id="direct"
                 checked={formState.directOnly}
-                onChange={(e) => handleInputChange('directOnly', e.target.checked)}
-                className="w-5 h-5 text-blue-600 rounded focus:ring-blue-400 cursor-pointer"
+                onCheckedChange={(checked) =>
+                  handleInputChange('directOnly', checked as boolean)
+                }
+                className="border-blue-500 data-[state=checked]:bg-blue-600"
               />
-              <label htmlFor="direct" className="mx-2 block text-sm font-medium text-gray-700 cursor-pointer">
+              <Label htmlFor="direct" className="text-sm font-medium text-gray-700 cursor-pointer">
                 {t("Direct")}
-              </label>
+              </Label>
             </div>
           </div>
-
 
           <div className="flex items-center gap-2 max-[767px]:flex-col max-[767px]:w-full max-[767px]:items-start">
             {/* Currency */}
             <div className="relative max-[767px]:w-full">
               <Select
-                options={[
-                  { value: 'USD', label: 'USD ($)' },
-                  { value: 'EUR', label: 'EUR (€)' },
-                  { value: 'GBP', label: 'GBP (£)' },
-                  { value: 'SGD', label: 'SGD (S$)' },
-                  { value: 'THB', label: 'THB (฿)' },
-                ]}
                 value={formState.currency}
-                onChange={(value) => handleInputChange('currency', value)}
-                placeholder="Currency"
-              />
+                onValueChange={(value) => handleInputChange('currency', value)}
+              >
+                <SelectTrigger className="w-[120px] !text-gray-900 border border-gray-400 hover:border-blue-300">
+                  <SelectValue placeholder="Currency" />
+                </SelectTrigger>
+                <SelectContent className="bg-white border border-gray-200 shadow-md">
+                  <SelectItem value="USD">USD ($)</SelectItem>
+                  <SelectItem value="EUR">EUR (€)</SelectItem>
+                  <SelectItem value="GBP">GBP (£)</SelectItem>
+                  <SelectItem value="SGD">SGD (S$)</SelectItem>
+                  <SelectItem value="THB">THB (฿)</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
 
             {/* Sort by */}
             <div className="relative max-[767px]:w-full">
               <Select
-                options={[
-                  { value: 'price', label: t("SortBy.Price") },
-                  { value: 'duration', label: t("SortBy.Duration") },
-                  { value: 'departure', label: t("SortBy.Departure") },
-                ]}
                 value={formState.sortBy}
-                onChange={(value) => handleInputChange('sortBy', value as SortBy)}
-                placeholder="SortBy"
-              />
+                onValueChange={(value) => handleInputChange('sortBy', value as SortBy)}
+              >
+                <SelectTrigger className="w-[140px] !text-gray-900 border border-gray-400 hover:border-blue-300">
+                  <SelectValue placeholder="Sort By" />
+                </SelectTrigger>
+                <SelectContent className="bg-white border border-gray-200 shadow-md">
+                  <SelectItem value="price">{t("SortBy.Price")}</SelectItem>
+                  <SelectItem value="duration">{t("SortBy.Duration")}</SelectItem>
+                  <SelectItem value="departure">{t("SortBy.Departure")}</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
-
 
             {/* Passengers */}
             <div className="relative max-[767px]:w-full">
-              <div
-                className="border border-gray-400 rounded-xl px-4 py-2 pl-12 cursor-pointer transition-colors duration-300 bg-white hover:shadow-md"
-                onClick={() => setUiState(prev => ({ ...prev, showPassengerSelect: !prev.showPassengerSelect }))}
-              >
-                <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
-                  <User size={20} className="text-blue-500" />
-                </div>
-                <div className="font-medium text-gray-800">
-                  {totalPassengers} {totalPassengers === 1 ? t("Passengers.One") : t("Passengers.More")}
-                </div>
-              </div>
-
-              {uiState.showPassengerSelect && (
-                <PassengerSelector
-                  passengers={formState.passengers}
-                  onChange={handlePassengerChange}
-                  onClose={() => setUiState(prev => ({ ...prev, showPassengerSelect: false }))}
-                />
-              )}
+              <Popover open={uiState.showPassengerSelect} onOpenChange={(open) => setUiState(prev => ({ ...prev, showPassengerSelect: open }))}>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className="pl-12 border border-gray-400 hover:border-blue-300"
+                  >
+                    <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
+                      <User size={20} className="text-blue-600" />
+                    </div>
+                    <div className="font-medium text-gray-800">
+                      {totalPassengers} {totalPassengers === 1 ? t("Passengers.One") : t("Passengers.More")}
+                    </div>
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-80 bg-white border border-blue-300 shadow-md">
+                  <PassengerSelector
+                    passengers={formState.passengers}
+                    onChange={handlePassengerChange}
+                    onClose={() => setUiState(prev => ({ ...prev, showPassengerSelect: false }))}
+                  />
+                </PopoverContent>
+              </Popover>
             </div>
 
             {/* Search Button */}
             <div className="max-[767px]:w-full">
-              <button
-                type="submit"
-                className="w-full cursor-pointer rounded-full max-[767px]:rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white py-2 px-4 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              <Button
+              type="submit"
+              className="w-full rounded-full max-[767px]:rounded-xl py-6 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
               >
                 <div className="flex items-center gap-2">
-                  <Search size={20} className="" />
+                  <Search size={20} />
                   <span className="font-medium">{t("SearchButton")}</span>
                 </div>
-              </button>
+              </Button>
             </div>
           </div>
         </div>
 
-
         {/* Error message */}
         {uiState.error && (
-          <div className="mt-5 p-4 bg-red-50 text-red-700 rounded-xl flex items-center animate-fadeIn border border-red-100">
+          <div className="mt-5 p-4 bg-red-50 text-red-700 rounded-xl flex items-center animate-fadeIn border border-red-200">
             <XCircle className="text-red-500" size={20} />
-            <span className="mx-2">{uiState.error}</span>
+            <span className="mx-2 font-medium">{uiState.error}</span>
           </div>
         )}
       </form>
@@ -340,9 +423,7 @@ export default function HomeFlightsSearch({
   );
 }
 
-
-
-// Passenger Selector Component (unchanged)
+// Passenger Selector Component
 const PassengerSelector = ({
   passengers,
   onChange,
@@ -355,15 +436,17 @@ const PassengerSelector = ({
   const t = useTranslations("SearchFlightsComponent");
 
   return (
-    <div className="absolute z-20 bg-white border border-gray-400 rounded-xl shadow-lg p-5 w-full mt-2 animate-fadeIn">
+    <div className="bg-white p-5 w-full">
       <div className="flex justify-between items-center mb-4 pb-2 border-b border-gray-100">
         <h3 className="font-semibold text-gray-800">{t("Passengers.More")}</h3>
-        <button
+        <Button
           onClick={onClose}
-          className="p-1 cursor-pointer rounded-full hover:bg-gray-100 transition-colors"
+          variant="ghost"
+          size="icon"
+          className="rounded-full text-gray-500 hover:text-blue-600"
         >
-          <X size={18} className="text-gray-500" />
-        </button>
+          <X size={18} />
+        </Button>
       </div>
 
       <div className="space-y-4">
@@ -378,24 +461,28 @@ const PassengerSelector = ({
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <button
-                className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border border-gray-400 hover:border-blue-400"
                 disabled={
                   (type === 'adults' && passengers[type] <= 1) ||
                   (type !== 'adults' && passengers[type] <= 0)
                 }
                 onClick={() => onChange(type, -1)}
               >
-                <Minus size={16} className="text-blue-500" />
-              </button>
+                <Minus size={16} className="text-blue-600" />
+              </Button>
               <span className="font-medium w-6 text-center">{passengers[type]}</span>
-              <button
-                className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center hover:bg-blue-50 transition-colors"
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border border-gray-400 hover:border-blue-400"
                 disabled={type === 'infants' && passengers[type] >= passengers.adults}
                 onClick={() => onChange(type, 1)}
               >
-                <Plus size={16} className="text-blue-500" />
-              </button>
+                <Plus size={16} className="text-blue-600" />
+              </Button>
             </div>
           </div>
         ))}

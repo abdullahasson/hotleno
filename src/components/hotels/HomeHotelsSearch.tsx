@@ -1,16 +1,8 @@
-// src/components/HomeHotelsSearch.tsx
 'use client';
 
-// Next
 import { useRouter } from 'next/navigation';
-// React
 import { useState, FormEvent } from 'react';
-// Next Intl
 import { useTranslations, useLocale } from 'next-intl';
-// UI
-import UiDatePicker from '../ui/datepicker';
-import LocationAutocomplete from '../ui/location-autocomplete';
-// Icons
 import {
   X,
   Search,
@@ -18,8 +10,18 @@ import {
   Plus,
   XCircle,
 } from 'lucide-react';
+import { format } from 'date-fns';
 
-// /api/search?location=paris&checkIn=2025-07-08&checkOut=2025-07-09&adults=2
+// Shadcn UI Components
+import { Button } from '@/components/ui/button';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Calendar } from '@/components/ui/calendar';
+import { Calendar as CalendarIcon } from 'lucide-react';
+
+// Custom Components
+import LocationAutocomplete from '../ui/location-autocomplete';
 
 export default function HomeHotelsSearch() {
   const router = useRouter();
@@ -106,7 +108,6 @@ export default function HomeHotelsSearch() {
         <div className="flex items-center gap-5 max-[767px]:gap-2 max-[767px]:flex-col">
           {/* Location */}
           <div className="flex-1 max-[767px]:w-full">
-
             <div className="relative !text-gray-900">
               <LocationAutocomplete
                 value={formState.location}
@@ -118,48 +119,91 @@ export default function HomeHotelsSearch() {
 
           {/* Date Pickers */}
           <div className="flex-1 flex gap-3 max-[767px]:w-full max-[767px]:flex-col">
+            {/* Check-in Date Picker */}
             <div className="flex-1">
-              <UiDatePicker
-                selected={formState.checkIn}
-                onChange={(date) => handleInputChange('checkIn', date)}
-                minDate={new Date()}
-                placeholderText={t("Date.CheckInPlaceholder")}
-                className="w-full"
-              />
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className="w-full h-[44px] rounded-xl border border-gray-400 bg-white text-left font-normal hover:bg-white hover:border-blue-400"
+                  >
+                    <CalendarIcon className="mr-2 h-4 w-4" />
+                    {formState.checkIn ? (
+                      format(formState.checkIn, "MM/dd/yyyy")
+                    ) : (
+                      <span className="text-gray-400">
+                        {t("Date.CheckInPlaceholder")}
+                      </span>
+                    )}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0">
+                  <Calendar
+                    mode="single"
+                    selected={formState.checkIn || undefined}
+                    onSelect={(date) => handleInputChange('checkIn', date || null)}
+                    disabled={(date) => date < new Date(new Date().setHours(0,0,0,0))}
+                    initialFocus
+                  />
+                </PopoverContent>
+              </Popover>
             </div>
 
+            {/* Check-out Date Picker */}
             <div className="flex-1">
-              <UiDatePicker
-                selected={formState.checkOut}
-                onChange={(date) => handleInputChange('checkOut', date)}
-                minDate={formState.checkIn || new Date()}
-                placeholderText={t("Date.CheckOutPlaceholder")}
-                className="w-full"
-              />
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className="w-full h-[44px] rounded-xl border border-gray-400 bg-white text-left font-normal hover:bg-white hover:border-blue-400"
+                  >
+                    <CalendarIcon className="mr-2 h-4 w-4" />
+                    {formState.checkOut ? (
+                      format(formState.checkOut, "MM/dd/yyyy")
+                    ) : (
+                      <span className="text-gray-400">
+                        {t("Date.CheckOutPlaceholder")}
+                      </span>
+                    )}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0">
+                  <Calendar
+                    mode="single"
+                    selected={formState.checkOut || undefined}
+                    onSelect={(date) => handleInputChange('checkOut', date || null)}
+                    disabled={(date) => 
+                      date < (formState.checkIn || new Date(new Date().setHours(0,0,0,0)))
+                    }
+                    initialFocus
+                  />
+                </PopoverContent>
+              </Popover>
             </div>
           </div>
 
           {/* Guests & Rooms */}
           <div className="flex-1 max-[767px]:w-full">
-            <div className="relative">
-              <div
-                className="border border-gray-400 rounded-xl px-4 py-3 cursor-pointer hover:border-blue-400 transition-colors"
-                onClick={() => setUiState(prev => ({ 
-                  ...prev, 
-                  showGuestRoomSelect: !prev.showGuestRoomSelect 
-                }))}
-              >
-                <div className="font-medium text-gray-800">
-                  {totalGuests} {totalGuests === 1 
-                    ? t("GuestsRooms.Guest") 
-                    : t("GuestsRooms.Guests")},
-                  {' '}{formState.rooms} {formState.rooms === 1 
-                    ? t("GuestsRooms.Room") 
-                    : t("GuestsRooms.Rooms")}
-                </div>
-              </div>
-
-              {uiState.showGuestRoomSelect && (
+            <Popover
+              open={uiState.showGuestRoomSelect}
+              onOpenChange={(open) => setUiState(prev => ({ ...prev, showGuestRoomSelect: open }))}
+            >
+              <PopoverTrigger asChild>
+                <Button
+                  variant="outline"
+                  className="w-full h-[44px] py-3 px-4 justify-start text-left font-normal border-gray-400 hover:border-blue-400"
+                >
+                  <div className="font-medium text-gray-800">
+                    {totalGuests} {totalGuests === 1 
+                      ? t("GuestsRooms.Guest") 
+                      : t("GuestsRooms.Guests")},
+                    {' '}{formState.rooms} {formState.rooms === 1 
+                      ? t("GuestsRooms.Room") 
+                      : t("GuestsRooms.Rooms")}
+                  </div>
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-full p-0" align="start">
                 <GuestRoomSelector
                   guests={formState.guests}
                   rooms={formState.rooms}
@@ -169,45 +213,47 @@ export default function HomeHotelsSearch() {
                     showGuestRoomSelect: false 
                   }))}
                 />
-              )}
-            </div>
+              </PopoverContent>
+            </Popover>
           </div>
         </div>
 
         <div className="flex items-center justify-between w-full mt-4 max-[767px]:flex-col max-[767px]:items-start max-[767px]:gap-4">
           <div className="flex items-center pl-3 max-[767px]:pl-0">
-            <div className="flex items-center">
-              <input
-                type="checkbox"
+            <div className="flex items-center space-x-2">
+              <Checkbox
                 id="cancellation"
                 checked={formState.cancellation}
-                onChange={(e) => handleInputChange('cancellation', e.target.checked)}
-                className="w-5 h-5 text-blue-600 rounded focus:ring-blue-400 cursor-pointer"
+                onCheckedChange={(checked) => 
+                  handleInputChange('cancellation', checked as boolean)
+                }
               />
-              <label htmlFor="cancellation" className="mx-2 block text-sm font-medium text-gray-700 cursor-pointer">
+              <label htmlFor="cancellation" className="text-sm font-medium text-gray-700 cursor-pointer">
                 {t("CancellationPolicy")}
               </label>
             </div>
           </div>
 
           <div className="max-[767px]:w-full">
-            <button
+            <Button 
               type="submit"
-              className="w-full cursor-pointer rounded-full max-[767px]:rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white py-2 px-4 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="w-full rounded-full max-[767px]:rounded-xl py-6 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
             >
               <div className="flex items-center gap-2">
-                <Search size={20} className="" />
+                <Search size={20} />
                 <span className="font-medium">{t("SearchButton")}</span>
               </div>
-            </button>
+            </Button>
           </div>
         </div>
 
         {uiState.error && (
-          <div className="mt-5 p-4 bg-red-50 text-red-700 rounded-xl flex items-center animate-fadeIn border border-red-100">
-            <XCircle className="text-red-500" size={20} />
-            <span className="mx-2">{uiState.error}</span>
-          </div>
+          <Alert variant="destructive" className="mt-5 flex items-start border-red-100">
+            <XCircle className="h-5 w-5 mt-0.5" />
+            <AlertDescription className="ml-2 text-red-700">
+              {uiState.error}
+            </AlertDescription>
+          </Alert>
         )}
       </form>
     </div>
@@ -229,12 +275,17 @@ const GuestRoomSelector = ({
   const t = useTranslations("SearchHotelsComponent");
 
   return (
-    <div className="absolute z-20 bg-white border border-gray-400 rounded-xl shadow-lg p-5 w-full mt-2 animate-fadeIn">
+    <div className="bg-white rounded-xl shadow-lg p-5 animate-fadeIn border border-gray-400">
       <div className="flex justify-between items-center mb-4 pb-2 border-b border-gray-100">
         <h3 className="font-semibold text-gray-800">{t("GuestsRooms.Title")}</h3>
-        <button onClick={onClose} className="p-1 cursor-pointer rounded-full hover:bg-gray-100 transition-colors">
+        <Button 
+          variant="ghost" 
+          size="icon" 
+          className="rounded-full"
+          onClick={onClose}
+        >
           <X size={18} className="text-gray-500" />
-        </button>
+        </Button>
       </div>
 
       <div className="space-y-6">
@@ -245,20 +296,24 @@ const GuestRoomSelector = ({
             <div className="text-sm text-gray-500">{t("GuestsRooms.AdultsEx")}</div>
           </div>
           <div className="flex items-center space-x-3">
-            <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full w-9 h-9"
               disabled={guests.adults <= 1}
               onClick={() => onChange('adults', -1)}
             >
               <Minus size={16} className="text-blue-500" />
-            </button>
+            </Button>
             <span className="font-medium w-6 text-center">{guests.adults}</span>
-            <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center hover:bg-blue-50 transition-colors"
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full w-9 h-9"
               onClick={() => onChange('adults', 1)}
             >
               <Plus size={16} className="text-blue-500" />
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -269,20 +324,24 @@ const GuestRoomSelector = ({
             <div className="text-sm text-gray-500">{t("GuestsRooms.ChildrenEx")}</div>
           </div>
           <div className="flex items-center space-x-3">
-            <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full w-9 h-9"
               disabled={guests.children <= 0}
               onClick={() => onChange('children', -1)}
             >
               <Minus size={16} className="text-blue-500" />
-            </button>
+            </Button>
             <span className="font-medium w-6 text-center">{guests.children}</span>
-            <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center hover:bg-blue-50 transition-colors"
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full w-9 h-9"
               onClick={() => onChange('children', 1)}
             >
               <Plus size={16} className="text-blue-500" />
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -293,20 +352,24 @@ const GuestRoomSelector = ({
             <div className="text-sm text-gray-500">{t("GuestsRooms.RoomsEx")}</div>
           </div>
           <div className="flex items-center space-x-3">
-            <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center disabled:opacity-30 hover:bg-blue-50 transition-colors"
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full w-9 h-9"
               disabled={rooms <= 1}
               onClick={() => onChange('rooms', -1)}
             >
               <Minus size={16} className="text-blue-500" />
-            </button>
+            </Button>
             <span className="font-medium w-6 text-center">{rooms}</span>
-            <button
-              className="w-9 h-9 cursor-pointer rounded-full border border-gray-400 flex items-center justify-center hover:bg-blue-50 transition-colors"
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full w-9 h-9"
               onClick={() => onChange('rooms', 1)}
             >
               <Plus size={16} className="text-blue-500" />
-            </button>
+            </Button>
           </div>
         </div>
       </div>

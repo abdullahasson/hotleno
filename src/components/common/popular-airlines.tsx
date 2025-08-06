@@ -11,7 +11,6 @@ import placeholder from "../../../public/placeholder.svg"
 const PopularAirlines = () => {
     const t = useTranslations('PopularAirlines');
 
-    // List of airlines with placeholder icons
     const airlines = [
         { id: 1, name: 'Delta Airlines' },
         { id: 2, name: 'American Airlines' },
@@ -25,15 +24,12 @@ const PopularAirlines = () => {
         { id: 10, name: 'Allegiant Air' },
     ];
 
-    // Duplicate airlines for seamless looping
     const doubleAirlines = [...airlines, ...airlines];
 
     return (
         <section className="py-10 px-4 bg-transparent">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-
-                    {/* Heading section */}
                     <div className="text-center lg:text-right lg:w-[40%]">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
                             {t('title')}
@@ -70,8 +66,6 @@ const PopularAirlines = () => {
                             ))}
                         </motion.div>
                     </div>
-
-
                 </div>
             </div>
         </section>

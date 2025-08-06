@@ -125,13 +125,13 @@ export default function HomeHotelsSearch() {
                 <PopoverTrigger asChild>
                   <Button
                     variant="outline"
-                    className="w-full h-[44px] rounded-xl border border-gray-400 bg-white text-left font-normal hover:bg-white hover:border-blue-400"
+                    className="w-full h-[44px] rounded-xl !text-gray-900 border border-gray-400 bg-white text-left font-normal hover:bg-white hover:border-blue-400"
                   >
-                    <CalendarIcon className="mr-2 h-4 w-4" />
+                    <CalendarIcon className="mr-2 h-4 w-4 text-blue-500" />
                     {formState.checkIn ? (
                       format(formState.checkIn, "MM/dd/yyyy")
                     ) : (
-                      <span className="text-gray-400">
+                      <span className="text-gray-900">
                         {t("Date.CheckInPlaceholder")}
                       </span>
                     )}
@@ -155,13 +155,13 @@ export default function HomeHotelsSearch() {
                 <PopoverTrigger asChild>
                   <Button
                     variant="outline"
-                    className="w-full h-[44px] rounded-xl border border-gray-400 bg-white text-left font-normal hover:bg-white hover:border-blue-400"
+                    className="w-full h-[44px] rounded-xl text-gray-900 border border-gray-400 bg-white text-left font-normal hover:bg-white hover:border-blue-400"
                   >
-                    <CalendarIcon className="mr-2 h-4 w-4" />
+                    <CalendarIcon className="mr-2 h-4 w-4 text-blue-500" />
                     {formState.checkOut ? (
                       format(formState.checkOut, "MM/dd/yyyy")
                     ) : (
-                      <span className="text-gray-400">
+                      <span className="!text-gray-900">
                         {t("Date.CheckOutPlaceholder")}
                       </span>
                     )}
@@ -191,7 +191,7 @@ export default function HomeHotelsSearch() {
               <PopoverTrigger asChild>
                 <Button
                   variant="outline"
-                  className="w-full h-[44px] py-3 px-4 justify-start text-left font-normal border-gray-400 hover:border-blue-400"
+                  className="w-full h-[44px] py-4 px-4 rounded-2xl justify-start text-left font-normal border-gray-400 hover:border-blue-400"
                 >
                   <div className="font-medium text-gray-800">
                     {totalGuests} {totalGuests === 1 
@@ -227,6 +227,7 @@ export default function HomeHotelsSearch() {
                 onCheckedChange={(checked) => 
                   handleInputChange('cancellation', checked as boolean)
                 }
+                className='border-blue-500 data-[state=checked]:bg-blue-600'
               />
               <label htmlFor="cancellation" className="text-sm font-medium text-gray-700 cursor-pointer">
                 {t("CancellationPolicy")}

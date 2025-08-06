@@ -14,10 +14,9 @@ interface AirportSelectProps {
   value: string;
   onChange: (value: string) => void;
   placeholder: string;
-  defaultValue?: string; // New defaultValue prop
+  defaultValue?: string; 
 }
 
-// Define API response interface
 interface ApiAirportItem {
   code: string;
   name: string;
@@ -30,7 +29,7 @@ const AirportSelect: React.FC<AirportSelectProps> = ({
   value,
   onChange,
   placeholder,
-  defaultValue, // Destructure new prop
+  defaultValue, 
 }) => {
   const lang = useLocale();
   const t = useTranslations('AirportSelect');
@@ -41,7 +40,6 @@ const AirportSelect: React.FC<AirportSelectProps> = ({
   const [loading, setLoading] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Fetch airports from TravelPayouts API
   const fetchAirports = useCallback(async () => {
     if (!inputValue.trim()) {
       setAirports([]);
@@ -55,7 +53,6 @@ const AirportSelect: React.FC<AirportSelectProps> = ({
       );
       const data: ApiAirportItem[] = await response.json();
 
-      // Transform API response to our Airport structure
       const formattedAirports = data
         .filter(
           (item) =>
@@ -76,7 +73,6 @@ const AirportSelect: React.FC<AirportSelectProps> = ({
     }
   }, [inputValue, lang]);
 
-  // Fetch single airport by code
   const fetchAirportByCode = useCallback(async (code: string) => {
     setLoading(true);
     try {
@@ -91,7 +87,6 @@ const AirportSelect: React.FC<AirportSelectProps> = ({
           `${airport.country_name} - ${airport.city_name} - ${airport.name}`
         );
       } else {
-        // If airport not found, just show the code
         setInputValue(code);
       }
     } catch (error) {
@@ -103,7 +98,6 @@ const AirportSelect: React.FC<AirportSelectProps> = ({
   }, [lang]);
 
   useEffect(() => {
-    // Debounce the API call
     const timer = setTimeout(() => {
       fetchAirports();
     }, 300);
@@ -111,7 +105,6 @@ const AirportSelect: React.FC<AirportSelectProps> = ({
     return () => clearTimeout(timer);
   }, [fetchAirports]);
 
-  // Handle click outside to close dropdown
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -128,14 +121,13 @@ const AirportSelect: React.FC<AirportSelectProps> = ({
     };
   }, []);
 
-  // Handle initial defaultValue
+ 
   useEffect(() => {
     if (defaultValue && !value) {
       fetchAirportByCode(defaultValue);
     }
   }, [defaultValue, value, fetchAirportByCode]);
 
-  // Set input value when a selection is made
   useEffect(() => {
     if (value && airports.length > 0) {
       const selectedAirport = airports.find((a) => a.code === value);
@@ -172,11 +164,12 @@ const AirportSelect: React.FC<AirportSelectProps> = ({
           className={`
             w-full rounded-xl 
             border border-gray-400 
-            px-4 py-3 pl-10 
+            px-4 py-2.5 pl-10 
             text-lg 
             transition-all duration-300 
             hover:shadow-md 
             focus:border-transparent focus:ring-2 focus:ring-blue-500
+            text-gray-900
         `}
         />
 

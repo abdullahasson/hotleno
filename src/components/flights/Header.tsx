@@ -77,7 +77,7 @@ const Header = () => {
           </div>
 
           <div className="flex items-center gap-6">
-            <SwitchLanguages scrolled={true} />
+            <SwitchLanguages />
           
             <Link className="hidden sm:inline text-sm border border-white rounded-full py-2 px-3 transition-all hover:scale-105" href={`/${lang}/login`}>
               تسجيل الدخول

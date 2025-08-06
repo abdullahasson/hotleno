@@ -20,6 +20,8 @@ import {
   ArrowDown,
   ArrowUp
 } from 'lucide-react';
+// mock data
+import { mockHotels } from "@/data/mockHotels"
 
 
 
@@ -312,11 +314,9 @@ export default function HotelsSearch() {
             </div>
           </div>
         ) : hotels.length > 0 ? (
-          <HotelList hotels={hotels} />
+          <HotelList hotels={mockHotels} />
         ) : (
-          <div className="text-center py-10">
-            <p className="text-gray-600">No hotels found. Try different dates or location.</p>
-          </div>
+          <HotelList hotels={mockHotels} />
         )}
       </div>
 

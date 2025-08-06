@@ -38,7 +38,7 @@ const Header = ({ initialScrolled = false }: HeaderProps) => {
     return (
         <header className={`
             fixed top-0 left-0 right-0 z-50 transition-all duration-400
-            ${scrolled ? "bg-white shadow-md" : "bg-transparent text-white"}
+            ${scrolled ? "bg-white shadow-md" : "bg-transparent"}
         `}>
             <div className="container mx-auto px-4 xl:px-0 max-w-7xl">
                 <div className="navbar flex justify-between items-center py-4 transition-all duration-400">
@@ -50,10 +50,9 @@ const Header = ({ initialScrolled = false }: HeaderProps) => {
                     </div>
 
                     <div className="flex items-center gap-6">
-                        {/* تبديل اللغة - نسخة سطح المكتب */}
-                        <SwitchLanguages scrolled={scrolled} />
+                        <SwitchLanguages />
                     
-                        <Link className="text-sm border border-white rounded-full py-2 px-3 transition-all hover:scale-105" href={`/${lang}/login`}>
+                        <Link className="text-sm border border-gray-400 rounded-full py-2 px-3 transition-all hover:scale-105" href={`/${lang}/login`}>
                             {t('Login')}
                         </Link>
                     </div>

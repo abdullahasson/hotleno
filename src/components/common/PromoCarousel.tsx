@@ -7,7 +7,7 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
+  CarouselPrevious,type CarouselApi 
 } from "@/components/ui/carousel";
 
 // Images
@@ -19,7 +19,7 @@ import thuothand from "../../../public/thuothand.svg";
 const PromoCarousel = () => {
   const lang = useLocale();
   const t = useTranslations("PromoCarousel");
-  const [api, setApi] = useState<any>(null);
+  const [api, setApi] = useState<CarouselApi | null>(null);
   const [current, setCurrent] = useState(0);
 
   const slides = [

@@ -5,7 +5,14 @@ import { useSearchParams } from 'next/navigation';
 import { useTranslations } from "next-intl";
 import FlightList from "./FlightList";
 import FlightsError from './FlightsError';
-import Select from '../ui/select';
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+
+} from '../ui/select';
 import UiDatePicker from '../ui/datepicker';
 import AirportSelect from '../ui/airport-select';
 import {
@@ -362,17 +369,20 @@ export default function FlightsSearch() {
 
             {/* Currency */}
             <Select
-              options={[
-                { value: 'USD', label: 'USD ($)' },
-                { value: 'EUR', label: 'EUR (€)' },
-                { value: 'GBP', label: 'GBP (£)' },
-                { value: 'SGD', label: 'SGD (S$)' },
-                { value: 'THB', label: 'THB (฿)' },
-              ]}
               value={searchParamsState.currency}
-              onChange={value => handleParamChange('currency', value)}
-              placeholder="العملة"
-            />
+              onValueChange={(value) => handleParamChange('currency', value)}
+            >
+              <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="العملة" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="USD">USD ($)</SelectItem>
+                <SelectItem value="EUR">EUR (€)</SelectItem>
+                <SelectItem value="GBP">GBP (£)</SelectItem>
+                <SelectItem value="SGD">SGD (S$)</SelectItem>
+                <SelectItem value="THB">THB (฿)</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
         </div>
 
@@ -459,11 +469,20 @@ export default function FlightsSearch() {
             <div className="border border-gray-200 rounded-xl p-4 bg-white shadow-sm">
               <label className="block text-sm font-medium text-gray-700 mb-2">{t("SortBy.Title")}</label>
               <Select
-                options={getSortByOptions()}
                 value={searchParamsState.sortBy}
-                onChange={handleSortByChange}
-                placeholder="Sort by"
-              />
+                onValueChange={handleSortByChange}
+              >
+                <SelectTrigger className="min-w-[180px]">
+                  <SelectValue placeholder={t("SortBy.Placeholder") || "Sort by"} />
+                </SelectTrigger>
+                <SelectContent>
+                  {getSortByOptions().map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
           </div>
         </div>

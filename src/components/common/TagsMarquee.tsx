@@ -100,8 +100,8 @@ const TagsMarquee = () => {
   }, []);
 
   // Optimized MarqueeLine component with proper typing
-  const MarqueeLine = React.memo(
-    ({ tags, direction, index }: { tags: Tag[]; direction: 'left' | 'right'; index: number }) => {
+const MarqueeLine = React.memo(
+  function MarqueeLine({ tags, direction, index }: { tags: Tag[]; direction: 'left' | 'right'; index: number }) {
       // Calculate the number of duplicates needed to fill the viewport
       const viewportFillFactor = 4;
       const duplicatedTags = React.useMemo(() => {

@@ -9,7 +9,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 // Components
-import Footer from "@/components/common/footer";
+// import Footer from "@/components/common/footer";
 // Styles
 import "../globals.css";
 
@@ -82,7 +82,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <>
             {children}
-            <Footer />
+            {/* <Footer /> */}
             {/* <Contact /> */}
           </>
         </NextIntlClientProvider>

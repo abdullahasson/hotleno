@@ -49,7 +49,7 @@ const PromoCarousel = () => {
     },
   ];
 
-  // Group slides into sets of 2
+ 
   const groupedSlides = [];
   for (let i = 0; i < slides.length; i += 2) {
     groupedSlides.push(slides.slice(i, i + 2));
@@ -70,7 +70,7 @@ const PromoCarousel = () => {
     };
   }, [api]);
 
-  // Don't render if no slides
+
   if (slides.length === 0) {
     return null;
   }

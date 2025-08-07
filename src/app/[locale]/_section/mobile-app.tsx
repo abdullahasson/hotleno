@@ -214,20 +214,20 @@ const MobileApp = () => {
             </div>
           </div>
 
-                     {/* Download buttons */}
-            <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-              <AppStoreButton
-                icon={<Apple className="text-3xl" />}
-                label="App Store"
-                subLabel={t("DownloadButton")}
-              />
-              <AppStoreButton
-                icon={<Play className="text-2xl" />}
-                label="Google Play"
-                subLabel={t("DownloadButton")}
-                iconColor="text-green-400"
-              />
-            </div>
+          {/* Download buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
+            <AppStoreButton
+              icon={<Apple className="text-3xl" />}
+              label="App Store"
+              subLabel={t("DownloadButton")}
+            />
+            <AppStoreButton
+              icon={<Play className="text-2xl" />}
+              label="Google Play"
+              subLabel={t("DownloadButton")}
+              iconColor="text-green-400"
+            />
+          </div>
 
         </div>
       </div>

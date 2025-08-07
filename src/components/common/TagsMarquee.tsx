@@ -79,7 +79,7 @@ const TagsMarquee = () => {
     },
   ];
 
-  // Memoized animation variants for better performance
+
   const marqueeVariants = React.useMemo(() => {
     return (direction: 'left' | 'right'): Variants => {
       const offset = direction === 'left' ? '-200%' : '100%';
@@ -99,10 +99,10 @@ const TagsMarquee = () => {
     };
   }, []);
 
-  // Optimized MarqueeLine component with proper typing
+ 
 const MarqueeLine = React.memo(
   function MarqueeLine({ tags, direction, index }: { tags: Tag[]; direction: 'left' | 'right'; index: number }) {
-      // Calculate the number of duplicates needed to fill the viewport
+      
       const viewportFillFactor = 4;
       const duplicatedTags = React.useMemo(() => {
         return Array(viewportFillFactor).fill(tags).flat();

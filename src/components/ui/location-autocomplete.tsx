@@ -112,7 +112,7 @@ export default function LocationAutocomplete({
 
   return (
     <div className="relative w-full" ref={containerRef}>
-      <div className="flex items-center gap-2 py-3 px-2 rounded-xl border border-gray-400">
+      <div className="flex items-center gap-2 py-2.5 px-2 rounded-xl border border-gray-400">
         <MapPin size={20} className="text-blue-500" />
         <input
           type="text"

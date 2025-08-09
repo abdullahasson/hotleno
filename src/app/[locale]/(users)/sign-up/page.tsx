@@ -21,7 +21,7 @@ import * as z from "zod"
 
 // Framer Motion
 import { motion } from "framer-motion"
-import { fadeIn, staggerContainer, slideIn } from "@/utils/motion"
+import { fadeIn, staggerContainer, slideIn } from "@/lib/utils/motion"
 
 // Create a schema for form validation
 type TranslationFunction = (key: string) => string;

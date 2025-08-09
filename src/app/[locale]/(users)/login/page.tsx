@@ -21,7 +21,7 @@ import * as z from "zod"
 
 // Framer Motion
 import { motion } from "framer-motion"
-import { fadeIn, staggerContainer, slideIn } from "@/utils/motion"
+import { fadeIn, staggerContainer, slideIn } from "@/lib/utils/motion"
 
 export default function Login() {
   const locale = useLocale()

@@ -10,7 +10,7 @@ interface TripCardProps {
 
 const TripCard: React.FC<TripCardProps> = ({ trip, roundTripText }) => {
 
-  const t = useTranslations('TripIdeas');
+  const t = useTranslations('Homepage.TripIdeas');
 
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">

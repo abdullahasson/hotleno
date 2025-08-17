@@ -2,11 +2,15 @@
 'use client';
 
 // React
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 // Next Intl
 import { useLocale, useTranslations } from 'next-intl';
 // Animations
 import { motion, AnimatePresence } from 'framer-motion';
+// Components
+import Header from "@/components/flights/Header"
+import Reviews from '@/components/common/Reviews';
+import Footer from "@/components/common/footer"
 // Icons
 import {
   Apple,
@@ -21,8 +25,6 @@ import {
   ShieldCheck,
   WalletCards,
   CalendarDays,
-  ChevronLeft,
-  ChevronRight,
 } from 'lucide-react';
 
 export default function AppDownloadPage() {
@@ -33,8 +35,7 @@ export default function AppDownloadPage() {
   // State for FAQ accordion
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  // State for testimonial carousel
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
 
   // Features data
   const features = [
@@ -67,22 +68,25 @@ export default function AppDownloadPage() {
   // Testimonials data
   const testimonials = [
     {
-      name: t('testimonials.1.name'),
-      role: t('testimonials.1.role'),
+      author: t('testimonials.1.name'),
+      date: t('testimonials.1.role'),
       content: t('testimonials.1.content'),
-      rating: 5
+      rating: 5,
+      title: ""
     },
     {
-      name: t('testimonials.2.name'),
-      role: t('testimonials.2.role'),
+      author: t('testimonials.2.name'),
+      date: t('testimonials.2.role'),
       content: t('testimonials.2.content'),
-      rating: 4
+      rating: 4,
+      title: ""
     },
     {
-      name: t('testimonials.3.name'),
-      role: t('testimonials.3.role'),
+      author: t('testimonials.3.name'),
+      date: t('testimonials.3.role'),
       content: t('testimonials.3.content'),
-      rating: 5
+      rating: 5,
+      title: ""
     }
   ];
 
@@ -111,26 +115,14 @@ export default function AppDownloadPage() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Auto-rotate testimonials
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
 
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
 
-  // Navigation functions
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
 
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
 
   return (
-    <div className={`min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 ${isRTL ? 'rtl' : 'ltr'}`}>
+    <div className={`min-h-screen ${isRTL ? 'rtl' : 'ltr'}`}>
+      <Header />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="absolute inset-0 z-0">
@@ -303,89 +295,11 @@ export default function AppDownloadPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-gray-900"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              {t('testimonials.title')}
-            </motion.h2>
-            <motion.p
-              className="mt-4 text-lg text-gray-600"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              {t('testimonials.subtitle')}
-            </motion.p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentTestimonial}
-                initial={{ opacity: 0, x: isRTL ? 100 : -100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: isRTL ? -100 : 100 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white rounded-xl p-8 shadow-sm border border-gray-100"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-teal-50 to-teal-100 border-2 border-dashed border-teal-200 flex-shrink-0" />
-                  <div className="mx-4">
-                    <h4 className="text-xl font-bold text-gray-900">{testimonials[currentTestimonial].name}</h4>
-                    <p className="text-gray-600">{testimonials[currentTestimonial].role}</p>
-                  </div>
-                  <div className="ml-auto flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`${i < testimonials[currentTestimonial].rating ? 'text-amber-400 fill-amber-400' : 'text-gray-300'}`}
-                        size={20}
-                      />
-                    ))}
-                  </div>
-                </div>
-                <blockquote className="text-lg text-gray-700 border-l-3 border-teal-500 pl-4 py-2">
-                  &quot;{testimonials[currentTestimonial].content}&quot;
-                </blockquote>
-              </motion.div>
-            </AnimatePresence>
-
-            <div className="flex justify-center mt-8 gap-4">
-              <button
-                onClick={prevTestimonial}
-                className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center hover:bg-gray-50 transition border border-gray-100"
-              >
-                <ChevronLeft className="text-gray-700" size={24} />
-              </button>
-
-              <div className="flex items-center gap-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentTestimonial(index)}
-                    className={`w-3 h-3 rounded-full ${currentTestimonial === index ? 'bg-teal-600' : 'bg-gray-300'}`}
-                  />
-                ))}
-              </div>
-
-              <button
-                onClick={nextTestimonial}
-                className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center hover:bg-gray-50 transition border border-gray-100"
-              >
-                <ChevronRight className="text-gray-700" size={24} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Reviews
+        title={t('testimonials.title')}
+        subtitle={t('testimonials.subtitle')}
+        testimonials={testimonials}
+      />
 
       {/* FAQ Section */}
       <section className="py-16 md:py-24 bg-white">
@@ -494,6 +408,8 @@ export default function AppDownloadPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

@@ -18,7 +18,7 @@ import thuothand from "../../../public/thuothand.svg";
 
 const PromoCarousel = () => {
   const lang = useLocale();
-  const t = useTranslations("PromoCarousel");
+  const t = useTranslations("Homepage.PromoCarousel");
   const [api, setApi] = useState<CarouselApi | null>(null);
   const [current, setCurrent] = useState(0);
 

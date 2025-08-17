@@ -9,251 +9,335 @@
     "Login": "Login",
     "Signup": "Create Account"
   },
-  "Hero": {
-    "Heading": "Best Travel Deals at Amazing Prices",
-    "SubHeading": "Search, compare, and book your next trip effortlessly. Save up to 50% with our exclusive offers",
-    "JoinPartner": "Flights",
-    "BrowseOffers": "Hotel Offers"
+  "Footer": {
+    "Logo": "Hotlino",
+    "AboutUs": {
+      "Title": "About Hotlino",
+      "Text": "We provide the best travel, flight, and hotel deals at competitive prices. Book your next trip with us and save money."
+    },
+    "QuickLinks": {
+      "Title": "Quick Links",
+      "Home": "Home",
+      "Flight": "Flights",
+      "Hotel": "Hotels",
+      "FeaturedDeals": "Special Offers",
+      "Contact": "App"
+    },
+    "PopularDestinations": {
+      "Title": "Popular Destinations",
+      "c1": "Dubai",
+      "c2": "Istanbul",
+      "c3": "Malaysia",
+      "c4": "Sharm El Sheikh",
+      "c5": "Paris"
+    },
+    "ContactUs": {
+      "Title": "Contact Us",
+      "Location": "London, United Kingdom"
+    },
+    "BootomFooter": "Hotlino, All Rights Reserved | Abdullah Hassoun 2025"
   },
-  "PromoCarousel": {
-    "title": "With us, travel has meaning.",
-    "Cards": {
-      "one": {
-        "title": "Car Rental",
-        "des": "Get the best car rental offers at your destination"
+  "Homepage": {
+    "Search": {
+      "Tabs": {
+        "flights": "Flights",
+        "hotels": "Hotels"
+      }
+    },
+    "PromoCarousel": {
+      "title": "With us, travel has meaning.",
+      "Cards": {
+        "one": {
+          "title": "Car Rental",
+          "des": "Get the best car rental offers at your destination"
+        },
+        "two": {
+          "title": "eSIM Packages",
+          "des": "Internet connection immediately upon arrival without a physical SIM"
+        },
+        "three": {
+          "title": "Visa Requirements",
+          "des": "Learn about travel requirements for your destination before booking"
+        },
+        "four": {
+          "title": "Airport Services",
+          "des": "Premium airport transfers at competitive prices"
+        },
+        "btn": "Discover More"
+      }
+    },
+    "FeaturesSection": {
+      "one": "Best travel deals in the United States",
+      "two": "Thousands of flight and hotel offers",
+      "three": "Multiple payment methods",
+      "four": "24/7 customer service"
+    },
+    "ArticlesCarousel": {
+      "title": "Latest Articles",
+      "seeMore": "More Articles",
+      "readArticle": "Read Article",
+      "articles": {
+        "1": {
+          "title": "The Future of Travel in a Post-Pandemic World",
+          "description": "Exploring how the travel industry is adapting to new challenges and changing traveler behaviors in the current global landscape.",
+          "department": "Travel Trends",
+          "blogName": "Wanderlust Insights"
+        },
+        "2": {
+          "title": "10 Hidden Gems in Southeast Asia You Must Visit",
+          "description": "Discover off-the-beaten-path destinations in Southeast Asia that offer unique experiences away from tourist crowds.",
+          "department": "Destination Guide",
+          "blogName": "Explorer's Diary"
+        },
+        "3": {
+          "title": "Sustainable Travel: How to Reduce Your Carbon Footprint",
+          "description": "Practical tips and strategies for environmentally conscious travelers to minimize their impact while exploring the world.",
+          "department": "Ecotourism",
+          "blogName": "The Green Traveler"
+        },
+        "4": {
+          "title": "The Comprehensive Guide to Digital Nomad Destinations",
+          "description": "The world's best cities for digital nomads offering reliable internet, coworking spaces, and vibrant communities.",
+          "department": "Work and Travel",
+          "blogName": "Nomad Life"
+        },
+        "5": {
+          "title": "Culinary Adventures: Street Food Tours Around the World",
+          "description": "A foodie journey through global street food markets and must-try dishes in each destination.",
+          "department": "Food and Culture",
+          "blogName": "Taste the World"
+        },
+        "6": {
+          "title": "Family Travel Hacks: Stress-Free Vacations with Kids",
+          "description": "Expert tips for planning and enjoying family holidays that cater to all ages and interests.",
+          "department": "Family Travel",
+          "blogName": "Happy Journeys"
+        }
+      }
+    },
+    "PopularAirlines": {
+      "title": "Popular Airlines in the United States",
+      "subtitle": "Book cheap flights with your favorite airlines"
+    },
+    "TripIdeas": {
+      "title": "Trip Ideas from USA",
+      "subtitle": "Discover your perfect destination with carefully curated travel recommendations",
+      "tabs": {
+        "romantic": "Romantic Getaways",
+        "cultural": "Cultural Experiences",
+        "beach": "Beach Destinations",
+        "family": "Family-Friendly",
+        "nature": "Nature & Adventures",
+        "forTrips": "For Trips"
       },
-      "two": {
-        "title": "eSIM Packages",
-        "des": "Internet connection immediately upon arrival without a physical SIM"
+      "card": {
+        "roundTrip": "Round Trip",
+        "details": "Details"
       },
-      "three": {
-        "title": "Visa Requirements",
-        "des": "Learn about travel requirements for your destination before booking"
+      "countries": {
+        "country_france": "France",
+        "country_italy": "Italy",
+        "country_greece": "Greece",
+        "country_spain": "Spain",
+        "country_morocco": "Morocco",
+        "country_czech": "Czech Republic",
+        "country_hungary": "Hungary",
+        "country_croatia": "Croatia",
+        "country_austria": "Austria",
+        "country_japan": "Japan",
+        "country_egypt": "Egypt",
+        "country_peru": "Peru",
+        "country_turkey": "Turkey",
+        "country_china": "China",
+        "country_india": "India",
+        "country_cambodia": "Cambodia",
+        "country_thailand": "Thailand",
+        "country_jordan": "Jordan",
+        "country_maldives": "Maldives",
+        "country_mexico": "Mexico",
+        "country_indonesia": "Indonesia",
+        "country_australia": "Australia",
+        "country_brazil": "Brazil",
+        "country_hawaii": "Hawaii",
+        "country_usa": "United States",
+        "country_singapore": "Singapore",
+        "country_denmark": "Denmark",
+        "country_canada": "Canada",
+        "country_netherlands": "Netherlands",
+        "country_uae": "UAE",
+        "country_uk": "United Kingdom",
+        "country_costa_rica": "Costa Rica",
+        "country_new_zealand": "New Zealand",
+        "country_tanzania": "Tanzania",
+        "country_norway": "Norway",
+        "country_kenya": "Kenya",
+        "country_iceland": "Iceland",
+        "country_venezuela": "Venezuela",
+        "country_namibia": "Namibia",
+        "country_germany": "Germany",
+        "country_argentina": "Argentina",
+        "country_colombia": "Colombia",
+        "country_finland": "Finland",
+        "country_hong_kong": "Hong Kong",
+        "country_south_korea": "South Korea",
+        "country_portugal": "Portugal"
       },
-      "four": {
-        "title": "Airport Services",
-        "des": "Premium airport transfers at competitive prices"
+      "cities": {
+        "city_paris": "Paris",
+        "city_venice": "Venice",
+        "city_santorini": "Santorini",
+        "city_seville": "Seville",
+        "city_marrakech": "Marrakech",
+        "city_prague": "Prague",
+        "city_budapest": "Budapest",
+        "city_dubrovnik": "Dubrovnik",
+        "city_vienna": "Vienna",
+        "city_kyoto": "Kyoto",
+        "city_cairo": "Cairo",
+        "city_cusco": "Cusco",
+        "city_istanbul": "Istanbul",
+        "city_beijing": "Beijing",
+        "city_agra": "Agra",
+        "city_siem_reap": "Siem Reap",
+        "city_bangkok": "Bangkok",
+        "city_petra": "Petra",
+        "city_male": "Male",
+        "city_cancun": "Cancun",
+        "city_phuket": "Phuket",
+        "city_bali": "Bali",
+        "city_mykonos": "Mykonos",
+        "city_gold_coast": "Gold Coast",
+        "city_majorca": "Majorca",
+        "city_florianopolis": "Florianopolis",
+        "city_maui": "Maui",
+        "city_orlando": "Orlando",
+        "city_barcelona": "Barcelona",
+        "city_singapore": "Singapore",
+        "city_tokyo": "Tokyo",
+        "city_copenhagen": "Copenhagen",
+        "city_vancouver": "Vancouver",
+        "city_amsterdam": "Amsterdam",
+        "city_dubai": "Dubai",
+        "city_london": "London",
+        "city_monteverde": "Monteverde",
+        "city_queenstown": "Queenstown",
+        "city_banff": "Banff",
+        "city_zanzibar": "Zanzibar",
+        "city_tromso": "Tromso",
+        "city_masai_mara": "Masai Mara",
+        "city_reykjavik": "Reykjavik",
+        "city_canaima": "Canaima",
+        "city_sossusvlei": "Sossusvlei",
+        "city_berlin": "Berlin",
+        "city_sydney": "Sydney",
+        "city_rio": "Rio de Janeiro",
+        "city_buenos_aires": "Buenos Aires",
+        "city_cartagena": "Cartagena",
+        "city_helsinki": "Helsinki",
+        "city_hong_kong": "Hong Kong",
+        "city_seoul": "Seoul",
+        "city_porto": "Porto"
+      }
+    },
+    "MobileApp": {
+      "Badge": "New Experience",
+      "Heading": "Download Hotlino App and Book Your Trip in Minutes",
+      "SubHeading": "Enjoy an exceptional booking experience through our app. Browse thousands of offers, manage your bookings, and travel without limits from anywhere, anytime.",
+      "Features": {
+        "One": {
+          "Title": "Instant Booking",
+          "Text": "Complete your booking in under two minutes with simple steps"
+        },
+        "Two": {
+          "Title": "Exclusive Offers",
+          "Text": "Up to 50% discounts available only for app users"
+        },
+        "Three": {
+          "Title": "Deal Alerts",
+          "Text": "Be the first to know about the latest offers for your favorite destinations"
+        },
+        "Four": {
+          "Title": "Secure Payments",
+          "Text": "Multiple payment systems with highest transaction protection standards"
+        }
       },
-      "btn": "Discover More"
-    }
-  },
-  "FeaturesSection": {
-    "one": "Best travel deals in the United States",
-    "two": "Thousands of flight and hotel offers",
-    "three": "Multiple payment methods",
-    "four": "24/7 customer service"
-  },
-  "SearchHome": {
-    "Tabs": {
-      "flights": "Flights",
-      "hotels": "Hotels"
-    }
-  },
-  "ArticlesCarousel": {
-    "title": "Latest Articles",
-    "seeMore": "More Articles",
-    "readArticle": "Read Article",
-    "articles": {
-      "1": {
-        "title": "The Future of Travel in a Post-Pandemic World",
-        "description": "Exploring how the travel industry is adapting to new challenges and changing traveler behaviors in the current global landscape.",
-        "department": "Travel Trends",
-        "blogName": "Wanderlust Insights"
-      },
-      "2": {
-        "title": "10 Hidden Gems in Southeast Asia You Must Visit",
-        "description": "Discover off-the-beaten-path destinations in Southeast Asia that offer unique experiences away from tourist crowds.",
-        "department": "Destination Guide",
-        "blogName": "Explorer's Diary"
-      },
-      "3": {
-        "title": "Sustainable Travel: How to Reduce Your Carbon Footprint",
-        "description": "Practical tips and strategies for environmentally conscious travelers to minimize their impact while exploring the world.",
-        "department": "Ecotourism",
-        "blogName": "The Green Traveler"
-      },
-      "4": {
-        "title": "The Comprehensive Guide to Digital Nomad Destinations",
-        "description": "The world's best cities for digital nomads offering reliable internet, coworking spaces, and vibrant communities.",
-        "department": "Work and Travel",
-        "blogName": "Nomad Life"
-      },
-      "5": {
-        "title": "Culinary Adventures: Street Food Tours Around the World",
-        "description": "A foodie journey through global street food markets and must-try dishes in each destination.",
-        "department": "Food and Culture",
-        "blogName": "Taste the World"
-      },
-      "6": {
-        "title": "Family Travel Hacks: Stress-Free Vacations with Kids",
-        "description": "Expert tips for planning and enjoying family holidays that cater to all ages and interests.",
-        "department": "Family Travel",
-        "blogName": "Happy Journeys"
+      "AvailableNow": "Available now on all devices",
+      "DownloadButton": "Download App From",
+      "mobile": {
+        "Heading": "Hotlino",
+        "Text": "Search. Book. Travel",
+        "Card": {
+          "Title": "Riyadh ⇨ Dubai",
+          "Date": "Thursday 15 July",
+          "Price": "899 SAR"
+        },
+        "Card2": {
+          "Title": "Jeddah ⇨ Istanbul",
+          "Date": "Saturday 20 August",
+          "Price": "1,250 SAR"
+        },
+        "ReadQrCode": "Scan QR Code to Install App"
+      }
+    },
+    "TagsMarquee": {
+      "Flights": {
+        "title": "Flights to the Best Countries"
       }
     }
   },
-  "PopularAirlines": {
-    "title": "Popular Airlines in the United States",
-    "subtitle": "Book cheap flights with your favorite airlines"
-  },
-  "TripIdeas": {
-    "title": "Trip Ideas from USA",
-    "subtitle": "Discover your perfect destination with carefully curated travel recommendations",
-    "tabs": {
-      "romantic": "Romantic Getaways",
-      "cultural": "Cultural Experiences",
-      "beach": "Beach Destinations",
-      "family": "Family-Friendly",
-      "nature": "Nature & Adventures",
-      "forTrips": "For Trips"
+  "about": {
+    "title": "About Hotleno",
+    "description": "Your trusted partner in seamless hotel bookings worldwide",
+    "heroTitle": "About Hotleno",
+    "heroSubtitle": "Revolutionizing travel experiences through innovation, transparency, and trust",
+    "registration": {
+      "title": "Official Registration",
+      "certificate": "Certificate of Incorporation",
+      "subtitle": "of a Private Limited Company",
+      "companyNumber": "Company Number",
+      "incorporationDate": "Incorporation Date",
+      "date": "16th July 2025",
+      "statement": "The Registrar of Companies for England and Wales, hereby certifies that HOTLENO LTD is incorporated under the Companies Act 2006 as a private company, limited by shares, with its registered office in England and Wales.",
+      "location": "Given at Companies House, Cardiff"
     },
-    "card": {
-      "roundTrip": "Round Trip",
-      "details": "Details"
+    "story": {
+      "title": "Our Story",
+      "paragraph1": "Founded in 2025, Hotleno emerged from a simple yet powerful idea: travel should be effortless, transparent, and accessible to everyone. Our platform was born out of frustration with complex booking systems and hidden fees that plague the travel industry.",
+      "paragraph2": "Today, we're proud to be a UK-registered company (Company Number 16587327) specializing in travel services, reservations, and visibility. We connect travelers with the perfect accommodations at competitive prices, while maintaining the highest standards of service and integrity."
     },
-    "countries": {
-      "country_france": "France",
-      "country_italy": "Italy",
-      "country_greece": "Greece",
-      "country_spain": "Spain",
-      "country_morocco": "Morocco",
-      "country_czech": "Czech Republic",
-      "country_hungary": "Hungary",
-      "country_croatia": "Croatia",
-      "country_austria": "Austria",
-      "country_japan": "Japan",
-      "country_egypt": "Egypt",
-      "country_peru": "Peru",
-      "country_turkey": "Turkey",
-      "country_china": "China",
-      "country_india": "India",
-      "country_cambodia": "Cambodia",
-      "country_thailand": "Thailand",
-      "country_jordan": "Jordan",
-      "country_maldives": "Maldives",
-      "country_mexico": "Mexico",
-      "country_indonesia": "Indonesia",
-      "country_australia": "Australia",
-      "country_brazil": "Brazil",
-      "country_hawaii": "Hawaii",
-      "country_usa": "United States",
-      "country_singapore": "Singapore",
-      "country_denmark": "Denmark",
-      "country_canada": "Canada",
-      "country_netherlands": "Netherlands",
-      "country_uae": "UAE",
-      "country_uk": "United Kingdom",
-      "country_costa_rica": "Costa Rica",
-      "country_new_zealand": "New Zealand",
-      "country_tanzania": "Tanzania",
-      "country_norway": "Norway",
-      "country_kenya": "Kenya",
-      "country_iceland": "Iceland",
-      "country_venezuela": "Venezuela",
-      "country_namibia": "Namibia",
-      "country_germany": "Germany",
-      "country_argentina": "Argentina",
-      "country_colombia": "Colombia",
-      "country_finland": "Finland",
-      "country_hong_kong": "Hong Kong",
-      "country_south_korea": "South Korea",
-      "country_portugal": "Portugal"
-    },
-    "cities": {
-      "city_paris": "Paris",
-      "city_venice": "Venice",
-      "city_santorini": "Santorini",
-      "city_seville": "Seville",
-      "city_marrakech": "Marrakech",
-      "city_prague": "Prague",
-      "city_budapest": "Budapest",
-      "city_dubrovnik": "Dubrovnik",
-      "city_vienna": "Vienna",
-      "city_kyoto": "Kyoto",
-      "city_cairo": "Cairo",
-      "city_cusco": "Cusco",
-      "city_istanbul": "Istanbul",
-      "city_beijing": "Beijing",
-      "city_agra": "Agra",
-      "city_siem_reap": "Siem Reap",
-      "city_bangkok": "Bangkok",
-      "city_petra": "Petra",
-      "city_male": "Male",
-      "city_cancun": "Cancun",
-      "city_phuket": "Phuket",
-      "city_bali": "Bali",
-      "city_mykonos": "Mykonos",
-      "city_gold_coast": "Gold Coast",
-      "city_majorca": "Majorca",
-      "city_florianopolis": "Florianopolis",
-      "city_maui": "Maui",
-      "city_orlando": "Orlando",
-      "city_barcelona": "Barcelona",
-      "city_singapore": "Singapore",
-      "city_tokyo": "Tokyo",
-      "city_copenhagen": "Copenhagen",
-      "city_vancouver": "Vancouver",
-      "city_amsterdam": "Amsterdam",
-      "city_dubai": "Dubai",
-      "city_london": "London",
-      "city_monteverde": "Monteverde",
-      "city_queenstown": "Queenstown",
-      "city_banff": "Banff",
-      "city_zanzibar": "Zanzibar",
-      "city_tromso": "Tromso",
-      "city_masai_mara": "Masai Mara",
-      "city_reykjavik": "Reykjavik",
-      "city_canaima": "Canaima",
-      "city_sossusvlei": "Sossusvlei",
-      "city_berlin": "Berlin",
-      "city_sydney": "Sydney",
-      "city_rio": "Rio de Janeiro",
-      "city_buenos_aires": "Buenos Aires",
-      "city_cartagena": "Cartagena",
-      "city_helsinki": "Helsinki",
-      "city_hong_kong": "Hong Kong",
-      "city_seoul": "Seoul",
-      "city_porto": "Porto"
-    }
-  },
-  "MobileApp": {
-    "Badge": "New Experience",
-    "Heading": "Download Hotlino App and Book Your Trip in Minutes",
-    "SubHeading": "Enjoy an exceptional booking experience through our app. Browse thousands of offers, manage your bookings, and travel without limits from anywhere, anytime.",
-    "Features": {
-      "One": {
-        "Title": "Instant Booking",
-        "Text": "Complete your booking in under two minutes with simple steps"
+    "values": {
+      "title": "Our Core Values",
+      "subtitle": "The principles that guide everything we do at Hotleno",
+      "transparency": {
+        "title": "Transparency",
+        "description": "No hidden fees, no surprises. We believe in clear pricing and honest communication at every step of your booking journey."
       },
-      "Two": {
-        "Title": "Exclusive Offers",
-        "Text": "Up to 50% discounts available only for app users"
+      "trust": {
+        "title": "Trust",
+        "description": "We've built our reputation on reliability and integrity. Your security and satisfaction are our top priorities."
       },
-      "Three": {
-        "Title": "Deal Alerts",
-        "Text": "Be the first to know about the latest offers for your favorite destinations"
-      },
-      "Four": {
-        "Title": "Secure Payments",
-        "Text": "Multiple payment systems with highest transaction protection standards"
+      "innovation": {
+        "title": "Innovation",
+        "description": "Continuously evolving our platform to deliver cutting-edge features that simplify travel planning and enhance your experience."
       }
     },
-    "AvailableNow": "Available now on all devices",
-    "DownloadButton": "Download App From",
-    "mobile": {
-      "Heading": "Hotlino",
-      "Text": "Search. Book. Travel",
-      "Card": {
-        "Title": "Riyadh ⇨ Dubai",
-        "Date": "Thursday 15 July",
-        "Price": "899 SAR"
-      },
-      "Card2": {
-        "Title": "Jeddah ⇨ Istanbul",
-        "Date": "Saturday 20 August",
-        "Price": "1,250 SAR"
-      },
-      "ReadQrCode": "Scan QR Code to Install App"
+    "mission": {
+      "title": "Our Mission",
+      "paragraph1": "At Hotleno, we're on a mission to transform the way people discover and book travel accommodations. We believe that finding the perfect place to stay should be simple, transparent, and enjoyable.",
+      "paragraph2": "By leveraging cutting-edge technology and maintaining the highest standards of integrity, we provide travelers with unparalleled access to diverse accommodations at competitive prices. Our platform empowers users with comprehensive visibility into their options, ensuring they make informed decisions with confidence.",
+      "ctaTitle": "Innovating Travel Experiences",
+      "ctaDescription": "We're constantly pushing boundaries to create seamless booking experiences that anticipate travelers' needs and exceed their expectations."
+    },
+    "stats": {
+      "properties": "Properties",
+      "countries": "Countries",
+      "support": "Support",
+      "satisfaction": "Satisfaction"
+    },
+    "cta": {
+      "title": "Join millions of travelers who trust Hotleno",
+      "subtitle": "Experience the difference of transparent pricing, innovative features, and exceptional service.",
+      "button": "Start Your Journey"
     }
   },
   "FlightDestinations": {
@@ -471,34 +555,6 @@
     "RatingHigh": "Highest Rating",
     "DistanceCenter": "Distance from Center"
   },
-  "Footer": {
-    "Logo": "Hotlino",
-    "AboutUs": {
-      "Title": "About Hotlino",
-      "Text": "We provide the best travel, flight, and hotel deals at competitive prices. Book your next trip with us and save money."
-    },
-    "QuickLinks": {
-      "Title": "Quick Links",
-      "Home": "Home",
-      "Flight": "Flights",
-      "Hotel": "Hotels",
-      "FeaturedDeals": "Special Offers",
-      "Contact": "App"
-    },
-    "PopularDestinations": {
-      "Title": "Popular Destinations",
-      "c1": "Dubai",
-      "c2": "Istanbul",
-      "c3": "Malaysia",
-      "c4": "Sharm El Sheikh",
-      "c5": "Paris"
-    },
-    "ContactUs": {
-      "Title": "Contact Us",
-      "Location": "London, United Kingdom"
-    },
-    "BootomFooter": "Hotlino, All Rights Reserved | Abdullah Hassoun 2025"
-  },
   "AppDownloadPage": {
     "hero": {
       "title": "Your Perfect Travel Companion",
@@ -658,5 +714,114 @@
     "invalid_email": "Invalid email address",
     "password_required": "Password is required",
     "password_min_length": "Password must be at least 6 characters"
+  },
+  "Hotel": {
+    "HotelPage": {
+      "Breadcrumb": {
+        "Home": "Home",
+        "Hotels": "Hotels"
+      },
+      "Tabs": {
+        "1": "Rooms",
+        "2": "Gurst Rating",
+        "3": "Reviews",
+        "4": "Map",
+        "5": "Similar Hotels",
+        "6": "Details"
+      },
+      "Reviews": "reviews",
+      "BookNow": "Book Now",
+      "PriceSummary": {
+        "Title": "Price Summary",
+        "Dates": "Dates",
+        "Guests": "Guests",
+        "RoomType": "Room Type",
+        "Total": "Total",
+        "Savings": "You save {amount}",
+        "TaxesIncluded": "Taxes and fees included"
+      },
+      "Amenities": "Amenities",
+      "Guests": "guests",
+      "PerNight": "/ night",
+      "TaxesIncluded": "Taxes included",
+      "SelectRoom": "Select Room",
+      "Star": "star",
+      "Location": "Location",
+      "LoadMoreReviews": "Load more reviews",
+      "Description": "Description",
+      "Policies": "Policies",
+      "CheckInOut": "Check-in / Check-out",
+      "CheckIn": "Check-in",
+      "CheckOut": "Check-out",
+      "CancellationPolicy": "Cancellation Policy",
+      "CancellationPolicyText": "Free cancellation up to 48 hours before check-in. After that, cancellations will be subject to a fee.",
+      "ChildrenPets": "Children and Pets",
+      "ChildrenPolicy": "Children of all ages are welcome.",
+      "PetsPolicy": "Pets are allowed with an additional charge of $25 per night.",
+      "Payment": "Payment",
+      "PaymentMethods": "We accept credit cards (Visa, MasterCard, American Express) and PayPal."
+    },
+    "BookingPage": {
+      "helpCenter": "Help Center",
+      "step1": "Search",
+      "step2": "Details",
+      "step3": "Confirmation",
+      "bookingDetails": "Your Booking Details",
+      "amenity1": "Free WiFi",
+      "amenity2": "Swimming Pool",
+      "amenity3": "Spa",
+      "dates": "Dates",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "nights": "nights",
+      "roomDetails": "Room Details",
+      "guests": "Guests",
+      "adults": "adults",
+      "guestInfo": "Guest Information",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "John Doe",
+      "emailPlaceholder": "john@example.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+971 50 123 4567",
+      "country": "Country",
+      "selectCountry": "Select country",
+      "uae": "United Arab Emirates",
+      "saudi": "Saudi Arabia",
+      "qatar": "Qatar",
+      "oman": "Oman",
+      "specialRequests": "Special Requests (Optional)",
+      "requestsPlaceholder": "Any special requirements?",
+      "paymentSummary": "Payment Summary",
+      "roomPrice": "Room Price ({nights} nights)",
+      "taxes": "Taxes & Fees",
+      "total": "Total",
+      "paymentMethod": "Payment Method",
+      "creditCard": "Credit/Debit Card",
+      "cardDetails": "Card Details",
+      "cardName": "Name on Card",
+      "completeBooking": "Complete Booking",
+      "saveForLater": "Save for Later",
+      "termsNote": "By completing this booking, you agree to our Terms of Service and Privacy Policy. Your booking is secured and encrypted.",
+      "copyright": "© 2025 Luxury Hotels Group. All rights reserved.",
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "hotelName": "Luxury Resort & Spa",
+      "hotelLocation": "Dubai, UAE",
+      "checkInDate": "Mon, Aug 20, 2025",
+      "checkOutDate": "Fri, Aug 25, 2025",
+      "roomType": "Deluxe Ocean View",
+      "paypalRedirect": "You will be redirected to PayPal to complete your payment",
+      "continueToPaypal": "Continue to PayPal",
+      "paymentSuccessTitle": "Payment Successful!",
+      "paymentSuccessMessage": "Your booking is confirmed. A confirmation email has been sent to your email address.",
+      "viewBooking": "View Booking",
+      "backToHome": "Back to Home",
+      "processing": "Processing Payment...",
+      "stripeNotLoaded": "Stripe is not loaded yet",
+      "cardElementNotFound": "Card element not found",
+      "paymentFailed": "Payment failed. Please try again."
+    }
   }
 }

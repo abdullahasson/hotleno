@@ -9,7 +9,7 @@ import placeholder from "../../../public/placeholder.svg"
 
 
 const PopularAirlines = () => {
-    const t = useTranslations('PopularAirlines');
+    const t = useTranslations('Homepage.PopularAirlines');
 
     const airlines = [
         { id: 1, name: 'Delta Airlines' },

@@ -1,6 +1,5 @@
 // Next js
 import type { Metadata } from "next";
-import Script from 'next/script';
 // Google Fonts
 import { Cairo, Roboto } from "next/font/google";
 // Next Intl
@@ -8,8 +7,6 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-// Components
-// import Footer from "@/components/common/footer";
 // Styles
 import "../globals.css";
 
@@ -56,25 +53,6 @@ export default async function RootLayout({
       data-theme='light'
       className={`${roboto.className} ${cairo.className}`}
     >
-      <head>
-        <Script
-          id="external-script-loader"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var script = document.createElement('script');
-                script.async = true;
-                script.src = 'https://emrldtp.com/NDI2NTc5.js?t=426579';
-                document.head.appendChild(script);
-              })();
-            `,
-          }}
-          data-noptimize="1"
-          data-cfasync="false"
-          data-wpfc-render="false"
-        />
-      </head>
       <body
         dir={locale == "ar" ? "rtl" : "ltr"}
         className={`antialiased`}
@@ -82,8 +60,6 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <>
             {children}
-            {/* <Footer /> */}
-            {/* <Contact /> */}
           </>
         </NextIntlClientProvider>
       </body>

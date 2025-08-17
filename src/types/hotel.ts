@@ -1,55 +1,90 @@
-export interface Location {
-  latitude: number;
-  longitude: number;
-}
-
-export interface Pax {
-  adults: number;
-  children: number;
-}
-
-export interface CancellationPolicy {
-  isRefundable: boolean;
-  deadline: string;
-}
-
-export interface Room {
+// src/types.ts
+export type Room = {
   roomName: string;
   board: string;
   price: number;
-  pax: Pax;
-  cancellationPolicy: CancellationPolicy;
+  pax: {
+    adults: number;
+    children: number;
+  };
+  cancellationPolicy: {
+    isRefundable: boolean;
+    deadline: string;
+  };
   rateKey: string;
   isBookable: boolean;
-}
+  perks?: string[];
+};
 
-export interface HotelResult {
+export type Provider = {
   provider: string;
   hotelId: string;
-  name: string;
-  rating: number;
-  location: Location;
-  address: string;
-  zoneName: string;
   minPrice: number;
   maxPrice: number;
   currency: string;
   rooms: Room[];
+};
+
+export type review = {
+  author: string;
+  date: string;
+  rating: number;
+  title: string;
+  content: string;
 }
 
-export interface HotelsSearchResponse {
-  searchId: string;
-  results: HotelResult[];
-}
+export type Hotel = {
+  id: string;
+  name: string;
+  rating: number;
+  stars: number;
+  description: string;
+  location: {
+    latitude: number;
+    longitude: number;
+  };
+  address: string;
+  zoneName: string;
+  amenities: string[];
+  images: string[];
+  facilities: string[];
+  providers: Provider[];
+  guestRating: {
+    cleanliness: number;
+    comfort: number;
+    location: number;
+    staff: number;
+    valueForMoney: number;
+  },
+  reviews: review[]
+};
 
-// Filter types
-export interface PriceFilter {
-  min: number;
-  max: number;
-}
-
-export interface Filters {
-  priceRange: PriceFilter;
-  starRatings: number[];
+export type FilterState = {
+  minPrice: number;
+  maxPrice: number;
+  minStars: number;
+  maxStars: number;
+  locationType: 'all' | 'center';
+  highRatedOnly: boolean;
   freeCancellation: boolean;
-}
+  boardTypes: string[];
+};
+
+export type PassengerCounts = {
+  adults: number;
+  children: number;
+};
+
+export type SearchParamsState = {
+  location: string;
+  checkIn: Date;
+  checkOut: Date;
+  passengers: PassengerCounts;
+  showPassengerSelect: boolean;
+};
+
+export type SearchResultsProps = {
+  hotels: Hotel[];
+  loading: boolean;
+  error: string | null;
+};

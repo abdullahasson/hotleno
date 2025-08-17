@@ -56,7 +56,7 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li className={`mb-4 ${lang == "ar" ? "hover:-translate-x-2" : "hover:translate-x-2"}`}>
-                                <Link href={`/${lang}/flights`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
+                                <Link href={`/${lang}/about-us`} className="text-slate-300 flex items-center gap-2 transition-all duration-400">
                                     
                                     {lang === 'ar' ? 
                                         <ChevronLeft className="text-[var(--color-accent))]" /> : 

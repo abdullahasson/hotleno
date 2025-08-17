@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "react/no-unknown-property": ["error", { "ignore": ["css"] }],
+    "@next/next/no-img-element": "off"
+  }
+}

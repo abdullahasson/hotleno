@@ -1,80 +1,43 @@
+// src/components/HotelList.tsx
 "use client";
 
 // Next 
 import Image from 'next/image';
+import Link from "next/link"
 import dynamic from 'next/dynamic';
 // React
 import { useState, useEffect, useMemo } from 'react';
 // Next Intl
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 // Icons
-import {
-  Star,
-  MapPin,
-  Heart,
-  Bed,
-  Utensils,
-} from 'lucide-react';
+import { Star, MapPin, Heart, Bed, Utensils } from 'lucide-react';
+// Types
+import { Hotel, FilterState, Room, Provider } from '@/types/hotel';
 // Components
 const MapComponent = dynamic(() => import('./Map'), {
   ssr: false,
   loading: () => <div className="h-full bg-gray-100 rounded-xl flex items-center justify-center">Loading map...</div>
 });
+// UI
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "../ui/carousel"
+import { Skeleton } from "../ui/skeleton"
 // Images
-import Logo from "../../../public/logo.jpg"
 import placeholderHotelImage from "../../../public/hotel-image-placeholder.jpg";
 
-export type Hotel = {
-  provider: string;
-  hotelId: string;
-  name: string;
-  rating: number;
-  location: {
-    latitude: number;
-    longitude: number;
-  };
-  address: string;
-  zoneName: string;
-  minPrice: number;
-  maxPrice: number;
-  currency: string;
-  rooms: {
-    roomName: string;
-    board: string;
-    price: number;
-    pax: {
-      adults: number;
-      children: number;
-    };
-    cancellationPolicy: {
-      isRefundable: boolean;
-      deadline: string;
-    };
-    rateKey: string;
-    isBookable: boolean;
-  }[];
-};
 
 type HotelListProps = {
   hotels: Hotel[];
 };
 
-type FilterState = {
-  minPrice: number;
-  maxPrice: number;
-  minStars: number;
-  maxStars: number;
-  locationType: 'all' | 'center';
-  highRatedOnly: boolean;
-  freeCancellation: boolean;
-  boardTypes: string[];
-};
-
-export default function HotelList({
-  hotels,
-}: HotelListProps) {
+export default function HotelList({ hotels }: HotelListProps) {
   const t = useTranslations('HotelList');
+  const lang = useLocale();
   const [selectedHotel, setSelectedHotel] = useState<Hotel | null>(null);
+  const [hoveredHotel, setHoveredHotel] = useState<Hotel | null>(null);
   const [favorites, setFavorites] = useState<string[]>([]);
   const [filters, setFilters] = useState<FilterState>({
     minPrice: 0,
@@ -87,11 +50,15 @@ export default function HotelList({
     boardTypes: []
   });
 
-
   // Initialize price range from data
   useEffect(() => {
     if (hotels.length > 0) {
-      const prices = hotels.flatMap(hotel => hotel.rooms.map(room => room.price));
+      const prices = hotels.flatMap(hotel =>
+        hotel.providers.flatMap(provider =>
+          provider.rooms.map(room => room.price)
+        )
+      );
+
       const minPrice = Math.min(...prices);
       const maxPrice = Math.max(...prices);
 
@@ -103,8 +70,6 @@ export default function HotelList({
     }
   }, [hotels]);
 
-
-
   // Toggle favorite
   const toggleFavorite = (hotelId: string) => {
     setFavorites(prev =>
@@ -114,17 +79,50 @@ export default function HotelList({
     );
   };
 
+  // Find cheapest room for a hotel
+  const findCheapestRoom = (hotel: Hotel): { room: Room, provider: Provider } => {
+    let cheapestRoom: Room | null = null;
+    let cheapestProvider: Provider | null = null;
+    let minPrice = Infinity;
+
+    for (const provider of hotel.providers) {
+      for (const room of provider.rooms) {
+        if (room.price < minPrice) {
+          minPrice = room.price;
+          cheapestRoom = room;
+          cheapestProvider = provider;
+        }
+      }
+    }
+
+    // Handle case where no rooms are found (shouldn't happen in real data)
+    if (!cheapestRoom || !cheapestProvider) {
+      // Fallback to first available room
+      return {
+        room: hotel.providers[0].rooms[0],
+        provider: hotel.providers[0]
+      };
+    }
+
+    return {
+      room: cheapestRoom,
+      provider: cheapestProvider
+    };
+  };
+
   // Filter hotels based on filter criteria
   const filteredHotels = useMemo(() => {
     return hotels.filter(hotel => {
-      // Price filter (using min room price)
-      const minRoomPrice = Math.min(...hotel.rooms.map(room => room.price));
-      if (minRoomPrice < filters.minPrice || minRoomPrice > filters.maxPrice) {
+      // Get cheapest room for price comparison
+      const { room: cheapestRoom } = findCheapestRoom(hotel);
+
+      // Price filter
+      if (cheapestRoom.price < filters.minPrice || cheapestRoom.price > filters.maxPrice) {
         return false;
       }
 
       // Star rating filter
-      if (hotel.rating < filters.minStars || hotel.rating > filters.maxStars) {
+      if (hotel.stars < filters.minStars || hotel.stars > filters.maxStars) {
         return false;
       }
 
@@ -139,15 +137,19 @@ export default function HotelList({
       }
 
       // Free cancellation filter
-      if (filters.freeCancellation &&
-        !hotel.rooms.some(room => room.cancellationPolicy.isRefundable)) {
-        return false;
+      if (filters.freeCancellation) {
+        const hasRefundable = hotel.providers.some(provider =>
+          provider.rooms.some(room => room.cancellationPolicy.isRefundable)
+        );
+        if (!hasRefundable) return false;
       }
 
       // Board type filter
-      if (filters.boardTypes.length > 0 &&
-        !hotel.rooms.some(room => filters.boardTypes.includes(room.board))) {
-        return false;
+      if (filters.boardTypes.length > 0) {
+        const hasBoardType = hotel.providers.some(provider =>
+          provider.rooms.some(room => filters.boardTypes.includes(room.board))
+        );
+        if (!hasBoardType) return false;
       }
 
       return true;
@@ -156,7 +158,12 @@ export default function HotelList({
 
   // Reset all filters
   const resetFilters = () => {
-    const prices = hotels.flatMap(hotel => hotel.rooms.map(room => room.price));
+    const prices = hotels.flatMap(hotel =>
+      hotel.providers.flatMap(provider =>
+        provider.rooms.map(room => room.price)
+      )
+    );
+
     const minPrice = Math.min(...prices);
     const maxPrice = Math.max(...prices);
 
@@ -172,8 +179,6 @@ export default function HotelList({
     });
   };
 
-
-
   if (hotels.length === 0) {
     return (
       <div className="text-center py-12">
@@ -183,79 +188,98 @@ export default function HotelList({
   }
 
   return (
+
     <div className="flex flex-col lg:flex-row gap-4">
       {/* Hotel List */}
       <div className={`flex-1`}>
-        <div className='bg-white p-2 mb-4 rounded-2xl'>
-          {/* Add Filters Here */}
-        </div>
-
-        <div className='bg-white border border-blue-500 rounded-2xl p-4 flex items-center justify-between mb-4'>
-          <div className="flex items-center gap-4">
-            <Image src={placeholderHotelImage} alt="sign up" className='rounded-full w-12 h-12' />
-            <div>
-              <h3 className="font-bold font-3xl">
-                Save up to 50% on login
-              </h3>
-              <p>
-                Enjoy exclusive prices in Hail for Hotleno members
-              </p>
-            </div>
-          </div>
-
-          <button className="w-auto cursor-pointer rounded-full max-[767px]:rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white py-2 px-4 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-            Sign Up free
-          </button>
-        </div>
+        {/* ... (filters and signup banner remain the same) ... */}
 
         <div className={`
-              bg-white 
-              border-gray-400 border 
-             rounded-2xl 
-              shadow-sm 
-              overflow-hidden
-            `}>
+          bg-white 
+          border-gray-400 border 
+          rounded-2xl 
+          shadow-sm 
+          overflow-hidden
+        `}>
           <ul>
             {filteredHotels.map((hotel) => {
-              const cheapestRoom = hotel.rooms.reduce((prev, current) =>
-                (prev.price < current.price) ? prev : current
-              );
-              const isFavorite = favorites.includes(`${hotel.provider}-${hotel.hotelId}`);
+              const { room: cheapestRoom, provider: cheapestProvider } = findCheapestRoom(hotel);
+              const isFavorite = favorites.includes(hotel.id);
+              const listOfImages = hotel.images
 
               return (
                 <li
-                  key={`${hotel.provider}-${hotel.hotelId}`}
-                  className={`border-b border-gray-400 last:border-0 hover:bg-gray-50 transition ${selectedHotel?.hotelId === hotel.hotelId && selectedHotel?.provider === hotel.provider ? 'bg-blue-50' : ''}`}
+                  key={hotel.id}
+                  className={`border-b border-gray-400 last:border-0 hover:bg-gray-50 transition ${selectedHotel?.id === hotel.id ? 'bg-blue-50' : ''}`}
                   onClick={() => setSelectedHotel(hotel)}
+                  onMouseEnter={() => setHoveredHotel(hotel)}
+                  onMouseLeave={() => setHoveredHotel(null)}
                 >
                   <div className="block p-4">
                     <div className="flex items-center flex-col md:flex-row gap-4">
                       {/* Hotel Image */}
-                      <div className="relative flex-shrink-0 w-full md:w-48 h-48 rounded-xl overflow-hidden bg-green-300">
-                        <Image
-                          src={placeholderHotelImage}
-                          alt={hotel.name}
-                          fill
-                          className="object-cover"
-                        />
+                      <div className="relative flex-shrink-0 w-full md:w-48 h-48 rounded-xl overflow-hidden">
+                        <div className='w-full h-full bg-gray-400'>
+                          <Skeleton className='w-full h-full absolute top-0 left-0 z-10' />
+                          <div className='relative z-20 w-full h-full'>
+
+                            {listOfImages.length > 0 ? (
+                              <>
+                                <Carousel className='w-48 h-48 bg-green-400'>
+                                  <CarouselContent>
+                                    {
+                                      hotel.images.map((image, index) => (
+                                        <CarouselItem key={`${index + 1}`}>
+                                          <div className='w-full h-48 bg-red-300 flex items-center justify-center text-2xl'>
+                                            <Image
+                                              src={image}
+                                              alt={`${index + 1}-${hotel.name}`}
+                                              fill
+                                              className="object-cover object-center"
+                                            />
+
+                                            <p>{index + 1}</p>
+                                          </div>
+                                        </CarouselItem>
+                                      ))
+                                    }
+                                  </CarouselContent>
+                                </Carousel>
+                              </>
+                            ) : (
+                              <>
+                                <Image
+                                  src={placeholderHotelImage}
+                                  alt={hotel.name}
+                                  fill
+                                  className="object-cover"
+                                  placeholder="blur"
+                                />
+                              </>
+                            )}
+                          </div>
+                        </div>
+
+                        {/* Favorite Button */}
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
-                            toggleFavorite(`${hotel.provider}-${hotel.hotelId}`);
+                            toggleFavorite(hotel.id);
                           }}
-                          className={`absolute cursor-pointer top-2 right-2 p-2 rounded-full ${isFavorite ? 'text-red-500 bg-white' : 'text-gray-400 bg-white/80 hover:text-red-500'}`}
+                          className={`absolute z-50 cursor-pointer top-2 right-2 p-2 rounded-full ${isFavorite ? 'text-red-500 bg-white' : 'text-gray-400 bg-white/80 hover:text-red-500'}`}
                         >
                           <Heart size={20} className={isFavorite ? 'fill-current' : ''} />
                         </button>
-                        <div className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">
-                          {hotel.rooms.length} room types
+
+                        {/* Room Count Badge */}
+                        <div className="absolute z-50 top-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded-xl">
+                          {hotel.providers.reduce((total, provider) => total + provider.rooms.length, 0)} room types
                         </div>
                       </div>
-
                       {/* Hotel Info */}
                       <div className="flex-1 flex flex-col">
                         <div className="flex justify-between items-center">
-                          <div>
+                          <div className="flex-[3.4]">
                             <h3 className="text-lg font-bold text-gray-900 mb-1">{hotel.name}</h3>
                             <div className="flex items-center text-gray-600 text-sm mb-2">
                               <MapPin size={14} className="mr-1" />
@@ -263,12 +287,13 @@ export default function HotelList({
                             </div>
 
                             <div className="flex items-center mb-3">
+                              {/* Star Rating */}
                               <div className="flex mr-2">
                                 {Array.from({ length: 5 }).map((_, i) => (
                                   <Star
                                     key={i}
                                     size={16}
-                                    className={`mr-0.5 ${i < Math.floor(hotel.rating)
+                                    className={`mr-0.5 ${i < hotel.stars
                                       ? 'text-yellow-500 fill-yellow-500'
                                       : 'text-gray-300'
                                       }`}
@@ -279,6 +304,23 @@ export default function HotelList({
                                 {hotel.rating.toFixed(1)}
                               </span>
                               <span className="text-gray-500 text-sm">{hotel.zoneName}</span>
+                            </div>
+
+                            {/* Amenities */}
+                            <div className="flex flex-wrap gap-1.5 text-xs mb-2">
+                              {hotel.amenities.slice(0, 3).map((amenity, index) => (
+                                <div
+                                  key={index}
+                                  className="bg-blue-50 text-blue-700 px-2 py-1 rounded"
+                                >
+                                  {amenity}
+                                </div>
+                              ))}
+                              {hotel.amenities.length > 3 && (
+                                <div className="bg-blue-50 text-blue-700 px-2 py-1 rounded">
+                                  +{hotel.amenities.length - 3} more
+                                </div>
+                              )}
                             </div>
 
                             {/* Room Info */}
@@ -299,24 +341,36 @@ export default function HotelList({
                                 <div className={`px-2 py-1 rounded flex items-center ${cheapestRoom.cancellationPolicy.isRefundable ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
                                   {cheapestRoom.cancellationPolicy.isRefundable ? t('refundable') : t('nonRefundable')}
                                 </div>
+                                {cheapestRoom.perks && cheapestRoom.perks.length > 0 && (
+                                  <div className="bg-purple-50 text-purple-700 px-2 py-1 rounded">
+                                    {cheapestRoom.perks[0]}
+                                  </div>
+                                )}
                               </div>
                             </div>
                           </div>
 
                           {/* Price Info */}
-                          <div className="text-right flex flex-col justify-between gap-2 items-center">
-                            <Image src={Logo} alt="Provider Logo" className="w-14" />
+                          <div className="text-right flex flex-col justify-between flex-1 gap-2 items-center">
+                            <div className="flex items-center gap-1">
+                              <span className="text-xs text-gray-500">via</span>
+                              <span className="font-medium text-xs">
+                                {cheapestProvider.provider === 'hotleno-direct'
+                                  ? 'Hotleno'
+                                  : cheapestProvider.provider}
+                              </span>
+                            </div>
                             <div>
                               <div className="text-xl font-bold text-blue-600">
-                                {hotel.currency || 'USD'}{cheapestRoom.price}
+                                {cheapestProvider.currency || 'EUR'}{cheapestRoom.price}
                               </div>
                               <div className="text-gray-500 text-xs mt-1">
                                 {t('fromPrice')}
                               </div>
                             </div>
-                            <button className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-lg transition">
+                            <Link href={`/${lang}/hotels/${hotel.id}`} className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-lg transition">
                               {t('bookNow')}
-                            </button>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -348,6 +402,7 @@ export default function HotelList({
           <MapComponent
             hotels={filteredHotels}
             selectedHotel={selectedHotel}
+            hoveredHotel={hoveredHotel}
             onHotelSelect={setSelectedHotel}
           />
         </div>

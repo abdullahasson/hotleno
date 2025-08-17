@@ -80,7 +80,7 @@ const Header = () => {
             <SwitchLanguages />
           
             <Link className="hidden sm:inline text-sm border border-white rounded-full py-2 px-3 transition-all hover:scale-105" href={`/${lang}/login`}>
-              تسجيل الدخول
+              {t('Login')}
             </Link>
 
             {/* Mobile Menu Button */}
@@ -131,7 +131,7 @@ const Header = () => {
               className="block text-center w-full py-3 px-4 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-colors"
               href={`/${lang}/login`}
             >
-              تسجيل الدخول
+              {t('Login')}
             </Link>
           </div>
         </div>

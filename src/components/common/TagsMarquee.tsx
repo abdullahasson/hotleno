@@ -15,65 +15,66 @@ interface Tag {
 const TagsMarquee = () => {
 
   // Translations
-  const t = useTranslations('TripIdeas')
+  const t = useTranslations('Homepage.TagsMarquee')
+  const tcountries = useTranslations('Homepage.TripIdeas')
   const lang = useLocale()
 
   const tagLines: { tags: Tag[]; direction: 'left' | 'right' }[] = [
     {
       tags: [
-        { name: t('countries.country_france'), highlight: false },
-        { name: t('countries.country_italy'), highlight: false },
-        { name: t('countries.country_greece'), highlight: false },
-        { name: t('countries.country_spain'), highlight: false },
-        { name: t('countries.country_morocco'), highlight: false },
-        { name: t('countries.country_czech'), highlight: false },
-        { name: t('countries.country_hungary'), highlight: false },
-        { name: t('countries.country_croatia'), highlight: false },
-        { name: t('countries.country_austria'), highlight: false },
-        { name: t('countries.country_japan'), highlight: true },
-        { name: t('countries.country_egypt'), highlight: false },
-        { name: t('countries.country_peru'), highlight: false },
-        { name: t('countries.country_turkey'), highlight: true },
-        { name: t('countries.country_china'), highlight: false },
+        { name: tcountries('countries.country_france'), highlight: false },
+        { name: tcountries('countries.country_italy'), highlight: false },
+        { name: tcountries('countries.country_greece'), highlight: false },
+        { name: tcountries('countries.country_spain'), highlight: false },
+        { name: tcountries('countries.country_morocco'), highlight: false },
+        { name: tcountries('countries.country_czech'), highlight: false },
+        { name: tcountries('countries.country_hungary'), highlight: false },
+        { name: tcountries('countries.country_croatia'), highlight: false },
+        { name: tcountries('countries.country_austria'), highlight: false },
+        { name: tcountries('countries.country_japan'), highlight: true },
+        { name: tcountries('countries.country_egypt'), highlight: false },
+        { name: tcountries('countries.country_peru'), highlight: false },
+        { name: tcountries('countries.country_turkey'), highlight: true },
+        { name: tcountries('countries.country_china'), highlight: false },
       ],
       direction: 'right',
     },
     {
       tags: [
-        { name: t('countries.country_india'), highlight: true },
-        { name: t('countries.country_cambodia'), highlight: true },
-        { name: t('countries.country_thailand'), highlight: false },
-        { name: t('countries.country_jordan'), highlight: false },
-        { name: t('countries.country_maldives'), highlight: false },
-        { name: t('countries.country_mexico'), highlight: false },
-        { name: t('countries.country_indonesia'), highlight: false },
-        { name: t('countries.country_australia'), highlight: false },
-        { name: t('countries.country_brazil'), highlight: false },
-        { name: t('countries.country_hawaii'), highlight: false },
-        { name: t('countries.country_usa'), highlight: false },
-        { name: t('countries.country_singapore'), highlight: false },
-        { name: t('countries.country_denmark'), highlight: false },
-        { name: t('countries.country_canada'), highlight: false },
-        { name: t('countries.country_netherlands'), highlight: false },
+        { name: tcountries('countries.country_india'), highlight: true },
+        { name: tcountries('countries.country_cambodia'), highlight: true },
+        { name: tcountries('countries.country_thailand'), highlight: false },
+        { name: tcountries('countries.country_jordan'), highlight: false },
+        { name: tcountries('countries.country_maldives'), highlight: false },
+        { name: tcountries('countries.country_mexico'), highlight: false },
+        { name: tcountries('countries.country_indonesia'), highlight: false },
+        { name: tcountries('countries.country_australia'), highlight: false },
+        { name: tcountries('countries.country_brazil'), highlight: false },
+        { name: tcountries('countries.country_hawaii'), highlight: false },
+        { name: tcountries('countries.country_usa'), highlight: false },
+        { name: tcountries('countries.country_singapore'), highlight: false },
+        { name: tcountries('countries.country_denmark'), highlight: false },
+        { name: tcountries('countries.country_canada'), highlight: false },
+        { name: tcountries('countries.country_netherlands'), highlight: false },
       ],
       direction: 'right',
     },
     {
       tags: [
-        { name: t('countries.country_uae'), highlight: false },
-        { name: t('countries.country_uk'), highlight: false },
-        { name: t('countries.country_costa_rica'), highlight: false },
-        { name: t('countries.country_new_zealand'), highlight: false },
-        { name: t('countries.country_tanzania'), highlight: true },
-        { name: t('countries.country_norway'), highlight: false },
-        { name: t('countries.country_kenya'), highlight: false },
-        { name: t('countries.country_iceland'), highlight: true },
-        { name: t('countries.country_venezuela'), highlight: false },
-        { name: t('countries.country_namibia'), highlight: false },
-        { name: t('countries.country_germany'), highlight: false },
-        { name: t('countries.country_argentina'), highlight: false },
-        { name: t('countries.country_colombia'), highlight: false },
-        { name: t('countries.country_finland'), highlight: false },
+        { name: tcountries('countries.country_uae'), highlight: false },
+        { name: tcountries('countries.country_uk'), highlight: false },
+        { name: tcountries('countries.country_costa_rica'), highlight: false },
+        { name: tcountries('countries.country_new_zealand'), highlight: false },
+        { name: tcountries('countries.country_tanzania'), highlight: true },
+        { name: tcountries('countries.country_norway'), highlight: false },
+        { name: tcountries('countries.country_kenya'), highlight: false },
+        { name: tcountries('countries.country_iceland'), highlight: true },
+        { name: tcountries('countries.country_venezuela'), highlight: false },
+        { name: tcountries('countries.country_namibia'), highlight: false },
+        { name: tcountries('countries.country_germany'), highlight: false },
+        { name: tcountries('countries.country_argentina'), highlight: false },
+        { name: tcountries('countries.country_colombia'), highlight: false },
+        { name: tcountries('countries.country_finland'), highlight: false },
       ],
       direction: 'right',
     },
@@ -149,7 +150,7 @@ const MarqueeLine = React.memo(
     <section className="py-10 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="mb-8 text-3xl font-bold text-gray-800 text-center">
-          رحلات طيران الى
+          {t('Flights.title')}
         </h2>
 
         <div className="flex flex-col gap-2">

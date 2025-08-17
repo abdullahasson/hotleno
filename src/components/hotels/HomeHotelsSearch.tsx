@@ -100,7 +100,7 @@ export default function HomeHotelsSearch() {
 
   return (
     <div className="flex-1">
-      <form onSubmit={handleSubmit} className="bg-white w-full rounded-b-3xl shadow-2xl px-8 pb-8 pt-4 max-[767px]:p-6 border border-gray-100">
+      <form onSubmit={handleSubmit} className="bg-white w-full rounded-none shadow-2xl px-8 pb-8 pt-4 max-[767px]:p-6 border border-gray-100">
         <h2 className="text-md font-semibold text-start text-gray-800 mb-4 w-full">
           {t("SearchTitle")}
         </h2>

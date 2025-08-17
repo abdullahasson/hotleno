@@ -9,7 +9,7 @@ import Payment from "../../../../public/payment.svg"
 
 const FeaturesSection = () => {
 
-  const t = useTranslations("FeaturesSection");
+  const t = useTranslations("Homepage.FeaturesSection");
 
   const features = [
     {

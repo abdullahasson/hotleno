@@ -1,519 +1,498 @@
 export const mockHotels = [
   {
-    provider: "hotelbeds",
-    hotelId: "HB-12345",
+    id: "HL-MAD-001",
     name: "Grand Madrid Hotel",
     rating: 4.8,
+    stars: 5,
+    description: "Luxurious 5-star hotel featuring panoramic city views, gourmet restaurants, and a rooftop infinity pool.",
     location: {
       latitude: 40.415363,
       longitude: -3.707398
     },
     address: "123 Gran Via, Madrid, Spain",
     zoneName: "City Center",
-    minPrice: 150,
-    maxPrice: 400,
-    currency: "EUR",
-    rooms: [
+    amenities: ["Free WiFi", "Swimming Pool", "Spa", "Fitness Center", "Restaurant"],
+    images: [
+      '/hotel-2.jpg',
+      '/hotel-1.jpg',
+      '/hotel-3.jpg'
+    ],
+    facilities: ["Business Center", "Concierge", "Valet Parking", "24/7 Room Service"],
+    providers: [
       {
-        roomName: "Deluxe Double Room",
-        board: "Breakfast Included",
-        price: 180,
-        pax: {
-          adults: 2,
-          children: 0
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-24T23:59:00Z"
-        },
-        rateKey: "HB-BOOK-KEY-XYZ",
-        isBookable: true
+        provider: "hotelbeds",
+        hotelId: "HB-12345",
+        minPrice: 150,
+        maxPrice: 400,
+        currency: "EUR",
+        rooms: [
+          {
+            roomName: "Deluxe Double Room",
+            board: "Breakfast Included",
+            price: 180,
+            pax: { adults: 2, children: 0 },
+            cancellationPolicy: {
+              isRefundable: true,
+              deadline: "2025-07-24T23:59:00Z"
+            },
+            rateKey: "HB-BOOK-KEY-XYZ",
+            isBookable: true
+          }
+        ]
       },
       {
-        roomName: "Executive Suite",
-        board: "Half Board",
-        price: 280,
-        pax: {
-          adults: 2,
-          children: 1
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-22T23:59:00Z"
-        },
-        rateKey: "HB-BOOK-KEY-ABC",
-        isBookable: true
+        provider: "tbo",
+        hotelId: "TBO-GRAND-MAD",
+        minPrice: 140,
+        maxPrice: 380,
+        currency: "EUR",
+        rooms: [
+          {
+            roomName: "Premium City View",
+            board: "Breakfast Included",
+            price: 140,
+            pax: { adults: 2, children: 1 },
+            cancellationPolicy: {
+              isRefundable: true,
+              deadline: "2025-07-25T23:59:00Z"
+            },
+            rateKey: "TBO-BOOK-KEY-GM",
+            isBookable: true
+          }
+        ]
+      },
+      {
+        provider: "hotleno-direct",
+        hotelId: "HD-GRAND-MAD",
+        minPrice: 135,
+        maxPrice: 370,
+        currency: "EUR",
+        rooms: [
+          {
+            roomName: "Hotleno Exclusive Suite",
+            board: "Half Board + Pool Access",
+            price: 210,
+            pax: { adults: 2, children: 0 },
+            cancellationPolicy: {
+              isRefundable: true,
+              deadline: "2025-07-26T23:59:00Z"
+            },
+            rateKey: "HD-BOOK-KEY-001",
+            isBookable: true,
+            perks: ["Free Room Upgrade", "Late Checkout"]
+          }
+        ]
       }
-    ]
-  },
-  {
-    provider: "tbo",
-    hotelId: "TBO-67890",
-    name: "Sunset Beach Resort",
-    rating: 4.2,
-    location: {
-      latitude: 40.423680,
-      longitude: -3.692830
+    ],
+    guestRating: {
+      cleanliness: 4.7,
+      comfort: 4.5,
+      location: 3,
+      staff: 4.7,
+      valueForMoney: 4.3
     },
-    address: "456 Beachfront Road, Madrid, Spain",
-    zoneName: "Retiro District",
-    minPrice: 120,
-    maxPrice: 300,
-    currency: "EUR",
-    rooms: [
+    reviews: [
       {
-        roomName: "Standard Room",
-        board: "Room Only",
-        price: 120,
-        pax: {
-          adults: 2,
-          children: 0
-        },
-        cancellationPolicy: {
-          isRefundable: false,
-          deadline: "2025-07-18T23:59:00Z"
-        },
-        rateKey: "TBO-BOOK-KEY-123",
-        isBookable: true
+        author: "Olivia García",
+        date: "2025-07-12",
+        rating: 4.5,
+        title: "Charming boutique experience",
+        content: "The art tour was a highlight! Beautiful architecture and personalized service made our stay special."
       },
       {
-        roomName: "Family Room",
-        board: "All Inclusive",
-        price: 250,
-        pax: {
-          adults: 2,
-          children: 2
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-15T23:59:00Z"
-        },
-        rateKey: "TBO-BOOK-KEY-456",
-        isBookable: true
+        author: "James Thompson",
+        date: "2025-06-30",
+        rating: 4.0,
+        title: "Unique but small rooms",
+        content: "Loved the historic character though rooms are compact. Excellent location in the shopping district."
+      },
+      {
+        author: "Isabella Rossi",
+        date: "2025-06-15",
+        rating: 5.0,
+        title: "Like staying in a museum",
+        content: "Attention to detail was impressive. The complimentary wine tasting was an unexpected delight!"
       }
-    ]
+    ],
   },
+
   {
-    provider: "hotelbeds",
-    hotelId: "HB-54321",
-    name: "Plaza Mayor Suites",
-    rating: 4.5,
+    id: "HL-MAD-050",
+    name: "Hotleno Boutique Experience",
+    rating: 4.6,
+    stars: 4,
+    description: "Exclusive Hotleno-partnered boutique hotel in a restored 19th-century mansion with personalized service.",
     location: {
-      latitude: 40.415500,
-      longitude: -3.706400
+      latitude: 40.417850,
+      longitude: -3.699120
     },
-    address: "78 Plaza Mayor, Madrid, Spain",
-    zoneName: "City Center",
-    minPrice: 200,
-    maxPrice: 450,
-    currency: "EUR",
-    rooms: [
+    address: "8 Calle de Serrano, Madrid, Spain",
+    zoneName: "Salamanca District",
+    amenities: ["Free WiFi", "Terrace", "Designer Toiletries", "Nespresso Machine"],
+    images: [
+      "/hotel-21.jpg",
+      "/hotel-22.jpg"
+    ],
+    facilities: ["Art Gallery", "Wine Cellar", "Bicycle Rental"],
+    providers: [
       {
-        roomName: "Junior Suite",
-        board: "Breakfast Included",
-        price: 220,
-        pax: {
-          adults: 2,
-          children: 0
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-20T23:59:00Z"
-        },
-        rateKey: "HB-BOOK-KEY-DEF",
-        isBookable: true
+        provider: "hotleno-direct",
+        hotelId: "HD-BOUTIQUE-050",
+        minPrice: 125,
+        maxPrice: 290,
+        currency: "EUR",
+        rooms: [
+          {
+            roomName: "Art Deco Room",
+            board: "Breakfast Included",
+            price: 125,
+            pax: { adults: 2, children: 0 },
+            cancellationPolicy: {
+              isRefundable: true,
+              deadline: "2025-07-28T23:59:00Z"
+            },
+            rateKey: "HD-BOOK-KEY-050A",
+            isBookable: true,
+            perks: ["Complimentary Art Tour"]
+          }
+        ]
+      }
+    ],
+    guestRating: {
+      cleanliness: 4.7,
+      comfort: 4.5,
+      location: 3,
+      staff: 4.7,
+      valueForMoney: 4.3
+    },
+    reviews: [
+      {
+        author: "Olivia García",
+        date: "2025-07-12",
+        rating: 4.5,
+        title: "Charming boutique experience",
+        content: "The art tour was a highlight! Beautiful architecture and personalized service made our stay special."
       },
       {
-        roomName: "Premium Suite",
-        board: "Half Board",
-        price: 350,
-        pax: {
-          adults: 2,
-          children: 1
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-18T23:59:00Z"
-        },
-        rateKey: "HB-BOOK-KEY-GHI",
-        isBookable: true
-      }
-    ]
-  },
-  {
-    provider: "tbo",
-    hotelId: "TBO-11223",
-    name: "Urban Loft Apartments",
-    rating: 4.1,
-    location: {
-      latitude: 40.426890,
-      longitude: -3.703450
-    },
-    address: "22 Calle de Hortaleza, Madrid, Spain",
-    zoneName: "Chueca",
-    minPrice: 90,
-    maxPrice: 180,
-    currency: "EUR",
-    rooms: [
-      {
-        roomName: "Studio Apartment",
-        board: "Self Catering",
-        price: 90,
-        pax: {
-          adults: 2,
-          children: 0
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-23T23:59:00Z"
-        },
-        rateKey: "TBO-BOOK-KEY-789",
-        isBookable: true
+        author: "James Thompson",
+        date: "2025-06-30",
+        rating: 4.0,
+        title: "Unique but small rooms",
+        content: "Loved the historic character though rooms are compact. Excellent location in the shopping district."
       },
       {
-        roomName: "One-Bedroom Apartment",
-        board: "Self Catering",
-        price: 140,
-        pax: {
-          adults: 2,
-          children: 1
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-21T23:59:00Z"
-        },
-        rateKey: "TBO-BOOK-KEY-012",
-        isBookable: true
+        author: "Isabella Rossi",
+        date: "2025-06-15",
+        rating: 5.0,
+        title: "Like staying in a museum",
+        content: "Attention to detail was impressive. The complimentary wine tasting was an unexpected delight!"
       }
-    ]
+    ],
   },
+
   {
-    provider: "hotelbeds",
-    hotelId: "HB-33445",
-    name: "The Ritz Madrid",
-    rating: 5.0,
-    location: {
-      latitude: 40.418330,
-      longitude: -3.694440
-    },
-    address: "Plaza de la Lealtad, 5, Madrid, Spain",
-    zoneName: "Golden Triangle of Art",
-    minPrice: 450,
-    maxPrice: 1200,
-    currency: "EUR",
-    rooms: [
-      {
-        roomName: "Deluxe Room",
-        board: "Breakfast Included",
-        price: 450,
-        pax: {
-          adults: 2,
-          children: 0
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-10T23:59:00Z"
-        },
-        rateKey: "HB-BOOK-KEY-JKL",
-        isBookable: true
-      },
-      {
-        roomName: "Royal Suite",
-        board: "Full Board",
-        price: 1100,
-        pax: {
-          adults: 2,
-          children: 2
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-05T23:59:00Z"
-        },
-        rateKey: "HB-BOOK-KEY-MNO",
-        isBookable: true
-      }
-    ]
-  },
-  {
-    provider: "tbo",
-    hotelId: "TBO-55667",
+    id: "HL-MAD-002",
     name: "Ibis Madrid Centro",
     rating: 3.7,
+    stars: 3,
+    description: "Reliable budget accommodation in central location with modern amenities. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ducimus ipsam cupiditate hic saepe expedita quasi eum necessitatibus ullam sit laborum sunt culpa dignissimos veritatis placeat ad, odit est sapiente. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ducimus ipsam cupiditate hic saepe expedita quasi eum necessitatibus ullam sit laborum sunt culpa dignissimos veritatis placeat ad, odit est sapiente. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, consequatur recusandae ratione, aliquid ad doloremque magni fugiat reiciendis aliquam, corrupti assumenda a? Maiores exercitationem et officia dolorem deleniti distinctio eius!",
     location: {
       latitude: 40.412220,
       longitude: -3.699170
     },
     address: "Calle de Silva, 6, Madrid, Spain",
     zoneName: "Malasaña",
-    minPrice: 65,
-    maxPrice: 120,
-    currency: "EUR",
-    rooms: [
+    amenities: ["Free WiFi", "24hr Snack Bar", "Air Conditioning"],
+    images: [
+      "/hotel-31.jpg",
+      "/hotel-32.jpg",
+      "/hotel-33.jpg"
+    ],
+    facilities: ["Luggage Storage", "Vending Machines"],
+    providers: [
       {
-        roomName: "Standard Double",
-        board: "Room Only",
-        price: 65,
-        pax: {
-          adults: 2,
-          children: 0
-        },
-        cancellationPolicy: {
-          isRefundable: false,
-          deadline: "2025-07-25T23:59:00Z"
-        },
-        rateKey: "TBO-BOOK-KEY-PQR",
-        isBookable: true
+        provider: "tbo",
+        hotelId: "TBO-55667",
+        minPrice: 65,
+        maxPrice: 120,
+        currency: "EUR",
+        rooms: [
+          {
+            roomName: "Standard Double",
+            board: "Room Only",
+            price: 65,
+            pax: { adults: 2, children: 0 },
+            cancellationPolicy: {
+              isRefundable: false,
+              deadline: "2025-07-25T23:59:00Z"
+            },
+            rateKey: "TBO-BOOK-KEY-PQR",
+            isBookable: true
+          }
+        ]
       },
       {
-        roomName: "Twin Room",
-        board: "Breakfast Included",
-        price: 85,
-        pax: {
-          adults: 2,
-          children: 0
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-20T23:59:00Z"
-        },
-        rateKey: "TBO-BOOK-KEY-STU",
-        isBookable: true
+        provider: "hotleno-direct",
+        hotelId: "HD-IBIS-MAD",
+        minPrice: 62,
+        maxPrice: 110,
+        currency: "EUR",
+        rooms: [
+          {
+            roomName: "Hotleno Smart Room",
+            board: "Breakfast Included",
+            price: 70,
+            pax: { adults: 2, children: 0 },
+            cancellationPolicy: {
+              isRefundable: true,
+              deadline: "2025-07-23T23:59:00Z"
+            },
+            rateKey: "HD-BOOK-KEY-IBIS",
+            isBookable: true,
+            perks: ["Early Check-in"]
+          }
+        ]
       }
-    ]
-  },
-  {
-    provider: "hotelbeds",
-    hotelId: "HB-77889",
-    name: "Only YOU Boutique Hotel",
-    rating: 4.6,
-    location: {
-      latitude: 40.419440,
-      longitude: -3.700280
+    ],
+    guestRating: {
+      cleanliness: 4.7,
+      comfort: 4.5,
+      location: 3,
+      staff: 4.7,
+      valueForMoney: 4.3
     },
-    address: "Paseo de la Infanta Isabel, 13, Madrid, Spain",
-    zoneName: "Atocha",
-    minPrice: 160,
-    maxPrice: 320,
-    currency: "EUR",
-    rooms: [
+    reviews: [
       {
-        roomName: "YOU Room",
-        board: "Breakfast Included",
-        price: 160,
-        pax: {
-          adults: 2,
-          children: 0
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-22T23:59:00Z"
-        },
-        rateKey: "HB-BOOK-KEY-VWX",
-        isBookable: true
+        author: "Olivia García",
+        date: "2025-07-12",
+        rating: 4.5,
+        title: "Charming boutique experience",
+        content: "The art tour was a highlight! Beautiful architecture and personalized service made our stay special."
       },
       {
-        roomName: "YOU Suite",
-        board: "Breakfast Included",
-        price: 280,
-        pax: {
-          adults: 2,
-          children: 1
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-18T23:59:00Z"
-        },
-        rateKey: "HB-BOOK-KEY-YZ1",
-        isBookable: true
-      }
-    ]
-  },
-  {
-    provider: "tbo",
-    hotelId: "TBO-99001",
-    name: "VP Plaza España Design",
-    rating: 4.4,
-    location: {
-      latitude: 40.423890,
-      longitude: -3.711670
-    },
-    address: "Plaza de España, 5, Madrid, Spain",
-    zoneName: "Argüelles",
-    minPrice: 190,
-    maxPrice: 380,
-    currency: "EUR",
-    rooms: [
-      {
-        roomName: "Design Room",
-        board: "Room Only",
-        price: 190,
-        pax: {
-          adults: 2,
-          children: 0
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-21T23:59:00Z"
-        },
-        rateKey: "TBO-BOOK-KEY-234",
-        isBookable: true
+        author: "James Thompson",
+        date: "2025-06-30",
+        rating: 4.0,
+        title: "Unique but small rooms",
+        content: "Loved the historic character though rooms are compact. Excellent location in the shopping district."
       },
       {
-        roomName: "Design Suite",
-        board: "Breakfast Included",
-        price: 320,
-        pax: {
-          adults: 2,
-          children: 2
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-17T23:59:00Z"
-        },
-        rateKey: "TBO-BOOK-KEY-567",
-        isBookable: true
+        author: "Isabella Rossi",
+        date: "2025-06-15",
+        rating: 5.0,
+        title: "Like staying in a museum",
+        content: "Attention to detail was impressive. The complimentary wine tasting was an unexpected delight!"
       }
-    ]
+    ],
   },
+
   {
-    provider: "hotelbeds",
-    hotelId: "HB-11223",
-    name: "Dear Hotel Madrid",
-    rating: 4.3,
+    id: "HL-MAD-003",
+    name: "The Ritz Madrid",
+    rating: 5.0,
+    stars: 5,
+    description: "Iconic luxury hotel featuring opulent interiors, Michelin-star dining, and royal suite accommodations.",
     location: {
-      latitude: 40.420830,
-      longitude: -3.706940
+      latitude: 40.418330,
+      longitude: -3.694440
     },
-    address: "Gran Via, 80, Madrid, Spain",
+    address: "Plaza de la Lealtad, 5, Madrid, Spain",
+    zoneName: "Golden Triangle of Art",
+    amenities: ["Free WiFi", "Spa", "Swimming Pool", "Butler Service"],
+    images: [
+      "/hotel-41.jpg",
+      "/hotel-42.jpg"
+    ],
+    facilities: ["Fine Dining Restaurant", "Tea Lounge", "Limousine Service"],
+    providers: [
+      {
+        provider: "hotelbeds",
+        hotelId: "HB-33445",
+        minPrice: 450,
+        maxPrice: 1200,
+        currency: "EUR",
+        rooms: [
+          {
+            roomName: "Deluxe Room",
+            board: "Breakfast Included",
+            price: 450,
+            pax: { adults: 2, children: 0 },
+            cancellationPolicy: {
+              isRefundable: true,
+              deadline: "2025-07-10T23:59:00Z"
+            },
+            rateKey: "HB-BOOK-KEY-JKL",
+            isBookable: true
+          }
+        ]
+      },
+      {
+        provider: "hotleno-direct",
+        hotelId: "HD-RITZ-MAD",
+        minPrice: 430,
+        maxPrice: 1150,
+        currency: "EUR",
+        rooms: [
+          {
+            roomName: "Hotleno Royal Experience",
+            board: "Full Board + Spa Access",
+            price: 980,
+            pax: { adults: 2, children: 0 },
+            cancellationPolicy: {
+              isRefundable: true,
+              deadline: "2025-07-15T23:59:00Z"
+            },
+            rateKey: "HD-BOOK-KEY-RITZ",
+            isBookable: true,
+            perks: ["Airport Transfer", "Champagne Welcome"]
+          }
+        ]
+      }
+    ],
+    guestRating: {
+      cleanliness: 4.7,
+      comfort: 4.5,
+      location: 3,
+      staff: 4.7,
+      valueForMoney: 4.3
+    },
+    reviews: [
+      {
+        author: "Olivia García",
+        date: "2025-07-12",
+        rating: 4.5,
+        title: "Charming boutique experience",
+        content: "The art tour was a highlight! Beautiful architecture and personalized service made our stay special."
+      },
+      {
+        author: "James Thompson",
+        date: "2025-06-30",
+        rating: 4.0,
+        title: "Unique but small rooms",
+        content: "Loved the historic character though rooms are compact. Excellent location in the shopping district."
+      },
+      {
+        author: "Isabella Rossi",
+        date: "2025-06-15",
+        rating: 5.0,
+        title: "Like staying in a museum",
+        content: "Attention to detail was impressive. The complimentary wine tasting was an unexpected delight!"
+      }
+    ],
+  },
+
+  {
+    id: "HL-MAD-004",
+    name: "Plaza Mayor Suites",
+    rating: 4.5,
+    stars: 4,
+    description: "Modern business suites with kitchenettes near Plaza Mayor, perfect for extended stays.",
+    location: {
+      latitude: 40.415500,
+      longitude: -3.706400
+    },
+    address: "78 Plaza Mayor, Madrid, Spain",
     zoneName: "City Center",
-    minPrice: 170,
-    maxPrice: 300,
-    currency: "EUR",
-    rooms: [
+    amenities: ["Free WiFi", "Kitchenette", "Work Desk", "Coffee Maker"],
+    images: [
+
+    ],
+    facilities: ["Business Lounge", "Meeting Rooms", "Dry Cleaning"],
+    providers: [
       {
-        roomName: "Dear Room",
-        board: "Breakfast Included",
-        price: 170,
-        pax: {
-          adults: 2,
-          children: 0
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-23T23:59:00Z"
-        },
-        rateKey: "HB-BOOK-KEY-890",
-        isBookable: true
+        provider: "hotelbeds",
+        hotelId: "HB-54321",
+        minPrice: 200,
+        maxPrice: 450,
+        currency: "EUR",
+        rooms: [
+          {
+            roomName: "Junior Suite",
+            board: "Breakfast Included",
+            price: 220,
+            pax: { adults: 2, children: 0 },
+            cancellationPolicy: {
+              isRefundable: true,
+              deadline: "2025-07-20T23:59:00Z"
+            },
+            rateKey: "HB-BOOK-KEY-DEF",
+            isBookable: true
+          }
+        ]
       },
       {
-        roomName: "Rooftop Room",
-        board: "Breakfast Included",
-        price: 250,
-        pax: {
-          adults: 2,
-          children: 0
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-19T23:59:00Z"
-        },
-        rateKey: "HB-BOOK-KEY-1234",
-        isBookable: true
+        provider: "tbo",
+        hotelId: "TBO-PLAZA-SUITES",
+        minPrice: 190,
+        maxPrice: 420,
+        currency: "EUR",
+        rooms: [
+          {
+            roomName: "Executive Studio",
+            board: "Room Only",
+            price: 190,
+            pax: { adults: 2, children: 0 },
+            cancellationPolicy: {
+              isRefundable: true,
+              deadline: "2025-07-22T23:59:00Z"
+            },
+            rateKey: "TBO-BOOK-KEY-PLAZA",
+            isBookable: true
+          }
+        ]
+      },
+      {
+        provider: "hotleno-direct",
+        hotelId: "HD-PLAZA-004",
+        minPrice: 185,
+        maxPrice: 400,
+        currency: "EUR",
+        rooms: [
+          {
+            roomName: "Hotleno Business Suite",
+            board: "Breakfast + Dinner Credit",
+            price: 240,
+            pax: { adults: 2, children: 0 },
+            cancellationPolicy: {
+              isRefundable: true,
+              deadline: "2025-07-24T23:59:00Z"
+            },
+            rateKey: "HD-BOOK-KEY-BIZ",
+            isBookable: true,
+            perks: ["Free Meeting Room Access"]
+          }
+        ]
       }
-    ]
-  },
-  {
-    provider: "tbo",
-    hotelId: "TBO-33445",
-    name: "Hotel Único Madrid",
-    rating: 4.9,
-    location: {
-      latitude: 40.430560,
-      longitude: -3.689170
+    ],
+    guestRating: {
+      cleanliness: 4.7,
+      comfort: 4.5,
+      location: 3,
+      staff: 4.7,
+      valueForMoney: 4.3
     },
-    address: "Claudio Coello, 67, Madrid, Spain",
-    zoneName: "Salamanca",
-    minPrice: 300,
-    maxPrice: 650,
-    currency: "EUR",
-    rooms: [
+    reviews: [
       {
-        roomName: "Classic Room",
-        board: "Breakfast Included",
-        price: 300,
-        pax: {
-          adults: 2,
-          children: 0
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-24T23:59:00Z"
-        },
-        rateKey: "TBO-BOOK-KEY-5678",
-        isBookable: true
+        author: "Olivia García",
+        date: "2025-07-12",
+        rating: 4.5,
+        title: "Charming boutique experience",
+        content: "The art tour was a highlight! Beautiful architecture and personalized service made our stay special."
       },
       {
-        roomName: "Gourmet Room",
-        board: "Dinner Included",
-        price: 450,
-        pax: {
-          adults: 2,
-          children: 0
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-20T23:59:00Z"
-        },
-        rateKey: "TBO-BOOK-KEY-9012",
-        isBookable: true
-      }
-    ]
-  },
-  {
-    provider: "hotelbeds",
-    hotelId: "HB-55667",
-    name: "Room Mate Oscar",
-    rating: 4.0,
-    location: {
-      latitude: 40.419720,
-      longitude: -3.698890
-    },
-    address: "Plaza de Pedro Zerolo, 12, Madrid, Spain",
-    zoneName: "Chueca",
-    minPrice: 110,
-    maxPrice: 220,
-    currency: "EUR",
-    rooms: [
-      {
-        roomName: "Standard Room",
-        board: "Room Only",
-        price: 110,
-        pax: {
-          adults: 2,
-          children: 0
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-22T23:59:00Z"
-        },
-        rateKey: "HB-BOOK-KEY-3456",
-        isBookable: true
+        author: "James Thompson",
+        date: "2025-06-30",
+        rating: 4.0,
+        title: "Unique but small rooms",
+        content: "Loved the historic character though rooms are compact. Excellent location in the shopping district."
       },
       {
-        roomName: "Terrace Room",
-        board: "Breakfast Included",
-        price: 180,
-        pax: {
-          adults: 2,
-          children: 0
-        },
-        cancellationPolicy: {
-          isRefundable: true,
-          deadline: "2025-07-18T23:59:00Z"
-        },
-        rateKey: "HB-BOOK-KEY-7890",
-        isBookable: true
+        author: "Isabella Rossi",
+        date: "2025-06-15",
+        rating: 5.0,
+        title: "Like staying in a museum",
+        content: "Attention to detail was impressive. The complimentary wine tasting was an unexpected delight!"
       }
-    ]
+    ],
   }
 ];

@@ -14,7 +14,7 @@ import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import placeholder from "../../../public/placeholder.svg"
 
 const ArticlesCarousel = ({ articles }: { articles: Article[] }) => {
-    const t = useTranslations('ArticlesCarousel');
+    const t = useTranslations('Homepage.ArticlesCarousel');
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState<'left' | 'right' | null>(null);
     const [isMobile, setIsMobile] = useState(false);

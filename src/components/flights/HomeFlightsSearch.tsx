@@ -158,7 +158,6 @@ export default function HomeFlightsSearch({
     router.push(`/${locale}/flights?${params.toString()}`);
   };
 
-  // Calculate total passengers
   const totalPassengers = Object.values(formState.passengers).reduce((a, b) => a + b, 0);
 
   return (
@@ -168,7 +167,7 @@ export default function HomeFlightsSearch({
         className={`
           bg-white 
           w-full 
-          ${position === 'flights-to' ? 'rounded-3xl relative' : 'rounded-b-3xl'}
+          ${position === 'flights-to' ? 'rounded-3xl relative' : 'rounded-none'}
           shadow-2xl 
           px-8 pb-8 pt-4 max-[767px]:p-6 
           border border-gray-100
@@ -244,7 +243,7 @@ export default function HomeFlightsSearch({
                   <Button
                     variant="outline"
                     className={`w-full pl-3 !py-6 !text-gray-900 !rounded-xl text-left font-normal border ${formState.departureDate
-                        ? 'border-gray-400 bg-blue-50'
+                        ? 'border-gray-400'
                         : 'border-gray-400 hover:border-blue-300'
                       }`}
                   >
@@ -279,10 +278,10 @@ export default function HomeFlightsSearch({
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
-                      className={`w-full pl-3 text-left font-normal border ${formState.returnDate
-                          ? 'border-blue-400 bg-blue-50'
-                          : 'border-gray-400 hover:border-blue-300'
-                        }`}
+                    className={`w-full pl-3 !py-6 !text-gray-900 !rounded-xl text-left font-normal border ${formState.departureDate
+                        ? 'border-gray-400'
+                        : 'border-gray-400 hover:border-blue-300'
+                      }`}
                     >
                       {formState.returnDate ? (
                         format(formState.returnDate, "MMM dd, yyyy")

@@ -106,7 +106,7 @@ const FlightCard: React.FC<FlightCardProps> = ({ title, rating, date, price }) =
 );
 
 const MobileApp = () => {
-  const t = useTranslations("MobileApp");
+  const t = useTranslations("Homepage.MobileApp");
 
   const featureCards = FEATURES.map((feature, index) => ({
     ...feature,

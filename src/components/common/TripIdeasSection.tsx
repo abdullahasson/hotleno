@@ -7,7 +7,7 @@ import { trips } from '@/lib/data';
 import TripCard from './TripCard';
 
 const TripIdeasSection: React.FC = () => {
-  const t = useTranslations('TripIdeas');
+  const t = useTranslations('Homepage.TripIdeas');
   const [activeTab, setActiveTab] = useState('romantic');
   
   const tabCategories = [

@@ -18,7 +18,7 @@
     "QuickLinks": {
       "Title": "روابط سريعة",
       "Home": "الرئيسية",
-      "Flight": "رحلات الطيران",
+      "Flight": "من نحن",
       "Hotel": "رحلات الفنادق",
       "FeaturedDeals": "عروض خاصة",
       "Contact": "التطبيق"
@@ -38,9 +38,254 @@
     "BootomFooter": " هوتلينو , جميع الحقوق محفوظة | عبدالله حسون 2025"
   },
   "Homepage": {
-
+    "Search": {
+      "Tabs": {
+        "flights": "رحلات طيران",
+        "hotels": "فنادق"
+      }
+    },
+    "PromoCarousel": {
+      "title": "معنا، السفر يحمل معنى.",
+      "Cards": {
+        "one": {
+          "title": "تأجير سيارات",
+          "des": "احصل على أفضل عروض تأجير السيارات في وجهتك"
+        },
+        "two": {
+          "title": "باقات eSIM",
+          "des": "اتصال بالإنترنت فور الوصول بدون شريحة SIM مادية"
+        },
+        "three": {
+          "title": "متطلبات التأشيرة",
+          "des": "تعرف على متطلبات السفر لوجهتك قبل الحجز"
+        },
+        "four": {
+          "title": "خدمات المطار",
+          "des": "خدمات نقل من المطار بجودة عالية وبأسعار تنافسية"
+        },
+        "btn": "اكتشف المزيد"
+      }
+    },
+    "FeaturesSection": {
+      "one": "أفضل عروض السفر في الولايات المتحدة",
+      "two": "آلاف عروض الطيران والفنادق",
+      "three": "وسائل دفع متعددة",
+      "four": "خدمة عملاء على مدار الساعة"
+    },
+    "ArticlesCarousel": {
+      "title": "أحدث المقالات",
+      "seeMore": "مقالات أخرى",
+      "readArticle": "قراءة المقال",
+      "articles": {
+        "1": {
+          "title": "مستقبل السفر في عالم ما بعد الجائحة",
+          "description": "كيف تتكيف صناعة السفر مع التحديات الجديدة وتغير سلوكيات المسافرين في المشهد العالمي الحالي.",
+          "department": "اتجاهات السفر",
+          "blogName": "رؤى التجوال"
+        },
+        "2": {
+          "title": "10 كنوز مخفية في جنوب شرق آسيا يجب أن تزورها",
+          "description": "اكتشف الوجهات غير التقليدية في جنوب شرق آسيا التي تقدم تجارب فريدة بعيداً عن الزحام السياحي.",
+          "department": "دليل الوجهات",
+          "blogName": "يوميات المستكشف"
+        },
+        "3": {
+          "title": "السفر المستدام: كيفية تقليل بصمتك الكربونية",
+          "description": "نصائح واستراتيجيات عملية للمسافرين الواعين بيئياً لتقليل تأثيرهم أثناء استكشاف العالم.",
+          "department": "السياحة البيئية",
+          "blogName": "المسافر الأخضر"
+        },
+        "4": {
+          "title": "الدليل الشامل لوجهات الرحّالة الرقميين",
+          "description": "أفضل مدن العالم للرحّالة الرقميين التي توفر إنترنت موثوقاً ومساحات عمل مشتركة ومجتمعات نابضة بالحياة.",
+          "department": "العمل والسفر",
+          "blogName": "حياة البدون"
+        },
+        "5": {
+          "title": "مغامرات الطهي: جولات طعام الشارع حول العالم",
+          "description": "رحلة لعشاق الطعام عبر أسواق الشوارع العالمية وأطباق يجب تجربتها في كل وجهة.",
+          "department": "الطعام والثقافة",
+          "blogName": "تذوق العالم"
+        },
+        "6": {
+          "title": "حيل السفر العائلي: عطلات خالية من التوتر مع الأطفال",
+          "description": "نصائح الخبراء للتخطيط والاستمتاع بعطلات عائلية تلبي جميع الأعمار والاهتمامات.",
+          "department": "السفر العائلي",
+          "blogName": "رحلات سعيدة"
+        }
+      }
+    },
+    "PopularAirlines": {
+      "title": "شركات الطيران الشهيرة في الولايات المتحدة",
+      "subtitle": "احجز رحلات طيران رخيصة مع شركات الطيران المفضلة لديك"
+    },
+    "TripIdeas": {
+      "title": "أفكار رحلات من الولايات المتحدة",
+      "subtitle": "اكتشف وجهتك المثالية مع توصيات سفر مختارة بعناية",
+      "tabs": {
+        "romantic": "عطلات رومانسية",
+        "cultural": "تجارب ثقافية",
+        "beach": "وجهات شاطئية",
+        "family": "مناسب للعائلات",
+        "nature": "الطبيعة والمغامرات",
+        "forTrips": "للرحلات"
+      },
+      "card": {
+        "roundTrip": "ذهاب وعودة",
+        "details": "التفاصيل"
+      },
+      "countries": {
+        "country_france": "فرنسا",
+        "country_italy": "إيطاليا",
+        "country_greece": "اليونان",
+        "country_spain": "إسبانيا",
+        "country_morocco": "المغرب",
+        "country_czech": "جمهورية التشيك",
+        "country_hungary": "المجر",
+        "country_croatia": "كرواتيا",
+        "country_austria": "النمسا",
+        "country_japan": "اليابان",
+        "country_egypt": "مصر",
+        "country_peru": "بيرو",
+        "country_turkey": "تركيا",
+        "country_china": "الصين",
+        "country_india": "الهند",
+        "country_cambodia": "كمبوديا",
+        "country_thailand": "تايلاند",
+        "country_jordan": "الأردن",
+        "country_maldives": "جزر المالديف",
+        "country_mexico": "المكسيك",
+        "country_indonesia": "إندونيسيا",
+        "country_australia": "أستراليا",
+        "country_brazil": "البرازيل",
+        "country_hawaii": "هاواي",
+        "country_usa": "الولايات المتحدة",
+        "country_singapore": "سنغافورة",
+        "country_denmark": "الدنمارك",
+        "country_canada": "كندا",
+        "country_netherlands": "هولندا",
+        "country_uae": "الإمارات",
+        "country_uk": "المملكة المتحدة",
+        "country_costa_rica": "كوستاريكا",
+        "country_new_zealand": "نيوزيلندا",
+        "country_tanzania": "تنزانيا",
+        "country_norway": "النرويج",
+        "country_kenya": "كينيا",
+        "country_iceland": "آيسلندا",
+        "country_venezuela": "فنزويلا",
+        "country_namibia": "ناميبيا",
+        "country_germany": "ألمانيا",
+        "country_argentina": "الأرجنتين",
+        "country_colombia": "كولومبيا",
+        "country_finland": "فنلندا",
+        "country_hong_kong": "هونغ كونغ",
+        "country_south_korea": "كوريا الجنوبية",
+        "country_portugal": "البرتغال"
+      },
+      "cities": {
+        "city_paris": "باريس",
+        "city_venice": "البندقية",
+        "city_santorini": "سانتوريني",
+        "city_seville": "إشبيلية",
+        "city_marrakech": "مراكش",
+        "city_prague": "براغ",
+        "city_budapest": "بودابست",
+        "city_dubrovnik": "دوبروفنيك",
+        "city_vienna": "فيينا",
+        "city_kyoto": "كيوتو",
+        "city_cairo": "القاهرة",
+        "city_cusco": "كوسكو",
+        "city_istanbul": "إسطنبول",
+        "city_beijing": "بكين",
+        "city_agra": "أغرا",
+        "city_siem_reap": "سييم ريب",
+        "city_bangkok": "بانكوك",
+        "city_petra": "البتراء",
+        "city_male": "ماليه",
+        "city_cancun": "كانكون",
+        "city_phuket": "بوكيت",
+        "city_bali": "بالي",
+        "city_mykonos": "ميكونوس",
+        "city_gold_coast": "جولد كوست",
+        "city_majorca": "مايوركا",
+        "city_florianopolis": "فلوريانوبوليس",
+        "city_maui": "ماوي",
+        "city_orlando": "أورلاندو",
+        "city_barcelona": "برشلونة",
+        "city_singapore": "سنغافورة",
+        "city_tokyo": "طوكيو",
+        "city_copenhagen": "كوبنهاغن",
+        "city_vancouver": "فانكوفر",
+        "city_amsterdam": "أمستردام",
+        "city_dubai": "دبي",
+        "city_london": "لندن",
+        "city_monteverde": "مونتيفيردي",
+        "city_queenstown": "كوينزتاون",
+        "city_banff": "بانف",
+        "city_zanzibar": "زنجبار",
+        "city_tromso": "ترومسو",
+        "city_masai_mara": "ماساي مارا",
+        "city_reykjavik": "ريكيافيك",
+        "city_canaima": "كانايما",
+        "city_sossusvlei": "سوسوسفلي",
+        "city_berlin": "برلين",
+        "city_sydney": "سيدني",
+        "city_rio": "ريو دي جانيرو",
+        "city_buenos_aires": "بوينس آيرس",
+        "city_cartagena": "قرطاجنة",
+        "city_helsinki": "هلسنكي",
+        "city_hong_kong": "هونغ كونغ",
+        "city_seoul": "سيول",
+        "city_porto": "بورتو"
+      }
+    },
+    "MobileApp": {
+      "Badge": "تجربة جديدة",
+      "Heading": "حمّل تطبيق هوتلينو واحجز رحلتك في دقائق",
+      "SubHeading": "استمتع بتجربة حجز استثنائية عبر تطبيقنا. تصفّح آلاف العروض، وأدرِج حجوزاتك، وسافر بلا حدود من أي مكان وفي أي وقت.",
+      "Features": {
+        "One": {
+          "Title": "حجز فوري",
+          "Text": "أكمل حجزك في أقل من دقيقتين بخطوات بسيطة"
+        },
+        "Two": {
+          "Title": "عروض حصرية",
+          "Text": "خصومات تصل إلى 50% متاحة فقط لمستخدمي التطبيق"
+        },
+        "Three": {
+          "Title": "تنبيهات العروض",
+          "Text": "كن أول من يعرف أحدث العروض لوجهاتك المفضلة"
+        },
+        "Four": {
+          "Title": "مدفوعات آمنة",
+          "Text": "أنظمة دفع متعددة بأعلى معايير حماية المعاملات"
+        }
+      },
+      "AvailableNow": "متاح الآن على جميع الأجهزة",
+      "DownloadButton": "حمّل التطبيق من",
+      "mobile": {
+        "Heading": "هوتلينو",
+        "Text": "ابحث. احجز. سافر",
+        "Card": {
+          "Title": "الرياض ⇨ دبي",
+          "Date": "الخميس 15 يوليو",
+          "Price": "899 ر.س"
+        },
+        "Card2": {
+          "Title": "جدة ⇨ إسطنبول",
+          "Date": "السبت 20 أغسطس",
+          "Price": "1,250 ر.س"
+        },
+        "ReadQrCode": "امسح رمز QR لتثبيت التطبيق"
+      }
+    },
+    "TagsMarquee": {
+      "Flights": {
+        "title": "رحلات طيران إلى أفضل الدول"
+      }
+    }
   },
-    "about": {
+  "about": {
     "title": "عن هوتلينو",
     "description": "شريكك الموثوق في حجوزات الفنادق السلسة حول العالم",
     "heroTitle": "عن هوتلينو",
@@ -681,7 +926,7 @@
       "password_min_length": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل"
     }
   },
-    "SignUp": {
+  "SignUp": {
     "errors": {
       "username": {
         "min": "يجب أن يكون اسم المستخدم 3 أحرف على الأقل",
@@ -717,5 +962,114 @@
     "invalid_email": "عنوان بريد إلكتروني غير صالح",
     "password_required": "كلمة المرور مطلوبة",
     "password_min_length": "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل"
+  },
+    "Hotel": {
+    "HotelPage": {
+      "Breadcrumb": {
+        "Home": "Home",
+        "Hotels": "Hotels"
+      },
+      "Tabs": {
+        "1": "Rooms",
+        "2": "Gurst Rating",
+        "3": "Reviews",
+        "4": "Map",
+        "5": "Similar Hotels",
+        "6": "Details"
+      },
+      "Reviews": "reviews",
+      "BookNow": "Book Now",
+      "PriceSummary": {
+        "Title": "Price Summary",
+        "Dates": "Dates",
+        "Guests": "Guests",
+        "RoomType": "Room Type",
+        "Total": "Total",
+        "Savings": "You save {amount}",
+        "TaxesIncluded": "Taxes and fees included"
+      },
+      "Amenities": "Amenities",
+      "Guests": "guests",
+      "PerNight": "/ night",
+      "TaxesIncluded": "Taxes included",
+      "SelectRoom": "Select Room",
+      "Star": "star",
+      "Location": "Location",
+      "LoadMoreReviews": "Load more reviews",
+      "Description": "Description",
+      "Policies": "Policies",
+      "CheckInOut": "Check-in / Check-out",
+      "CheckIn": "Check-in",
+      "CheckOut": "Check-out",
+      "CancellationPolicy": "Cancellation Policy",
+      "CancellationPolicyText": "Free cancellation up to 48 hours before check-in. After that, cancellations will be subject to a fee.",
+      "ChildrenPets": "Children and Pets",
+      "ChildrenPolicy": "Children of all ages are welcome.",
+      "PetsPolicy": "Pets are allowed with an additional charge of $25 per night.",
+      "Payment": "Payment",
+      "PaymentMethods": "We accept credit cards (Visa, MasterCard, American Express) and PayPal."
+    },
+    "BookingPage": {
+      "helpCenter": "Help Center",
+      "step1": "Search",
+      "step2": "Details",
+      "step3": "Confirmation",
+      "bookingDetails": "Your Booking Details",
+      "amenity1": "Free WiFi",
+      "amenity2": "Swimming Pool",
+      "amenity3": "Spa",
+      "dates": "Dates",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "nights": "nights",
+      "roomDetails": "Room Details",
+      "guests": "Guests",
+      "adults": "adults",
+      "guestInfo": "Guest Information",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "John Doe",
+      "emailPlaceholder": "john@example.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+971 50 123 4567",
+      "country": "Country",
+      "selectCountry": "Select country",
+      "uae": "United Arab Emirates",
+      "saudi": "Saudi Arabia",
+      "qatar": "Qatar",
+      "oman": "Oman",
+      "specialRequests": "Special Requests (Optional)",
+      "requestsPlaceholder": "Any special requirements?",
+      "paymentSummary": "Payment Summary",
+      "roomPrice": "Room Price ({nights} nights)",
+      "taxes": "Taxes & Fees",
+      "total": "Total",
+      "paymentMethod": "Payment Method",
+      "creditCard": "Credit/Debit Card",
+      "cardDetails": "Card Details",
+      "cardName": "Name on Card",
+      "completeBooking": "Complete Booking",
+      "saveForLater": "Save for Later",
+      "termsNote": "By completing this booking, you agree to our Terms of Service and Privacy Policy. Your booking is secured and encrypted.",
+      "copyright": "© 2025 Luxury Hotels Group. All rights reserved.",
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "hotelName": "Luxury Resort & Spa",
+      "hotelLocation": "Dubai, UAE",
+      "checkInDate": "Mon, Aug 20, 2025",
+      "checkOutDate": "Fri, Aug 25, 2025",
+      "roomType": "Deluxe Ocean View",
+      "paypalRedirect": "You will be redirected to PayPal to complete your payment",
+      "continueToPaypal": "Continue to PayPal",
+      "paymentSuccessTitle": "Payment Successful!",
+      "paymentSuccessMessage": "Your booking is confirmed. A confirmation email has been sent to your email address.",
+      "viewBooking": "View Booking",
+      "backToHome": "Back to Home",
+      "processing": "Processing Payment...",
+      "stripeNotLoaded": "Stripe is not loaded yet",
+      "cardElementNotFound": "Card element not found",
+      "paymentFailed": "Payment failed. Please try again."
+    }
   }
 }

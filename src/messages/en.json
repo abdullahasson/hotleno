@@ -20,7 +20,7 @@
       "Home": "Home",
       "Flight": "About us",
       "Hotel": "Hotels",
-      "FeaturedDeals": "Special Offers",
+      "FeaturedDeals": "Contact Us",
       "Contact": "App"
     },
     "PopularDestinations": {
@@ -340,19 +340,131 @@
       "button": "Start Your Journey"
     }
   },
-  "FlightDestinations": {
-    "1": {
-      "title": "Flights to the Best Cities from the United States"
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with our team",
+    "heroTitle": "We're Here to Help",
+    "heroSubtitle": "Contact Support",
+    "heroDescription": "Our dedicated team is ready to assist you with any questions or concerns about your travel experience.",
+    "heroStats": {
+      "support": "Global Support",
+      "languages": "Languages Supported"
     },
-    "2": {
-      "title": "Flights to the Best Countries from the United States"
+    "heroContact": {
+      "title": "Call Us Directly",
+      "email": "Email Us At",
+      "description": "Our support team typically responds within 1 business day"
     },
-    "3": {
-      "title": "Hotels in the Best Cities"
+    "info": {
+      "address": {
+        "title": "Our Headquarters",
+        "value": "123 Travel Street, London, UK, SW1A 1AA"
+      },
+      "phone": {
+        "title": "Phone Number",
+        "value": "+44 20 1234 5678"
+      },
+      "email": {
+        "title": "Email Address",
+        "value": "support@hotleno.com"
+      },
+      "hours": {
+        "title": "Working Hours",
+        "value": "Monday-Friday: 9am-6pm GMT"
+      }
     },
-    "4": {
-      "title": "Hotels in the Best Countries"
-    }
+    "form": {
+      "title": "Send us a message",
+      "name": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Your Message",
+      "button": "Send Message",
+      "submitting": "Sending...",
+      "success": "Thank you! Your message has been sent successfully.",
+      "errors": {
+        "name": {
+          "required": "Name is required",
+          "minLength": "Name must be at least 2 characters"
+        },
+        "email": {
+          "required": "Email is required",
+          "invalid": "Please enter a valid email address"
+        },
+        "subject": {
+          "required": "Subject is required",
+          "minLength": "Subject must be at least 5 characters"
+        },
+        "message": {
+          "required": "Message is required",
+          "minLength": "Message must be at least 10 characters"
+        }
+      }
+    },
+    "mapTitle": "Our London Office",
+    "supportTitle": "24/7 Customer Support",
+    "supportText": "Our dedicated support team is available around the clock to assist with your travel needs",
+    "supportHotline": "Emergency Hotline"
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "heroTitle": "Hotleno Terms & Conditions",
+    "heroDescription": "Please read these terms carefully before using our services",
+    "lastUpdated": "Last Updated",
+    "updateDate": "October 5, 2025",
+    "importantNotice": "Important Notice",
+    "noticeDescription": "By using our services, you agree to these terms and conditions",
+    "overviewTitle": "Overview",
+    "overviewText1": "Welcome to Hotleno! These Terms of Service govern your use of our website, mobile applications, and related services. By accessing or using our services, you agree to be bound by these terms.",
+    "overviewText2": "These terms affect your legal rights and obligations. If you do not agree to these terms, do not use our services.",
+    "sections": {
+      "introduction": {
+        "title": "1. Introduction",
+        "content": "These Terms of Service ('Terms') govern your access to and use of Hotleno's websites, mobile applications, and services ('Services'). Please read these Terms carefully before using the Services."
+      },
+      "definitions": {
+        "title": "2. Definitions",
+        "content": "<p>In these Terms:</p><ul><li>'Hotleno', 'we', 'us', or 'our' refers to Hotleno LTD</li><li>'User', 'you', or 'your' refers to any person accessing or using our Services</li><li>'Content' means text, images, videos, reviews, and other materials</li></ul>"
+      },
+      "accountRegistration": {
+        "title": "3. Account Registration",
+        "content": "<p>To access certain features, you may need to register an account. You must provide accurate information and keep your account secure.</p><p>You are responsible for all activities that occur under your account.</p>"
+      },
+      "bookings": {
+        "title": "4. Bookings & Payments",
+        "content": "<p>All bookings are subject to availability. Prices are displayed in the local currency but may be converted during payment processing.</p><p>We accept various payment methods as displayed during checkout. Your payment is processed securely.</p>"
+      },
+      "cancellations": {
+        "title": "5. Cancellations & Refunds",
+        "content": "<p>Cancellation policies vary by property. Please review the specific cancellation policy for your booking.</p><p>Refunds, if applicable, will be processed within 14 business days to the original payment method.</p>"
+      },
+      "intellectualProperty": {
+        "title": "6. Intellectual Property",
+        "content": "<p>All content on our platform, including text, graphics, logos, and software, is the property of Hotleno or its licensors and is protected by intellectual property laws.</p><p>You may not use our content without express written permission.</p>"
+      },
+      "liability": {
+        "title": "7. Liability",
+        "content": "<p>Hotleno acts as an intermediary between users and accommodation providers. We are not responsible for any issues arising during your stay.</p><p>Our liability is limited to the total cost of your booking.</p>"
+      },
+      "privacy": {
+        "title": "8. Privacy",
+        "content": "<p>Your privacy is important to us. Please review our <a>Privacy Policy</a> to understand how we collect and use your personal information.</p>",
+        "link": "/privacy-policy"
+      },
+      "changes": {
+        "title": "9. Changes to Terms",
+        "content": "<p>We may update these Terms from time to time. We will notify you of significant changes through our platform or via email.</p><p>Continued use of our Services after changes constitutes acceptance of the new terms.</p>"
+      },
+      "governingLaw": {
+        "title": "10. Governing Law",
+        "content": "<p>These Terms are governed by the laws of England and Wales. Any disputes will be resolved in the courts of London, UK.</p>"
+      }
+    },
+    "acceptanceTitle": "Acceptance of Terms",
+    "acceptanceText": "By accessing or using any part of our Services, you agree to be bound by these Terms. If you do not agree to all of these Terms, you may not use our Services.",
+    "contactText": "If you have any questions about these Terms, please contact us at:",
+    "contactLink": "Contact Support",
+    "backToTop": "Back to top"
   },
   "SearchFlightsComponent": {
     "Location": {

@@ -1,6 +1,8 @@
 // src/app/about-us/page.tsx
 'use client';
 
+
+import Image from "next/image"
 import { motion } from 'framer-motion';
 import Header from '@/components/common/header';
 import Footer from "@/components/common/footer"
@@ -30,7 +32,7 @@ export default function AboutUsPage() {
             <div className="min-h-screen">
                 {/* Hero Section */}
                 <div className="relative py-20 px-4 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 opacity-5"></div>
+                    <div className="absolute inset-0 "></div>
                     <div className="max-w-7xl mx-auto relative z-10">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -41,10 +43,10 @@ export default function AboutUsPage() {
                             <motion.div
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-white rounded-full p-4 shadow-xl mb-8"
+                                className="bg-white rounded-full p-5 border-4 border-blue-500 shadow-xl mb-8"
                             >
-                                <div className="bg-gradient-to-r from-blue-600 to-blue-800 w-24 h-24 rounded-full flex items-center justify-center">
-                                    <span className="text-white text-3xl font-bold">H</span>
+                                <div className="w-24 h-24 rounded-full flex items-center justify-center">
+                                    <Image src="/logo.jpg" alt="Main Logo" width={200} height={200} />
                                 </div>
                             </motion.div>
                             <motion.h1
@@ -68,7 +70,7 @@ export default function AboutUsPage() {
                 </div>
 
                 {/* Company Info Section */}
-                <div className="py-16 px-4 bg-transparent">
+                <div className="pb-16 px-4 bg-transparent">
                     <div className="max-w-7xl mx-auto">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                             <motion.div
@@ -85,20 +87,22 @@ export default function AboutUsPage() {
                                     </div>
 
                                     <div className="space-y-6">
-                                        <div className="border-l-4 border-blue-500 pl-4 py-2">
-                                            <h3 className="text-lg font-semibold text-gray-800">{t('registration.certificate')}</h3>
-                                            <p className="text-gray-600">{t('registration.subtitle')}</p>
-                                        </div>
+                                        <div className="space-y-0">
+                                            <div className="bg-blue-50 px-4 py-2 rounded-tr-xl border-l-4 border-blue-500">
+                                                <h3 className="text-lg font-semibold text-gray-800">{t('registration.certificate')}</h3>
+                                                <p className="text-gray-600">{t('registration.subtitle')}</p>
+                                            </div>
 
-                                        <div className="bg-blue-50 rounded-xl p-5">
-                                            <div className="grid grid-cols-2 gap-4">
-                                                <div>
-                                                    <p className="text-sm text-gray-500">{t('registration.companyNumber')}</p>
-                                                    <p className="font-bold text-blue-700">16587327</p>
-                                                </div>
-                                                <div>
-                                                    <p className="text-sm text-gray-500">{t('registration.incorporationDate')}</p>
-                                                    <p className="font-bold text-blue-700">{t('registration.date')}</p>
+                                            <div className="bg-blue-50 rounded-br-xl px-4 py-2 border-l-4 border-blue-500">
+                                                <div className="grid grid-cols-2 gap-4">
+                                                    <div>
+                                                        <p className="text-sm text-gray-500">{t('registration.companyNumber')}</p>
+                                                        <p className="font-bold text-blue-700">16587327</p>
+                                                    </div>
+                                                    <div>
+                                                        <p className="text-sm text-gray-500">{t('registration.incorporationDate')}</p>
+                                                        <p className="font-bold text-blue-700">{t('registration.date')}</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -167,13 +171,13 @@ export default function AboutUsPage() {
                         </motion.div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {valueConfig.map(({key, icon: Icon}) => (
+                            {valueConfig.map(({ key, icon: Icon }) => (
                                 <motion.div
                                     key={key}
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: valueConfig.indexOf({key, icon: Icon}) * 0.1 }}
+                                    transition={{ duration: 0.5, delay: valueConfig.indexOf({ key, icon: Icon }) * 0.1 }}
                                     whileHover={{ y: -10 }}
                                     className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all"
                                 >
@@ -260,7 +264,7 @@ export default function AboutUsPage() {
                 </div>
 
                 {/* Stats Section */}
-                <div className="py-16 px-4">
+                <div className="pb-16 px-4">
                     <div className="max-w-7xl mx-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -285,32 +289,6 @@ export default function AboutUsPage() {
                                 <div className="text-4xl font-bold text-blue-600 mb-2">99.8%</div>
                                 <div className="text-gray-600">{t('stats.satisfaction')}</div>
                             </div>
-                        </motion.div>
-                    </div>
-                </div>
-
-                {/* CTA Section */}
-                <div className="py-20 px-4 bg-gradient-to-r from-blue-300 to-blue-400">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                                {t('cta.title')}
-                            </h2>
-                            <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-                                {t('cta.subtitle')}
-                            </p>
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all"
-                            >
-                                {t('cta.button')}
-                            </motion.button>
                         </motion.div>
                     </div>
                 </div>

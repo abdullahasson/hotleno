@@ -9,265 +9,280 @@
     "Login": "Iniciar sesión",
     "Signup": "Registrarse"
   },
-  "Hero": {
-    "Heading": "Las mejores ofertas de viaje a precios increíbles",
-    "SubHeading": "Busca, compara y reserva tu próximo viaje fácilmente, ahorra hasta 50% con nuestras ofertas exclusivas",
-    "JoinPartner": "Vuelos",
-    "BrowseOffers": "Ofertas de hoteles"
-  },
-  "PromoCarousel": {
-    "title": "Con nosotros, viajar tiene sentido.",
-    "Cards": {
-      "one": {
-        "title": "Alquiler de coches",
-        "des": "Obtén las mejores ofertas de alquiler de coches en tu destino"
-      },
-      "two": {
-        "title": "Paquetes eSIM",
-        "des": "Conexión a internet al llegar sin tarjeta SIM"
-      },
-      "three": {
-        "title": "Requisitos de visado",
-        "des": "Conoce los requisitos de viaje antes de reservar"
-      },
-      "four": {
-        "title": "Servicios aeroportuarios",
-        "des": "Traslados al aeropuerto a precios especiales"
-      },
-      "btn": "Descubre más"
-    }
-  },
-  "FeaturesSection": {
-    "one": "Mejores ofertas de viaje en Estados Unidos",
-    "two": "Miles de ofertas de vuelos y hoteles",
-    "three": "Múltiples métodos de pago",
-    "four": "Servicio al cliente 24/7"
-  },
-  "SearchHome": {
-    "Tabs": {
-      "flights": "Vuelos",
-      "hotels": "Hoteles"
-    }
-  },
-  "ArticlesCarousel": {
-    "title": "Artículos más recientes",
-    "seeMore": "Más artículos",
-    "readArticle": "Leer artículo",
-    "articles": {
-      "1": {
-        "title": "El futuro de los viajes en un mundo postpandémico",
-        "description": "Explorando cómo la industria de viajes se adapta a nuevos desafíos y cambiantes comportamientos de los viajeros en el panorama global actual.",
-        "department": "Tendencias de Viajes",
-        "blogName": "Perspectivas Wanderlust"
-      },
-      "2": {
-        "title": "10 joyas ocultas del sudeste asiático que debes visitar",
-        "description": "Descubre destinos fuera de los circuitos turísticos en el sudeste asiático que ofrecen experiencias únicas lejos de las multitudes.",
-        "department": "Guía de Destinos",
-        "blogName": "Diario del Explorador"
-      },
-      "3": {
-        "title": "Viajes sostenibles: Cómo reducir tu huella de carbono",
-        "description": "Consejos prácticos y estrategias para viajeros ecológicamente conscientes que buscan minimizar su impacto mientras exploran el mundo.",
-        "department": "Ecoturismo",
-        "blogName": "El Viajero Verde"
-      },
-      "4": {
-        "title": "Guía completa de destinos para nómadas digitales",
-        "description": "Las mejores ciudades del mundo para nómadas digitales que ofrecen internet confiable, espacios de coworking y comunidades vibrantes.",
-        "department": "Trabajo y Viajes",
-        "blogName": "Vida Nómada"
-      },
-      "5": {
-        "title": "Aventuras culinarias: Tours de comida callejera alrededor del mundo",
-        "description": "Un viaje gastronómico por mercados callejeros globales y platos imperdibles en cada destino.",
-        "department": "Gastronomía y Cultura",
-        "blogName": "Saborea el Mundo"
-      },
-      "6": {
-        "title": "Trucos para viajes familiares: Vacaciones sin estrés con niños",
-        "description": "Consejos expertos para planificar y disfrutar vacaciones familiares que satisfacen todas las edades e intereses.",
-        "department": "Viajes Familiares",
-        "blogName": "Viajes Felices"
-      }
-    }
-  },
-  "PopularAirlines": {
-    "title": "Aerolíneas populares en Estados Unidos",
-    "subtitle": "Reserva vuelos baratos con tus aerolíneas favoritas"
-  },
-  "TripIdeas": {
-    "title": "Ideas de viaje desde Estados Unidos",
-    "subtitle": "Descubre tu destino ideal con recomendaciones de viaje cuidadosamente seleccionadas",
-    "tabs": {
-      "romantic": "Vacaciones románticas",
-      "cultural": "Experiencias culturales",
-      "beach": "Destinos de playa",
-      "family": "Familiar",
-      "nature": "Naturaleza y aventuras",
-      "forTrips": "Para viajes"
+  "Footer": {
+    "Logo": "Hotlino",
+    "AboutUs": {
+      "Title": "Sobre Hotlino",
+      "Text": "Ofrecemos las mejores ofertas de viajes, vuelos y hoteles a precios competitivos. Reserva tu próximo viaje con nosotros y ahorra dinero."
     },
-    "card": {
-      "roundTrip": "Viaje redondo",
-      "details": "Ver detalles"
+    "QuickLinks": {
+      "Title": "Enlaces rápidos",
+      "Home": "Inicio",
+      "Flight": "Vuelos",
+      "Hotel": "Hoteles",
+      "FeaturedDeals": "Ofertas especiales",
+      "Contact": "Aplicación"
     },
-    "countries": {
-      "country_france": "Francia",
-      "country_italy": "Italia",
-      "country_greece": "Grecia",
-      "country_spain": "España",
-      "country_morocco": "Marruecos",
-      "country_czech": "República Checa",
-      "country_hungary": "Hungría",
-      "country_croatia": "Croacia",
-      "country_austria": "Austria",
-      "country_japan": "Japón",
-      "country_egypt": "Egipto",
-      "country_peru": "Perú",
-      "country_turkey": "Turquía",
-      "country_china": "China",
-      "country_india": "India",
-      "country_cambodia": "Camboya",
-      "country_thailand": "Tailandia",
-      "country_jordan": "Jordania",
-      "country_maldives": "Maldivas",
-      "country_mexico": "México",
-      "country_indonesia": "Indonesia",
-      "country_australia": "Australia",
-      "country_brazil": "Brasil",
-      "country_hawaii": "Hawái",
-      "country_usa": "Estados Unidos",
-      "country_singapore": "Singapur",
-      "country_denmark": "Dinamarca",
-      "country_canada": "Canadá",
-      "country_netherlands": "Países Bajos",
-      "country_uae": "Emiratos Árabes Unidos",
-      "country_uk": "Reino Unido",
-      "country_costa_rica": "Costa Rica",
-      "country_new_zealand": "Nueva Zelanda",
-      "country_tanzania": "Tanzania",
-      "country_norway": "Noruega",
-      "country_kenya": "Kenia",
-      "country_iceland": "Islandia",
-      "country_venezuela": "Venezuela",
-      "country_namibia": "Namibia",
-      "country_germany": "Alemania",
-      "country_argentina": "Argentina",
-      "country_colombia": "Colombia",
-      "country_finland": "Finlandia",
-      "country_hong_kong": "Hong Kong",
-      "country_south_korea": "Corea del Sur",
-      "country_portugal": "Portugal"
+    "PopularDestinations": {
+      "Title": "Destinos populares",
+      "c1": "Dubái",
+      "c2": "Estambul",
+      "c3": "Malasia",
+      "c4": "Sharm El Sheikh",
+      "c5": "París"
     },
-    "cities": {
-      "city_paris": "París",
-      "city_venice": "Venecia",
-      "city_santorini": "Santorini",
-      "city_seville": "Sevilla",
-      "city_marrakech": "Marrakech",
-      "city_prague": "Praga",
-      "city_budapest": "Budapest",
-      "city_dubrovnik": "Dubrovnik",
-      "city_vienna": "Viena",
-      "city_kyoto": "Kioto",
-      "city_cairo": "El Cairo",
-      "city_cusco": "Cusco",
-      "city_istanbul": "Estambul",
-      "city_beijing": "Pekín",
-      "city_agra": "Agra",
-      "city_siem_reap": "Siem Reap",
-      "city_bangkok": "Bangkok",
-      "city_petra": "Petra",
-      "city_male": "Malé",
-      "city_cancun": "Cancún",
-      "city_phuket": "Phuket",
-      "city_bali": "Bali",
-      "city_mykonos": "Mikonos",
-      "city_gold_coast": "Costa Dorada",
-      "city_majorca": "Mallorca",
-      "city_florianopolis": "Florianópolis",
-      "city_maui": "Maui",
-      "city_orlando": "Orlando",
-      "city_barcelona": "Barcelona",
-      "city_singapore": "Singapur",
-      "city_tokyo": "Tokio",
-      "city_copenhagen": "Copenhague",
-      "city_vancouver": "Vancouver",
-      "city_amsterdam": "Ámsterdam",
-      "city_dubai": "Dubái",
-      "city_london": "Londres",
-      "city_monteverde": "Monteverde",
-      "city_queenstown": "Queenstown",
-      "city_banff": "Banff",
-      "city_zanzibar": "Zanzíbar",
-      "city_tromso": "Tromsø",
-      "city_masai_mara": "Masái Mara",
-      "city_reykjavik": "Reikiavik",
-      "city_canaima": "Canaima",
-      "city_sossusvlei": "Sossusvlei",
-      "city_berlin": "Berlín",
-      "city_sydney": "Sídney",
-      "city_rio": "Río de Janeiro",
-      "city_buenos_aires": "Buenos Aires",
-      "city_cartagena": "Cartagena",
-      "city_helsinki": "Helsinki",
-      "city_hong_kong": "Hong Kong",
-      "city_seoul": "Seúl",
-      "city_porto": "Oporto"
-    }
+    "ContactUs": {
+      "Title": "Contáctanos",
+      "Location": "Londres, Reino Unido"
+    },
+    "BootomFooter": "Hotlino, Todos los derechos reservados | Abdullah Hassoun 2025"
   },
-  "MobileApp": {
-    "Badge": "Nueva experiencia",
-    "Heading": "Descarga la app de Hotlino y reserva tu viaje en minutos",
-    "SubHeading": "Disfruta de una experiencia de reserva excepcional. Explora miles de ofertas, gestiona tus reservas y viaja sin límites desde cualquier lugar y en cualquier momento.",
-    "Features": {
-      "One": {
-        "Title": "Reserva instantánea",
-        "Text": "Completa tu reserva en menos de 2 minutos"
-      },
-      "Two": {
-        "Title": "Ofertas exclusivas",
-        "Text": "Descuentos de hasta 50% solo para usuarios de la app"
-      },
-      "Three": {
-        "Title": "Alertas de ofertas",
-        "Text": "Sé el primero en conocer las últimas ofertas para tus destinos favoritos"
-      },
-      "Four": {
-        "Title": "Pagos seguros",
-        "Text": "Múltiples sistemas de pago con máximos estándares de seguridad"
+    "Homepage": {
+    "Search": {
+      "Tabs": {
+        "flights": "Vuelos",
+        "hotels": "Hoteles"
       }
     },
-    "AvailableNow": "Disponible en todos los dispositivos",
-    "DownloadButton": "Descargar en",
-    "mobile": {
-      "Heading": "Hotlino",
-      "Text": "Busca. Reserva. Viaja",
-      "Card": {
-        "Title": "Riad ⇨ Dubái",
-        "Date": "Jueves 15 julio",
-        "Price": "899 SAR"
+    "PromoCarousel": {
+      "title": "Con nosotros, viajar tiene sentido.",
+      "Cards": {
+        "one": {
+          "title": "Alquiler de coches",
+          "des": "Obtén las mejores ofertas de alquiler de coches en tu destino"
+        },
+        "two": {
+          "title": "Paquetes eSIM",
+          "des": "Conexión a internet inmediata al llegar sin SIM física"
+        },
+        "three": {
+          "title": "Requisitos de visado",
+          "des": "Infórmate sobre los requisitos de viaje antes de reservar"
+        },
+        "four": {
+          "title": "Servicios aeroportuarios",
+          "des": "Traslados premium a precios competitivos"
+        },
+        "btn": "Descubrir más"
+      }
+    },
+    "FeaturesSection": {
+      "one": "Mejores ofertas de viaje en Estados Unidos",
+      "two": "Miles de ofertas de vuelos y hoteles",
+      "three": "Múltiples métodos de pago",
+      "four": "Servicio al cliente 24/7"
+    },
+    "ArticlesCarousel": {
+      "title": "Artículos recientes",
+      "seeMore": "Más artículos",
+      "readArticle": "Leer artículo",
+      "articles": {
+        "1": {
+          "title": "El futuro de los viajes en un mundo post-pandémico",
+          "description": "Cómo la industria de viajes se adapta a nuevos retos y cambios en el comportamiento de los viajeros.",
+          "department": "Tendencias de viaje",
+          "blogName": "Wanderlust Insights"
+        },
+        "2": {
+          "title": "10 joyas ocultas del Sudeste Asiático que debes visitar",
+          "description": "Descubre destinos poco conocidos en el Sudeste Asiático con experiencias únicas lejos del turismo masivo.",
+          "department": "Guía de destinos",
+          "blogName": "Explorer's Diary"
+        },
+        "3": {
+          "title": "Viajes sostenibles: Cómo reducir tu huella de carbono",
+          "description": "Consejos prácticos para viajeros conscientes que quieren minimizar su impacto ambiental.",
+          "department": "Ecoturismo",
+          "blogName": "The Green Traveler"
+        },
+        "4": {
+          "title": "Guía completa de destinos para nómadas digitales",
+          "description": "Las mejores ciudades del mundo para nómadas digitales con internet fiable y comunidades vibrantes.",
+          "department": "Trabajo y viaje",
+          "blogName": "Nomad Life"
+        },
+        "5": {
+          "title": "Aventuras culinarias: Tours de comida callejera mundial",
+          "description": "Un recorrido gastronómico por mercados callejeros y platos imprescindibles en cada destino.",
+          "department": "Comida y cultura",
+          "blogName": "Taste the World"
+        },
+        "6": {
+          "title": "Trucos para viajar en familia: Vacaciones sin estrés con niños",
+          "description": "Consejos de expertos para planificar vacaciones familiares adaptadas a todas las edades.",
+          "department": "Viajes familiares",
+          "blogName": "Happy Journeys"
+        }
+      }
+    },
+    "PopularAirlines": {
+      "title": "Aerolíneas populares en Estados Unidos",
+      "subtitle": "Reserva vuelos baratos con tus aerolíneas favoritas"
+    },
+    "TripIdeas": {
+      "title": "Ideas de viaje desde EE.UU.",
+      "subtitle": "Descubre tu destino perfecto con recomendaciones curadas",
+      "tabs": {
+        "romantic": "Escapadas románticas",
+        "cultural": "Experiencias culturales",
+        "beach": "Destinos de playa",
+        "family": "Destinos familiares",
+        "nature": "Naturaleza y aventura",
+        "forTrips": "Para viajes"
       },
-      "Card2": {
-        "Title": "Yeda ⇨ Estambul",
-        "Date": "Sábado 20 agosto",
-        "Price": "1.250 SAR"
+      "card": {
+        "roundTrip": "Viaje redondo",
+        "details": "Detalles"
       },
-      "ReadQrCode": "Escanear para instalar la app"
-    }
-  },
-  "FlightDestinations": {
-    "1": {
-      "title": "Vuelos a las Mejores Ciudades desde Estados Unidos"
+      "countries": {
+        "country_france": "Francia",
+        "country_italy": "Italia",
+        "country_greece": "Grecia",
+        "country_spain": "España",
+        "country_morocco": "Marruecos",
+        "country_czech": "República Checa",
+        "country_hungary": "Hungría",
+        "country_croatia": "Croacia",
+        "country_austria": "Austria",
+        "country_japan": "Japón",
+        "country_egypt": "Egipto",
+        "country_peru": "Perú",
+        "country_turkey": "Turquía",
+        "country_china": "China",
+        "country_india": "India",
+        "country_cambodia": "Camboya",
+        "country_thailand": "Tailandia",
+        "country_jordan": "Jordania",
+        "country_maldives": "Maldivas",
+        "country_mexico": "México",
+        "country_indonesia": "Indonesia",
+        "country_australia": "Australia",
+        "country_brazil": "Brasil",
+        "country_hawaii": "Hawái",
+        "country_usa": "Estados Unidos",
+        "country_singapore": "Singapur",
+        "country_denmark": "Dinamarca",
+        "country_canada": "Canadá",
+        "country_netherlands": "Países Bajos",
+        "country_uae": "Emiratos Árabes Unidos",
+        "country_uk": "Reino Unido",
+        "country_costa_rica": "Costa Rica",
+        "country_new_zealand": "Nueva Zelanda",
+        "country_tanzania": "Tanzania",
+        "country_norway": "Noruega",
+        "country_kenya": "Kenia",
+        "country_iceland": "Islandia",
+        "country_venezuela": "Venezuela",
+        "country_namibia": "Namibia",
+        "country_germany": "Alemania",
+        "country_argentina": "Argentina",
+        "country_colombia": "Colombia",
+        "country_finland": "Finlandia",
+        "country_hong_kong": "Hong Kong",
+        "country_south_korea": "Corea del Sur",
+        "country_portugal": "Portugal"
+      },
+      "cities": {
+        "city_paris": "París",
+        "city_venice": "Venecia",
+        "city_santorini": "Santorini",
+        "city_seville": "Sevilla",
+        "city_marrakech": "Marrakech",
+        "city_prague": "Praga",
+        "city_budapest": "Budapest",
+        "city_dubrovnik": "Dubrovnik",
+        "city_vienna": "Viena",
+        "city_kyoto": "Kioto",
+        "city_cairo": "El Cairo",
+        "city_cusco": "Cusco",
+        "city_istanbul": "Estambul",
+        "city_beijing": "Pekín",
+        "city_agra": "Agra",
+        "city_siem_reap": "Siem Reap",
+        "city_bangkok": "Bangkok",
+        "city_petra": "Petra",
+        "city_male": "Malé",
+        "city_cancun": "Cancún",
+        "city_phuket": "Phuket",
+        "city_bali": "Bali",
+        "city_mykonos": "Míkonos",
+        "city_gold_coast": "Costa Dorada",
+        "city_majorca": "Mallorca",
+        "city_florianopolis": "Florianópolis",
+        "city_maui": "Maui",
+        "city_orlando": "Orlando",
+        "city_barcelona": "Barcelona",
+        "city_singapore": "Singapur",
+        "city_tokyo": "Tokio",
+        "city_copenhagen": "Copenhague",
+        "city_vancouver": "Vancouver",
+        "city_amsterdam": "Ámsterdam",
+        "city_dubai": "Dubái",
+        "city_london": "Londres",
+        "city_monteverde": "Monteverde",
+        "city_queenstown": "Queenstown",
+        "city_banff": "Banff",
+        "city_zanzibar": "Zanzíbar",
+        "city_tromso": "Tromsø",
+        "city_masai_mara": "Masái Mara",
+        "city_reykjavik": "Reikiavik",
+        "city_canaima": "Canaima",
+        "city_sossusvlei": "Sossusvlei",
+        "city_berlin": "Berlín",
+        "city_sydney": "Sídney",
+        "city_rio": "Río de Janeiro",
+        "city_buenos_aires": "Buenos Aires",
+        "city_cartagena": "Cartagena",
+        "city_helsinki": "Helsinki",
+        "city_hong_kong": "Hong Kong",
+        "city_seoul": "Seúl",
+        "city_porto": "Oporto"
+      }
     },
-    "2": {
-      "title": "Vuelos a los Mejores Países desde Estados Unidos"
+    "MobileApp": {
+      "Badge": "Nueva experiencia",
+      "Heading": "Descarga Hotlino y reserva tu viaje en minutos",
+      "SubHeading": "Disfruta de reservas excepcionales. Miles de ofertas, gestión de reservas y viajes sin límites desde cualquier lugar.",
+      "Features": {
+        "One": {
+          "Title": "Reserva instantánea",
+          "Text": "Completa tu reserva en menos de dos minutos"
+        },
+        "Two": {
+          "Title": "Ofertas exclusivas",
+          "Text": "Hasta 50% de descuento solo para usuarios de la app"
+        },
+        "Three": {
+          "Title": "Alertas de ofertas",
+          "Text": "Sé el primero en conocer ofertas para tus destinos favoritos"
+        },
+        "Four": {
+          "Title": "Pagos seguros",
+          "Text": "Múltiples sistemas de pago con máxima protección"
+        }
+      },
+      "AvailableNow": "Disponible en todos los dispositivos",
+      "DownloadButton": "Descargar desde",
+      "mobile": {
+        "Heading": "Hotlino",
+        "Text": "Buscar. Reservar. Viajar",
+        "Card": {
+          "Title": "Riad ⇨ Dubái",
+          "Date": "Jueves 15 de julio",
+          "Price": "899 SAR"
+        },
+        "Card2": {
+          "Title": "Yeda ⇨ Estambul",
+          "Date": "Sábado 20 de agosto",
+          "Price": "1.250 SAR"
+        },
+        "ReadQrCode": "Escanear código QR para instalar"
+      }
     },
-    "3": {
-      "title": "Hoteles en las Mejores Ciudades"
-    },
-    "4": {
-      "title": "Hoteles en los Mejores Países"
+    "TagsMarquee": {
+      "Flights": {
+        "title": "Vuelos a los mejores países"
+      }
     }
   },
   "SearchFlightsComponent": {
@@ -471,34 +486,6 @@
     "RatingHigh": "Mejor calificación",
     "DistanceCenter": "Distancia del centro"
   },
-  "Footer": {
-    "Logo": "Hotlino",
-    "AboutUs": {
-      "Title": "Sobre Hotlino",
-      "Text": "Ofrecemos las mejores ofertas de viajes, vuelos y hoteles a precios competitivos. Reserva tu próximo viaje con nosotros y ahorra dinero."
-    },
-    "QuickLinks": {
-      "Title": "Enlaces rápidos",
-      "Home": "Inicio",
-      "Flight": "Vuelos",
-      "Hotel": "Hoteles",
-      "FeaturedDeals": "Ofertas especiales",
-      "Contact": "Aplicación"
-    },
-    "PopularDestinations": {
-      "Title": "Destinos populares",
-      "c1": "Dubái",
-      "c2": "Estambul",
-      "c3": "Malasia",
-      "c4": "Sharm El Sheikh",
-      "c5": "París"
-    },
-    "ContactUs": {
-      "Title": "Contáctanos",
-      "Location": "Londres, Reino Unido"
-    },
-    "BootomFooter": "Hotlino, Todos los derechos reservados | Abdullah Hassoun 2025"
-  },
   "AppDownloadPage": {
     "hero": {
       "title": "Tu compañero de viaje perfecto",
@@ -622,7 +609,7 @@
       "password_min_length": "La contraseña debe tener al menos 8 caracteres"
     }
   },
-    "SignUp": {
+  "SignUp": {
     "errors": {
       "username": {
         "min": "El nombre de usuario debe tener al menos 3 caracteres",
@@ -658,5 +645,114 @@
     "invalid_email": "Dirección de correo electrónico no válida",
     "password_required": "La contraseña es obligatoria",
     "password_min_length": "La contraseña debe tener al menos 6 caracteres"
+  },
+  "Hotel": {
+    "HotelPage": {
+      "Breadcrumb": {
+        "Home": "Inicio",
+        "Hotels": "Hoteles"
+      },
+      "Tabs": {
+        "1": "Habitaciones",
+        "2": "Calificación de huéspedes",
+        "3": "Reseñas",
+        "4": "Mapa",
+        "5": "Hoteles similares",
+        "6": "Detalles"
+      },
+      "Reviews": "reseñas",
+      "BookNow": "Reservar ahora",
+      "PriceSummary": {
+        "Title": "Resumen de precios",
+        "Dates": "Fechas",
+        "Guests": "Huéspedes",
+        "RoomType": "Tipo de habitación",
+        "Total": "Total",
+        "Savings": "Ahorras {amount}",
+        "TaxesIncluded": "Impuestos y tasas incluidos"
+      },
+      "Amenities": "Servicios",
+      "Guests": "huéspedes",
+      "PerNight": "/ noche",
+      "TaxesIncluded": "Impuestos incluidos",
+      "SelectRoom": "Seleccionar habitación",
+      "Star": "estrella",
+      "Location": "Ubicación",
+      "LoadMoreReviews": "Cargar más reseñas",
+      "Description": "Descripción",
+      "Policies": "Políticas",
+      "CheckInOut": "Check-in / Check-out",
+      "CheckIn": "Check-in",
+      "CheckOut": "Check-out",
+      "CancellationPolicy": "Política de cancelación",
+      "CancellationPolicyText": "Cancelación gratuita hasta 48 horas antes del check-in. Después, las cancelaciones tendrán un cargo.",
+      "ChildrenPets": "Niños y mascotas",
+      "ChildrenPolicy": "Niños de todas las edades son bienvenidos.",
+      "PetsPolicy": "Se permiten mascotas con un cargo adicional de $25 por noche.",
+      "Payment": "Pago",
+      "PaymentMethods": "Aceptamos tarjetas de crédito (Visa, MasterCard, American Express) y PayPal."
+    },
+    "BookingPage": {
+      "helpCenter": "Centro de ayuda",
+      "step1": "Búsqueda",
+      "step2": "Detalles",
+      "step3": "Confirmación",
+      "bookingDetails": "Detalles de tu reserva",
+      "amenity1": "Wi-Fi gratuito",
+      "amenity2": "Piscina",
+      "amenity3": "Spa",
+      "dates": "Fechas",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "nights": "noches",
+      "roomDetails": "Detalles de la habitación",
+      "guests": "Huéspedes",
+      "adults": "adultos",
+      "guestInfo": "Información del huésped",
+      "fullName": "Nombre completo",
+      "fullNamePlaceholder": "John Doe",
+      "emailPlaceholder": "john@example.com",
+      "phone": "Número de teléfono",
+      "phonePlaceholder": "+971 50 123 4567",
+      "country": "País",
+      "selectCountry": "Seleccionar país",
+      "uae": "Emiratos Árabes Unidos",
+      "saudi": "Arabia Saudita",
+      "qatar": "Catar",
+      "oman": "Omán",
+      "specialRequests": "Solicitudes especiales (opcional)",
+      "requestsPlaceholder": "¿Algún requerimiento especial?",
+      "paymentSummary": "Resumen de pago",
+      "roomPrice": "Precio de habitación ({nights} noches)",
+      "taxes": "Impuestos y tasas",
+      "total": "Total",
+      "paymentMethod": "Método de pago",
+      "creditCard": "Tarjeta de crédito/débito",
+      "cardDetails": "Detalles de la tarjeta",
+      "cardName": "Nombre en la tarjeta",
+      "completeBooking": "Completar reserva",
+      "saveForLater": "Guardar para después",
+      "termsNote": "Al completar esta reserva, aceptas nuestros Términos de servicio y Política de privacidad. Tu reserva está asegurada y encriptada.",
+      "copyright": "© 2025 Luxury Hotels Group. Todos los derechos reservados.",
+      "terms": "Términos",
+      "privacy": "Privacidad",
+      "faq": "Preguntas frecuentes",
+      "contact": "Contacto",
+      "hotelName": "Luxury Resort & Spa",
+      "hotelLocation": "Dubái, Emiratos Árabes Unidos",
+      "checkInDate": "Lun, 20 ago 2025",
+      "checkOutDate": "Vie, 25 ago 2025",
+      "roomType": "Deluxe con vista al mar",
+      "paypalRedirect": "Serás redirigido a PayPal para completar el pago",
+      "continueToPaypal": "Continuar a PayPal",
+      "paymentSuccessTitle": "¡Pago exitoso!",
+      "paymentSuccessMessage": "Tu reserva está confirmada. Se ha enviado un correo de confirmación a tu dirección.",
+      "viewBooking": "Ver reserva",
+      "backToHome": "Volver al inicio",
+      "processing": "Procesando pago...",
+      "stripeNotLoaded": "Stripe aún no se ha cargado",
+      "cardElementNotFound": "Elemento de tarjeta no encontrado",
+      "paymentFailed": "Pago fallido. Por favor, inténtalo de nuevo."
+    }
   }
 }

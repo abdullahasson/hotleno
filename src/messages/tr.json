@@ -9,265 +9,280 @@
     "Login": "Giriş Yap",
     "Signup": "Üye Ol"
   },
-  "Hero": {
-    "Heading": "İnanılmaz fiyatlarla en iyi seyahat teklifleri",
-    "SubHeading": "Bir sonraki yolculuğunuzu kolayca araştırın, karşılaştırın ve rezerve edin, özel tekliflerimizle %50'ye varan tasarruf edin",
-    "JoinPartner": "Uçuşlar",
-    "BrowseOffers": "Otel Fırsatları"
-  },
-  "PromoCarousel": {
-    "title": "Bizimle seyahatin bir anlamı var.",
-    "Cards": {
-      "one": {
-        "title": "Araç Kiralama",
-        "des": "Varış noktanızda en iyi araç kiralama fırsatlarını elde edin"
-      },
-      "two": {
-        "title": "eSIM Paketleri",
-        "des": "SIM kart olmadan varır varmaz internet bağlantısı"
-      },
-      "three": {
-        "title": "Vize Gereksinimleri",
-        "des": "Rezervasyon yapmadan önce seyahat gereksinimlerini öğrenin"
-      },
-      "four": {
-        "title": "Havaalanı Servisleri",
-        "des": "Uygun fiyatlarla havaalanı transferleri"
-      },
-      "btn": "Daha Fazla Keşfet"
-    }
-  },
-  "FeaturesSection": {
-    "one": "ABD'deki en iyi seyahat fırsatları",
-    "two": "Binlerce uçuş ve otel teklifi",
-    "three": "Çoklu ödeme seçenekleri",
-    "four": "7/24 müşteri hizmeti"
-  },
-  "SearchHome": {
-    "Tabs": {
-      "flights": "Uçuşlar",
-      "hotels": "Otel"
-    }
-  },
-  "ArticlesCarousel": {
-    "title": "Son Makaleler",
-    "seeMore": "Daha Fazla Makale",
-    "readArticle": "Makaleyi Oku",
-    "articles": {
-      "1": {
-        "title": "Pandemi Sonrası Dünyada Seyahatin Geleceği",
-        "description": "Seyahat endüstrisinin mevcut küresel ortamda yeni zorluklara ve değişen gezgin davranışlarına nasıl uyum sağladığının incelenmesi.",
-        "department": "Seyahat Trendleri",
-        "blogName": "Seyahat Tutkusu Analizleri"
-      },
-      "2": {
-        "title": "Güneydoğu Asya'da Görmeniz Gereken 10 Gizli Cennet",
-        "description": "Turist kalabalıklarından uzakta, eşsiz deneyimler sunan Güneydoğu Asya'nın keşfedilmemiş rotalarını keşfedin.",
-        "department": "Rota Rehberi",
-        "blogName": "Kaşifin Günlüğü"
-      },
-      "3": {
-        "title": "Sürdürülebilir Seyahat: Karbon Ayak İzinizi Nasıl Azaltırsınız",
-        "description": "Dünyayı keşfederken çevresel etkisini en aza indirmek isteyen gezginler için pratik ipuçları ve stratejiler.",
-        "department": "Eko-Turizm",
-        "blogName": "Yeşil Gezgin"
-      },
-      "4": {
-        "title": "Dijital Göçebeler İçin Kapsamlı Rota Kılavuzu",
-        "description": "Güvenilir internet, ortak çalışma alanları ve canlı topluluklar sunan dünyanın en iyi dijital göçbe şehirleri.",
-        "department": "Çalışma ve Seyahat",
-        "blogName": "Göçebe Yaşamı"
-      },
-      "5": {
-        "title": "Gastronomi Maceraları: Dünya Sokak Lezzetleri Turları",
-        "description": "Her destinasyonda mutlaka denemeniz gereken yemeklerle birlikte küresel sokak yemekleri pazarlarında lezzet yolculuğu.",
-        "department": "Yemek ve Kültür",
-        "blogName": "Dünyanın Tadı"
-      },
-      "6": {
-        "title": "Aile Seyahati Püf Noktaları: Çocuklarla Stressiz Tatiller",
-        "description": "Tüm yaşlara ve ilgi alanlarına hitap eden aile tatillerini planlamak ve keyfini çıkarmak için uzman tavsiyeleri.",
-        "department": "Aile Seyahati",
-        "blogName": "Mutlu Yolculuklar"
-      }
-    }
-  },
-  "PopularAirlines": {
-    "title": "ABD'de Popüler Havayolları",
-    "subtitle": "Favori havayollarınızla ucuz uçak biletleri rezerve edin"
-  },
-  "TripIdeas": {
-    "title": "ABD'den Seyahat Fikirleri",
-    "subtitle": "Özenle seçilmiş seyahat önerileriyle ideal destinasyonunuzu keşfedin",
-    "tabs": {
-      "romantic": "Romantik Tatiller",
-      "cultural": "Kültürel Deneyimler",
-      "beach": "Sahil Destinasyonları",
-      "family": "Aile Dostu",
-      "nature": "Doğa ve Macera",
-      "forTrips": "Seyahatler İçin"
+  "Footer": {
+    "Logo": "Hotlino",
+    "AboutUs": {
+      "Title": "Hotlino Hakkında",
+      "Text": "En iyi seyahat, uçuş ve otel tekliflerini rekabetçi fiyatlarla sunuyoruz. Bir sonraki yolculuğunuzu bizimle rezerve edin ve tasarruf edin."
     },
-    "card": {
-      "roundTrip": "Gidiş-Dönüş",
-      "details": "Detayları Göster"
+    "QuickLinks": {
+      "Title": "Hızlı Bağlantılar",
+      "Home": "Ana Sayfa",
+      "Flight": "Uçuşlar",
+      "Hotel": "Otel",
+      "FeaturedDeals": "Öne Çıkan Fırsatlar",
+      "Contact": "Uygulama"
     },
-    "countries": {
-      "country_france": "Fransa",
-      "country_italy": "İtalya",
-      "country_greece": "Yunanistan",
-      "country_spain": "İspanya",
-      "country_morocco": "Fas",
-      "country_czech": "Çek Cumhuriyeti",
-      "country_hungary": "Macaristan",
-      "country_croatia": "Hırvatistan",
-      "country_austria": "Avusturya",
-      "country_japan": "Japonya",
-      "country_egypt": "Mısır",
-      "country_peru": "Peru",
-      "country_turkey": "Türkiye",
-      "country_china": "Çin",
-      "country_india": "Hindistan",
-      "country_cambodia": "Kamboçya",
-      "country_thailand": "Tayland",
-      "country_jordan": "Ürdün",
-      "country_maldives": "Maldivler",
-      "country_mexico": "Meksika",
-      "country_indonesia": "Endonezya",
-      "country_australia": "Avustralya",
-      "country_brazil": "Brezilya",
-      "country_hawaii": "Hawaii",
-      "country_usa": "ABD",
-      "country_singapore": "Singapur",
-      "country_denmark": "Danimarka",
-      "country_canada": "Kanada",
-      "country_netherlands": "Hollanda",
-      "country_uae": "BAE",
-      "country_uk": "Birleşik Krallık",
-      "country_costa_rica": "Kosta Rika",
-      "country_new_zealand": "Yeni Zelanda",
-      "country_tanzania": "Tanzanya",
-      "country_norway": "Norveç",
-      "country_kenya": "Kenya",
-      "country_iceland": "İzlanda",
-      "country_venezuela": "Venezuela",
-      "country_namibia": "Namibya",
-      "country_germany": "Almanya",
-      "country_argentina": "Arjantin",
-      "country_colombia": "Kolombiya",
-      "country_finland": "Finlandiya",
-      "country_hong_kong": "Hong Kong",
-      "country_south_korea": "Güney Kore",
-      "country_portugal": "Portekiz"
+    "PopularDestinations": {
+      "Title": "Popüler Destinasyonlar",
+      "c1": "Dubai",
+      "c2": "İstanbul",
+      "c3": "Malezya",
+      "c4": "Şarm El-Şeyh",
+      "c5": "Paris"
     },
-    "cities": {
-      "city_paris": "Paris",
-      "city_venice": "Venedik",
-      "city_santorini": "Santorini",
-      "city_seville": "Sevilla",
-      "city_marrakech": "Marakeş",
-      "city_prague": "Prag",
-      "city_budapest": "Budapeşte",
-      "city_dubrovnik": "Dubrovnik",
-      "city_vienna": "Viyana",
-      "city_kyoto": "Kyoto",
-      "city_cairo": "Kahire",
-      "city_cusco": "Cusco",
-      "city_istanbul": "İstanbul",
-      "city_beijing": "Pekin",
-      "city_agra": "Agra",
-      "city_siem_reap": "Siem Reap",
-      "city_bangkok": "Bangkok",
-      "city_petra": "Petra",
-      "city_male": "Malé",
-      "city_cancun": "Cancún",
-      "city_phuket": "Phuket",
-      "city_bali": "Bali",
-      "city_mykonos": "Mikonos",
-      "city_gold_coast": "Gold Coast",
-      "city_majorca": "Mayorka",
-      "city_florianopolis": "Florianópolis",
-      "city_maui": "Maui",
-      "city_orlando": "Orlando",
-      "city_barcelona": "Barselona",
-      "city_singapore": "Singapur",
-      "city_tokyo": "Tokyo",
-      "city_copenhagen": "Kopenhag",
-      "city_vancouver": "Vancouver",
-      "city_amsterdam": "Amsterdam",
-      "city_dubai": "Dubai",
-      "city_london": "Londra",
-      "city_monteverde": "Monteverde",
-      "city_queenstown": "Queenstown",
-      "city_banff": "Banff",
-      "city_zanzibar": "Zanzibar",
-      "city_tromso": "Tromsø",
-      "city_masai_mara": "Masai Mara",
-      "city_reykjavik": "Reykjavik",
-      "city_canaima": "Canaima",
-      "city_sossusvlei": "Sossusvlei",
-      "city_berlin": "Berlin",
-      "city_sydney": "Sidney",
-      "city_rio": "Rio de Janeiro",
-      "city_buenos_aires": "Buenos Aires",
-      "city_cartagena": "Cartagena",
-      "city_helsinki": "Helsinki",
-      "city_hong_kong": "Hong Kong",
-      "city_seoul": "Seul",
-      "city_porto": "Porto"
-    }
+    "ContactUs": {
+      "Title": "İletişim",
+      "Location": "Londra, Birleşik Krallık"
+    },
+    "BootomFooter": "Hotlino, Tüm hakları saklıdır | Abdullah Hassoun 2025"
   },
-  "MobileApp": {
-    "Badge": "Yeni Deneyim",
-    "Heading": "Hotlino uygulamasını indirin ve yolculuğunuzu dakikalar içinde rezerve edin",
-    "SubHeading": "Uygulamamız aracılığıyla olağanüstü bir rezervasyon deneyimi yaşayın. Binlerce teklifi inceleyin, rezervasyonlarınızı yönetin ve her yerden, her zaman sınırsız seyahat edin.",
-    "Features": {
-      "One": {
-        "Title": "Anında Rezervasyon",
-        "Text": "Rezervasyonunuzu 2 dakikadan kısa sürede tamamlayın"
-      },
-      "Two": {
-        "Title": "Özel Teklifler",
-        "Text": "Yalnızca uygulama kullanıcıları için %50'ye varan indirimler"
-      },
-      "Three": {
-        "Title": "Fırsat Uyarıları",
-        "Text": "Favori destinasyonlarınızdaki son fırsatları ilk siz öğrenin"
-      },
-      "Four": {
-        "Title": "Güvenli Ödemeler",
-        "Text": "En yüksek işlem koruma standartlarıyla çoklu ödeme sistemleri"
+    "Homepage": {
+    "Search": {
+      "Tabs": {
+        "flights": "Uçuşlar",
+        "hotels": "Otel"
       }
     },
-    "AvailableNow": "Tüm cihazlarda mevcut",
-    "DownloadButton": "İndir",
-    "mobile": {
-      "Heading": "Hotlino",
-      "Text": "Ara. Rezerve Et. Seyahat Et",
-      "Card": {
-        "Title": "Riyad ⇨ Dubai",
-        "Date": "Perşembe 15 Temmuz",
-        "Price": "899 SAR"
+    "PromoCarousel": {
+      "title": "Bizimle seyahat anlam kazanır.",
+      "Cards": {
+        "one": {
+          "title": "Araç Kiralama",
+          "des": "Varış noktanızda en iyi araç kiralama tekliflerini alın"
+        },
+        "two": {
+          "title": "eSIM Paketleri",
+          "des": "Fiziksel SIM kart olmadan varışta anında internet bağlantısı"
+        },
+        "three": {
+          "title": "Vize Gereksinimleri",
+          "des": "Rezervasyon yapmadan önce gideceğiniz yer için seyahat gereksinimlerini öğrenin"
+        },
+        "four": {
+          "title": "Havaalanı Hizmetleri",
+          "des": "Rekabetçi fiyatlarla premium havaalanı transferleri"
+        },
+        "btn": "Daha Fazla Keşfet"
+      }
+    },
+    "FeaturesSection": {
+      "one": "Amerika Birleşik Devletleri'ndeki en iyi seyahat fırsatları",
+      "two": "Binlerce uçuş ve otel teklifi",
+      "three": "Çoklu ödeme yöntemleri",
+      "four": "7/24 müşteri hizmetleri"
+    },
+    "ArticlesCarousel": {
+      "title": "Son Makaleler",
+      "seeMore": "Daha Fazla Makale",
+      "readArticle": "Makaleyi Oku",
+      "articles": {
+        "1": {
+          "title": "Pandemi Sonrası Dünyada Seyahatin Geleceği",
+          "description": "Seyahat endüstrisinin mevcut küresel ortamda yeni zorluklara ve değişen seyyah davranışlarına nasıl uyum sağladığının keşfi.",
+          "department": "Seyahat Trendleri",
+          "blogName": "Wanderlust Insights"
+        },
+        "2": {
+          "title": "Güneydoğu Asya'da Mutlaka Ziyaret Etmeniz Gereken 10 Gizli Cazibe",
+          "description": "Turist kalabalıklarından uzakta benzersiz deneyimler sunan Güneydoğu Asya'nın keşfedilmemiş rotalarını keşfedin.",
+          "department": "Rota Rehberi",
+          "blogName": "Explorer's Diary"
+        },
+        "3": {
+          "title": "Sürdürülebilir Seyahat: Karbon Ayak İzinizi Nasıl Azaltırsınız?",
+          "description": "Dünyayı keşfederken çevresel etkilerini en aza indirmek isteyen bilinçli gezginler için pratik ipuçları ve stratejiler.",
+          "department": "Ekoturizm",
+          "blogName": "The Green Traveler"
+        },
+        "4": {
+          "title": "Dijital Göçebeler İçin Kapsamlı Rota Rehberi",
+          "description": "Güvenilir internet, ortak çalışma alanları ve canlı topluluklar sunan dünyanın dijital göçebeler için en iyi şehirleri.",
+          "department": "Çalışma ve Seyahat",
+          "blogName": "Nomad Life"
+        },
+        "5": {
+          "title": "Mutfak Maceraları: Dünyanın Sokak Lezzetleri Turları",
+          "description": "Her rotadaki sokak lezzetleri pazarları ve denenmesi gereken yemeklerle dolu bir gastronomi yolculuğu.",
+          "department": "Yemek ve Kültür",
+          "blogName": "Taste the World"
+        },
+        "6": {
+          "title": "Aile Seyahati İpuçları: Çocuklarla Stressiz Tatiller",
+          "description": "Tüm yaşlara ve ilgi alanlarına hitap eden aile tatilleri için uzman tavsiyeleri.",
+          "department": "Aile Seyahati",
+          "blogName": "Happy Journeys"
+        }
+      }
+    },
+    "PopularAirlines": {
+      "title": "Amerika Birleşik Devletleri'ndeki Popüler Havayolları",
+      "subtitle": "Favori havayollarınızla uygun fiyatlı uçuşlar rezerve edin"
+    },
+    "TripIdeas": {
+      "title": "ABD'den Seyahat Fikirleri",
+      "subtitle": "Özenle hazırlanmış seyahat önerileriyle mükemmel rotanızı keşfedin",
+      "tabs": {
+        "romantic": "Romantik Kaçamaklar",
+        "cultural": "Kültürel Deneyimler",
+        "beach": "Plaj Rotası",
+        "family": "Aile Dostu",
+        "nature": "Doğa ve Macera",
+        "forTrips": "Seyahatler İçin"
       },
-      "Card2": {
-        "Title": "Cidde ⇨ İstanbul",
-        "Date": "Cumartesi 20 Ağustos",
-        "Price": "1.250 SAR"
+      "card": {
+        "roundTrip": "Gidiş-Dönüş",
+        "details": "Detaylar"
       },
-      "ReadQrCode": "Uygulamayı yüklemek için tarayın"
-    }
-  },
-  "FlightDestinations": {
-    "1": {
-      "title": "Amerika Birleşik Devletleri'nden En İyi Şehirlere Uçuşlar"
+      "countries": {
+        "country_france": "Fransa",
+        "country_italy": "İtalya",
+        "country_greece": "Yunanistan",
+        "country_spain": "İspanya",
+        "country_morocco": "Fas",
+        "country_czech": "Çek Cumhuriyeti",
+        "country_hungary": "Macaristan",
+        "country_croatia": "Hırvatistan",
+        "country_austria": "Avusturya",
+        "country_japan": "Japonya",
+        "country_egypt": "Mısır",
+        "country_peru": "Peru",
+        "country_turkey": "Türkiye",
+        "country_china": "Çin",
+        "country_india": "Hindistan",
+        "country_cambodia": "Kamboçya",
+        "country_thailand": "Tayland",
+        "country_jordan": "Ürdün",
+        "country_maldives": "Maldivler",
+        "country_mexico": "Meksika",
+        "country_indonesia": "Endonezya",
+        "country_australia": "Avustralya",
+        "country_brazil": "Brezilya",
+        "country_hawaii": "Hawaii",
+        "country_usa": "Amerika Birleşik Devletleri",
+        "country_singapore": "Singapur",
+        "country_denmark": "Danimarka",
+        "country_canada": "Kanada",
+        "country_netherlands": "Hollanda",
+        "country_uae": "BAE",
+        "country_uk": "Birleşik Krallık",
+        "country_costa_rica": "Kosta Rika",
+        "country_new_zealand": "Yeni Zelanda",
+        "country_tanzania": "Tanzanya",
+        "country_norway": "Norveç",
+        "country_kenya": "Kenya",
+        "country_iceland": "İzlanda",
+        "country_venezuela": "Venezuela",
+        "country_namibia": "Namibya",
+        "country_germany": "Almanya",
+        "country_argentina": "Arjantin",
+        "country_colombia": "Kolombiya",
+        "country_finland": "Finlandiya",
+        "country_hong_kong": "Hong Kong",
+        "country_south_korea": "Güney Kore",
+        "country_portugal": "Portekiz"
+      },
+      "cities": {
+        "city_paris": "Paris",
+        "city_venice": "Venedik",
+        "city_santorini": "Santorini",
+        "city_seville": "Sevilla",
+        "city_marrakech": "Marakeş",
+        "city_prague": "Prag",
+        "city_budapest": "Budapeşte",
+        "city_dubrovnik": "Dubrovnik",
+        "city_vienna": "Viyana",
+        "city_kyoto": "Kyoto",
+        "city_cairo": "Kahire",
+        "city_cusco": "Cusco",
+        "city_istanbul": "İstanbul",
+        "city_beijing": "Pekin",
+        "city_agra": "Agra",
+        "city_siem_reap": "Siem Reap",
+        "city_bangkok": "Bangkok",
+        "city_petra": "Petra",
+        "city_male": "Malé",
+        "city_cancun": "Cancún",
+        "city_phuket": "Phuket",
+        "city_bali": "Bali",
+        "city_mykonos": "Mikonos",
+        "city_gold_coast": "Gold Coast",
+        "city_majorca": "Mallorca",
+        "city_florianopolis": "Florianópolis",
+        "city_maui": "Maui",
+        "city_orlando": "Orlando",
+        "city_barcelona": "Barselona",
+        "city_singapore": "Singapur",
+        "city_tokyo": "Tokyo",
+        "city_copenhagen": "Kopenhag",
+        "city_vancouver": "Vancouver",
+        "city_amsterdam": "Amsterdam",
+        "city_dubai": "Dubai",
+        "city_london": "Londra",
+        "city_monteverde": "Monteverde",
+        "city_queenstown": "Queenstown",
+        "city_banff": "Banff",
+        "city_zanzibar": "Zanzibar",
+        "city_tromso": "Tromsø",
+        "city_masai_mara": "Masai Mara",
+        "city_reykjavik": "Reykjavik",
+        "city_canaima": "Canaima",
+        "city_sossusvlei": "Sossusvlei",
+        "city_berlin": "Berlin",
+        "city_sydney": "Sidney",
+        "city_rio": "Rio de Janeiro",
+        "city_buenos_aires": "Buenos Aires",
+        "city_cartagena": "Cartagena",
+        "city_helsinki": "Helsinki",
+        "city_hong_kong": "Hong Kong",
+        "city_seoul": "Seul",
+        "city_porto": "Porto"
+      }
     },
-    "2": {
-      "title": "Amerika Birleşik Devletleri'nden En İyi Ülkelere Uçuşlar"
+    "MobileApp": {
+      "Badge": "Yeni Deneyim",
+      "Heading": "Hotlino Uygulamasını İndirin ve Seyahatinizi Dakikalar İçinde Rezerve Edin",
+      "SubHeading": "Uygulamamız aracılığıyla olağanüstü bir rezervasyon deneyimi yaşayın. Binlerce teklife göz atın, rezervasyonlarınızı yönetin ve her yerden, her zaman limitsiz seyahat edin.",
+      "Features": {
+        "One": {
+          "Title": "Anında Rezervasyon",
+          "Text": "Basit adımlarla rezervasyonunuzu iki dakikadan kısa sürede tamamlayın"
+        },
+        "Two": {
+          "Title": "Özel Teklifler",
+          "Text": "Sadece uygulama kullanıcılarına özel %50'ye varan indirimler"
+        },
+        "Three": {
+          "Title": "Fırsat Uyarıları",
+          "Text": "Favori rotalarınızdaki en son tekliflerden ilk siz haberdar olun"
+        },
+        "Four": {
+          "Title": "Güvenli Ödemeler",
+          "Text": "En yüksek işlem koruma standartlarına sahip çoklu ödeme sistemleri"
+        }
+      },
+      "AvailableNow": "Tüm cihazlarda mevcut",
+      "DownloadButton": "Uygulamayı İndir",
+      "mobile": {
+        "Heading": "Hotlino",
+        "Text": "Ara. Rezerve Et. Seyahat Et",
+        "Card": {
+          "Title": "Riyad ⇨ Dubai",
+          "Date": "15 Temmuz Perşembe",
+          "Price": "899 SAR"
+        },
+        "Card2": {
+          "Title": "Cidde ⇨ İstanbul",
+          "Date": "20 Ağustos Cumartesi",
+          "Price": "1.250 SAR"
+        },
+        "ReadQrCode": "Uygulamayı Yüklemek için QR Kodu Tara"
+      }
     },
-    "3": {
-      "title": "En İyi Şehirlerde Oteller"
-    },
-    "4": {
-      "title": "En İyi Ülkelerde Oteller"
+    "TagsMarquee": {
+      "Flights": {
+        "title": "En İyi Ülkelere Uçuşlar"
+      }
     }
   },
   "SearchFlightsComponent": {
@@ -471,34 +486,6 @@
     "RatingHigh": "En Yüksek Puan",
     "DistanceCenter": "Merkeze Mesafe"
   },
-  "Footer": {
-    "Logo": "Hotlino",
-    "AboutUs": {
-      "Title": "Hotlino Hakkında",
-      "Text": "En iyi seyahat, uçuş ve otel tekliflerini rekabetçi fiyatlarla sunuyoruz. Bir sonraki yolculuğunuzu bizimle rezerve edin ve tasarruf edin."
-    },
-    "QuickLinks": {
-      "Title": "Hızlı Bağlantılar",
-      "Home": "Ana Sayfa",
-      "Flight": "Uçuşlar",
-      "Hotel": "Otel",
-      "FeaturedDeals": "Öne Çıkan Fırsatlar",
-      "Contact": "Uygulama"
-    },
-    "PopularDestinations": {
-      "Title": "Popüler Destinasyonlar",
-      "c1": "Dubai",
-      "c2": "İstanbul",
-      "c3": "Malezya",
-      "c4": "Şarm El-Şeyh",
-      "c5": "Paris"
-    },
-    "ContactUs": {
-      "Title": "İletişim",
-      "Location": "Londra, Birleşik Krallık"
-    },
-    "BootomFooter": "Hotlino, Tüm hakları saklıdır | Abdullah Hassoun 2025"
-  },
   "AppDownloadPage": {
     "hero": {
       "title": "Mükemmel Seyahat Arkadaşınız",
@@ -658,5 +645,114 @@
     "invalid_email": "Geçersiz e-posta adresi",
     "password_required": "Şifre gereklidir",
     "password_min_length": "Şifre en az 6 karakter olmalıdır"
+  },
+  "Hotel": {
+    "HotelPage": {
+      "Breadcrumb": {
+        "Home": "Ana Sayfa",
+        "Hotels": "Otel"
+      },
+      "Tabs": {
+        "1": "Odalar",
+        "2": "Misafir Değerlendirmesi",
+        "3": "Yorumlar",
+        "4": "Harita",
+        "5": "Benzer Oteller",
+        "6": "Detaylar"
+      },
+      "Reviews": "yorum",
+      "BookNow": "Şimdi Rezervasyon Yap",
+      "PriceSummary": {
+        "Title": "Fiyat Özeti",
+        "Dates": "Tarihler",
+        "Guests": "Misafirler",
+        "RoomType": "Oda Tipi",
+        "Total": "Toplam",
+        "Savings": "{amount} tasarruf ediyorsunuz",
+        "TaxesIncluded": "Vergiler ve ücretler dahil"
+      },
+      "Amenities": "Olanaklar",
+      "Guests": "misafir",
+      "PerNight": "/ gece",
+      "TaxesIncluded": "Vergiler dahil",
+      "SelectRoom": "Oda Seç",
+      "Star": "yıldız",
+      "Location": "Konum",
+      "LoadMoreReviews": "Daha fazla yorum yükle",
+      "Description": "Açıklama",
+      "Policies": "Politikalar",
+      "CheckInOut": "Giriş / Çıkış",
+      "CheckIn": "Giriş",
+      "CheckOut": "Çıkış",
+      "CancellationPolicy": "İptal Politikası",
+      "CancellationPolicyText": "Girişten 48 saat öncesine kadar ücretsiz iptal. Sonrasında iptaller ücrete tabidir.",
+      "ChildrenPets": "Çocuklar ve Evcil Hayvanlar",
+      "ChildrenPolicy": "Tüm yaşlardan çocuklar kabul edilir.",
+      "PetsPolicy": "Evcil hayvanlar, gece başına 25$ ek ücretle kabul edilir.",
+      "Payment": "Ödeme",
+      "PaymentMethods": "Kredi kartı (Visa, MasterCard, American Express) ve PayPal kabul ediyoruz."
+    },
+    "BookingPage": {
+      "helpCenter": "Yardım Merkezi",
+      "step1": "Arama",
+      "step2": "Detaylar",
+      "step3": "Onay",
+      "bookingDetails": "Rezervasyon Detaylarınız",
+      "amenity1": "Ücretsiz WiFi",
+      "amenity2": "Yüzme Havuzu",
+      "amenity3": "Spa",
+      "dates": "Tarihler",
+      "checkIn": "Giriş",
+      "checkOut": "Çıkış",
+      "nights": "gece",
+      "roomDetails": "Oda Detayları",
+      "guests": "Misafirler",
+      "adults": "yetişkin",
+      "guestInfo": "Misafir Bilgisi",
+      "fullName": "Tam Adı",
+      "fullNamePlaceholder": "John Doe",
+      "emailPlaceholder": "john@example.com",
+      "phone": "Telefon Numarası",
+      "phonePlaceholder": "+971 50 123 4567",
+      "country": "Ülke",
+      "selectCountry": "Ülke seçin",
+      "uae": "Birleşik Arap Emirlikleri",
+      "saudi": "Suudi Arabistan",
+      "qatar": "Katar",
+      "oman": "Umman",
+      "specialRequests": "Özel İstekler (Opsiyonel)",
+      "requestsPlaceholder": "Özel bir isteğiniz var mı?",
+      "paymentSummary": "Ödeme Özeti",
+      "roomPrice": "Oda Fiyatı ({nights} gece)",
+      "taxes": "Vergiler ve Ücretler",
+      "total": "Toplam",
+      "paymentMethod": "Ödeme Yöntemi",
+      "creditCard": "Kredi/Banka Kartı",
+      "cardDetails": "Kart Detayları",
+      "cardName": "Kart Üzerindeki İsim",
+      "completeBooking": "Rezervasyonu Tamamla",
+      "saveForLater": "Daha Sonra Kaydet",
+      "termsNote": "Bu rezervasyonu tamamlayarak, Hizmet Şartlarımızı ve Gizlilik Politikamızı kabul etmiş olursunuz. Rezervasyonunuz güvenli ve şifrelenmiştir.",
+      "copyright": "© 2025 Luxury Hotels Group. Tüm hakları saklıdır.",
+      "terms": "Şartlar",
+      "privacy": "Gizlilik",
+      "faq": "SSS",
+      "contact": "İletişim",
+      "hotelName": "Lüks Resort & Spa",
+      "hotelLocation": "Dubai, Birleşik Arap Emirlikleri",
+      "checkInDate": "Pzt, 20 Ağu 2025",
+      "checkOutDate": "Cum, 25 Ağu 2025",
+      "roomType": "Deluxe Deniz Manzaralı",
+      "paypalRedirect": "Ödemenizi tamamlamak için PayPal'a yönlendirileceksiniz",
+      "continueToPaypal": "PayPal'a Devam Et",
+      "paymentSuccessTitle": "Ödeme Başarılı!",
+      "paymentSuccessMessage": "Rezervasyonunuz onaylandı. Onay e-postası adresinize gönderildi.",
+      "viewBooking": "Rezervasyonu Görüntüle",
+      "backToHome": "Ana Sayfaya Dön",
+      "processing": "Ödeme İşleniyor...",
+      "stripeNotLoaded": "Stripe henüz yüklenmedi",
+      "cardElementNotFound": "Kart öğesi bulunamadı",
+      "paymentFailed": "Ödeme başarısız. Lütfen tekrar deneyin."
+    }
   }
 }

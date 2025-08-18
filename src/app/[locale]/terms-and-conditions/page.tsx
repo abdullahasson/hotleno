@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { ChevronUp, FileText, ArrowUp, BookOpen } from 'lucide-react';
-import Header from '@/components/common/header';
+import Header from '@/components/flights/Header';
 import Footer from "@/components/common/footer";
 import { useTranslations, useLocale } from "next-intl";
 
@@ -35,7 +35,7 @@ export default function TermsAndConditionsPage() {
         <>
             <Header />
             <div className={`min-h-screen bg-gradient-to-b from-white to-blue-50 ${isRTL ? 'rtl' : 'ltr'}`}>
-                {/* Hero Section */}
+                {/* Modern Hero Section */}
                 <section className="relative min-h-screen flex items-center justify-center py-24 px-4 overflow-hidden bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
                     {/* Background SVG Shapes */}
                     <div className="absolute inset-0 z-0 opacity-20">
@@ -55,12 +55,13 @@ export default function TermsAndConditionsPage() {
                             />
                         </svg>
                     </div>
-                    <div className="max-w-7xl mx-auto relative z-10">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div className="max-w-7xl relative z-10">
+                        <div className="flex justify-between w-7xl mx-auto items-center">
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7 }}
+                                className='flex-1'
                             >
                                 <motion.h1
                                     className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
@@ -100,7 +101,7 @@ export default function TermsAndConditionsPage() {
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.7 }}
-                                className="flex justify-center"
+                                className="flex justify-end flex-1"
                             >
                                 <div className="relative">
                                     <div className="absolute -inset-4 bg-white/10 backdrop-blur-sm rounded-2xl rotate-6"></div>
@@ -120,7 +121,7 @@ export default function TermsAndConditionsPage() {
                         </div>
                     </div>
                 </section>
-
+ 
                 {/* Terms Content */}
                 <div className="max-w-7xl mx-auto py-16 px-4 -mt-12">
                     <div className="bg-white rounded-2xl shadow-xl p-6 md:p-10">

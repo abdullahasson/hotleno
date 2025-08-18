@@ -73,11 +73,12 @@ export default function ContactUsPage() {
                     </div>
 
                     <div className="max-w-7xl relative z-10">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div className="flex justify-between w-7xl mx-auto items-center">
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7 }}
+                                className='flex-1'
                             >
                                 <div className="flex items-center gap-3 mb-6">
                                     <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
@@ -134,7 +135,7 @@ export default function ContactUsPage() {
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.7 }}
-                                className="flex justify-center"
+                                className="flex flex-1 justify-end"
                             >
                                 <div className="relative">
                                     <div className="absolute -inset-4 bg-white/10 backdrop-blur-sm rounded-2xl rotate-6"></div>

@@ -416,7 +416,7 @@ body {
 
 .language-dropdown {
   position: absolute;
-  top: calc(100% + 30px);
+  top: calc(100% + 0px);
   left: 50%;
   width: 180px;
   background: white;
@@ -429,23 +429,11 @@ body {
   overflow: hidden;
 }
 
-.language-dropdown::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  right: 20px;
-  width: 16px;
-  height: 16px;
-  background: white;
-  transform: rotate(45deg);
-  box-shadow: -3px -3px 5px rgba(0, 0, 0, 0.03);
-}
-
 .language-item {
-  padding: 12px 15px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   transition: all 0.2s ease;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -467,7 +455,7 @@ body {
   content: '';
   position: absolute;
   top: 50%;
-  right: 10px;
+  left: 10px;
   transform: translateY(-50%);
   width: 6px;
   height: 10px;
@@ -475,8 +463,17 @@ body {
   border-bottom: 2px solid #2563eb;
   transform: translateY(-50%) rotate(45deg);
 }
+[lang = 'ar'] .language-item.active::after {
+  right: 10px;
+}
+
 
 .language-item.active .language-flag {
+  margin: 0;
+  margin-left: 10px;
+}
+[lang = 'ar'] .language-item.active .language-flag {
+  margin: 0;
   margin-right: 10px;
 }
 
@@ -489,6 +486,11 @@ body {
 .language-code {
   font-size: 12px;
   color: #94a3b8;
+  margin: 0;
+  margin-left: auto;
+}
+[lang = 'ar'] .language-code {
+  margin: 0;
   margin-right: auto;
 }
 

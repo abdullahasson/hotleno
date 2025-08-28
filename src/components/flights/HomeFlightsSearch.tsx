@@ -167,7 +167,7 @@ export default function HomeFlightsSearch({
         className={`
           bg-white 
           w-full 
-          ${position === 'flights-to' ? 'rounded-3xl relative' : 'rounded-none'}
+          ${position === 'flights-to' ? 'rounded-3xl relative' : 'rounded-b-2xl'}
           shadow-2xl 
           px-8 pb-8 pt-4 max-[767px]:p-6 
           border border-gray-100

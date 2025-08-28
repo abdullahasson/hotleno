@@ -15,11 +15,11 @@ const Search = () => {
     const t = useTranslations("Homepage.Search");
 
     return (
-        <div className="bg-white w-[80%] max-[767px]:w-[100%] mx-auto">
+        <div className="w-[80%] max-[767px]:w-[100%] mx-auto">
             <Tabs defaultValue="flights" className="!gap-0">
-                <TabsList className="!rounded-none bg-white !pb-0">
-                    <TabsTrigger value="flights">{t("Tabs.flights")}</TabsTrigger>
-                    <TabsTrigger value="hotels">{t("Tabs.hotels")}</TabsTrigger>
+                <TabsList className="w-full bg-white !justify-end !pb-0 !rounded-t-2xl !rounded-b-none">
+                    <TabsTrigger value="hotels" className="flex-[0]">{t("Tabs.hotels")}</TabsTrigger>
+                    <TabsTrigger value="flights" className="flex-[0]">{t("Tabs.flights")}</TabsTrigger>
                 </TabsList>
                 <TabsContent value="flights" className="border-t border-gray-300">
                     <HomeFlightsSearch position="tab" />

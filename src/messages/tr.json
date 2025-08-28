@@ -37,7 +37,7 @@
     },
     "BootomFooter": "Hotlino, Tüm hakları saklıdır | Abdullah Hassoun 2025"
   },
-    "Homepage": {
+  "Homepage": {
     "Search": {
       "Tabs": {
         "flights": "Uçuşlar",
@@ -284,6 +284,187 @@
         "title": "En İyi Ülkelere Uçuşlar"
       }
     }
+  },
+  "about": {
+    "title": "Hotleno Hakkında",
+    "description": "Dünya çapında sorunsuz otel rezervasyonlarında güvenilir partneriniz",
+    "heroTitle": "Hotleno Hakkında",
+    "heroSubtitle": "Yenilik, şeffaflık ve güven ile seyahat deneyimlerini dönüştürüyoruz",
+    "registration": {
+      "title": "Resmi Kayıt",
+      "certificate": "Limited Şirket Kuruluş Belgesi",
+      "subtitle": "Özel Limited Şirket",
+      "companyNumber": "Şirket Numarası",
+      "incorporationDate": "Kuruluş Tarihi",
+      "date": "16 Temmuz 2025",
+      "statement": "İngiltere ve Galler Şirketler Sicil Memuru, HOTLENO LTD şirketinin Companies Act 2006 kapsamında, hisselerle sınırlı, özel bir şirket olarak İngiltere ve Galler'de kayıtlı ofisi ile kurulduğunu belgelendirir.",
+      "location": "Companies House, Cardiff'te düzenlenmiştir"
+    },
+    "story": {
+      "title": "Hikayemiz",
+      "paragraph1": "2025 yılında kurulan Hotleno, basit ama güçlü bir fikirden doğdu: Seyahat zahmetsiz, şeffaf ve herkes için erişilebilir olmalı. Platformumuz, seyahat endüstrisini kemiren karmaşık rezervasyon sistemleri ve gizli ücretlerden duyulan hayal kırıklığı sonucu ortaya çıktı.",
+      "paragraph2": "Bugün, seyahat hizmetleri, rezervasyonlar ve görünürlük konusunda uzmanlaşmış İngiltere kayıtlı bir şirket (Şirket Numarası 16587327) olmaktan gurur duyuyoruz. En yüksek hizmet ve dürüstlük standartlarını korurken, yolcuları rekabetçi fiyatlarla mükemmel konaklama seçenekleriyle buluşturuyoruz."
+    },
+    "values": {
+      "title": "Temel Değerlerimiz",
+      "subtitle": "Hotleno'da tüm yaptıklarımıza rehberlik eden ilkeler",
+      "transparency": {
+        "title": "Şeffaflık",
+        "description": "Gizli ücret yok, sürpriz yok. Rezervasyon sürecinizin her adımında net fiyatlandırma ve dürüst iletişime inanıyoruz."
+      },
+      "trust": {
+        "title": "Güven",
+        "description": "İtibarımızı güvenilirlik ve dürüstlük üzerine kurduk. Güvenliğiniz ve memnuniyetiniz en öncelikli konularımızdır."
+      },
+      "innovation": {
+        "title": "Yenilikçilik",
+        "description": "Seyahat planlamasını basitleştiren ve deneyiminizi geliştiren en son teknoloji özellikleri sunmak için platformumuzu sürekli geliştiriyoruz."
+      }
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "paragraph1": "Hotleno olarak, insanların seyahat konaklamalarını keşfetme ve rezervasyon yapma şeklini dönüştürme misyonuyla çalışıyoruz. Mükemmel konaklama yerini bulmanın basit, şeffaf ve keyifli olması gerektiğine inanıyoruz.",
+      "paragraph2": "En son teknolojilerden yararlanarak ve en yüksek dürüstlük standartlarını koruyarak, yolculara rekabetçi fiyatlarla çeşitli konaklama seçeneklerine benzersiz erişim sağlıyoruz. Platformumuz, kullanıcılara seçeneklerine dair kapsamlı görünürlük sunarak, güvenle bilinçli kararlar vermelerini sağlıyor.",
+      "ctaTitle": "Seyahat Deneyimlerinde Yenilik",
+      "ctaDescription": "Yolcuların ihtiyaçlarını öngören ve beklentilerini aşan sorunsuz rezervasyon deneyimleri yaratmak için sınırları sürekli zorluyoruz."
+    },
+    "stats": {
+      "properties": "Konaklama",
+      "countries": "Ülke",
+      "support": "Destek",
+      "satisfaction": "Memnuniyet"
+    },
+    "cta": {
+      "title": "Hotleno'ya güvenen milyonlarca yolcuya katılın",
+      "subtitle": "Şeffaf fiyatlandırma, yenilikçi özellikler ve olağanüstü hizmetin farkını yaşayın.",
+      "button": "Yolculuğa Başla"
+    }
+  },
+  "contact": {
+    "title": "İletişim",
+    "description": "Ekibimizle iletişime geçin",
+    "heroTitle": "Yardım İçin Buradayız",
+    "heroSubtitle": "Destek İletişimi",
+    "heroDescription": "Özverili ekibimiz, seyahat deneyiminizle ilgili her türlü soru veya endişeniz için yardıma hazırdır.",
+    "heroStats": {
+      "support": "Küresel Destek",
+      "languages": "Desteklenen Diller"
+    },
+    "heroContact": {
+      "title": "Doğrudan Arayın",
+      "email": "E-posta Gönderin",
+      "description": "Destek ekibimiz genellikle 1 iş günü içinde yanıt verir"
+    },
+    "info": {
+      "address": {
+        "title": "Genel Merkezimiz",
+        "value": "123 Travel Street, Londra, İngiltere, SW1A 1AA"
+      },
+      "phone": {
+        "title": "Telefon Numarası",
+        "value": "+44 20 1234 5678"
+      },
+      "email": {
+        "title": "E-posta Adresi",
+        "value": "destek@hotleno.com"
+      },
+      "hours": {
+        "title": "Çalışma Saatleri",
+        "value": "Pazartesi-Cuma: 09:00-18:00 GMT"
+      }
+    },
+    "form": {
+      "title": "Bize mesaj gönderin",
+      "name": "Tam Adı",
+      "email": "E-posta Adresi",
+      "subject": "Konu",
+      "message": "Mesajınız",
+      "button": "Mesajı Gönder",
+      "submitting": "Gönderiliyor...",
+      "success": "Teşekkürler! Mesajınız başarıyla gönderildi.",
+      "errors": {
+        "name": {
+          "required": "Ad zorunludur",
+          "minLength": "Ad en az 2 karakter olmalıdır"
+        },
+        "email": {
+          "required": "E-posta zorunludur",
+          "invalid": "Lütfen geçerli bir e-posta adresi girin"
+        },
+        "subject": {
+          "required": "Konu zorunludur",
+          "minLength": "Konu en az 5 karakter olmalıdır"
+        },
+        "message": {
+          "required": "Mesaj zorunludur",
+          "minLength": "Mesaj en az 10 karakter olmalıdır"
+        }
+      }
+    },
+    "mapTitle": "Londra Ofisimiz",
+    "supportTitle": "7/24 Müşteri Desteği",
+    "supportText": "Özel destek ekibimiz, seyahat ihtiyaçlarınıza yardımcı olmak için 7/24 hizmetinizdedir",
+    "supportHotline": "Acil Destek Hattı"
+  },
+  "terms": {
+    "title": "Şartlar ve Koşullar",
+    "heroTitle": "Hotleno Şartlar ve Koşulları",
+    "heroDescription": "Lütfen hizmetlerimizi kullanmadan önce bu şartları dikkatlice okuyun",
+    "lastUpdated": "Son Güncelleme",
+    "updateDate": "5 Ekim 2025",
+    "importantNotice": "Önemli Uyarı",
+    "noticeDescription": "Hizmetlerimizi kullanarak bu şartlar ve koşulları kabul etmiş olursunuz",
+    "overviewTitle": "Genel Bakış",
+    "overviewText1": "Hotleno'ya hoş geldiniz! Bu Hizmet Şartları, web sitemizi, mobil uygulamalarımızı ve ilgili hizmetlerimizi kullanımınızı düzenler. Hizmetlerimize erişerek veya kullanarak bu şartlara bağlı kalmayı kabul edersiniz.",
+    "overviewText2": "Bu şartlar yasal haklarınızı ve yükümlülüklerinizi etkiler. Bu şartları kabul etmiyorsanız, hizmetlerimizi kullanmayınız.",
+    "sections": {
+      "introduction": {
+        "title": "1. Giriş",
+        "content": "Bu Hizmet Şartları ('Şartlar'), Hotleno'nun web sitelerine, mobil uygulamalarına ve hizmetlerine ('Hizmetler') erişiminizi ve kullanımınızı düzenler. Lütfen Hizmetleri kullanmadan önce bu Şartları dikkatlice okuyunuz."
+      },
+      "definitions": {
+        "title": "2. Tanımlar",
+        "content": "<p>Bu Şartlarda:</p><ul><li>'Hotleno', 'biz', 'bize' veya 'bizim' Hotleno LTD'yi ifade eder</li><li>'Kullanıcı', 'siz' veya 'sizin' Hizmetlerimizi kullanan herhangi bir kişiyi ifade eder</li><li>'İçerik' metin, resim, video, yorum ve diğer materyaller anlamına gelir</li></ul>"
+      },
+      "accountRegistration": {
+        "title": "3. Hesap Kaydı",
+        "content": "<p>Bazı özelliklere erişmek için bir hesap oluşturmanız gerekebilir. Doğru bilgi sağlamalı ve hesabınızı güvende tutmalısınız.</p><p>Hesabınız altında gerçekleşen tüm faaliyetlerden siz sorumlusunuz.</p>"
+      },
+      "bookings": {
+        "title": "4. Rezervasyonlar ve Ödemeler",
+        "content": "<p>Tüm rezervasyonlar kontenjana tabidir. Fiyatlar yerel para biriminde gösterilir ancak ödeme işlemi sırasında dönüştürülebilir.</p><p>Ödeme sırasında gösterilen çeşitli ödeme yöntemlerini kabul ediyoruz. Ödemeniz güvenli bir şekilde işlenir.</p>"
+      },
+      "cancellations": {
+        "title": "5. İptaller ve İadeler",
+        "content": "<p>İptal politikaları konaklama yerine göre değişir. Lütfen rezervasyonunuz için özel iptal politikasını inceleyin.</p><p>Uygunsa, iadeler 14 iş günü içinde orijinal ödeme yöntemine işlenir.</p>"
+      },
+      "intellectualProperty": {
+        "title": "6. Fikri Mülkiyet",
+        "content": "<p>Platformumuzdaki tüm içerikler (metin, grafikler, logolar ve yazılım dahil) Hotleno veya lisans sahiplerinin mülkiyetindedir ve fikri mülkiyet yasalarıyla korunmaktadır.</p><p>İçeriğimizi açık yazılı izin olmadan kullanamazsınız.</p>"
+      },
+      "liability": {
+        "title": "7. Sorumluluk",
+        "content": "<p>Hotleno kullanıcılar ve konaklama sağlayıcılar arasında aracı olarak hareket eder. Konaklamanız sırasında ortaya çıkan sorunlardan sorumlu değiliz.</p><p>Sorumluluğumuz rezervasyonunuzun toplam maliyeti ile sınırlıdır.</p>"
+      },
+      "privacy": {
+        "title": "8. Gizlilik",
+        "content": "<p>Gizliliğiniz bizim için önemlidir. Kişisel bilgilerinizi nasıl topladığımızı ve kullandığımızı anlamak için <a>Gizlilik Politikamızı</a> inceleyin.</p>",
+        "link": "/privacy-policy"
+      },
+      "changes": {
+        "title": "9. Şartlardaki Değişiklikler",
+        "content": "<p>Bu Şartları zaman zaman güncelleyebiliriz. Önemli değişiklikleri platformumuz aracılığıyla veya e-posta yoluyla size bildireceğiz.</p><p>Değişiklikler sonrasında Hizmetlerimizi kullanmaya devam etmeniz yeni şartları kabul ettiğiniz anlamına gelir.</p>"
+      },
+      "governingLaw": {
+        "title": "10. Uygulanacak Hukuk",
+        "content": "<p>Bu Şartlar İngiltere ve Galler hukukuna tabidir. Herhangi bir uyuşmazlık İngiltere, Londra mahkemelerinde çözülecektir.</p>"
+      }
+    },
+    "acceptanceTitle": "Şartların Kabulü",
+    "acceptanceText": "Hizmetlerimizin herhangi bir bölümüne erişerek veya kullanarak bu Şartlara bağlı kalmayı kabul edersiniz. Bu Şartların tümünü kabul etmiyorsanız, Hizmetlerimizi kullanamazsınız.",
+    "contactText": "Bu Şartlarla ilgili sorularınız varsa lütfen bizimle iletişime geçin:",
+    "contactLink": "Destekle İletişim",
+    "backToTop": "Yukarı dön"
   },
   "SearchFlightsComponent": {
     "Location": {

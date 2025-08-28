@@ -7,6 +7,7 @@ import { Mail, MapPin, Phone, Clock, Send, MessageCircle, Globe, Users } from 'l
 import Header from '@/components/flights/Header';
 import Footer from "@/components/common/footer";
 import { useTranslations } from "next-intl";
+import emailjs from '@emailjs/browser';
 
 import { toast } from 'sonner';
 
@@ -26,18 +27,35 @@ export default function ContactUsPage() {
         reset
     } = useForm<FormData>();
 
-    const onSubmit = async () => {
-        // Simulate form submission
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        // In real app: fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) })
-        toast(t('form.success'), {
-            description: "",
-            position: 'top-center',
-            style: {
-                textAlign: 'start'
-            }
-        })
-        reset();
+    const onSubmit = async (data: FormData) => {
+        try {
+            // EmailJS integration
+            await emailjs.send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+                {
+                    from_name: data.name,
+                    from_email: data.email,
+                    subject: data.subject,
+                    message: data.message
+                },
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+            );
+
+            toast.success(t('form.success'), {
+                description: "",
+                position: 'top-center',
+                style: { textAlign: 'start' }
+            });
+            reset();
+        } catch (error) {
+            toast.error(t('form.error'), {
+                description: t('form.errorDescription'),
+                position: 'top-center',
+                style: { textAlign: 'start' }
+            });
+            console.error('Email sending failed:', error);
+        }
     };
 
     const contactInfo = [

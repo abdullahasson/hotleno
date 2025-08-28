@@ -37,7 +37,7 @@
     },
     "BootomFooter": "Hotlino, Todos los derechos reservados | Abdullah Hassoun 2025"
   },
-    "Homepage": {
+  "Homepage": {
     "Search": {
       "Tabs": {
         "flights": "Vuelos",
@@ -284,6 +284,187 @@
         "title": "Vuelos a los mejores países"
       }
     }
+  },
+    "about": {
+    "title": "Sobre Hotleno",
+    "description": "Su socio de confianza en reservas hoteleras sin complicaciones en todo el mundo",
+    "heroTitle": "Sobre Hotleno",
+    "heroSubtitle": "Revolucionando experiencias de viaje a través de innovación, transparencia y confianza",
+    "registration": {
+      "title": "Registro Oficial",
+      "certificate": "Certificado de Constitución",
+      "subtitle": "de una Sociedad de Responsabilidad Limitada",
+      "companyNumber": "Número de Empresa",
+      "incorporationDate": "Fecha de Constitución",
+      "date": "16 de julio de 2025",
+      "statement": "El Registro de Empresas de Inglaterra y Gales certifica por la presente que HOTLENO LTD está constituida en virtud de la Ley de Sociedades de 2006 como una empresa privada, limitada por acciones, con su domicilio social en Inglaterra y Gales.",
+      "location": "Emitido en Companies House, Cardiff"
+    },
+    "story": {
+      "title": "Nuestra Historia",
+      "paragraph1": "Fundada en 2025, Hotleno surgió de una idea simple pero poderosa: viajar debería ser sencillo, transparente y accesible para todos. Nuestra plataforma nació de la frustración con los complejos sistemas de reserva y las tarifas ocultas que plagan la industria de viajes.",
+      "paragraph2": "Hoy, nos enorgullece ser una empresa registrada en el Reino Unido (Número de Empresa 16587327) especializada en servicios de viajes, reservas y visibilidad. Conectamos a los viajeros con alojamientos perfectos a precios competitivos, manteniendo los más altos estándares de servicio e integridad."
+    },
+    "values": {
+      "title": "Nuestros Valores Fundamentales",
+      "subtitle": "Los principios que guían todo lo que hacemos en Hotleno",
+      "transparency": {
+        "title": "Transparencia",
+        "description": "Sin tarifas ocultas, sin sorpresas. Creemos en precios claros y comunicación honesta en cada paso de su proceso de reserva."
+      },
+      "trust": {
+        "title": "Confianza",
+        "description": "Hemos construido nuestra reputación sobre fiabilidad e integridad. Su seguridad y satisfacción son nuestras máximas prioridades."
+      },
+      "innovation": {
+        "title": "Innovación",
+        "description": "Evolucionamos continuamente nuestra plataforma para ofrecer funciones vanguardistas que simplifican la planificación de viajes y mejoran su experiencia."
+      }
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "paragraph1": "En Hotleno, tenemos la misión de transformar la forma en que las personas descubren y reservan alojamientos de viaje. Creemos que encontrar el lugar perfecto para hospedarse debería ser simple, transparente y placentero.",
+      "paragraph2": "Al aprovechar tecnología de vanguardia y mantener los más altos estándares de integridad, ofrecemos a los viajeros acceso inigualable a diversos alojamientos a precios competitivos. Nuestra plataforma brinda a los usuarios visibilidad integral sobre sus opciones, asegurando que tomen decisiones informadas con confianza.",
+      "ctaTitle": "Innovando Experiencias de Viaje",
+      "ctaDescription": "Constantemente estamos ampliando límites para crear experiencias de reserva sin complicaciones que anticipen las necesidades de los viajeros y superen sus expectativas."
+    },
+    "stats": {
+      "properties": "Alojamientos",
+      "countries": "Países",
+      "support": "Soporte",
+      "satisfaction": "Satisfacción"
+    },
+    "cta": {
+      "title": "Únase a millones de viajeros que confían en Hotleno",
+      "subtitle": "Experimente la diferencia: precios transparentes, funciones innovadoras y servicio excepcional.",
+      "button": "Comenzar"
+    }
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "description": "Comuníquese con nuestro equipo",
+    "heroTitle": "Estamos Aquí para Ayudarle",
+    "heroSubtitle": "Soporte de Contacto",
+    "heroDescription": "Nuestro equipo dedicado está listo para asistirle con cualquier pregunta o inquietud sobre su experiencia de viaje.",
+    "heroStats": {
+      "support": "Soporte Global",
+      "languages": "Idiomas Soportados"
+    },
+    "heroContact": {
+      "title": "Llámenos Directamente",
+      "email": "Escríbanos a",
+      "description": "Nuestro equipo de soporte suele responder en 1 día hábil"
+    },
+    "info": {
+      "address": {
+        "title": "Nuestra Sede Central",
+        "value": "123 Travel Street, Londres, Reino Unido, SW1A 1AA"
+      },
+      "phone": {
+        "title": "Teléfono",
+        "value": "+44 20 1234 5678"
+      },
+      "email": {
+        "title": "Correo Electrónico",
+        "value": "soporte@hotleno.com"
+      },
+      "hours": {
+        "title": "Horario Laboral",
+        "value": "Lunes-Viernes: 9:00-18:00 GMT"
+      }
+    },
+    "form": {
+      "title": "Envíenos un mensaje",
+      "name": "Nombre Completo",
+      "email": "Correo Electrónico",
+      "subject": "Asunto",
+      "message": "Su Mensaje",
+      "button": "Enviar Mensaje",
+      "submitting": "Enviando...",
+      "success": "¡Gracias! Su mensaje ha sido enviado exitosamente.",
+      "errors": {
+        "name": {
+          "required": "El nombre es obligatorio",
+          "minLength": "El nombre debe tener al menos 2 caracteres"
+        },
+        "email": {
+          "required": "El correo electrónico es obligatorio",
+          "invalid": "Por favor ingrese un correo electrónico válido"
+        },
+        "subject": {
+          "required": "El asunto es obligatorio",
+          "minLength": "El asunto debe tener al menos 5 caracteres"
+        },
+        "message": {
+          "required": "El mensaje es obligatorio",
+          "minLength": "El mensaje debe tener al menos 10 caracteres"
+        }
+      }
+    },
+    "mapTitle": "Nuestra Oficina en Londres",
+    "supportTitle": "Soporte al Cliente 24/7",
+    "supportText": "Nuestro equipo de soporte dedicado está disponible las 24 horas para asistirle con sus necesidades de viaje",
+    "supportHotline": "Línea de Emergencia"
+  },
+  "terms": {
+    "title": "Términos y Condiciones",
+    "heroTitle": "Términos y Condiciones de Hotleno",
+    "heroDescription": "Por favor lea estos términos cuidadosamente antes de usar nuestros servicios",
+    "lastUpdated": "Última Actualización",
+    "updateDate": "5 de octubre de 2025",
+    "importantNotice": "Aviso Importante",
+    "noticeDescription": "Al usar nuestros servicios, usted acepta estos términos y condiciones",
+    "overviewTitle": "Resumen",
+    "overviewText1": "¡Bienvenido a Hotleno! Estos Términos de Servicio rigen su uso de nuestro sitio web, aplicaciones móviles y servicios relacionados. Al acceder o usar nuestros servicios, usted acepta estar sujeto a estos términos.",
+    "overviewText2": "Estos términos afectan sus derechos y obligaciones legales. Si no está de acuerdo con estos términos, no use nuestros servicios.",
+    "sections": {
+      "introduction": {
+        "title": "1. Introducción",
+        "content": "Estos Términos de Servicio ('Términos') rigen su acceso y uso de los sitios web, aplicaciones móviles y servicios de Hotleno ('Servicios'). Por favor lea estos Términos cuidadosamente antes de usar los Servicios."
+      },
+      "definitions": {
+        "title": "2. Definiciones",
+        "content": "<p>En estos Términos:</p><ul><li>'Hotleno', 'nosotros' o 'nuestro' se refiere a Hotleno LTD</li><li>'Usuario', 'usted' o 'su' se refiere a cualquier persona que acceda o use nuestros Servicios</li><li>'Contenido' significa texto, imágenes, videos, reseñas y otros materiales</li></ul>"
+      },
+      "accountRegistration": {
+        "title": "3. Registro de Cuenta",
+        "content": "<p>Para acceder a ciertas funciones, es posible que necesite registrarse. Debe proporcionar información precisa y mantener su cuenta segura.</p><p>Usted es responsable de todas las actividades que ocurran bajo su cuenta.</p>"
+      },
+      "bookings": {
+        "title": "4. Reservas y Pagos",
+        "content": "<p>Todas las reservas están sujetas a disponibilidad. Los precios se muestran en moneda local pero pueden convertirse durante el procesamiento del pago.</p><p>Aceptamos varios métodos de pago como se muestra durante el pago. Su pago se procesa de forma segura.</p>"
+      },
+      "cancellations": {
+        "title": "5. Cancelaciones y Reembolsos",
+        "content": "<p>Las políticas de cancelación varían según el establecimiento. Revise la política específica para su reserva.</p><p>Los reembolsos, si aplican, se procesarán en 14 días hábiles al método de pago original.</p>"
+      },
+      "intellectualProperty": {
+        "title": "6. Propiedad Intelectual",
+        "content": "<p>Todo el contenido en nuestra plataforma, incluyendo texto, gráficos, logos y software, es propiedad de Hotleno o sus licenciantes y está protegido por leyes de propiedad intelectual.</p><p>No puede usar nuestro contenido sin permiso escrito expreso.</p>"
+      },
+      "liability": {
+        "title": "7. Responsabilidad",
+        "content": "<p>Hotleno actúa como intermediario entre usuarios y proveedores de alojamiento. No somos responsables por problemas durante su estancia.</p><p>Nuestra responsabilidad está limitada al costo total de su reserva.</p>"
+      },
+      "privacy": {
+        "title": "8. Privacidad",
+        "content": "<p>Su privacidad es importante. Revise nuestra <a>Política de Privacidad</a> para entender cómo recopilamos y usamos su información personal.</p>",
+        "link": "/privacy-policy"
+      },
+      "changes": {
+        "title": "9. Cambios a los Términos",
+        "content": "<p>Podemos actualizar estos Términos periódicamente. Le notificaremos cambios importantes a través de nuestra plataforma o por correo electrónico.</p><p>El uso continuado de nuestros Servicios después de cambios constituye aceptación de los nuevos términos.</p>"
+      },
+      "governingLaw": {
+        "title": "10. Ley Aplicable",
+        "content": "<p>Estos Términos se rigen por las leyes de Inglaterra y Gales. Cualquier disputa se resolverá en los tribunales de Londres, Reino Unido.</p>"
+      }
+    },
+    "acceptanceTitle": "Aceptación de los Términos",
+    "acceptanceText": "Al acceder o usar cualquier parte de nuestros Servicios, usted acepta estar sujeto a estos Términos. Si no acepta todos estos Términos, no puede usar nuestros Servicios.",
+    "contactText": "Si tiene preguntas sobre estos Términos, contáctenos en:",
+    "contactLink": "Soporte de Contacto",
+    "backToTop": "Volver arriba"
   },
   "SearchFlightsComponent": {
     "Location": {

@@ -1,4 +1,16 @@
 {
+  "components": {
+    "header": {
+      "nav": {
+        "nav1": "Home",
+        "nav2": "Our Services",
+        "nav3": "About Us",
+        "nav4": "Reviews",
+        "nav5": "F&Qs",
+        "nav6": "Contact"
+      }
+    }
+  },
   "Header": {
     "Logo": "Hotlino",
     "Home": "Home",

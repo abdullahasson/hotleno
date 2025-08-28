@@ -1,19 +1,20 @@
 import Link from 'next/link'
 // Next Intl
-import { useTranslations } from "next-intl"
+import { useTranslations , useLocale } from "next-intl"
 
 
-export default function FooterSection() {
+export default function Footer() {
 
     const t = useTranslations('components.footer')
+    const lang = useLocale();
 
     const links = [
-        { title: t('nav.nav1'), href: '#home' },
-        { title: t('nav.nav2'), href: '#services' },
-        { title: t('nav.nav3'), href: '#about' },
-        { title: t('nav.nav4'), href: '#testimonials' },
-        { title: t('nav.nav5'), href: '#faqs' },
-        { title: t('nav.nav6'), href: '#contact' },
+        { title: t('nav.nav1'), href: `/${lang}/` },
+        { title: t('nav.nav2'), href: `/${lang}/about` },
+        { title: t('nav.nav3'), href: `/${lang}/contact` },
+        { title: t('nav.nav4'), href: `/${lang}/app` },
+        { title: t('nav.nav5'), href: `/${lang}/terms` },
+        { title: t('nav.nav6'), href: `/${lang}/privacy` },
     ]
 
     return (

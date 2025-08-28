@@ -4,7 +4,7 @@
 
 import Image from "next/image"
 import { motion } from 'framer-motion';
-import Header from '@/components/common/header';
+import { HeroHeader } from "@/components/common/header"
 import Footer from "@/components/common/footer"
 import {
     useTranslations
@@ -28,7 +28,7 @@ export default function AboutUsPage() {
 
     return (
         <>
-            <Header />
+            <HeroHeader />
             <div className="min-h-screen">
                 {/* Hero Section */}
                 <div className="relative py-20 px-4 overflow-hidden">

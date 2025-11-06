@@ -29,35 +29,35 @@ import { Skeleton } from "../ui/skeleton"
 import placeholderHotelImage from "../../../public/hotel-image-placeholder.jpg";
 
 
-import {
-  HomeIcon,
-  ListFilter,
-  Locate,
-  Search
-} from 'lucide-react';
+// import {
+//   HomeIcon,
+//   ListFilter,
+//   // Locate,
+//   Search
+// } from 'lucide-react';
 
-import { Dock, DockIcon, DockItem, DockLabel } from '@/components/ui/dock';
+// import { Dock, DockIcon, DockItem, DockLabel } from '@/components/ui/dock';
 
-const data = [
-  {
-    title: 'Back Home',
-    icon: (
-      <HomeIcon className='h-full w-full text-neutral-600 dark:text-neutral-300' />
-    )
-  },
-  {
-    title: 'Search',
-    icon: (
-      <Search className='h-full w-full text-neutral-600 dark:text-neutral-300' />
-    )
-  },
-  {
-    title: 'Fillters',
-    icon: (
-      <ListFilter className='h-full w-full text-neutral-600 dark:text-neutral-300' />
-    )
-  }
-];
+// const data = [
+//   {
+//     title: 'Back Home',
+//     icon: (
+//       <HomeIcon className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+//     )
+//   },
+//   {
+//     title: 'Search',
+//     icon: (
+//       <Search className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+//     )
+//   },
+//   {
+//     title: 'Fillters',
+//     icon: (
+//       <ListFilter className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+//     )
+//   }
+// ];
 
 
 type HotelListProps = {
@@ -80,11 +80,11 @@ export default function HotelList({ hotels }: HotelListProps) {
     freeCancellation: false,
     boardTypes: []
   });
-  const [uiShow, setUiShow] = useState({
-    map: true,
-    search: true,
-    fillter: true
-  })
+  // const [uiShow, setUiShow] = useState({
+  //   map: true,
+  //   search: true,
+  //   fillter: true
+  // })
 
   // Initialize price range from data
   useEffect(() => {
@@ -432,9 +432,7 @@ export default function HotelList({ hotels }: HotelListProps) {
         </div>
       </div>
 
-      {/* Map View */}
-      {
-        uiShow.map ? (
+ 
           <div className="flex-1 h-[600px] max-h-screen p-4 lg:h-auto sticky top-0">
             <div className={`bg-white border-gray-400 border rounded-2xl shadow-sm overflow-hidden h-full`}>
               <MapComponent
@@ -445,13 +443,11 @@ export default function HotelList({ hotels }: HotelListProps) {
               />
             </div>
           </div>
-        ) : null
-      }
 
 
 
 
-      <div className='fixed bottom-3 left-1/2 max-w-full -translate-x-1/2'>
+      {/* <div className='fixed bottom-3 left-1/2 max-w-full -translate-x-1/2'>
         <Dock className='items-end pb-3 bg-gray-300'>
           {data.map((item, idx) => (
             <button key={idx} className='cursor-pointer'>
@@ -480,7 +476,7 @@ export default function HotelList({ hotels }: HotelListProps) {
             </DockItem>
           </button>
         </Dock>
-      </div>
+      </div> */}
     </div>
   );
 }

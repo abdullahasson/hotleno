@@ -12,7 +12,7 @@ import {
     Toaster
 } from "@/components/ui/sonner"
 // Kinde Auth Provider
-import AuthProvider from '@/components/AuthProvider';
+import AuthProvider from '@/components/auth/auth-provider';
 // Styles
 import "../globals.css";
 

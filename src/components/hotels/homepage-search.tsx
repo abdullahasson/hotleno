@@ -1,64 +1,70 @@
-'use client';
+"use client";
 
-import { useRouter } from 'next/navigation';
-import { useState, FormEvent } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
-import {
-  X,
-  Search,
-  Minus,
-  Plus,
-  XCircle,
-} from 'lucide-react';
-import { format } from 'date-fns';
+import { useRouter } from "next/navigation";
+import { useState, FormEvent } from "react";
+import { useTranslations, useLocale } from "next-intl";
+import { X, Search, Minus, Plus, XCircle } from "lucide-react";
+import { format } from "date-fns";
 
 // Shadcn UI Components
-import { Button } from '@/components/ui/button';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Calendar } from '@/components/ui/calendar';
-import { Calendar as CalendarIcon } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Calendar } from "@/components/ui/calendar";
+import { Calendar as CalendarIcon } from "lucide-react";
 
 // Custom Components
-import LocationAutocomplete from '../ui/location-autocomplete';
+import LocationAutocomplete from "../ui/location-autocomplete";
 
 export default function HomeHotelsSearch() {
   const router = useRouter();
   const locale = useLocale();
-  const isRTL = locale === "ar"
+  const isRTL = locale === "ar";
   const t = useTranslations("SearchHotelsComponent");
 
   const [formState, setFormState] = useState({
-    location: '',
+    location: "",
     checkIn: new Date() as Date | null,
-    checkOut: new Date(new Date().setDate(new Date().getDate() + 3)) as Date | null,
+    checkOut: new Date(
+      new Date().setDate(new Date().getDate() + 3)
+    ) as Date | null,
     guests: { adults: 2, children: 0 },
     rooms: 1,
     cancellation: false,
-    currency: 'USD',
+    currency: "USD",
   });
 
   const [uiState, setUiState] = useState({
     showGuestRoomSelect: false,
-    error: ''
+    error: "",
   });
 
   const handleInputChange = <K extends keyof typeof formState>(
     field: K,
-    value: typeof formState[K]
+    value: (typeof formState)[K]
   ) => {
-    setFormState(prev => ({ ...prev, [field]: value }));
+    setFormState((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleGuestRoomChange = (type: 'adults' | 'children' | 'rooms', delta: number) => {
-    setFormState(prev => {
-      if (type === 'rooms') {
+  const handleGuestRoomChange = (
+    type: "adults" | "children" | "rooms",
+    delta: number
+  ) => {
+    setFormState((prev) => {
+      if (type === "rooms") {
         return { ...prev, rooms: Math.max(1, prev.rooms + delta) };
       } else {
         return {
           ...prev,
-          guests: { ...prev.guests, [type]: Math.max(0, prev.guests[type] + delta) }
+          guests: {
+            ...prev.guests,
+            [type]: Math.max(0, prev.guests[type] + delta),
+          },
         };
       }
     });
@@ -69,21 +75,21 @@ export default function HomeHotelsSearch() {
     const { location, checkIn, checkOut } = formState;
 
     if (!location) {
-      setUiState(prev => ({ ...prev, error: t("Error.destination") }));
+      setUiState((prev) => ({ ...prev, error: t("Error.destination") }));
       return;
     }
     if (!checkIn) {
-      setUiState(prev => ({ ...prev, error: t("Error.checkIn") }));
+      setUiState((prev) => ({ ...prev, error: t("Error.checkIn") }));
       return;
     }
     if (!checkOut) {
-      setUiState(prev => ({ ...prev, error: t("Error.checkOut") }));
+      setUiState((prev) => ({ ...prev, error: t("Error.checkOut") }));
       return;
     }
 
-    setUiState(prev => ({ ...prev, error: '' }));
+    setUiState((prev) => ({ ...prev, error: "" }));
 
-    const formatDate = (date: Date) => date.toISOString().split('T')[0];
+    const formatDate = (date: Date) => date.toISOString().split("T")[0];
     const params = new URLSearchParams({
       location,
       currency: formState.currency.toLowerCase(),
@@ -100,8 +106,11 @@ export default function HomeHotelsSearch() {
   const totalGuests = formState.guests.adults + formState.guests.children;
 
   return (
-    <div className="flex-1" dir={isRTL ? 'rtl' : 'ltr'}>
-      <form onSubmit={handleSubmit} className="bg-white w-full rounded-b-2xl shadow-2xl px-8 pb-8 pt-4 max-[767px]:p-6 border border-gray-100">
+    <div className="flex-1" dir={isRTL ? "rtl" : "ltr"}>
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white w-full rounded-b-2xl shadow-2xl px-8 pb-8 pt-4 max-[767px]:p-6 border border-gray-100"
+      >
         <h2 className="text-md font-semibold text-start text-gray-800 mb-4 w-full">
           {t("SearchTitle")}
         </h2>
@@ -112,8 +121,8 @@ export default function HomeHotelsSearch() {
             <div className="relative !text-gray-900">
               <LocationAutocomplete
                 value={formState.location}
-                onChange={(value) => handleInputChange('location', value)}
-                placeholder={t('Location.Placeholder')}
+                onChange={(value) => handleInputChange("location", value)}
+                placeholder={t("Location.Placeholder")}
               />
             </div>
           </div>
@@ -142,8 +151,12 @@ export default function HomeHotelsSearch() {
                   <Calendar
                     mode="single"
                     selected={formState.checkIn || undefined}
-                    onSelect={(date) => handleInputChange('checkIn', date || null)}
-                    disabled={(date) => date < new Date(new Date().setHours(0,0,0,0))}
+                    onSelect={(date) =>
+                      handleInputChange("checkIn", date || null)
+                    }
+                    disabled={(date) =>
+                      date < new Date(new Date().setHours(0, 0, 0, 0))
+                    }
                     initialFocus
                   />
                 </PopoverContent>
@@ -172,9 +185,13 @@ export default function HomeHotelsSearch() {
                   <Calendar
                     mode="single"
                     selected={formState.checkOut || undefined}
-                    onSelect={(date) => handleInputChange('checkOut', date || null)}
-                    disabled={(date) => 
-                      date < (formState.checkIn || new Date(new Date().setHours(0,0,0,0)))
+                    onSelect={(date) =>
+                      handleInputChange("checkOut", date || null)
+                    }
+                    disabled={(date) =>
+                      date <
+                      (formState.checkIn ||
+                        new Date(new Date().setHours(0, 0, 0, 0)))
                     }
                     initialFocus
                   />
@@ -187,7 +204,9 @@ export default function HomeHotelsSearch() {
           <div className="flex-1 max-[767px]:w-full">
             <Popover
               open={uiState.showGuestRoomSelect}
-              onOpenChange={(open) => setUiState(prev => ({ ...prev, showGuestRoomSelect: open }))}
+              onOpenChange={(open) =>
+                setUiState((prev) => ({ ...prev, showGuestRoomSelect: open }))
+              }
             >
               <PopoverTrigger asChild>
                 <Button
@@ -195,11 +214,13 @@ export default function HomeHotelsSearch() {
                   className="w-full h-[44px] py-4 px-4 rounded-2xl justify-start text-left font-normal border-gray-400 hover:border-blue-400"
                 >
                   <div className="font-medium text-gray-800">
-                    {totalGuests} {totalGuests === 1 
-                      ? t("GuestsRooms.Guest") 
-                      : t("GuestsRooms.Guests")},
-                    {' '}{formState.rooms} {formState.rooms === 1 
-                      ? t("GuestsRooms.Room") 
+                    {totalGuests}{" "}
+                    {totalGuests === 1
+                      ? t("GuestsRooms.Guest")
+                      : t("GuestsRooms.Guests")}
+                    , {formState.rooms}{" "}
+                    {formState.rooms === 1
+                      ? t("GuestsRooms.Room")
                       : t("GuestsRooms.Rooms")}
                   </div>
                 </Button>
@@ -209,10 +230,12 @@ export default function HomeHotelsSearch() {
                   guests={formState.guests}
                   rooms={formState.rooms}
                   onChange={handleGuestRoomChange}
-                  onClose={() => setUiState(prev => ({ 
-                    ...prev, 
-                    showGuestRoomSelect: false 
-                  }))}
+                  onClose={() =>
+                    setUiState((prev) => ({
+                      ...prev,
+                      showGuestRoomSelect: false,
+                    }))
+                  }
                 />
               </PopoverContent>
             </Popover>
@@ -225,19 +248,22 @@ export default function HomeHotelsSearch() {
               <Checkbox
                 id="cancellation"
                 checked={formState.cancellation}
-                onCheckedChange={(checked) => 
-                  handleInputChange('cancellation', checked as boolean)
+                onCheckedChange={(checked) =>
+                  handleInputChange("cancellation", checked as boolean)
                 }
-                className='border-blue-500 data-[state=checked]:bg-blue-600'
+                className="border-blue-500 data-[state=checked]:bg-blue-600"
               />
-              <label htmlFor="cancellation" className="text-sm font-medium text-gray-700 cursor-pointer">
+              <label
+                htmlFor="cancellation"
+                className="text-sm font-medium text-gray-700 cursor-pointer"
+              >
                 {t("CancellationPolicy")}
               </label>
             </div>
           </div>
 
           <div className="max-[767px]:w-full">
-            <Button 
+            <Button
               type="submit"
               className="w-full rounded-full max-[767px]:rounded-xl py-6 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
             >
@@ -250,7 +276,10 @@ export default function HomeHotelsSearch() {
         </div>
 
         {uiState.error && (
-          <Alert variant="destructive" className="mt-5 flex items-start border-red-100">
+          <Alert
+            variant="destructive"
+            className="mt-5 flex items-start border-red-100"
+          >
             <XCircle className="h-5 w-5 mt-0.5" />
             <AlertDescription className="ml-2 text-red-700">
               {uiState.error}
@@ -267,11 +296,11 @@ const GuestRoomSelector = ({
   guests,
   rooms,
   onChange,
-  onClose
+  onClose,
 }: {
   guests: { adults: number; children: number };
   rooms: number;
-  onChange: (type: 'adults' | 'children' | 'rooms', delta: number) => void;
+  onChange: (type: "adults" | "children" | "rooms", delta: number) => void;
   onClose: () => void;
 }) => {
   const t = useTranslations("SearchHotelsComponent");
@@ -279,10 +308,12 @@ const GuestRoomSelector = ({
   return (
     <div className="bg-white rounded-xl shadow-lg p-5 animate-fadeIn border border-gray-400">
       <div className="flex justify-between items-center mb-4 pb-2 border-b border-gray-100">
-        <h3 className="font-semibold text-gray-800">{t("GuestsRooms.Title")}</h3>
-        <Button 
-          variant="ghost" 
-          size="icon" 
+        <h3 className="font-semibold text-gray-800">
+          {t("GuestsRooms.Title")}
+        </h3>
+        <Button
+          variant="ghost"
+          size="icon"
           className="rounded-full"
           onClick={onClose}
         >
@@ -294,8 +325,12 @@ const GuestRoomSelector = ({
         {/* Adults */}
         <div className="flex justify-between items-center">
           <div>
-            <div className="font-medium text-gray-800">{t("GuestsRooms.Adults")}</div>
-            <div className="text-sm text-gray-500">{t("GuestsRooms.AdultsEx")}</div>
+            <div className="font-medium text-gray-800">
+              {t("GuestsRooms.Adults")}
+            </div>
+            <div className="text-sm text-gray-500">
+              {t("GuestsRooms.AdultsEx")}
+            </div>
           </div>
           <div className="flex items-center space-x-3">
             <Button
@@ -303,7 +338,7 @@ const GuestRoomSelector = ({
               size="icon"
               className="rounded-full w-9 h-9"
               disabled={guests.adults <= 1}
-              onClick={() => onChange('adults', -1)}
+              onClick={() => onChange("adults", -1)}
             >
               <Minus size={16} className="text-blue-500" />
             </Button>
@@ -312,7 +347,7 @@ const GuestRoomSelector = ({
               variant="outline"
               size="icon"
               className="rounded-full w-9 h-9"
-              onClick={() => onChange('adults', 1)}
+              onClick={() => onChange("adults", 1)}
             >
               <Plus size={16} className="text-blue-500" />
             </Button>
@@ -322,8 +357,12 @@ const GuestRoomSelector = ({
         {/* Children */}
         <div className="flex justify-between items-center">
           <div>
-            <div className="font-medium text-gray-800">{t("GuestsRooms.Children")}</div>
-            <div className="text-sm text-gray-500">{t("GuestsRooms.ChildrenEx")}</div>
+            <div className="font-medium text-gray-800">
+              {t("GuestsRooms.Children")}
+            </div>
+            <div className="text-sm text-gray-500">
+              {t("GuestsRooms.ChildrenEx")}
+            </div>
           </div>
           <div className="flex items-center space-x-3">
             <Button
@@ -331,16 +370,18 @@ const GuestRoomSelector = ({
               size="icon"
               className="rounded-full w-9 h-9"
               disabled={guests.children <= 0}
-              onClick={() => onChange('children', -1)}
+              onClick={() => onChange("children", -1)}
             >
               <Minus size={16} className="text-blue-500" />
             </Button>
-            <span className="font-medium w-6 text-center">{guests.children}</span>
+            <span className="font-medium w-6 text-center">
+              {guests.children}
+            </span>
             <Button
               variant="outline"
               size="icon"
               className="rounded-full w-9 h-9"
-              onClick={() => onChange('children', 1)}
+              onClick={() => onChange("children", 1)}
             >
               <Plus size={16} className="text-blue-500" />
             </Button>
@@ -350,8 +391,12 @@ const GuestRoomSelector = ({
         {/* Rooms */}
         <div className="flex justify-between items-center">
           <div>
-            <div className="font-medium text-gray-800">{t("GuestsRooms.Rooms")}</div>
-            <div className="text-sm text-gray-500">{t("GuestsRooms.RoomsEx")}</div>
+            <div className="font-medium text-gray-800">
+              {t("GuestsRooms.Rooms")}
+            </div>
+            <div className="text-sm text-gray-500">
+              {t("GuestsRooms.RoomsEx")}
+            </div>
           </div>
           <div className="flex items-center space-x-3">
             <Button
@@ -359,7 +404,7 @@ const GuestRoomSelector = ({
               size="icon"
               className="rounded-full w-9 h-9"
               disabled={rooms <= 1}
-              onClick={() => onChange('rooms', -1)}
+              onClick={() => onChange("rooms", -1)}
             >
               <Minus size={16} className="text-blue-500" />
             </Button>
@@ -368,7 +413,7 @@ const GuestRoomSelector = ({
               variant="outline"
               size="icon"
               className="rounded-full w-9 h-9"
-              onClick={() => onChange('rooms', 1)}
+              onClick={() => onChange("rooms", 1)}
             >
               <Plus size={16} className="text-blue-500" />
             </Button>

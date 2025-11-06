@@ -3,8 +3,7 @@
 
 import { 
     RegisterLink, 
-    LoginLink, 
-    LogoutLink 
+    LoginLink
 } from '@kinde-oss/kinde-auth-nextjs';
 
 import { 
@@ -12,7 +11,7 @@ import {
 } from '@kinde-oss/kinde-auth-nextjs';
 
 export default function AuthButtons() {
-  const { user, isAuthenticated, isLoading } = useKindeBrowserClient();
+  const { isAuthenticated, isLoading } = useKindeBrowserClient();
 
   if (isLoading) return <div>Loading...</div>;
 

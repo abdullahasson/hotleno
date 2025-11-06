@@ -3,13 +3,13 @@
 // Next
 import Link from 'next/link'
 import Image from 'next/image'
-import { usePathname } from 'next/navigation'
+// import { usePathname } from 'next/navigation'
 // React
 import React from 'react'
 // Lib
 import { cn } from '@/lib/utils'
 // Next Intl
-import { useTranslations, useLocale } from "next-intl"
+// import { useTranslations, useLocale } from "next-intl"
 // Components
 import SwitchLanguages from './switch-languages'
 import AuthButtons from '../AuthButtons'
@@ -21,23 +21,23 @@ import { Menu, X } from 'lucide-react'
 
 export const Header = () => {
     // Translations
-    const t = useTranslations('components.header')
-    const lang = useLocale()
-    const isRTL = lang === "ar"
-    const pathname = usePathname()
-    const isNotHomePage = pathname === `/${lang}/about` || `/${lang}/hotels`
+    // const t = useTranslations('components.header')
+    // const lang = useLocale()
+    // const isRTL = lang === "ar"
+    // const pathname = usePathname()
+    // const isNotHomePage = pathname === `/${lang}/about` || `/${lang}/hotels`
 
     const [menuState, setMenuState] = React.useState(false)
     const [isScrolled, setIsScrolled] = React.useState(false)
 
-    const menuItems = [
-        { name: t('nav.nav1'), href: '#home' },
-        { name: t('nav.nav2'), href: '#services' },
-        { name: t('nav.nav3'), href: '#about' },
-        { name: t('nav.nav4'), href: '#testimonials' },
-        { name: t('nav.nav5'), href: '#faqs' },
-        { name: t('nav.nav6'), href: '#contact' },
-    ]
+    // const menuItems = [
+    //     { name: t('nav.nav1'), href: '#home' },
+    //     { name: t('nav.nav2'), href: '#services' },
+    //     { name: t('nav.nav3'), href: '#about' },
+    //     { name: t('nav.nav4'), href: '#testimonials' },
+    //     { name: t('nav.nav5'), href: '#faqs' },
+    //     { name: t('nav.nav6'), href: '#contact' },
+    // ]
 
     React.useEffect(() => {
         const handleScroll = () => {

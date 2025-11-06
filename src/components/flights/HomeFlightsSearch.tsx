@@ -51,6 +51,7 @@ export default function HomeFlightsSearch({
 }: HomeFlightsSearchProps) {
   const router = useRouter();
   const locale = useLocale();
+  const isRTL = locale === "ar"
   const t = useTranslations("SearchFlightsComponent");
 
   // Form state
@@ -161,7 +162,7 @@ export default function HomeFlightsSearch({
   const totalPassengers = Object.values(formState.passengers).reduce((a, b) => a + b, 0);
 
   return (
-    <div className="flex-1">
+    <div className="flex-1" dir={isRTL ? 'rtl' : 'ltr'}>
       <form
         onSubmit={handleSubmit}
         className={`

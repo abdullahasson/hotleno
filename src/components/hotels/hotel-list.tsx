@@ -14,7 +14,7 @@ import { Star, MapPin, Heart, Bed, Utensils } from 'lucide-react';
 // Types
 import { Hotel, FilterState, Room, Provider } from '@/types/hotel';
 // Components
-const MapComponent = dynamic(() => import('./Map'), {
+const MapComponent = dynamic(() => import('./map'), {
   ssr: false,
   loading: () => <div className="h-full bg-gray-100 rounded-xl flex items-center justify-center">Loading map...</div>
 });
@@ -27,6 +27,37 @@ import {
 import { Skeleton } from "../ui/skeleton"
 // Images
 import placeholderHotelImage from "../../../public/hotel-image-placeholder.jpg";
+
+
+import {
+  HomeIcon,
+  ListFilter,
+  Locate,
+  Search
+} from 'lucide-react';
+
+import { Dock, DockIcon, DockItem, DockLabel } from '@/components/ui/dock';
+
+const data = [
+  {
+    title: 'Back Home',
+    icon: (
+      <HomeIcon className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+    )
+  },
+  {
+    title: 'Search',
+    icon: (
+      <Search className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+    )
+  },
+  {
+    title: 'Fillters',
+    icon: (
+      <ListFilter className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+    )
+  }
+];
 
 
 type HotelListProps = {
@@ -49,6 +80,11 @@ export default function HotelList({ hotels }: HotelListProps) {
     freeCancellation: false,
     boardTypes: []
   });
+  const [uiShow, setUiShow] = useState({
+    map: true,
+    search: true,
+    fillter: true
+  })
 
   // Initialize price range from data
   useEffect(() => {
@@ -397,15 +433,53 @@ export default function HotelList({ hotels }: HotelListProps) {
       </div>
 
       {/* Map View */}
-      <div className="flex-1 h-[600px] max-h-screen p-4 lg:h-auto sticky top-0">
-        <div className={`bg-white border-gray-400 border rounded-2xl shadow-sm overflow-hidden h-full`}>
-          <MapComponent
-            hotels={filteredHotels}
-            selectedHotel={selectedHotel}
-            hoveredHotel={hoveredHotel}
-            onHotelSelect={setSelectedHotel}
-          />
-        </div>
+      {
+        uiShow.map ? (
+          <div className="flex-1 h-[600px] max-h-screen p-4 lg:h-auto sticky top-0">
+            <div className={`bg-white border-gray-400 border rounded-2xl shadow-sm overflow-hidden h-full`}>
+              <MapComponent
+                hotels={filteredHotels}
+                selectedHotel={selectedHotel}
+                hoveredHotel={hoveredHotel}
+                onHotelSelect={setSelectedHotel}
+              />
+            </div>
+          </div>
+        ) : null
+      }
+
+
+
+
+      <div className='fixed bottom-3 left-1/2 max-w-full -translate-x-1/2'>
+        <Dock className='items-end pb-3 bg-gray-300'>
+          {data.map((item, idx) => (
+            <button key={idx} className='cursor-pointer'>
+              <DockItem
+
+                className='aspect-square rounded-full bg-gray-200'
+              >
+                <DockLabel>{item.title}</DockLabel>
+                <DockIcon>{item.icon}</DockIcon>
+              </DockItem>
+            </button>
+          ))}
+          <button className='cursor-pointer' onClick={() => setUiShow({
+            ...uiShow,
+            map: !uiShow.map
+          })}>
+            <DockItem
+              className='aspect-square rounded-full bg-gray-200'
+            >
+              <DockLabel>
+                Map
+              </DockLabel>
+              <DockIcon>
+                <Locate className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+              </DockIcon>
+            </DockItem>
+          </button>
+        </Dock>
       </div>
     </div>
   );

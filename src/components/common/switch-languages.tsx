@@ -10,17 +10,14 @@ import { useLocale } from "next-intl";
 import { useState } from "react";
 // Images
 import sa from "../../../public/sa.svg"
-import es from "../../../public/es.svg"
-import tr from "../../../public/tr.svg"
 import gb from "../../../public/gb.svg"
-import fr from "../../../public/fr.svg"
 // Icons 
 import { ChevronDown } from "lucide-react"
 
 const SwitchLanguages = () => {
     const pathname = usePathname();
     const searchParams = useSearchParams();
-    const lang = useLocale() as "ar" | "en" | "fr" | "es" | "tr"
+    const lang = useLocale() as "ar" | "en"
     const [open, setOpen] = useState<boolean>(false);
 
     // Get current query string
@@ -36,17 +33,11 @@ const SwitchLanguages = () => {
     const handleActiveLanguageButttonText = {
         "ar": "AR",
         "en": "EN",
-        "fr": "FR",
-        "es": "ES",
-        "tr": "TR"
     }
 
     const handleActiveLanguageImage = {
         "ar": sa,
-        "en": gb,
-        "fr": fr,
-        "es": es,
-        "tr": tr
+        "en": gb
     }
 
     return (
@@ -77,30 +68,6 @@ const SwitchLanguages = () => {
                         <Image src={gb} className="language-flag" alt="English" />
                         <span className="language-name">English</span>
                         <span className="language-code">EN</span>
-                    </Link>
-                    <Link 
-                        href={`/fr${pathSuffix}${querySuffix}`} 
-                        className={`language-item ${lang === "fr" ? "active" : ""}`}
-                    >
-                        <Image src={fr} className="language-flag" alt="Français" />
-                        <span className="language-name">Français</span>
-                        <span className="language-code">FR</span>
-                    </Link>
-                    <Link 
-                        href={`/es${pathSuffix}${querySuffix}`} 
-                        className={`language-item ${lang === "es" ? "active" : ""}`}
-                    >
-                        <Image src={es} className="language-flag" alt="Español" />
-                        <span className="language-name">Español</span>
-                        <span className="language-code">ES</span>
-                    </Link>
-                    <Link 
-                        href={`/tr${pathSuffix}${querySuffix}`} 
-                        className={`language-item ${lang === "tr" ? "active" : ""}`}
-                    >
-                        <Image src={tr} className="language-flag" alt="Türkçe" />
-                        <span className="language-name">Türkçe</span>
-                        <span className="language-code">TR</span>
                     </Link>
                 </div>
             )}

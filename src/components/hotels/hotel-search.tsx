@@ -1,7 +1,7 @@
 'use client';
 
-import { SearchForm } from './SearchForm';
-import { SearchResults } from './SearchResults';
+import { SearchForm } from './search-form';
+import { SearchResults } from './search-results';
 import { useHotelsSearch } from '@/hooks/useHotelsSearch';
 
 export default function HotelsSearch() {

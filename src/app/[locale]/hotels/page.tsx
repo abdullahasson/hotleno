@@ -1,12 +1,10 @@
 // Components
-import Header from "@/components/flights/Header"
-import HotelsSearch from "@/components/hotels/HotelsSearch"
+import HotelsSearch from "@/components/hotels/hotel-search"
 
 
 export default function Hotels() {
   return (
     <div>
-      <Header />
       <HotelsSearch />
     </div>
   )

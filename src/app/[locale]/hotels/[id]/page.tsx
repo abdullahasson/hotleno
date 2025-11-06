@@ -1,6 +1,5 @@
 // Components
-import Header from "@/components/flights/Header";
-import HotelDetails from "@/components/hotels/HotelDetails";
+import HotelDetails from "@/components/hotels/hotel-details";
 
 export default async function Hotel({
   params,
@@ -12,7 +11,6 @@ export default async function Hotel({
   
   return (
     <div>
-      <Header />
       <HotelDetails 
         id={id}
       />

@@ -3,7 +3,7 @@ import { CalendarIcon, MapPin, User, Search, Loader2, ArrowUp, ArrowDown } from 
 import { format } from 'date-fns';
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { PassengerSelector } from './PassengerSelector';
+import { PassengerSelector } from './passenger-selector';
 import { SearchParamsState } from '@/types/hotel';
 
 type SearchFormProps = {

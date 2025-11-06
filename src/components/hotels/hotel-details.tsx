@@ -12,7 +12,7 @@ import { useTranslations } from "next-intl";
 import { Hotel } from "@/types/hotel";
 // Components
 import Reviews from "../common/Reviews";
-const MapComponent = dynamic(() => import('@/components/hotels/Map'), {
+const MapComponent = dynamic(() => import('@/components/hotels/map'), {
     ssr: false,
     loading: () => (
         <div className="h-full bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl overflow-hidden shadow-sm">

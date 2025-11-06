@@ -1,5 +1,5 @@
 import { Hotel } from "@/types/hotel";
-import HotelList from "./HotelList";
+import HotelList from "./hotel-list";
 import { mockHotels } from "@/data/mockHotels";
 import { XCircle } from 'lucide-react';
 
@@ -9,7 +9,7 @@ type SearchResultsProps = {
     error: string | null;
 };
 
-export const SearchResults = ({ hotels, loading, error }: SearchResultsProps) => {
+export const SearchResults = ({ hotels, loading = true , error }: SearchResultsProps) => {
     return (
         <>
             <div className="p-6">

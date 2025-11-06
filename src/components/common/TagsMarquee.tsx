@@ -4,8 +4,8 @@ import Link from "next/link"
 import React from 'react';
 // Next Intl
 import { useTranslations, useLocale } from "next-intl"
-// Framer Motion
-import { motion, Variants } from 'framer-motion';
+
+import { InfiniteSlider } from '@/components/ui/infinite-slider';
 
 interface Tag {
   name: string;
@@ -80,92 +80,75 @@ const TagsMarquee = () => {
     },
   ];
 
-
-  const marqueeVariants = React.useMemo(() => {
-    return (direction: 'left' | 'right'): Variants => {
-      const offset = direction === 'left' ? '-200%' : '100%';
-      return {
-        animate: {
-          x: [direction === 'left' ? '0%' : '0%', offset],
-          transition: {
-            x: {
-              repeat: Infinity,
-              repeatType: 'loop',
-              duration: 100, // Faster duration for better user experience
-              ease: 'linear',
-            },
-          },
-        },
-      };
-    };
-  }, []);
-
- 
-const MarqueeLine = React.memo(
-  function MarqueeLine({ tags, direction, index }: { tags: Tag[]; direction: 'left' | 'right'; index: number }) {
-      
-      const viewportFillFactor = 4;
-      const duplicatedTags = React.useMemo(() => {
-        return Array(viewportFillFactor).fill(tags).flat();
-      }, [tags]);
-
-      return (
-        <motion.div
-          className="group flex gap-4 overflow-hidden flex-row py-2 relative"
-          style={{
-            maskImage:
-              'linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)',
-            WebkitMaskImage:
-              'linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)',
-          }}
-          whileHover={{ animationPlayState: 'paused' }}
-        >
-          <motion.div
-            className="flex shrink-0 flex-row gap-3 items-center"
-            variants={marqueeVariants(direction)}
-            animate="animate"
-            custom={direction}
-          >
-            {duplicatedTags.map((tag, tagIndex) => (
-              <Link
-                key={`tag-${index}-${tagIndex}`}
-                className={`rounded-md px-3 py-2 m-0 overflow-visible whitespace-nowrap text-sm md:text-base ${tag.highlight
-                    ? 'text-blue-600 bg-blue-100 font-medium hover:bg-blue-200'
-                    : 'text-gray-600 bg-gray-100 hover:bg-gray-200'
-                  } transition-all hover:scale-105 hover:shadow-sm`}
-                data-discover="true"
-                href={`/${lang}/${encodeURIComponent(tag.name)}`}
-                aria-label={`Browse ${tag.name} tag`}
-              >
-                {tag.name}
-              </Link>
-            ))}
-          </motion.div>
-        </motion.div>
-      );
-    }
-  );
+  const tags = [
+    { name: tcountries('countries.country_france'), highlight: false },
+    { name: tcountries('countries.country_italy'), highlight: false },
+    { name: tcountries('countries.country_greece'), highlight: false },
+    { name: tcountries('countries.country_spain'), highlight: false },
+    { name: tcountries('countries.country_morocco'), highlight: false },
+    { name: tcountries('countries.country_czech'), highlight: false },
+    { name: tcountries('countries.country_hungary'), highlight: false },
+    { name: tcountries('countries.country_croatia'), highlight: false },
+    { name: tcountries('countries.country_austria'), highlight: false },
+    { name: tcountries('countries.country_japan'), highlight: true },
+    { name: tcountries('countries.country_egypt'), highlight: false },
+    { name: tcountries('countries.country_peru'), highlight: false },
+    { name: tcountries('countries.country_turkey'), highlight: true },
+    { name: tcountries('countries.country_china'), highlight: false },
+  ]
 
   return (
-    <section className="py-10 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="mb-8 text-3xl font-bold text-gray-800 text-center">
-          {t('Flights.title')}
-        </h2>
-
-        <div className="flex flex-col gap-2">
-          {tagLines.map((line, index) => (
-            <MarqueeLine
-              key={`marquee-line-${index}`}
-              tags={line.tags}
-              direction={line.direction}
-              index={index}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+    <div dir="ltr">
+      <InfiniteSlider speedOnHover={0} gap={24} className="py-2">
+        {tags.map((tag, index) => (
+          <Link
+            key={`tag-${index + 1}`}
+            className={`rounded-md px-3 py-2 m-0 overflow-visible whitespace-nowrap text-sm md:text-base ${tag.highlight
+              ? 'text-blue-600 bg-blue-100 font-medium hover:bg-blue-200'
+              : 'text-gray-600 bg-gray-100 hover:bg-gray-200'
+              } transition-all hover:scale-105 hover:shadow-sm`}
+            data-discover="true"
+            href={`/${lang}/${encodeURIComponent(tag.name)}`}
+            aria-label={`Browse ${tag.name} tag`}
+          >
+            {tag.name}
+          </Link>
+        ))}
+      </InfiniteSlider>
+      <InfiniteSlider speedOnHover={0} gap={24} reverse className="py-2">
+        {tags.map((tag, index) => (
+          <Link
+            key={`tag-${index + 1}`}
+            className={`rounded-md px-3 py-2 m-0 overflow-visible whitespace-nowrap text-sm md:text-base ${tag.highlight
+              ? 'text-blue-600 bg-blue-100 font-medium hover:bg-blue-200'
+              : 'text-gray-600 bg-gray-100 hover:bg-gray-200'
+              } transition-all hover:scale-105 hover:shadow-sm`}
+            data-discover="true"
+            href={`/${lang}/${encodeURIComponent(tag.name)}`}
+            aria-label={`Browse ${tag.name} tag`}
+          >
+            {tag.name}
+          </Link>
+        ))}
+      </InfiniteSlider>
+      <InfiniteSlider speedOnHover={0} gap={24} className="py-2">
+        {tags.map((tag, index) => (
+          <Link
+            key={`tag-${index + 1}`}
+            className={`rounded-md px-3 py-2 m-0 overflow-visible whitespace-nowrap text-sm md:text-base ${tag.highlight
+              ? 'text-blue-600 bg-blue-100 font-medium hover:bg-blue-200'
+              : 'text-gray-600 bg-gray-100 hover:bg-gray-200'
+              } transition-all hover:scale-105 hover:shadow-sm`}
+            data-discover="true"
+            href={`/${lang}/${encodeURIComponent(tag.name)}`}
+            aria-label={`Browse ${tag.name} tag`}
+          >
+            {tag.name}
+          </Link>
+        ))}
+      </InfiniteSlider>
+    </div>
+  )
 };
 
 

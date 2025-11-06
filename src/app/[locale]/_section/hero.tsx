@@ -1,10 +1,9 @@
-"use client"
-
 // Next
 import Image from 'next/image';
-
-import { motion } from 'framer-motion';
+// Components
 import Search from "@/components/common/Search";
+// Motion
+import * as motion from "motion/react-client"
 // Images
 import BgHero from "../../../../public/hero3.jpeg"
 
